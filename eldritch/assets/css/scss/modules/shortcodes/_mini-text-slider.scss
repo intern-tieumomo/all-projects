@@ -1,0 +1,85 @@
+/* ==========================================================================
+   #Mini Text Slider styles - start
+   ========================================================================== */
+.edgt-mini-text-slider {
+	visibility: hidden;
+
+	p {
+		margin: 26px 0px 17px;
+	}
+
+	.edgt-separator {
+		border-bottom-color: $first-main-color;
+		margin: 7px 0 10px;
+	}
+
+	h4 {
+		margin-top: 9px;
+	}
+
+	.owl-controls {
+		margin-top: 49px;
+		height: 49px;
+		position: relative;
+
+		.owl-prev,
+		.owl-next {
+			width: 49px;
+			height: 100%;
+			background-color: transparent;
+			float: left;
+			text-align: center;
+			line-height: 49px;
+			border: 1px solid #000;
+			font-size: 26px;
+			color: #000;
+			box-sizing: border-box;
+			@include edgtTransition(all 0.3s ease);
+
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+
+		.edgt-prev-icon,
+		.edgt-next-icon {
+			width: 47px;
+			height: 47px;
+			line-height: 47px;
+			position: relative;
+			display: block;
+
+			span {
+				line-height: 47px;
+			}
+		}
+
+		.owl-prev {
+			margin-right: 10px;
+		}
+	}
+
+	&.edgt-light-skin {
+		h2, h4, p {
+			color: #fff;
+		}
+
+		.owl-prev,
+		.owl-next {
+			color: #fff;
+			border: 1px solid #fff;
+
+		}
+
+		.owl-prev:hover,
+		.owl-next:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+}
+
+/* ==========================================================================
+   #Mini Text Slider styles - end
+   ========================================================================== */

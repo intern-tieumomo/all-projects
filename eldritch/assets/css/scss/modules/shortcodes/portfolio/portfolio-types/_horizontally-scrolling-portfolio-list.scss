@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Portfolio shortcode style - begin
+   ========================================================================== */
+
+.edgt-horizontally-scrolling-portfolio-list-page {
+	overflow-x: visible !important;
+	height: 100%;
+
+    .edgtf-page-header .edgtf-menu-area {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header {
+        position: absolute;
+    }
+
+    .edgt-content {
+        margin-top: 0 !important;
+    }
+
+	.edgt-wrapper .edgt-wrapper-inner {
+		overflow: visible;
+	}
+
+	.edgt-page-header {
+		.edgt-menu-area {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			z-index: 1000;
+		}
+	}
+
+}
+
+html.edgt-horizontally-scrolling-html {
+	overflow-y: auto !important;
+}
+
+.edgt-horizontally-scrolling-portfolio-list-holder {
+	@include edgtRelativeHolderLayout();
+	height: 100vH;
+	width: 103%;
+	opacity: 0;
+	@include edgtTransition(opacity .2s ease-out);
+
+    /***** Article Global Style - begin *****/
+
+	.edgt-hspl-images-holder {
+		overflow: hidden;
+		display: block;
+		position: relative;
+		bottom: 0;
+		background-color: #121212;
+		height: 100%;
+
+	}
+
+	.edgt-hspl-images-row {
+		height: 33.33%;
+		overflow: hidden;
+	}
+
+	article {
+		overflow: hidden;
+		box-sizing: border-box;
+		height: 100%;
+		float: left;
+		position: relative;
+
+		img {
+			width: auto;
+			max-width: initial;
+			max-height: 100%;
+			height: 100%;
+			vertical-align: middle;
+			@include edgtTransition(all .4s cubic-bezier(0.6, 0, 0.26, 0.99));
+            @include edgtTransform(scale(1.05)); /* cuz of image size bug */
+		}
+
+		.touch & {
+			cursor: pointer;
+		}
+
+		.edgt-hspl-text > a {
+			overflow:hidden;
+		}
+
+		.edgt-hspl-title {
+			opacity: 0;
+			@include edgtTransform(scale(1.2, .8));
+			opacity: 0;
+			text-shadow: $glowing-text-shadow;
+			-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), opacity 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), text-shadow 0.25s cubic-bezier(0.6, 0, 0.26, 0.99) 0.15s;
+			transition: transform 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), opacity 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), text-shadow 0.25s cubic-bezier(0.6, 0, 0.26, 0.99) 0.15s;
+		}
+
+		&:hover {
+			.edgt-hspl-text-holder {
+				opacity: 1;
+				@include edgtTransition(opacity .4s cubic-bezier(0.6, 0, 0.26, 0.99));
+			}
+
+			img {
+				@include edgtTransform(scale(1.15));
+			}
+
+			.edgt-hspl-title {
+				opacity:1;
+				@include edgtTransform(translateY(0));
+			}
+		}
+
+		.edgt-hspl-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+			padding: 20px;
+			background-color: rgba(0,0,0, 0.8);
+			opacity: 0;
+			text-align: center;
+			@include edgtTransition(opacity .3s cubic-bezier(0.6, 0, 0.26, 0.99));
+			box-sizing: border-box;
+
+			.edgt-hspl-text-wrapper {
+		        @include edgtTableLayout();
+		        position: static;
+
+		        > a {
+		        	position: absolute;
+		        	top:0;
+		        	left:0;
+		        	height: 100%;
+		        	width: 100%;
+		        	z-index: 100;
+		        }
+		    }
+
+			.edgt-hspl-text {
+			    position: relative;
+			    display: table-cell;
+			    height: 100%;
+			    width: 100%;
+			    vertical-align: middle;
+
+			    .edgt-hspl-title {
+					margin: 3px;
+					color: #fff;
+			    }
+			}
+		}
+
+        /***** Article Global Style - end *****/
+
+	}
+
+	.edgt-hspl-cover-image {
+		float: left;
+		height: 100%;
+		overflow: hidden;
+		display: block;
+		position: static;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: 0 center;
+		z-index: 1498;
+		padding: 0;
+	}
+
+	.edgt-hspl-cover-image-title,
+    .edgt-hspl-cover-image-subtitle {
+		color: #fff;
+        line-height: 1;
+        margin: 0;
+	}
+
+    .edgt-hspl-cover-image-title {
+        margin-bottom: 2px;
+    }
+
+	.edgt-hspl-cover-image-text-holder {
+		display: table;
+		height: 100%;
+		width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+
+        @include edgtBoxSizing(border-box);
+
+		.edgt-hspl-cover-image-text-holder-inner {
+
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+
+            .edgt-hspl-cover-image-button-holder {
+                display: inline-block;
+                margin-top: 47px;
+
+                .edgt-btn {
+                    float: left;
+                    &:not(:first-child) {
+                        margin-left: 28px;
+                    }
+
+                }
+            }
+
+
+
+
+		}
+	}
+
+}

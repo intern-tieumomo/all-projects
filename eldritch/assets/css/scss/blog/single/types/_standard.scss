@@ -1,0 +1,216 @@
+.edgt-blog-holder {
+
+	&.edgt-blog-single {
+
+		&.edgt-blog-standard {
+			//single post width - start
+			& {
+				& > article, & > div {
+					width: 65%;
+					margin-left: auto;
+					margin-right: auto;
+
+					.edgt-grid-col-9 &, .edgt-grid-col-8 & {
+						width: 100%;
+					}
+				}
+			}
+			//single post width - end
+
+			.edgt-post-content {
+				margin-bottom: 47px;
+			}
+
+			.edgt-post-text {
+				background-color: transparent;
+				padding: 20px 0 0;
+			}
+
+			.edgt-post-image img {
+				display: block;
+			}
+
+			.edgt-post-title {
+                margin-bottom: 4px;
+			}
+
+			.edgt-post-info {
+				margin-top: 4px;
+				margin-bottom: 7px;
+                font-size: 13px;
+				color: $default-post-info-color;
+
+				> div {
+					display: inline-block;
+                    vertical-align: middle;
+					padding-right: 13px;
+				}
+
+                .edgt-post-info-category {
+
+                    > ul {
+                        list-style: none;
+                    }
+
+                    font-size: 13px;
+
+                    a {
+                        color: $default-post-info-color;
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        &before {
+                            content: '/ ';
+                        }
+                    }
+                }
+			}
+
+			.edgt-tags {
+				a {
+					display: inline-block;
+					font-family: $headings-font-family;
+					text-transform: uppercase;
+					color: $default-text-color;
+					font-size: 13px;
+					padding: 0px 16px;
+					height: 29px;
+					line-height: 31px;
+					margin-right: 10px;
+					border-bottom: 1px solid $default-border-color;
+                    &:hover {
+                        color: $first-main-color;
+                        border-bottom: 1px solid $first-main-color;
+                    }
+                    @include edgtTransition(color $default-transition-property $default-transition-speed,
+                            border-color $default-transition-property $default-transition-speed)
+				}
+			}
+
+			.edgt-tags-share-holder {
+				margin-top: 45px;
+
+				.edgt-single-tags-holder {
+					float: left;
+				}
+
+                .edgt-share-icons-single:first-child {
+                    float: left;
+                    width: 100%;
+                }
+
+				.edgt-share-icons-single {
+					float: right;
+
+					a {
+						color: $default-post-info-color;
+
+						&:hover {
+							color: $first-main-color;
+						}
+					}
+
+					.edgt-social-share-holder {
+						display: inline-block;
+					}
+				}
+
+			}
+
+			.format-link .edgt-post-link {
+                background-image: url("./img/pattern-dark.png");
+                background-position: 0 0;
+                background-repeat: repeat;
+				position: relative;
+
+				.edgt-post-mark {
+					position: absolute;
+					top: 50%;
+					width: 135px;
+					text-align: center;
+
+					@include edgtTransform(translateY(-50%));
+
+					span {
+						color: #fff;
+						font-size: 48px;
+					}
+				}
+
+				.edgt-post-title {
+                    font-size: 22px;
+                    line-height: 1.5em; /* 33/22 */
+                    letter-spacing: 0.5px;
+					padding-left: 135px;
+					padding-right: 30px;
+					margin-top: 63px;
+					margin-bottom: 63px;
+					color: #fff;
+
+					@include edgtTransition(opacity 0.3s ease);
+
+					&:hover {
+						opacity: 0.85;
+					}
+
+					a:hover {
+                        color: $first-main-color;
+					}
+				}
+			}
+
+			.format-quote .edgt-post-quote {
+                background-image: url("./img/pattern-dark.png");
+                background-position: 0 0;
+                background-repeat: repeat;
+				position: relative;
+
+				.edgt-post-mark {
+					position: absolute;
+					top: 50%;
+					width: 135px;
+					text-align: center;
+
+					@include edgtTransform(translateY(-50%));
+
+					span {
+						color: #fff;
+						font-size: 93px;
+					}
+				}
+
+				.edgt-post-title {
+                    font-size: 22px;
+                    line-height: 1.5em; /* 33/22 */
+                    letter-spacing: 0.5px;
+					padding-left: 135px;
+					padding-right: 30px;
+					margin-top: 63px;
+					margin-bottom: 63px;
+					color: #fff;
+
+					@include edgtTransition(opacity 0.3s ease);
+
+					&:hover {
+						opacity: 0.85;
+					}
+
+					a:hover {
+						color: $first-main-color;
+					}
+				}
+
+			}
+
+			.format-gallery {
+				.edgt-slick-slider {
+					opacity: 0;
+
+				}
+			}
+		}
+	}
+}

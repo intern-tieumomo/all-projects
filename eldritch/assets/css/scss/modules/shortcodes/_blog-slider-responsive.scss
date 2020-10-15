@@ -1,0 +1,93 @@
+@include mac {
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 360px;
+		}
+	}
+
+	.edgt-blog-slider-holder.masonry article .edgt-post-info>div {
+		padding-right: 13px;
+	}
+
+	.edgt-blog-slider-holder.masonry article.format-quote .edgt-post-text-inner .edgt-post-title {
+		@include edgtTransform(translateY(-10%));
+	}
+
+	.edgt-blog-slider-holder.masonry article.format-quote .edgt-post-text-inner .edgt-post-mark {
+		top: 43%;
+	}
+}
+
+@include laptop-landscape {
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 413px;
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 635px;
+		}
+	}
+
+	.edgt-blog-slider-holder.masonry article.format-quote .edgt-post-text-inner .edgt-post-title {
+		@include edgtTransform(translateY(0));
+	}
+
+	.edgt-blog-slider-holder.masonry article.format-quote .edgt-post-text-inner .edgt-post-mark {
+		top: 50%;
+	}
+
+	.edgt-blog-slider-holder.simple.light .edgt-blog-slider-item:nth-child(3n):after {
+		background-color: #d7dde3;
+	}
+
+	.edgt-blog-slider-holder.simple.dark .edgt-blog-slider-item:nth-child(3n):after {
+		background-color: #4a4b4f;
+	}
+
+	.edgt-blog-slider-holder.simple.light .edgt-blog-slider-item:nth-child(2n):after {
+		background-color: transparent;
+	}
+
+	.edgt-blog-slider-holder.simple.dark .edgt-blog-slider-item:nth-child(2n):after {
+		background-color: transparent;
+	}
+}
+
+@include ipad-portrait {
+	.edgt-blog-slider-holder.simple .edgt-blog-slider-item:after {
+		background-color: transparent!important; //important to override nth-child selectors
+	}
+
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 537px;
+		}
+	}
+}
+
+@include phone-landscape {
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 458px;
+		}
+	}
+}
+
+@include phone-portrait {
+	.edgt-blog-slider-holder.masonry article.format-link,
+	.edgt-blog-slider-holder.masonry article.format-quote {
+		.edgt-post-text-inner {
+			height: 412px;
+		}
+	}
+}

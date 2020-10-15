@@ -1,0 +1,7 @@
+/* ==========================================================================
+   Messages styles
+   ========================================================================== */
+.edgt-page-content-wrapper .edgt-page-message .alert {
+	margin: 0;
+	@include edgt-border-radius(0);
+}

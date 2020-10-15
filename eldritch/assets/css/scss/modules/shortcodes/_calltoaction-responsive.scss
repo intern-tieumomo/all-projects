@@ -1,0 +1,125 @@
+/* ==========================================================================
+# Call to action responsive style - begin
+========================================================================== */
+
+.edgt-call-to-action {
+
+	.edgt-call-to-action-row-75-25 .edgt-call-to-action-column1,
+	.edgt-call-to-action-row-50-50 .edgt-call-to-action-column1,
+	.edgt-call-to-action-row-66-33 .edgt-call-to-action-column1 {
+
+		@include ipad-portrait {
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+
+	.edgt-call-to-action-row-75-25 .edgt-call-to-action-column2,
+	.edgt-call-to-action-row-50-50 .edgt-call-to-action-column2,
+	.edgt-call-to-action-row-66-33 .edgt-call-to-action-column2 {
+
+		@include ipad-portrait {
+			width: 100%;
+			margin-top: 30px;
+			text-align: center !important;
+		}
+
+	}
+
+	&.with-icon {
+		.edgt-text-wrapper {
+			.edgt-call-to-action-text {
+				@include ipad-portrait {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.edgt-text-wrapper {
+
+		.edgt-call-to-action-text {
+			@include ipad-portrait {
+				margin-top: 30px;
+			}
+		}
+
+		.edgt-call-to-action-icon-holder {
+			@include ipad-portrait {
+				position: relative;
+			}
+
+			.edgt-call-to-action-icon {
+				@include ipad-portrait {
+					display: block;
+				}
+			}
+
+			.edgt-call-to-action-icon-inner {
+				@include ipad-portrait {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.edgt-call-to-action-cell {
+		@include ipad-portrait {
+			display: block;
+		}
+	}
+
+
+	.edgt-call-to-action-cell {
+
+		@include phone-landscape {
+			display: block;
+			text-align: center !important;
+			width: 100% !important;
+		}
+
+	}
+
+	.edgt-text-wrapper .edgt-call-to-action-icon-holder {
+
+		@include phone-landscape {
+			position: relative;
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+
+	.edgt-text-wrapper .edgt-call-to-action-icon {
+
+		@include phone-landscape {
+			display: inline-block;
+		}
+
+	}
+
+	.edgt-text-wrapper .edgt-call-to-action-text {
+
+		@include phone-landscape {
+			text-align: center;
+			margin-bottom: 10px;
+			padding: 0 !important;
+		}
+
+	}
+
+}
+
+.edgt-call-to-action.with-icon {
+
+	@include phone-landscape {
+		padding: 0;
+	}
+
+}
+
+
+/* ==========================================================================
+# Call to action responsive style - end
+========================================================================== */

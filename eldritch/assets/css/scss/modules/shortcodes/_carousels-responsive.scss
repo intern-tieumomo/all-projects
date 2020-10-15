@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) and (min-width: 500px){
+	.slick-slide:nth-child(3n) .edgt-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 668px) and (min-width: 500px) {
+	.slick-slide:nth-child(2n) .edgt-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 499px) {
+	.slick-slide:nth-child(n) .edgt-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}

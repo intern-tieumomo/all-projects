@@ -1,0 +1,39 @@
+// theme colors
+$theme:                  dark !default;
+$main_color:             #c9572a !default; // light
+$back_color:             #2b2b2b !default; // dark
+$back_darken_color:      darken($back_color, 13) !default; // darken
+$back_grey_color:        #30303d !default;
+$back_darken_grey_color: darken($back_grey_color, 10) !default;
+$text_color:             #fff !default;
+$text_mute_color:        rgba($text_color, .5) !default;
+
+$color_primary:  #2b6ad9 !default; // blue
+$color_success:  #2bd964 !default; // green
+$color_info:     #2bd7d9 !default; // light blue
+$color_warning:  #eb8324 !default; // orange
+$color_danger:   #d92b4c !default; // red
+
+// media variables
+$media-xxs: "(max-width: 532px)" !default;
+$media-xs:  "(max-width: 767px)" !default;
+$media-sm:  "(min-width: 767px) and (max-width: 991px)" !default;
+$media-md:  "(min-width: 992px) and (max-width: 1199px)" !default;
+$media-lg:  "(min-width: 1200)" !default;
+
+// font
+$font_body: "Open Sans", sans-serif !default;
+$font_headings: "Josefin Sans", sans-serif !default;
+$body_letter_spacing: normal !default;
+
+// skew size
+$skew_size: 0 !default;
+
+// images opacity
+$banners_opacity: .7 !default;
+$images_opacity: 1 !default;
+$images_hover_opacity: .7 !default;
+
+// navbar
+$navbar-height:    80px !default;
+$navbar-sm-height: 50px !default;

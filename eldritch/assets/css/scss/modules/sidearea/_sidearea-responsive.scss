@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1500px) {
+	.edgt-side-menu {
+		.widget.widget_edgt_instagram_widget {
+			.edgt-instagram-feed {
+				padding-right: 0;
+			}
+		}
+		.widget.widget_text {
+
+			.edgt-iwt.edgt-iwt-left-from-title.edgt-iwt-icon-tiny {
+
+				.edgt-iwt-icon-title-holder {
+					.edgt-iwt-icon-holder {
+						position: absolute;
+					}
+					.edgt-iwt-title-holder {
+						margin-left: 31px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include laptop-landscape-large {
+    .edgt-side-menu {
+        .edgt-close-side-menu-holder {
+            right: 39px;
+        }
+    }
+}
+
+@include mac {
+
+	.edgt-side-menu-slide-from-right {
+		.edgt-side-menu {
+			padding: 45px 30px 5px 40px;
+		}
+	}
+
+
+}

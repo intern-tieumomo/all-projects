@@ -1,0 +1,427 @@
+$header-icon: 20px;
+
+@import "blocks/logo";
+@import "blocks/main_menu";
+@import "blocks/top_line";
+@import "widgets/search";
+@import "widgets/sections";
+@import "widgets/banner";
+@import "top-bar/top-bar";
+@import "types/header-standard/_header-standard";
+@import "types/header-minimal/_header-minimal";
+@import "types/header-centered/_header-centered";
+@import "types/header-vertical/_header-vertical";
+@import "types/mobile-header/_mobile-header";
+
+$logo-area-height: 155px;
+$menu-area-height: 90px;
+$sticky-header-height: 60px;
+
+.edgt-page-header {
+
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 110;
+
+    /* ==========================================================================
+    #General header layout - start
+    ========================================================================== */
+    a img {
+        display: block;
+    }
+
+    .edgt-grid {
+        height: 100%;
+
+        .edgt-vertical-align-containers {
+            padding: 0;
+            @include edgtTransition(background-color 0.3s ease);
+        }
+    }
+
+    /* ==========================================================================
+    #General header layout - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Logo area styles - start
+    ========================================================================== */
+    .edgt-logo-area {
+        height: $logo-area-height;
+        overflow: hidden;
+        position: relative;
+        background-repeat: repeat;
+
+        .edgt-logo-wrapper a {
+            max-height: $logo-area-height*0.9;
+        }
+    }
+    /* ==========================================================================
+    #Logo area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Menu area styles - start
+    ========================================================================== */
+    .edgt-menu-area {
+        height: $menu-area-height;
+        position: relative;
+        @include edgtTransition(background-color 0.3s ease);
+        background-repeat: repeat;
+
+        .edgt-logo-wrapper a {
+            max-height: $menu-area-height*0.9;
+        }
+
+        .edgt-position-right-inner {
+            height: 100%;
+        }
+    }
+
+    /* ==========================================================================
+    #Menu area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Sticky header styles - start
+    ========================================================================== */
+    .edgt-sticky-header {
+        height: $sticky-header-height;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        -webkit-transform: translateY(-110%);
+        transform: translateY(-110%);
+        -webkit-transition: -webkit-transform 0.33s ease;
+        transition: transform 0.3s ease;
+        -webkit-backface-visibility: hidden;
+        @include edgtBoxShadow(1px 1px 3px rgba(0, 0, 0, 0.1));
+
+        &.header-appear {
+            transform: translateY(0%);
+        }
+
+        .edgt-sticky-holder {
+            height: 100%;
+            background-color: $default-dark-color;
+
+            background-image: url("./img/pattern-dark.png");
+            background-position: 0 0;
+            background-repeat: repeat;
+
+            position: relative;
+            z-index: 2;
+
+            @include edgtBoxSizing(border-box);
+        }
+
+        .admin-bar &.header-appear {
+            top: 32px;
+        }
+
+        .edgt-position-right-inner {
+            height: 100%;
+        }
+
+        .edgt-sticky-holder .edgt-logo-wrapper a {
+            max-height: $sticky-header-height*0.9;
+        }
+
+        .edgt-sticky-right-widget-area {
+            height: 100%;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            @include edgtClearfix;
+        }
+
+        .edgt-sticky-right-widget {
+            display: table;
+            height: 100%;
+            float: left;
+            padding: 0 12px;
+            position: relative;
+
+            &:not(.widget_edgt_side_area_opener):last-child {
+                padding-right: 0;
+            }
+        }
+
+        .edgt-sticky-right-widget-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .edgt-sticky-right {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .edgt-main-menu > ul > li > a,
+        .edgt-main-menu > ul > li.edgt-active-item > a,
+        .edgt-side-menu-button-opener,
+        .edgt-search-opener {
+            color: $header-light-color;
+            @include edgtTransition(color $default-transition-property $default-transition-speed);
+        }
+
+        .edgt-side-menu-button-opener:hover,
+        .edgt-search-opener:hover {
+            opacity: 1;
+            color: $first-main-color;
+        }
+
+        .edgt-boxed & {
+            .edgt-main-menu {
+                float: left;
+            }
+
+            .edgt-sticky-right-widget-inner > div {
+                width: $header-icon;
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                text-align: center;
+                padding: 0 10px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                .edgt-shopping-cart-holder {
+                    height: 100%;
+                    > * {
+                        display: table;
+                        height:100%;
+                        text-align: center;
+                        width: 100%;
+                        .edgt-header-cart {
+                            display: table-cell;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* ==========================================================================
+    #Sticky header styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Fixed header styles - start
+    ========================================================================== */
+    .edgt-fixed-wrapper.fixed {
+        width: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        -webkit-backface-visibility: hidden;
+    }
+
+    /* ==========================================================================
+    #Fixed header - end
+    ========================================================================== */
+
+    .edgt-search-opener {
+        color: $headings-text-color;
+        font-size: 18px;
+        position: relative;
+        top: -1px;
+
+        &:hover {
+            color: rgba($headings-text-color, 0.7);
+        }
+    }
+
+    .edgt-menu-area .edgt-search-opener .edgt-icon-font-elegant {
+        position: relative;
+        top: 4px;
+    }
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+
+.edgt-light-header {
+
+    .edgt-logo-area,
+    .edgt-menu-area,
+    .edgt-vertical-menu-area {
+        //color: $header-light-color !important; //Beacause of inline color styles
+
+        .edgt-main-menu-widget-area {
+            .widget:not(.widget_edgt_woocommerce_dropdown_cart):not(.widget_edgt_side_area_opener):not(.widget_edgt_search_opener) {
+                color: $header-light-color;
+
+                p,
+                a,
+                span,
+                i,
+                .widgettitle {
+                    color: $header-light-color;
+                }
+
+                a {
+                    border-color: $header-light-color !important;
+                }
+
+                .edgt-btn:hover .edgt-btn-text {
+                    color: #222328 !important;
+                }
+            }
+
+            .widget_edgt_woocommerce_dropdown_cart .edgt-cart-icon {
+                color: $header-light-color;
+            }
+        }
+
+        .edgt-light-logo {
+            opacity: 1;
+        }
+
+        .edgt-dark-logo,
+        .edgt-normal-logo {
+            opacity: 0;
+        }
+    }
+
+    .edgt-vertical-menu > ul > li > a,
+    .edgt-vertical-area-widget-holder,
+    .edgt-vertical-area-widget-holder a,
+    .edgt-vertical-area-widget-holder a span {
+        color: $header-light-color !important;
+    }
+
+    .edgt-page-header #lang_sel > ul > li > a {
+        color: $header-light-color;
+    }
+
+    .widget_text.edgt-right-from-logo-widget {
+
+        .edgt-iwt-icon-holder .edgt-icon-element,
+        .edgt-icon-shortcode .lnr-pointer-right {
+            color: $header-light-color !important;
+        }
+
+        span.edgt-icon-shortcode.circle {
+            background-color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .edgt-icon-shortcode.square {
+            background-color: #404040 !important;
+        }
+
+        .edgt-icon-element {
+            color: $header-light-color !important;
+        }
+
+        .edgt-iwt-title-holder h6 {
+            color: $header-light-color;
+        }
+
+        .edgt-iwt-text-holder p {
+            color: $header-light-color !important;
+        }
+
+        h6 {
+            color: $header-light-color;
+        }
+    }
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+
+.edgt-dark-header {
+
+    .edgt-logo-area,
+    .edgt-menu-area,
+    .edgt-vertical-menu-area {
+        //color: $header-dark-color !important; //Because of inline color styles
+
+        .edgt-main-menu-widget-area {
+            .widget:not(.widget_edgt_side_area_opener):not(.widget_edgt_side_area_opener):not(.widget_edgt_search_opener) {
+                color: $header-dark-color !important; //Beacause of inline color styles
+
+                p,
+                a,
+                span,
+                i,
+                .widgettitle {
+                    color: $header-dark-color !important; //Beacause of inline color styles
+                }
+
+                .edgt-btn:hover .edgt-btn-text {
+                    color: #fff !important;
+                }
+            }
+        }
+
+        .edgt-dark-logo {
+            opacity: 1;
+        }
+
+        .edgt-normal-logo,
+        .edgt-light-logo {
+            opacity: 0;
+        }
+    }
+
+    .edgt-vertical-menu > ul > li > a,
+    .edgt-vertical-area-widget-holder,
+    .edgt-vertical-area-widget-holder a,
+    .edgt-vertical-area-widget-holder a span {
+        color: $header-dark-color !important;
+    }
+
+    .edgt-page-header #lang_sel > ul > li > a {
+        color: $header-dark-color;
+    }
+
+    .widget_text.edgt-right-from-logo-widget {
+
+        .edgt-iwt-icon-holder .edgt-icon-element,
+        .edgt-icon-shortcode .lnr-pointer-right {
+            color: $header-dark-color !important;
+        }
+
+        span.edgt-icon-shortcode.circle {
+            background-color: rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .edgt-icon-element {
+            color: $header-dark-color !important;
+        }
+
+        .edgt-iwt-title-holder h6 {
+            color: $header-dark-color;
+        }
+
+        .edgt-iwt-text-holder p {
+            color: $header-dark-color !important;
+        }
+
+        h6 {
+            color: $header-dark-color;
+        }
+    }
+
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */

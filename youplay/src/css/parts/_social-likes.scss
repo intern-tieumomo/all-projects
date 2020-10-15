@@ -1,0 +1,8 @@
+.social-likes__widget::before,
+.social-likes__widget::after {
+    display: block !important; // stylelint-disable-line
+}
+.social-likes__button {
+    padding: .04em .7em .18em 1em;
+    color: inherit;
+}

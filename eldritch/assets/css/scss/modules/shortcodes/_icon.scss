@@ -1,0 +1,84 @@
+.edgt-icon-shortcode {
+	$transition-duration: 0.15s;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.circle,
+	&.square {
+		background-color: #fff;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		margin-right: 9px;
+		box-shadow: $default-box-shadow;
+
+		@include edgtTransition(
+				background-color $transition-duration ease-in-out,
+				border-color $transition-duration ease-in-out
+		);
+
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.edgt-icon-element {
+			color: $headings-text-color;
+			line-height: inherit;
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+	}
+
+	&.circle {
+		@include edgtBorderRadius(50%);
+	}
+
+	&.shadow {
+		@include edgtBoxShadow(1px 2px 9px 1px rgba(0, 0, 0, 0.09));
+	}
+
+	.edgt-icon-element {
+		@include edgtTransition(color $transition-duration ease-in-out);
+
+		&.edgt-icon-simple-line-icon:before {
+			font-family: inherit !important; /*to resolve conflict between Simple line icons and Linea icons  */
+		}
+
+	}
+}
+
+.edgt-icon-animation-holder {
+	@include edgtTransform(scale(0));
+	@include edgtTransition(transform 0.15s ease-in-out);
+	display: inline-block;
+
+	&.edgt-icon-animation-show {
+		@include edgtTransform(scale(1));
+	}
+}
+
+.edgt-icon-tiny {
+	font-size: 1.33333333em;
+	line-height: .75em;
+	vertical-align: -15%;
+}
+
+.edgt-icon-small {
+	font-size: 2em;
+}
+
+.edgt-icon-medium {
+	font-size: 3em;
+}
+
+.edgt-icon-large {
+	font-size: 4em;;
+}
+
+.edgt-icon-huge {
+	font-size: 5em;
+}

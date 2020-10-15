@@ -1,0 +1,81 @@
+/* ==========================================================================
+   WooCommerce Buttons styles - begin
+   ========================================================================== */
+
+.woocommerce-page .edgt-content,
+div.woocommerce {
+
+	a.button,
+	a.added_to_cart,
+	input[type="submit"],
+	button[type="submit"] {
+		position: relative;
+		display: inline-block;
+        padding: 14px 50px 14px;
+        min-width: 95px;
+        font-size: 14px;
+        line-height: 18px;
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-family: $headings-font-family;
+        text-transform: uppercase;
+        text-align: center;
+
+		color: $headings-text-color;
+		background-color: $first-main-color;
+		border: 0;
+		outline: none;
+		cursor: pointer;
+		vertical-align: middle;
+		-webkit-appearance: none;
+        @include edgtTransition(color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out);
+        @include edgtBoxSizing(border-box);
+
+        border: 1px solid $button-border-color;
+        color: $headings-text-color;
+        background-color: transparent;
+
+
+		&:hover {
+            border: 1px solid $headings-text-color;
+            color: #fff;
+            background-color: $headings-text-color;
+		}
+
+
+
+
+
+	}
+
+	a.button.added {
+		display: none;
+	}
+}
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin {
+    .edgt-content,
+    div.woocommerce {
+        a.button,
+        a.added_to_cart,
+        input[type="submit"],
+        button[type="submit"] {
+
+            border: 1px solid #fff;
+            background-color: transparent;
+            color: #fff;
+
+            &:hover {
+                border: 1px solid #fff;
+                background-color: #fff;
+                color: $headings-text-color;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Buttons styles - end
+   ========================================================================== */

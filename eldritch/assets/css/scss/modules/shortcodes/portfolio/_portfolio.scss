@@ -1,0 +1,340 @@
+$portfolio-gallery-layers: (
+		background-overlay: 1,
+		item-link: 2,
+		item-content: 3
+);
+
+@import 'portfolio-types/standard';
+@import 'portfolio-types/gallery';
+@import 'portfolio-types/pinterest';
+@import 'portfolio-types/masonry';
+@import 'portfolio-types/simple';
+@import 'portfolio-types/horizontally-scrolling-portfolio-list';
+@import 'portfolio-slider';
+
+/* ==========================================================================
+   Portfolio shortcode styles - begin
+   ========================================================================== */
+
+/* #General portfolio list styles - start
+  ========================================================================== */
+.edgt-portfolio-list-holder {
+	height: 100%;
+	font-size: 0px;
+
+	article {
+		position: relative;
+		vertical-align: top;
+		overflow:hidden;
+
+		.edgt-ptf-item-image-holder {
+			position: relative;
+
+			a {
+				display: block;
+				text-align: center;
+			}
+
+			img {
+				vertical-align: top;
+				height: auto;
+				max-width: 100%;
+				backface-visibility: hidden;
+			}
+		}
+
+		.edgt-like {
+			color: #808080;
+
+			&:after {
+				content: '\e030';
+				font-family: 'ElegantIcons';
+				color: inherit;
+			}
+
+			&.liked:after {
+				content: '\e089';
+			}
+
+		}
+
+		.edgt-portfolio-video {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			text-align: center;
+			font-size: 38px;
+			color: #fff;
+
+			@include edgtTransform(translateY(-50%));
+		}
+
+		.edgt-portfolio-video-inner {
+			display: inline-block;
+			height: 57px;
+			width: 57px;
+			line-height: 57px;
+			border: 3px solid #fff;
+
+			@include edgtBorderRadius(50%);
+			@include edgtBoxSizing(border-box);
+
+			span {
+				margin-left: 1px;
+			}
+		}
+	}
+
+	article.mix {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.edgt-portfolio-list-holder-outer.edgt-portfolio-gallery-hover {
+	article {
+		.edgt-ptf-item-title {
+			position: relative;
+			color: #fff;
+		}
+
+		.edgt-ptf-item-title,
+		.edgt-like {
+			z-index: 3;
+		}
+
+		.edgt-ptf-item-image-holder {
+			overflow: hidden;
+
+			img {
+				backface-visibility: visible;
+			}
+		}
+
+		.edgt-portfolio-link {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+
+		.edgt-ptf-item-text-overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+
+			@include edgtTransition(opacity 0.5s cubic-bezier(.38, .76, 0, .87));
+		}
+
+		.edgt-ptf-item-text-overlay-inner {
+			@include edgtTableLayout;
+		}
+
+		.edgt-ptf-item-text-holder {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 15px; //prevent title from spreading the whole lenght of its container
+		}
+
+		.edgt-ptf-wrapper:hover {
+			.edgt-ptf-item-text-overlay {
+				opacity: 1;
+			}
+		}
+
+		.edgt-ptf-item-icons-holder {
+			margin: 10px 0;
+		}
+	}
+}
+
+.edgt-portfolio-list-holder-outer.edgt-ptf-with-spaces {
+	.edgt-portfolio-list-holder {
+		line-height: 0;
+		text-align: justify;
+
+		article {
+			//reset portfolio item's typography
+			font-size: $default-text-size;
+			line-height: $default-text-line-height;
+			text-align: left;
+		}
+
+		.edgt-ptf-item-image-holder img {
+			backface-visibility: visible;
+		}
+
+		.edgt-ptf-gap {
+			display: inline-block;
+		}
+	}
+}
+
+/* General portfolio list styles - end
+   ========================================================================== */
+
+/* #Portfolio grid styles - start
+  ========================================================================== */
+.edgt-portfolio-list-holder-outer {
+
+	&.edgt-ptf-three-columns {
+		article {
+			width: 33.33%;
+		}
+	}
+
+	&.edgt-ptf-four-columns {
+		article {
+			width: 25%;
+		}
+	}
+
+	&.edgt-ptf-five-columns {
+		article {
+			width: 20%;
+		}
+	}
+
+	&.edgt-ptf-six-columns {
+		article {
+			width: 16.66%;
+		}
+	}
+}
+
+/* Portfolio grid styles - end
+   ========================================================================== */
+
+/* #Portfolio filters styles - start
+  ========================================================================== */
+.edgt-portfolio-filter-holder {
+	margin: 0 0 40px;
+
+	&.left {
+		text-align: left;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	.edgt-portfolio-filter-holder-inner {
+
+		ul {
+			list-style: none;
+			vertical-align: middle;
+			padding: 0;
+			margin: 0;
+
+			ul:not(:first-of-type) {
+				display: none;
+			}
+		}
+
+		ul {
+
+			&.edgt-filter-last-level li {
+				font-size: 12px;
+			}
+
+			li {
+				cursor: pointer;
+				display: inline-block;
+				margin: 0;
+				padding: 0 15px;
+
+				font-family: $headings-font-family;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $default-text-color;
+				font-size: 20px;
+
+				@include edgtTransition(color 0.15s ease-in-out);
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+
+		ul li.active,
+		ul li.current,
+		ul li:hover {
+			color: $first-main-color;
+		}
+	}
+
+	&.light {
+		.edgt-portfolio-filter-holder-inner {
+			ul li {
+				color: #a1a0a0;
+			}
+
+			ul li.active,
+			ul li.current,
+			ul li:hover {
+				color: $first-main-color;
+			}
+		}
+	}
+}
+
+/* Portfolio filters styles - end
+   ========================================================================== */
+
+/* #Portfolio Load More Button - start
+  ========================================================================== */
+.edgt-portfolio-list-holder-outer .edgt-ptf-list-paging {
+	text-align: center;
+	margin: 40px 0 0 0;
+	min-height: 46px;
+}
+
+/* Portfolio Load More Button - end
+   ========================================================================== */
+
+/* #Portfolio List Appear Effect - start
+  ========================================================================== */
+.edgt-portfolio-list-holder-outer.edgt-appear-effect {
+	article {
+		visibility: hidden;
+
+		.touch & {
+			visibility: visible;
+		}
+
+		.no-touch & {
+			visibility: visible;
+			opacity: 0;
+			@include edgtTransform(scale(.85));
+
+			&.edgt-appeared {
+				-webkit-transition: opacity 1.85s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .85s cubic-bezier(0.23, 1, 0.32, 1);
+				transition: opacity 1.85s cubic-bezier(0.23, 1, 0.32, 1), transform .85s cubic-bezier(0.23, 1, 0.32, 1);
+				opacity: 1;
+				@include edgtTransform(scale(1));
+			}
+		}
+	}
+}
+
+/* Portfolio List Appear Effect - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio styles - end
+   ========================================================================== */

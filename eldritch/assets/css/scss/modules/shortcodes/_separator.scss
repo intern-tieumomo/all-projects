@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Separator start style
+   ========================================================================== */
+.edgt-separator-holder {
+	position: relative;
+	height: auto;
+	font-size: 0;
+    line-height: 1em;
+
+	&.edgt-separator-center {
+		text-align: center;
+	}
+	&.edgt-separator-left {
+		text-align: left;
+	}
+	&.edgt-separator-right {
+		text-align: right;
+	}
+
+	&.edgt-separator-full-width {
+		.edgt-separator {
+			width: 100% !important;
+		}
+	}
+
+}
+.edgt-separator {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 1px solid #b2b2b2;
+	margin: 10px 0;
+
+
+}
+
+/* ==========================================================================
+   End of Separator style
+   ========================================================================== */

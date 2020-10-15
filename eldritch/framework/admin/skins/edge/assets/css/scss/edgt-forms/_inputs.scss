@@ -1,0 +1,168 @@
+input.edgt-form-element,
+select.edgt-form-element,
+textarea.edgt-form-element {
+	@include edgt-box-shadow(none);
+	@include edgt-transition(border-color 0.3s ease-in-out);
+
+	border-color: #ddd;
+	font-size: 12px;
+	outline: none;
+}
+
+.input-group-addon {
+    font-size: 12px;
+    background-color: #f7f7f7;
+}
+
+input[type='text'].edgt-form-element,
+input[type='email'].edgt-form-element,
+input[type='password'].edgt-form-element,
+input[type='number'].edgt-form-element,
+select.edgt-form-element,
+textarea.edgt-form-element {
+	@include edgt-border-radius(4px);
+}
+
+input[type='text'].edgt-form-element.edgt-form-element-xxsmall,
+input[type='email'].edgt-form-element.edgt-form-element-xxsmall,
+input[type='password'].edgt-form-element.edgt-form-element-xxsmall,
+input[type='number'].edgt-form-element.edgt-form-element-xxsmall,
+select.edgt-form-element.edgt-form-element-xxsmall,
+textarea.edgt-form-element.edgt-form-element-xxsmall {
+	width: 60px;
+}
+
+input[type='text'].edgt-form-element.edgt-form-element-xsmall,
+input[type='email'].edgt-form-element.edgt-form-element-xsmall,
+input[type='password'].edgt-form-element.edgt-form-element-xsmall,
+input[type='number'].edgt-form-element.edgt-form-element-xsmall,
+select.edgt-form-element.edgt-form-element-xsmall,
+textarea.edgt-form-element.edgt-form-element-xsmall {
+	width: 100px;
+}
+
+input[type='text'].edgt-form-element.edgt-form-element-small,
+input[type='email'].edgt-form-element.edgt-form-element-small,
+input[type='password'].edgt-form-element.edgt-form-element-small,
+input[type='number'].edgt-form-element.edgt-form-element-small,
+select.edgt-form-element.edgt-form-element-small,
+textarea.edgt-form-element.edgt-form-element-small {
+	width: 155px;
+}
+
+input[type='text'].edgt-form-element.edgt-form-element-medium,
+input[type='email'].edgt-form-element.edgt-form-element-medium,
+input[type='password'].edgt-form-element.edgt-form-element-medium,
+input[type='number'].edgt-form-element.edgt-form-element-medium,
+select.edgt-form-element.edgt-form-element-medium,
+textarea.edgt-form-element.edgt-form-element-medium {
+	width: 255px;
+}
+
+input[type='text'].edgt-form-element.edgt-form-element-large,
+input[type='email'].edgt-form-element.edgt-form-element-large,
+input[type='password'].edgt-form-element.edgt-form-element-large,
+input[type='number'].edgt-form-element.edgt-form-element-large,
+select.edgt-form-element.edgt-form-element-large,
+textarea.edgt-form-element.edgt-form-element-large {
+	width: 500px;
+}
+
+textarea.edgt-form-element {
+	resize: none;
+}
+#general textarea.edgt-form-element {
+	resize: vertical;
+}
+
+input[type='text'].edgt-form-element,
+input[type='email'].edgt-form-element,
+input[type='password'].edgt-form-element,
+input[type='number'].edgt-form-element,
+select.edgt-form-element {
+	height: 34px;
+	line-height: 1.42857143;
+}
+
+input[type='text'].edgt-form-element,
+input[type='email'].edgt-form-element,
+input[type='password'].edgt-form-element,
+input[type='number'].edgt-form-element,
+select.edgt-form-element,
+textarea.edgt-form-element {
+	padding: 6px 12px;
+}
+input.edgt-form-element:hover,
+select.edgt-form-element:hover,
+textarea.edgt-form-element:hover {
+	background-color:#f7f9fa;
+}
+
+input.edgt-form-element:focus,
+select.edgt-form-element:focus,
+textarea.edgt-form-element:focus {
+	border-color: #999;
+	background-color:#f7f9fa;
+
+	@include edgt-box-shadow(none);
+}
+
+input[type="radio"].edgt-form-element,
+input[type="checkbox"].edgt-form-element {
+	margin-top: 1px;
+	outline: none;
+}
+
+@media only screen and (max-width: $second-break-point) {
+
+	input[type="radio"].edgt-form-element,
+	input[type="checkbox"].edgt-form-element {
+		width: 16px;
+		height: 16px;
+	}
+}
+@media only screen and (max-width: $second-break-point) {
+	input[type="radio"].edgt-form-element:checked:before,
+	input[type="checkbox"].edgt-form-element:checked:before {
+		font: 400 21px/1 dashicons;
+	}
+}
+@media only screen and (max-width: $second-break-point) {
+	input[type="checkbox"].edgt-form-element:checked:before {
+		margin: -3px 0 0 -4px;
+	}
+}
+@media only screen and (max-width: $second-break-point) {
+	input[type="radio"].edgt-form-element:checked:before {
+		margin: 3px;
+	}
+}
+
+.input-group {
+	margin-bottom: 15px;
+}
+
+.input-group .input-group-addon {
+	@include edgt-border-radius(0);
+}
+
+label {
+	margin:0;
+}
+
+.radio-inline input[type="radio"] + img {
+    border: 2px solid transparent;
+    -webkit-transition: border-color 0.15s ease-in-out;
+    -moz-transition: border-color 0.15s ease-in-out;
+    -ms-transition: border-color 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.radio-inline input[type="radio"]:checked + img {
+    border-color: #bba011;
+}
+
+.edgt-radio-group-holder.with-images .radio-inline {
+    padding-left: 0;
+}

@@ -1,0 +1,106 @@
+.edgt-match-featured-holder {
+    @include edgtRelativeHolderLayout();
+
+    $margin-error: 29px;
+
+    article {
+        @include edgtRelativeHolderLayout();
+        padding: 20px 0 15px;
+        text-align: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $default-border-color-light;
+        }
+
+        .edgt-match-item-holder {
+            display: table;
+            width: 100%;
+            padding: 0 22px;
+            @include edgtBoxSizing(border-box);
+
+            > * {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .edgt-match-single-team {
+                text-align: center;
+
+                .edgt-match-item-image-holder {
+                    vertical-align: middle;
+                }
+
+                img {
+                    vertical-align: middle;
+                }
+
+                .edgt-match-team-title {
+                    margin: 5px 0 0;
+                }
+            }
+
+            .edgt-match-vs-image {
+                width: 102px;
+                @include edgtBoxSizing(border-box);
+                padding: 0 31px $margin-error;
+            }
+
+        }
+
+        .edgt-match-info {
+
+            .edgt-match-title {
+                margin: 0;
+            }
+
+            .edgt-match-meta {
+                font-size: 13px;
+
+                .edgt-match-category-holder {
+                    text-transform: uppercase;
+                    &:not(:last-child):after {
+                        content: ' / ';
+                    }
+                }
+
+            }
+        }
+
+        .edgt-match-result-holder {
+            font-family: $default-font-family;
+            color: $headings-text-color;
+            font-size: 32px;
+            line-height: 1.25em;  /* 40/32 */
+            margin: 30px 0;
+        }
+
+        .edgt-match-link {
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.edgt-match-skin-light {
+        article {
+
+            color: $default-text-color-dark;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $default-border-color-dark;
+            }
+
+            .edgt-match-result-holder {
+                color: #fff;
+            }
+
+            .edgt-match-title,
+            .edgt-match-team-title {
+                color: #fff;
+            }
+        }
+    }
+
+}

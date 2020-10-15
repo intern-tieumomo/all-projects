@@ -1,0 +1,156 @@
+<!-- Footer -->
+<footer class="youplay-footer{{ ' youplay-footer-parallax' if footer_parallax }}">
+    {% if footer_bg %}
+        <div class="image"{{ (' data-speed="' + footer_parallax_speed + '" data-img-position="50% 0%"') | safe if footer_parallax }}>
+            <img src="{{ footer_bg }}" alt=""{{ ' class="jarallax-img"' | safe if footer_parallax }}>
+        </div>
+    {% endif %}
+
+    <div class="wrapper">
+
+        {% if footer_widgets_block %}
+            <!-- Widgets -->
+            <div class="widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="side-block">
+                                <div class="block-content">
+                                    <img src="assets/images/shooter/logo.png" alt="">
+                                    <br><br>
+                                    <p>
+                                        Pretium placerat senectus cubilia purus. In curae; sem morbi odio, platea magna. Fames integer accumsan. Pellentesque proin fermentum et consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <!-- Side Popular News -->
+                            <div class="side-block">
+                                <h4 class="block-title">Popular News</h4>
+                                <div class="block-content p-0">
+                                    <!-- Single News Block -->
+                                    <div class="row youplay-side-news">
+                                        <div class="col-xs-3 col-md-4">
+                                            <a href="#" class="angled-img">
+                                                <div class="img">
+                                                    <img src="assets/images/shooter/game-cos-1-500x375.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-9 col-md-8">
+                                            <h4 class="ellipsis"><a href="#" title="Bloodborne - First Try!">Ready for Preorder - Call of Shooter</a></h4>
+                                            <span class="date"><i class="fa fa-calendar"></i> May 14, 2017</span>
+                                        </div>
+                                    </div>
+                                    <!-- /Single News Block -->
+
+                                    <!-- Single News Block -->
+                                    <div class="row youplay-side-news">
+                                        <div class="col-xs-3 col-md-4">
+                                            <a href="#" class="angled-img">
+                                                <div class="img">
+                                                    <img src="assets/images/shooter/game-cos-2-500x375.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-9 col-md-8">
+                                            <h4 class="ellipsis"><a href="#" title="Whats New in Middle-earth">Closed Beta Started Today - Call of Shooter</a></h4>
+                                            <span class="date"><i class="fa fa-calendar"></i> April 24, 2017</span>
+                                        </div>
+                                    </div>
+                                    <!-- /Single News Block -->
+
+                                    <!-- Single News Block -->
+                                    <div class="row youplay-side-news">
+                                        <div class="col-xs-3 col-md-4">
+                                            <a href="#" class="angled-img">
+                                                <div class="img">
+                                                    <img src="assets/images/shooter/game-cos-3-500x375.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-9 col-md-8">
+                                            <h4 class="ellipsis"><a href="#" title="Let's Grind Diablo III">We are in Facebook Now!</a></h4>
+                                            <span class="date"><i class="fa fa-calendar"></i> April 5, 2017</span>
+                                        </div>
+                                    </div>
+                                    <!-- /Single News Block -->
+                                </div>
+                            </div>
+                            <!-- /Side Popular News -->
+                        </div>
+                        <div class="col-md-3">
+                            <!-- Our Twitter -->
+                            <div class="side-block">
+                                <h4 class="block-title">Our Twitter</h4>
+                                <div class="block-content">
+                                    <div class="youplay-twitter" data-twitter-user-name="nkdevv" data-twitter-count="2" data-twitter-hide-replies="false"></div>
+                                </div>
+                            </div>
+                            <!-- /Our Twitter -->
+                        </div>
+                        <div class="col-md-3">
+                            <!-- Instagram -->
+                            <div class="side-block">
+                                <h4 class="block-title">Instagram</h4>
+                                <div class="youplay-instagram row small-gap" data-instagram-user-id="2133360819"
+                                ></div>
+                            </div>
+                            <!-- /Instagram -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Widgets -->
+        {% endif %}
+
+        {% if footer_social_block %}
+            <!-- Social Buttons -->
+            <div class="social">
+                <div class="container">
+                    <h3>Connect socially with <strong>Youplay</strong></h3>
+
+                    <div class="social-icons">
+                        <div class="social-icon">
+                            <a href="#">
+                                <i class="fab fa-discord"></i>
+                                <span>Subscribe to Discord</span>
+                            </a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#">
+                                <i class="fab fa-twitch"></i>
+                                <span>Watch on Twitch</span>
+                            </a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>
+                                <span>Watch on Youtube</span>
+                            </a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#">
+                                <i class="fab fa-twitter-square"></i>
+                                <span>Follow on Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Social Buttons -->
+        {% endif %}
+
+        {% if footer_text %}
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    {{ footer_text | safe }}
+                </div>
+            </div>
+            <!-- /Copyright -->
+        {% endif %}
+    </div>
+</footer>
+<!-- /Footer -->

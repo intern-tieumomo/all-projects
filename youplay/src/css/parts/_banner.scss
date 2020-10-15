@@ -1,0 +1,116 @@
+.no-banner {
+    padding-top: $navbar-height;
+}
+.youplay-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 550px;
+    overflow: hidden;
+    background: $back_color;
+
+    @media screen and (min-width: 0\0) {
+        height: 0; // fixed IE flex vertical centering
+    }
+
+    // top banner top padding
+    &.banner-top {
+        padding-top: $navbar-height;
+    }
+
+    &.small {
+        min-height: 450px;
+        font-size: inherit;
+    }
+
+    &.xsmall {
+        min-height: 350px;
+    }
+
+    &.big {
+        min-height: 650px;
+    }
+
+    &.full {
+        min-height: 100vh;
+    }
+
+    // heading
+    h1,
+    h2 {
+        margin-top: 0;
+    }
+
+    // banner info
+    .info {
+        position: relative;
+        width: 100%;
+        padding: 80px 0;
+
+        @media #{$media-xs} {
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            font-size: 5rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// background parallax image
+.youplay-banner .image,
+footer .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: $banners_opacity;
+
+    img {
+        width: 100%;
+        height: 100%;
+        font-family: "object-fit: cover;"; // stylelint-disable-line
+        z-index: -1;
+        object-fit: cover;
+    }
+}
+
+// full height banner
+.full,
+.full .youplay-banner {
+    height: 100%;
+    min-height: 650px;
+}
+.full {
+    overflow: auto;
+}
+.full .youplay-banner .image {
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+// full width banner
+.wide .youplay-banner .image {
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+// Jarallax banners
+.youplay-banner-parallax.youplay-banner .image {
+    background-attachment: initial;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.youplay-banner-parallax.youplay-banner.banner-top .image {
+    background-position: 50% 0;
+}

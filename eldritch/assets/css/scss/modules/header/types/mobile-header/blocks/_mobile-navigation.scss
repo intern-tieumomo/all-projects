@@ -1,0 +1,76 @@
+.edgt-mobile-header {
+	.edgt-mobile-nav {
+		display: none;
+
+		background-color: #fff;
+
+		ul {
+			list-style-type: none;
+
+			//dropdowns
+			ul {
+				margin-left: 20px;
+				display: none;
+			}
+		}
+
+		li {
+			position: relative;
+		}
+
+		a, h4 {
+			//h4 is here because of no link option in navigation
+			border-bottom: 1px solid #eaeaea;
+			display: block;
+
+			font-size: 14px;
+			color: #8d8d8d;
+			padding: 9px 0px;
+            margin: 0px;
+			display: block;
+			position: relative;
+			text-transform: none;
+			line-height: 18px;
+			letter-spacing: 0;
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		.mobile_arrow {
+			$mobile-arrow-height: 35px;
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			line-height: $mobile-arrow-height;
+			height: $mobile-arrow-height;
+			padding-right: 10px;
+			width: 50px;
+			text-align: right;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			.edgt-sub-arrow {
+				@include edgtTransition(transform 0.2s ease-in-out);
+			}
+
+			//@TODO remove this line of code when new headers are enabled
+			.fa-angle-down {
+				display: none; //temporarily
+			}
+		}
+
+		li.edgt-opened > .mobile_arrow > .edgt-sub-arrow {
+			@include edgtTransform(rotate(90deg));
+		}
+
+		& > ul > li:last-child > a,
+		& > .edgt-grid > ul > li:last-child > a {
+			border-bottom: none;
+		}
+	}
+}

@@ -1,0 +1,221 @@
+.angled-img {
+    position: relative;
+    display: block;
+
+    &,
+    &:hover,
+    &:focus {
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+    }
+
+    // image
+    .img {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        background: $back_color;
+        transform: skew(-$skew_size);
+        transform-origin: 50% 50%;
+        -webkit-backface-visibility: hidden; // stylelint-disable-line
+
+        > img {
+            width: 100%;
+            opacity: $images_opacity;
+            transition: .3s opacity ease;
+            transform: skew($skew_size) scale($skew_scale);
+            -webkit-backface-visibility: hidden; // stylelint-disable-line
+        }
+
+        // image offset
+        &.img-offset {
+            transform-origin: 50% 100%;
+        }
+    }
+    &:hover .img > img {
+        opacity: $images_hover_opacity;
+    }
+
+    // icon
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+        font-size: 5rem;
+        opacity: .2;
+        transition: .3s opacity ease;
+    }
+    &:hover .icon {
+        opacity: .8;
+    }
+
+    // price
+    .price {
+        font-weight: 600;
+        del {
+            color: $text_mute_color;
+        }
+    }
+
+    // heading
+    h4 {
+        font-weight: 600;
+    }
+
+    // badge
+    .badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 15px;
+        font-size: 1.5rem;
+        border-radius: 0;
+        opacity: 0;
+        transition: .3s opacity ease;
+        -webkit-backface-visibility: hidden; // stylelint-disable-line
+        &.show-half {
+            opacity: .5;
+        }
+        &.show {
+            opacity: 1;
+        }
+    }
+    &:hover .badge {
+        opacity: 1;
+    }
+
+    // info over image
+    .over-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        margin-left: 5%;
+        text-align: center;
+
+        // bottom pos
+        &.bottom {
+            top: auto;
+            bottom: 0;
+            height: auto;
+            text-align: left;
+        }
+
+        // heading and rating
+        h4,
+        .rating {
+            margin-top: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        // vertical center
+        > div {
+            display: table;
+            width: 100%;
+            height: 100%;
+            > div {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // item info
+    .bottom-info {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1.8rem; // bottom margin like in top from H4
+        text-align: center;
+
+        h3,
+        .h3,
+        h4,
+        .h4 {
+            position: relative;
+            margin-top: 1.8rem;
+            margin-bottom: 3rem !important; // stylelint-disable-line
+            text-align: center;
+
+            // border bottom
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                right: 15%;
+                bottom: -1.5rem;
+                left: 15%;
+                height: 1px;
+                background: rgba($text_mute_color, .2);
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------
+
+  Angled Backgrounds
+
+-------------------------------------------------------------------*/
+.angled-bg {
+    position: relative;
+    display: block;
+
+    // all items inside - over background
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    // angled background
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($text_color, .1);
+        transition: .3s background ease;
+        transform: skew(-$skew_size);
+        z-index: 0;
+    }
+    &:hover::after {
+        background: rgba($text_color, .13);
+    }
+
+    &.item {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        // initial color
+        &:hover,
+        &:focus {
+            color: inherit;
+        }
+
+        // price
+        .price {
+            margin-top: 10px;
+            margin-right: 20px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        // remove icon
+        .remove,
+        .remove:hover,
+        .remove:focus {
+            margin-top: 5px;
+            margin-right: 20px;
+            font-size: 1.7rem;
+            text-decoration: none;
+        }
+    }
+}

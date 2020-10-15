@@ -1,0 +1,220 @@
+/* ==========================================================================
+# Image Gallery - begin
+========================================================================== */
+
+/* Image Gallery Grid - begin
+========================================================================== */
+
+.edgt-image-gallery {
+
+	.edgt-gallery-image {
+
+		&.edgt-image-galley-circle-overlay span.edgt-image-gallery-hover {
+			width: 132%;
+			height: 180%;
+			top: -40%;
+			left: -16%;
+
+			@include edgtTransform(scale(0));
+			@include edgtBorderRadius(50%);
+			@include edgtTransition(transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s);
+		}
+
+		span.edgt-image-gallery-hover {
+			position: absolute;
+			display: block;
+			background-color: rgba(0, 0, 0, 0.8);
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			@include edgtTransition(opacity 0.2s ease-out);
+		}
+
+		.edgt-image-gallery-holder {
+			position: relative;
+			overflow: hidden;
+
+			&:hover span.edgt-image-gallery-hover {
+				opacity: 0.95;
+
+				@include edgtTransform(scale(1));
+			}
+
+			&:hover .edgt-icon-holder {
+				opacity: 1;
+
+				@include edgtTransform(translate(-50%, -50%) translateZ(0));
+				@include edgtTransition(transform 0.2s ease-out, opacity 0.2s ease-out);
+			}
+
+			.edgt-icon-holder {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 3;
+				opacity: 0;
+				color: #fff;
+				font-size: 60px;
+
+				@include edgtTransform(translate(-150%, 50%) translateZ(0));
+				transition: transform 0.2s ease-out 0.2s, opacity 0.2s ease-out;
+				-webkit-transition: -webkit-transform 0.2s ease-out 0.2s, opacity 0.2s ease-out;
+				@include edgtTransitionDelay(0);
+			}
+		}
+	}
+
+	.edgt-grayscale .edgt-gallery-image img {
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		filter: gray;
+		filter: grayscale(100%);
+		filter: url(img/desaturate.svg#grayscale);
+	}
+
+	.edgt-grayscale .edgt-gallery-image:hover img {
+		-webkit-filter: grayscale(0);
+		filter: none;
+	}
+
+	.edgt-gallery-image img {
+		display: block;
+		width: 100%;
+	}
+
+	.edgt-image-gallery-grid {
+		font-size: 0;
+		line-height: 0;
+
+		&.edgt-space {
+			margin-left: -11px;
+			margin-right: -11px;
+
+			.edgt-gallery-image {
+				padding: 0 11px;
+				margin-bottom: 22px;
+			}
+		}
+
+		&.edgt-no-space {
+			margin-left: 0;
+			margin-right: 0;
+
+			.edgt-gallery-image {
+				padding: 0 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.edgt-image-gallery-grid.edgt-gallery-columns-2 {
+
+		.edgt-gallery-image {
+			width: 50%;
+			display: inline-block;
+
+			@include edgtBoxSizing(border-box);
+
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+
+		}
+	}
+
+	.edgt-image-gallery-grid.edgt-gallery-columns-3 {
+
+		.edgt-gallery-image {
+			width: 33.3333%;
+			display: inline-block;
+
+			@include edgtBoxSizing(border-box);
+
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+		}
+	}
+
+	.edgt-image-gallery-grid.edgt-gallery-columns-4 {
+
+		.edgt-gallery-image {
+			width: 25%;
+			display: inline-block;
+
+			@include edgtBoxSizing(border-box);
+
+			&:nth-child(4n+1) {
+				clear: both;
+			}
+		}
+	}
+
+	.edgt-image-gallery-grid.edgt-gallery-columns-5 {
+
+		.edgt-gallery-image {
+			width: 20%;
+			display: inline-block;
+
+			@include edgtBoxSizing(border-box);
+
+			&:nth-child(5n+1) {
+				clear: both;
+			}
+		}
+	}
+}
+
+/* Image Gallery Grid - end
+========================================================================== */
+
+/* Image Gallery Slider - begin
+========================================================================== */
+
+.edgt-image-gallery-slider {
+	opacity: 0;
+
+	.edgt-image-gallery-item {
+		position: relative;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+/* Image Gallery Slider - end
+========================================================================== */
+
+.edgt-title-description {
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+
+	@include edgtBoxSizing(border-box);
+
+	.edgt-image-gallery-title {
+		color: $first-main-color;
+		background-color: #000;
+		padding: 7px 14px 2px;
+		float: left;
+		margin-bottom: 0px;
+	}
+
+	.edgt-image-gallery-description {
+		color: #fff;
+		background-color: rgba(0, 0, 0, 0.88);
+		padding: 4px 14px;
+		float: left;
+		margin-top: 5px;
+		font-size: 14px;
+		line-height: 1.7em;
+	}
+}
+
+/* ==========================================================================
+# Image Gallery - end
+========================================================================== */

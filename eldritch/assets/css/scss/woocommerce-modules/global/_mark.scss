@@ -1,0 +1,72 @@
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock styles - begin
+   ========================================================================== */
+.woocommerce {
+
+	.edgt-product-mark {
+		position: absolute;
+		display: block;
+		top: 15px;
+		left: 15px;
+		width: auto;
+		height: 31px;
+		font-size: 12px;
+		line-height: 29px;
+		font-weight: 700;
+		padding: 0 24px;
+		text-align: center;
+		z-index: 100;
+		box-shadow: $default-box-shadow;
+
+		@include edgtTransform(translateZ(0));
+		@include edgtBoxSizing(border-box);
+
+		&:nth-last-of-type(1){
+			top:15px;
+		}
+
+		&:nth-last-of-type(2){
+			top:50px;
+		}
+
+		&:nth-last-of-type(3){
+			top:85px;
+		}
+	}
+
+	.edgt-on-sale {
+		color: $headings-text-color;
+		background-color: $first-main-color;
+	}
+
+	.edgt-new-product {
+		color: #fff;
+		background-color: #337cdf;
+	}
+
+	.edgt-out-of-stock {
+		color: #fff;
+		background-color: #d4d4d4;
+	}
+}
+
+.edgt-woo-single-page {
+
+	.edgt-on-sale,
+	.edgt-out-of-stock,
+	.edgt-new-product {
+		display: none;
+	}
+}
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin,
+body.edgt-page-content-skin-light {
+    .edgt-on-sale {
+        color: #fff;
+        background-color: $first-main-color;
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock styles - end
+   ========================================================================== */

@@ -1,0 +1,68 @@
+.rs-youplay {
+    position: relative;
+    background: $back_darken_color;
+
+    .tp-banner {
+        overflow: hidden;
+    }
+
+    // main image
+    .slotholder > .tp-bgimg::after,
+    .slotholder > .slot .slotslide::after,
+    .tp-arr-iwrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $back_color;
+        opacity: .4;
+    }
+
+    // fix some item sizes
+    h1,
+    .h1 {
+        margin-top: 1em;
+        margin-bottom: .6em;
+        font-size: 3.7em;
+        text-transform: uppercase;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    .btn-group-lg > .btn,
+    .btn-lg {
+        font-size: 1.285em;
+    }
+    .btn.btn-lg,
+    .btn:focus.btn-lg,
+    .btn:hover.btn-lg {
+        padding: .8em 3em;
+    }
+
+    // timer restyle
+    .tp-bannertimer {
+        top: auto;
+        bottom: 0;
+        height: 2px;
+    }
+
+    // links fix
+    .tp-caption a,
+    .tp-caption a:hover {
+        color: $text_color;
+        transition: .3s ease;
+    }
+    // in light theme hover button change text color
+    @if ($theme == light) {
+        .btn {
+            transition: .3s color ease;
+        }
+        .btn:hover,
+        .btn.active,
+        .tp-caption a:hover {
+            color: $back_darken_color;
+        }
+    }
+}

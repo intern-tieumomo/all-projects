@@ -1,0 +1,58 @@
+.edgt-video-banner-holder {
+	position: relative;
+
+	.edgt-video-banner-link {
+		display: block;
+		color: #fff;
+	}
+
+	img {
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	.edgt-video-banner-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		font-size: 60px;
+	}
+
+	.edgt-vb-overlay-tb {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.edgt-vb-overlay-tc {
+		display: table-cell;
+		vertical-align: middle;
+
+		.edgt-vb-play-icon {
+			display: inline-block;
+			height: 104px;
+			width: 104px;
+			line-height: 89px;
+			background-color: $first-main-color;
+
+			@include edgtBoxSizing(border-box);
+			@include edgtBorderRadius(50%);
+			@include edgtTransition(all 0.3s ease-in-out);
+
+			i {
+				padding-left: 11px;
+				font-size: 42px;
+				color: #fff;
+			}
+		}
+
+		&:hover {
+			.edgt-vb-play-icon {
+				@include edgtTransform(scale(1.2));
+			}
+		}
+	}
+}

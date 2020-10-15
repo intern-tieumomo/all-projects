@@ -1,0 +1,78 @@
+.edgt-header-standard {
+    .edgt-vertical-align-containers {
+        padding: 0 100px;
+    }
+
+	.edgt-menu-area {
+		background-color: #fff;
+		box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+
+		@include edgtBoxSizing(border-box);
+
+		.edgt-main-menu-widget-area {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.edgt-main-menu-widget-area-inner {
+			height: 100%;
+		}
+
+		.edgt-right-from-main-menu-widget {
+			float: left;
+			position: relative;
+			vertical-align: middle;
+			height: 100%;
+
+			&:not(.widget_edgt_side_area_opener):last-child {
+				padding-right: 0;
+			}
+
+			.edgt-right-from-main-menu-widget-inner {
+				display: table;
+                height: 100%;
+				vertical-align: middle;
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    position: relative;
+                }
+			}
+
+        }
+
+        .edgt-grid {
+            .edgt-right-from-main-menu-widget {
+                float: right;
+
+                .edgt-right-from-main-menu-widget-inner > div {
+                    width: $header-icon;
+                    padding: 0 12px;
+                    text-align: center;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                }
+
+            }
+        }
+	}
+
+	&.edgt-light-header .edgt-menu-area .edgt-right-from-main-menu-widget:before {
+		background-color: rgba($header-light-color, 0.5);
+	}
+
+	&.edgt-dark-header .edgt-menu-area .edgt-right-from-main-menu-widget:before {
+		background-color: rgba($header-dark-color, 0.5);
+	}
+
+	&.edgt-header-standard-shadow-disable .edgt-menu-area,
+    &.edgt-header-standard-in-grid-shadow-disable .edgt-page-header .edgt-menu-area .edgt-grid .edgt-vertical-align-containers{
+		box-shadow: none;
+	}
+}
+

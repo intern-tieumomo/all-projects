@@ -1,0 +1,20 @@
+/* #Simple blog list responsive styles
+   ========================================================================== */
+
+@include mac {
+	.edgt-latest-posts-widget {
+		.edgt-blog-list-holder.edgt-simple {
+
+			.edgt-blog-list-item {
+
+				.edgt-blog-list-title {
+					font-size: 15px;
+				}
+
+			}
+		}
+	}
+}
+
+/* #Simple blog list responsive styles - end
+   ========================================================================== */

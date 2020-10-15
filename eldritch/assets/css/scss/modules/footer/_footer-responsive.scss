@@ -1,0 +1,24 @@
+@include ipad-landscape {
+	footer .edgt-footer-top .edgt-grid-row > div {
+		margin-bottom: 40px;
+
+		&:nth-child(2n+1) {
+			clear: both;
+		}
+	}
+
+	footer .edgt-footer-bottom-holder .edgt-footer-bottom-right {
+		text-align: left;
+	}
+
+	footer .edgt-footer-bottom-holder {
+		.edgt-left, .edgt-right {
+			text-align: left;
+		}
+
+        .edgt-footer-bottom-holder .widget_edgt_social_icon_widget:first-child a {
+            padding-left: 0;
+        }
+
+	}
+}

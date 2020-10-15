@@ -1,0 +1,206 @@
+.edgt-grid,
+.edgt-container-inner,
+.edgt-grid-section .edgt-section-inner,
+.edgt-slider .carousel-inner .edgt-slider-content-outer {
+
+	@include laptop-landscape {
+		width: $grid-width-laptop-landscape;
+	}
+
+	@include ipad-landscape {
+		width: $grid-width-ipad-landscape;
+	}
+
+	@include ipad-portrait {
+		width: $grid-width-ipad-portrait;
+	}
+
+	@include phone-landscape {
+		width: $grid-width-phone-landscape;
+	}
+
+	@include phone-portrait {
+		width: $grid-width-phone-portrait;
+	}
+
+	@include smaller-phone-portrait {
+		width: $grid-width-smaller-phone-portrait;
+	}
+}
+
+//vertical menu responsive
+.edgt-header-vertical .edgt-grid,
+.edgt-header-vertical .edgt-container-inner,
+.edgt-header-vertical .edgt-grid-section .edgt-section-inner,
+.edgt-header-vertical .edgt-slider .carousel-inner .edgt-slider-content-outer{
+    @include vertical-menu-laptop-wide-landscape {
+        width: $grid-width-laptop-wide-landscape;
+    }
+
+    @include vertical-menu-laptop-landscape {
+        width: $grid-width-laptop-landscape;
+    }
+
+    @include vertical-menu-small-laptop-landscape {
+        width: $grid-width-vertical-menu-laptop-landscape;
+    }
+
+    @include vertical-menu-ipad-landscape {
+        width: $grid-width-ipad-landscape;
+    }
+
+    @include ipad-portrait {
+        width: $grid-width-ipad-portrait;
+    }
+
+    @include phone-landscape {
+        width: $grid-width-phone-landscape;
+    }
+
+    @include phone-portrait {
+        width: $grid-width-phone-portrait;
+    }
+
+    @include smaller-phone-portrait {
+        width: $grid-width-smaller-phone-portrait;
+    }
+
+}
+
+.edgt-boxed .edgt-wrapper .edgt-wrapper-inner,
+.edgt-boxed .edgt-wrapper .edgt-footer-inner,
+.edgt-boxed-content .edgt-wrapper .edgt-wrapper-inner > .edgt-content {
+
+	@include laptop-landscape {
+		width: $grid-width-laptop-landscape-boxed;
+		max-width: 100%; //because of passepartout
+	}
+
+	@include ipad-landscape {
+		width: $grid-width-ipad-landscape-boxed;
+		max-width: 100%; //because of passepartout
+	}
+
+	@include ipad-portrait {
+		width: $grid-width-ipad-portrait-boxed;
+		max-width: 100%; //because of passepartout
+	}
+
+	@include phone-landscape {
+		width: $grid-width-phone-landscape-boxed;
+		max-width: 100%; //because of passepartout
+	}
+
+	@include phone-portrait {
+		width: $grid-width-phone-portrait-boxed;
+		max-width: 100%; //because of passepartout
+	}
+
+	@include smaller-phone-portrait {
+		width: $grid-width-smaller-phone-portrait-boxed;
+		max-width: 100%; //because of passepartout
+	}
+}
+
+@include ipad-landscape {
+	.edgt-content {
+		margin-top: 0px !important;
+	}
+}
+
+@include ipad-landscape {
+	.edgt-two-columns-50-50 .edgt-column,
+	.edgt-two-columns-66-33 .edgt-column1,
+	.edgt-two-columns-66-33 .edgt-column2,
+	.edgt-two-columns-33-66 .edgt-column1,
+	.edgt-two-columns-33-66 .edgt-column2,
+	.edgt-two-columns-25-75 .edgt-column1,
+	.edgt-two-columns-25-75 .edgt-column2,
+	.edgt-two-columns-75-25 .edgt-column1,
+	.edgt-two-columns-75-25 .edgt-column2,
+	.edgt-three-columns .edgt-column,
+	.edgt-four-columns .edgt-column {
+		width: 100%;
+	}
+
+	.edgt-two-columns-66-33 .edgt-column1 .edgt-column-inner,
+	.edgt-two-columns-66-33 .edgt-column2 .edgt-column-inner,
+	.edgt-two-columns-33-66 .edgt-column1 .edgt-column-inner,
+	.edgt-two-columns-33-66 .edgt-column2 .edgt-column-inner,
+	.edgt-two-columns-75-25 .edgt-column1 .edgt-column-inner,
+	.edgt-two-columns-75-25 .edgt-column2 .edgt-column-inner,
+	.edgt-two-columns-25-75 .edgt-column1 .edgt-column-inner,
+	.edgt-two-columns-25-75 .edgt-column2 .edgt-column-inner {
+		padding: 0 0 0 0;
+	}
+
+}
+
+@include smaller-phone-portrait {
+	.edgt-section-inner-margin {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+@include ipad-landscape {
+	.wpcf7 {
+		.edgt-confirmation-form {
+			.edgt-two-columns-50-50 {
+				.edgt-column {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.wpcf7 {
+		.edgt-newsletter {
+			display: block;
+			& > span {
+				float: none;
+			}
+
+			.wpcf7-form-control {
+				&.wpcf7-submit {
+					float: none;
+				}
+			}
+
+			&.transparent {
+				.wpcf7-form-control {
+					&.wpcf7-email,
+					&.wpcf-text {
+						border-left: 2px solid rgba(215, 221, 227, 0.4);
+						border-right: 2px solid rgba(215, 221, 227, 0.4);
+					}
+				}
+			}
+
+			&.grey-skin {
+				.wpcf7-form-control {
+					&.wpcf7-email:focus {
+						border-right: 1px solid #d7dde3;
+					}
+				}
+			}
+		}
+
+		.edgt-confirmation-form {
+			.edgt-two-columns-50-50 {
+				.edgt-column {
+					width: 100%;
+
+					.edgt-column-inner,
+					&:last-child,
+					&:first-child {
+						padding: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
+}

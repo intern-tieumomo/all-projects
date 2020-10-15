@@ -1,0 +1,131 @@
+.edgt-header-vertical {
+	.edgt-vertical-dropdown-float {
+
+		.menu-item .second {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+			position: absolute;
+			top: 0;
+			left: 100%;
+			margin-left: 50px;
+			opacity: 0;
+			visibility: hidden;
+			@include edgtTransition(margin 0.25s cubic-bezier(0, 0.57, 0.58, 1));
+
+            .inner {
+                position: relative;
+                display: block;
+                padding: 0;
+                z-index: 997;
+            }
+		}
+
+		.menu-item .second.edgt-float-open {
+			margin-left: 0px;
+			opacity: 1;
+			visibility: visible;
+
+		}
+
+		.menu-item .second.vertical_menu_start ul li ul,
+		.menu-item .second.vertical_menu_start ul li ul * {
+			visibility: hidden;
+		}
+
+		.menu-item .second.vertical_menu_start ul li ul.edgt-float-open,
+		.menu-item .second.vertical_menu_start ul li ul.edgt-float-open * {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.second .inner ul {
+            margin: 0px;
+            padding: 10px 0px;
+
+            li{
+                display: block;
+                padding: 0px;
+                position: relative;
+                float: none;
+                height: auto;
+                background: 0;
+                width: 220px;
+                @include edgtTransition(background-color 0.15s ease-out);
+
+                a{
+                    text-align: left;
+                    color: #999;
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 400;
+                    height: auto;
+                    line-height: 18px;
+                    padding: 6px 22px;
+                    position: relative;
+                    @include edgtTransition(color 0.2s ease);
+
+                    .item_text {
+                        display: inline-block;
+                        position: relative;
+
+                        &:after{
+                            background-color: $first-main-color;
+                            bottom: 0;
+                            content: "";
+                            height: 1px;
+                            left: 0;
+                            position: absolute;
+                            width: 0;
+                            @include edgtTransition(width 0.2s cubic-bezier(0.6, 0, 0.26, 0.99));
+                            visibility: hidden;
+                        }
+                    }
+
+                    .plus{
+                        font-size: 12px;
+                        line-height: 12px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+
+                &:hover > a,
+                &.edgt-active-item > a{
+                    color: $first-main-color;
+
+                    .item_text:after {
+                        width: 100%;
+                        visibility: visible;
+                    }
+                }
+
+            }
+		}
+
+		.second .inner ul ul {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+			position: absolute;
+			top: -10px;
+			left: 100%;
+			margin-left: 50px;
+			height: auto;
+			visibility: hidden;
+			width: 100%;
+			opacity: 0;
+			overflow: hidden;
+			z-index: 10;
+			@include edgtTransition(all 0.25s cubic-bezier(0, 0.57, 0.58, 1));
+		}
+
+		.second .inner ul ul.edgt-float-open {
+			opacity: 1;
+			margin-left: 0;
+			visibility: visible;
+		}
+
+		.second .inner > ul > li > a .menu_icon {
+			@include edgtTransition(color 0.25s ease-out);
+		}
+	}
+}

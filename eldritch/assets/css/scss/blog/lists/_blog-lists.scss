@@ -1,0 +1,45 @@
+@import 'types/masonry_full_width';
+@import 'types/masonry';
+@import 'types/masonry_gallery';
+@import 'types/standard';
+
+.edgt-blog-holder {
+  article {
+    &.sticky {
+      .edgt-post-title a {
+        color: $first-main-color;
+      }
+    }
+
+    .edgt-single-links-pages a {
+      color: $headings-text-color;
+      font-weight: 600;
+      margin-right: 10px;
+
+      &:hover {
+        color: $first-main-color;
+      }
+    }
+  }
+
+    .edgt-more-link-container {
+        margin-bottom: 15px;
+    }
+}
+
+.edgt-filter-blog-holder {
+
+  text-align: center;
+  margin-bottom: 30px;
+
+  li {
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 15px;
+
+    &.edgt-active {
+      color: $first-main-color;
+    }
+  }
+}

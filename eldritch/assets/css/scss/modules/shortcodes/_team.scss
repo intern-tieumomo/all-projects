@@ -1,0 +1,102 @@
+/* ==========================================================================
+# Team style - begin
+	========================================================================== */
+
+/* Team type simple - begin
+========================================================================== */
+
+.edgt-team {
+	position: relative;
+
+	.edgt-icon-shortcode {
+		color: $headings-text-color;
+
+		a, span, i {
+			color: $headings-text-color;
+		}
+	}
+
+	.edgt-phone-number-holder {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 40px;
+		background-color: $first-main-color;
+		line-height: 42px;
+		overflow: hidden;
+
+		@include edgtTransform(translateX(-40px));
+		@include edgtTransition(transform 0.2s ease-out);
+
+		.edgt-phone-number-holder-inner {
+			position: relative;
+			white-space: nowrap;
+			letter-spacing: -5px;
+			color: #fff;
+		}
+
+		.edgt-phone-icon {
+			width: 40px;
+			text-align: center;
+			display: inline-block;
+			letter-spacing: normal;
+			font-size: 18px;
+		}
+
+		.edgt-phone-number {
+			display: inline-block;
+			padding-right: 13px;
+			letter-spacing: normal;
+			font-weight: 600;
+			font-family: $headings-font-family;
+		}
+	}
+
+	&:hover .edgt-phone-number-holder {
+		@include edgtTransform(translateX(-100%));
+		@include edgtTransition(transform 0.2s ease-out .2s);
+	}
+
+	.edgt-team-inner {
+		text-align: center;
+		width: 100%;
+	}
+
+	.edgt-team-image {
+		position: relative;
+		overflow: hidden;
+		width: 167px;
+		display: block;
+		margin: 0 auto;
+
+		&:hover {
+			img {
+				opacity: 0.7;
+				@include edgtTransition(opacity 0.7s);
+			}
+		}
+
+		img {
+			opacity: 1;
+			@include edgtTransition(opacity 0.7s);
+			transition: opacity 0.7s;
+			vertical-align: middle;
+			border: 1px solid #e1e6eb;
+
+			@include edgtBorderRadius(4px);
+		}
+
+	}
+
+	.edgt-team-title-holder {
+		margin-top: 25px;
+	}
+
+	.edgt-icon-shortcode {
+		margin: 0 7px;
+	}
+}
+
+/* ==========================================================================
+# Team style - end
+========================================================================== */

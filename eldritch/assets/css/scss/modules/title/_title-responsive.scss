@@ -1,0 +1,96 @@
+@include ipad-landscape {
+
+  .edgt-title {
+
+    &.edgt-has-background {
+      background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+      height: auto !important;
+      padding: 0 !important;
+    }
+
+    &.edgt-title-image-not-responsive {
+      .edgt-title-image {
+        display: block;
+      }
+    }
+
+    .edgt-title-holder {
+      height: 100% !important;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      padding: 0 !important;
+    }
+
+    .edgt-title-holder .edgt-container {
+      display: block;
+      height: 100%;
+    }
+
+    .edgt-title-holder .edgt-container-inner {
+      display: table;
+      height: 100%;
+    }
+
+    .edgt-title-holder .edgt-title-subtitle-holder {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .edgt-title-subtitle-holder {
+      padding: 0px !important;
+    }
+
+    &.edgt-standard-type .edgt-breadcrumbs-holder {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+    }
+
+  }
+
+}
+
+@include ipad-portrait {
+
+  .edgt-title {
+      .edgt-title-holder .edgt-subtitle {
+          width: 100%;
+      }
+
+      &:not(.edgt-title-in-grid) .edgt-container-inner {
+          padding: 0 30px;
+      }
+  }
+
+}
+
+@include phone-portrait {
+
+  .edgt-title .edgt-title-holder {
+    .edgt-breadcrumbs {
+      a, span {
+        font-size: 12px;
+      }
+    }
+
+    h1 {
+      line-height: 0.7em;
+
+      span {
+        font-size: 0.5em;
+        line-height: 1.2em;
+      }
+    }
+
+    .edgt-subtitle {
+      margin-bottom: -8px;
+      font-size: 12px;
+    }
+  }
+}
+

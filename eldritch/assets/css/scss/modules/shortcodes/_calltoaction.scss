@@ -1,0 +1,113 @@
+/* ==========================================================================
+# Call to action style - begin
+========================================================================== */
+
+.edgt-call-to-action {
+	position: relative;
+	display: table;
+	background-color: transparent;
+	width: 100%;
+
+
+	@include edgtBoxSizing(border-box);
+
+	.edgt-call-to-action-row-75-25,
+	.edgt-call-to-action-row-50-50,
+	.edgt-call-to-action-row-66-33 {
+		display: table;
+		
+		@include edgtBoxSizing(border-box);
+
+		width: 100%;
+	}
+
+	.edgt-call-to-action-row-75-25 .edgt-call-to-action-column1 {
+		width: 75%;
+	}
+
+	.edgt-call-to-action-row-75-25 .edgt-call-to-action-column2 {
+		width: 25%;
+	}
+
+	.edgt-call-to-action-row-50-50 .edgt-call-to-action-column1,
+	.edgt-call-to-action-row-50-50 .edgt-call-to-action-column2 {
+		width: 50%;
+	}
+
+	.edgt-call-to-action-row-66-33 .edgt-call-to-action-column1 {
+		width: 66%;
+	}
+
+	.edgt-call-to-action-row-66-33 .edgt-call-to-action-column2 {
+		width: 34%;
+	}
+
+	.edgt-call-to-action-column2 {
+		text-align: right;
+	}
+
+	.edgt-call-to-action-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.edgt-text-wrapper .edgt-call-to-action-icon-holder {
+		position: absolute;
+		height: 100%;
+		top: 0;
+	}
+
+	.edgt-text-wrapper .edgt-call-to-action-icon {
+		display: table;
+		height: 100%;
+
+		.edgt-call-to-action-icon-inner {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+
+			.edgt-call-to-action-icon {
+				color: #8b8b8b;
+				font-size: 40px;
+				display: inline;
+			}
+
+			i {
+				color: #161616;
+			}
+		}
+	}
+}
+
+.edgt-call-to-action {
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	.edgt-button-wrapper {
+		.edgt-btn {
+			margin-top: 3px;
+			padding: 20px 40px;
+		}
+	}
+
+	&.with-icon {
+
+		.edgt-text-wrapper .edgt-call-to-action-text {
+			padding: 0 20px 0 110px;
+		}
+	}
+
+	&.box-shadow {
+		@include edgtBoxShadow($default-box-shadow);
+	}
+}
+
+/* ==========================================================================
+# Call to action style - end
+========================================================================== */

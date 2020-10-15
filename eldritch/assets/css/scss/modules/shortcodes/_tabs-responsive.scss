@@ -1,0 +1,36 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.edgt-tabs.edgt-vertical .edgt-tabs-nav, .edgt-tabs.edgt-vertical .edgt-tab-container {
+		width: 100% !important;
+	}
+
+	.edgt-tabs.edgt-vertical .edgt-tab-container {
+		padding: 39px 5px 10px;
+
+	}
+
+	.edgt-tabs .edgt-tabs-nav li,
+	.edgt-tabs.edgt-horizontal .edgt-tabs-nav li {
+		float: none;
+		display: block;
+	}
+
+	.edgt-tabs.edgt-horizontal .edgt-tab-container {
+		border-top: 0;
+	}
+
+	.edgt-tabs.edgt-horizontal .edgt-tabs-nav li:last-child a {
+		border-bottom: 1px solid;
+	}
+
+	.edgt-tabs.edgt-vertical .edgt-tab-container {
+		border: 1px solid #f2f2f2;
+	}
+
+    .edgt-tabs.edgt-light-skin.edgt-vertical .edgt-tab-container {
+		border: 1px solid $default-border-color-dark;
+	}
+
+	.edgt-tabs.edgt-vertical .edgt-tabs-nav li.ui-state-active a:after {
+		content: none;
+	}
+}

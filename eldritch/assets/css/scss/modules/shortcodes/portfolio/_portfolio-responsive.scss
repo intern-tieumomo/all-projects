@@ -1,0 +1,257 @@
+@include large-laptop {
+	.edgt-ptf-masonry {
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article.edgt-default-masonry-item,
+			article.edgt-large-height-masonry-item {
+				width: 25%;
+			}
+		}
+
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns {
+			.edgt-large-width-masonry-item,
+			.edgt-large-width-height-masonry-item {
+				width: 50%;
+			}
+		}
+	}
+}
+
+/* horizontal scrolling */
+
+@media screen and (max-width: map-get($breakpoints, laptop-landscape-large)) {
+    .edgt-horizontally-scrolling-portfolio-list-holder .edgt-hspl-cover-image-text-holder {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@include laptop-landscape {
+	.edgt-portfolio-list-holder-outer {
+		&.edgt-ptf-six-columns, &.edgt-ptf-five-columns, &.edgt-ptf-pinterest-six-columns, &.edgt-ptf-pinterest-five-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article {
+				width: 25%;
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgt-portfolio-list-holder-outer.edgt-ptf-standard {
+		.edgt-ptf-item-image-holder {
+			.edgt-portfolio-lightbox {
+				.edgt-overlay-icon {
+					font-size: 60px;
+				}
+			}
+		}
+	}
+
+	.edgt-ptf-masonry {
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns, &.edgt-ptf-masonry-four-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article.edgt-default-masonry-item,
+			article.edgt-large-height-masonry-item {
+				width: 33.3333%;
+			}
+		}
+
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns, &.edgt-ptf-masonry-four-columns {
+			.edgt-large-width-masonry-item,
+			.edgt-large-width-height-masonry-item {
+				width: 66.6666%;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-ptf-masonry {
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns, &.edgt-ptf-masonry-four-columns, &.edgt-ptf-masonry-three-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article.edgt-default-masonry-item,
+			article.edgt-large-height-masonry-item {
+				width: 50%;
+			}
+		}
+
+		&.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns, &.edgt-ptf-masonry-four-columns, &.edgt-ptf-masonry-three-columns {
+			.edgt-large-width-masonry-item,
+			.edgt-large-width-height-masonry-item {
+				width: 100%;
+			}
+		}
+	}
+
+	 .edgt-portfolio-list-holder-outer {
+		&.edgt-ptf-six-columns, &.edgt-ptf-five-columns, &.edgt-ptf-four-columns, &.edgt-ptf-three-columns,
+		&.edgt-ptf-pinterest-six-columns, &.edgt-ptf-pinterest-five-columns, &.edgt-ptf-pinterest-four-columns, &.edgt-ptf-pinterest-three-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article {
+				width: 50%;
+			}
+		}
+	}
+
+	.edgt-ptf-masonry {
+		.edgt-portfolio-masonry-content {
+			position: relative !important;
+			height: auto !important;
+
+			.edgt-masonry-content-inner-holder {
+				position: relative;
+				width: 100%;
+				height:100%;
+				left:0;
+			}
+		}
+	}
+}
+
+
+@include phone-landscape {
+    .edgt-ptf-masonry {
+        &.edgt-ptf-masonry-six-columns, &.edgt-ptf-masonry-five-columns, &.edgt-ptf-masonry-four-columns, &.edgt-ptf-masonry-three-columns {
+            .edgt-portfolio-list-masonry-grid-sizer,
+            article.edgt-default-masonry-item,
+            article.edgt-large-height-masonry-item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@include phone-portrait {
+
+	.edgt-portfolio-list-holder-outer {
+		&.edgt-ptf-six-columns, &.edgt-ptf-five-columns, &.edgt-ptf-four-columns, &.edgt-ptf-three-columns,
+		&.edgt-ptf-pinterest-six-columns, &.edgt-ptf-pinterest-five-columns, &.edgt-ptf-pinterest-four-columns, &.edgt-ptf-pinterest-three-columns {
+			.edgt-portfolio-list-masonry-grid-sizer,
+			article {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+/* horizontal scrolling */
+
+@media screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+    .edgt-horizontally-scrolling-portfolio-list-page {
+        header {
+            position: relative;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        .edgt-hspl-cover-image {
+            background-attachment: initial;
+            background-size: cover;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: map-get($breakpoints, ipad-landscape)) and (min-width: map-get($breakpoints, phone-landscape-plus-pixel)) {
+    .edgt-horizontally-scrolling-portfolio-list-page {
+        .edgt-mobile-header {
+            z-index: 111;
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+            width: 100%;
+            margin-bottom: 100px !important;
+
+            .edgt-mobile-header-inner {
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 1000;
+                @include edgtTransform(initial);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, ipad-portrait)) {
+    .edgt-horizontally-scrolling-portfolio-list-page {
+
+        h1 {
+            font-size: 60px;
+        }
+
+    }
+
+}
+
+
+
+@include phone-landscape {
+
+    .edgt-horizontally-scrolling-portfolio-list-page{
+        overflow-x: hidden!important;
+    }
+
+    .edgt-horizontally-scrolling-portfolio-list-holder {
+        width: 100%;
+        .edgt-hspl-images-holder {
+            width: 100%;
+            height: auto;
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .edgt-hspl-cover-image {
+            width: 100%;
+            height: 350px;
+            min-height: 350px;
+            position: relative;
+            overflow: initial;
+
+            .edgt-hspl-cover-image-text-holder {
+                display: block;
+                height: auto;
+                top: 50%;
+                @include edgtTransform(translateY(-50%));
+                position: absolute;
+
+            }
+            .edgt-hspl-cover-image-text-holder-inner {
+                display: block;
+                height: auto;
+
+                .edgt-hspl-cover-image-title {
+                    font-size: 30px;
+                }
+                .edgt-hspl-cover-image-subtitle {
+                    font-size: 20px;
+                }
+
+                .edgt-hspl-cover-image-button-holder {
+
+                    margin-top: 15px;
+
+                    .edgt-btn {
+                        float: left;
+                        padding: 10px 20px 10px;
+                        margin: 10px 10px 0 0 !important;
+                    }
+                }
+
+            }
+
+        }
+    }
+}

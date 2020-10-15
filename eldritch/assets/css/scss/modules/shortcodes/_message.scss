@@ -1,0 +1,86 @@
+/* ==========================================================================
+# Message style - begin
+========================================================================== */
+/* Unique style for both types  - begin
+========================================================================== */
+.edgt-message {
+	position: relative;
+	padding: 20px 28px;
+	margin: 0;
+    border-style: solid;
+
+	.edgt-message-inner {
+		position: relative;
+		padding-right: 20px;
+
+		.edgt-message-text {
+			display: table;
+			height: 100%;
+
+			.edgt-message-text-inner {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+				font-family: $headings-font-family;
+			}
+		}
+
+		a.edgt-close {
+			position: absolute;
+			right: 6px;
+			top: 50%;
+			line-height: 13px;
+			font-size: 18px;
+			color: $default-text-color;
+
+			@include edgtTransform(translateY(-50%));
+
+			i {
+				width: 14px;
+				height: 14px;
+				font-weight: 700;
+				display: inline-block;
+
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+}
+
+/* Unique style for both types - end
+========================================================================== */
+
+/* Type with icon - begin
+========================================================================== */
+.edgt-message.edgt-with-icon {
+	.edgt-message-icon-holder {
+		float: left;
+		padding: 0 20px 0 0;
+
+		.edgt-message-icon {
+			display: table;
+			height: 100%;
+
+			.edgt-message-icon-inner {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+				font-size: 18px;
+				font-weight: 400;
+				> i,
+				> span {
+					line-height: 1em;
+					padding: 8px;
+				}
+			}
+		}
+	}
+}
+
+/* Type with icon - end
+========================================================================== 
+/* ==========================================================================
+# Message style - end
+========================================================================== */

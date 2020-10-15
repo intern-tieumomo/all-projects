@@ -1,0 +1,37 @@
+.youplay-search {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    // search block
+    > form input {
+        padding: 1.5rem 3rem;
+        font-size: 2rem;
+    }
+
+    // founded items
+    .angled-bg {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        // initial color
+        &:hover,
+        &:focus {
+            color: inherit;
+        }
+
+        // price
+        .price {
+            margin-top: 10px;
+            margin-right: 20px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        // date
+        .date {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+/* ==========================================================================
+   WooCommerce Pagination styles - begin
+   ========================================================================== */
+.edgt-woo-pagination-holder {
+    @include edgtRelativeHolderLayout();
+    margin: 0 0 66px;
+    clear: both;
+
+    .edgt-woo-pagination-inner {
+        position: relative;
+        display: table;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.woocommerce-pagination {
+    position: relative;
+    display: block;
+    margin: 0 0 87px;
+    padding: 0;
+
+    .page-numbers {
+        position: relative;
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        left: 50%;
+        @include edgtTransform(translateX(-50%));
+        float: left;
+
+        *zoom: 1;
+
+        &:before,
+        &:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        &:after {
+            clear: both;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 5px;
+
+            a,
+            span {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                vertical-align: middle;
+                text-decoration: none;
+                cursor: pointer;
+                white-space: nowrap;
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
+                line-height: 40px;
+                text-align: center;
+                color: $default-text-color;
+                border-bottom: 1px solid transparent;
+                @include edgtTransition(border $default-transition-speed $default-transition-property);
+
+                &:hover,
+                &.current {
+                    text-decoration:line-through;
+                }
+            }
+
+            a {
+
+                &.next,
+                &.prev {
+                    font-size: 0px;
+                    line-height: 33px;
+                    text-decoration:none;
+                    @include edgtTransition(all 0.3s cubic-bezier(0.6, 0, 0.26, 0.99));
+
+                    &:before {
+                        display: block;
+                        font-size: 16px;
+                        line-height: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                }
+
+                &.prev {
+                    background:url("/wp-content/themes/eldritch/assets/css/img/slick/arrow_black_left.png") no-repeat center center;
+                    background-size:40% 40%;
+
+                    &:hover {
+                        @include edgtTransform(translate3d(-57%,0,0));
+                    }
+                }
+
+                &.next {
+                    background:url("/wp-content/themes/eldritch/assets/css/img/slick/arrow_black_right.png") no-repeat center center;
+                    background-size:40% 40%;
+
+                    &:hover {
+                        @include edgtTransform(translate3d(-43%,0,0));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edgt-woo-view-all-pagination {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        padding: 0 0 0 2px;
+        color: $default-text-color;
+
+        &:before {
+            content: '|';
+            padding: 0 14px 0 0;
+            color: $default-text-color;
+        }
+
+        &:hover {
+            color: $headings-text-color;
+        }
+    }
+}
+
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin {
+    .woocommerce-pagination .page-numbers li a,
+    .woocommerce-pagination .page-numbers li span {
+        color: $default-text-color-dark;
+
+        &:hover,
+        &.current {
+            text-decoration:line-through;
+        }
+
+    }
+
+    .edgt-woo-view-all-pagination {
+        a {
+            color: $default-text-color-dark;
+
+            &:before {
+                color: $default-text-color-dark;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Pagination styles - end
+   ========================================================================== */

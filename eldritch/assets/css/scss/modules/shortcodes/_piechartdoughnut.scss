@@ -1,0 +1,54 @@
+/* ==========================================================================
+# Pie Chart Doughnut - begin
+========================================================================== */
+
+.edgt-pie-chart-doughnut-holder {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	.edgt-pie-chart-doughnut {
+		margin: 0 22px 0 0;
+		float: left;
+	}
+
+	.edgt-pie-legend {
+		position: relative;
+		float: left;
+		width: 40%;
+	}
+
+	.edgt-pie-legend ul {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: block;
+			margin: 0 0 10px 0;
+
+			p {
+				font-size: 12px;
+				font-family: $headings-font-family;
+				text-transform: capitalize;
+				font-weight: 600;
+				line-height: 25px;
+				margin: 0;
+				text-align: left;
+				padding: 0 0 0 35px;
+			}
+		}
+
+		li .edgt-pie-color-holder {
+			width: 25px;
+			height: 25px;
+			background-color: $first-main-color;
+			float: left;
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+# Pie Chart Doughnut - end
+========================================================================== */

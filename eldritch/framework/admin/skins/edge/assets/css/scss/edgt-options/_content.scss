@@ -1,0 +1,55 @@
+.edgt-tab-content {
+	.edgt-page-title {
+		color:#8D9CA6;
+		font-size: 15px;
+		background-color:#F6F8F8;
+		padding:5px 20px;
+		margin: -20px -20px 30px -20px;
+		border-bottom: 1px solid #dce0e6;
+		font-weight:600;
+	}
+
+	.edgt-page-title.edgt-page-title-fixed {
+		position:fixed;
+		z-index: 8;
+		margin-bottom: 0;
+	}
+
+	.edgt-page-form {
+		position: relative;
+	}
+
+	.edgt-page-section-title {
+		color: $edgt-first-color;
+		background-color: #fff;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		padding-left: 10px;
+		margin: -10px 0px 0;
+		border-bottom:1px solid #efefef;
+		font-size: 15px;
+		line-height: 1
+	}
+
+	.edgt-page-section-subtitle {
+		color:#374a59;
+		font-weight:400;
+		display: inline-block;
+		margin:15px 0 15px;
+		font-size: 14px;
+		position:relative;
+		left:0px;
+		padding:0px 20px;
+		border-left:3px solid $edgt-first-color;
+	}
+
+	.edgt-page-form-section-holder {
+		margin-bottom: 30px;
+		padding: 0px 0px;
+		background:#fff;
+	}
+
+	.edgt-page-form-section-holder h3 + .edgt-page-form-section {
+		border-top:none;
+	}
+}

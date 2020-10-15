@@ -1,0 +1,128 @@
+.edgt-meta-box {
+  margin: -6px -12px -12px; }
+  .edgt-meta-box .edgt-meta-box-holder {
+    width: 100%; }
+  .edgt-meta-box .edgt-meta-box-holder .edgt-page-form-section th {
+    width: 250px; }
+  .edgt-meta-box .edgt-meta-box-holder .edgt-page-form-section th p {
+    font-weight: 400;
+    color: #9e9e9e; }
+  .edgt-meta-box .edgt-portfolio-media, .edgt-meta-box .edgt-portfolio-additional-item,
+  .edgt-meta-box .edgt-slide-element-media, .edgt-meta-box .edgt-slide-element-additional-item  {
+    background: #fff;
+    margin-bottom: 5px; }
+  .edgt-meta-box .edgt-portfolio-media .edgt-page-form-section,
+  .edgt-meta-box .edgt-slide-element-media .edgt-page-form-section  {
+    border-top: none; }
+  .edgt-meta-box .edgt-meta-box-holder .edgt-portfolio-media .edgt-page-form-section, .edgt-meta-box .edgt-meta-box-holder .edgt-portfolio-additional-item .edgt-page-form-section,
+  .edgt-meta-box .edgt-meta-box-holder .edgt-slide-element-media .edgt-page-form-section, .edgt-meta-box .edgt-meta-box-holder .edgt-slide-element-additional-item .edgt-page-form-section  {
+    border-bottom: none;
+    display: table;
+    width: 100%; }
+  .edgt-meta-box .edgt-portfolio-toggle-holder,
+  .edgt-meta-box .edgt-slide-element-toggle-holder  {
+    display: table;
+    width: 100%;
+    border: 1px solid #dae0e8;
+    position: relative;
+    cursor: pointer; }
+  .edgt-meta-box .edgt-portfolio-toggle,
+  .edgt-meta-box .edgt-slide-element-toggle  {
+    display: table-cell;
+    vertical-align: middle;
+    background: #ebeef2;
+    color: #6F858D;
+    height: 40px;
+    padding: 0 10px; }
+  .edgt-meta-box .edgt-portfolio-media .edgt-portfolio-toggle-content, .edgt-meta-box .edgt-portfolio-additional-item .edgt-portfolio-toggle-content,
+  .edgt-meta-box .edgt-slide-element-media .edgt-slide-element-toggle-content, .edgt-meta-box .edgt-slide-element-additional-item .edgt-slide-element-toggle-content  {
+    border: 1px solid #dbdee0;
+    border-top: none; }
+  .edgt-meta-box .edgt-portfolio-toggle .number,
+  .edgt-meta-box .edgt-slide-element-toggle .number  {
+    display: inline-block;
+    background-color: #ABB7C7;
+    color: #fff;
+    width: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 1px 5px; }
+  .edgt-meta-box .edgt-portfolio-toggle.edgt-portfolio-control,
+  .edgt-meta-box .edgt-slide-element-toggle.edgt-slide-element-control  {
+    text-align: right;
+    padding-right: 40px;
+    color: #ABB7C7;
+    font-size: 14px; }
+  .edgt-meta-box .edgt-portfolio-toggle.edgt-portfolio-control a,
+  .edgt-meta-box .edgt-slide-element-toggle.edgt-slide-element-control a  {
+    color: #ABB7C7; }
+  .edgt-meta-box .edgt-portfolio-toggle.edgt-portfolio-control a.remove-portfolio-media, .edgt-meta-box .edgt-portfolio-toggle.edgt-portfolio-control a.remove-portfolio-item,
+  .edgt-meta-box .edgt-slide-element-toggle.edgt-slide-element-control a.remove-slide-element-media, .edgt-meta-box .edgt-slide-element-toggle.edgt-slide-element-control a.remove-slide-element-item  {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 13px 11px 14px 5px;
+    line-height: 0; }
+  .edgt-meta-box .edgt-portfolio-add,
+  .edgt-meta-box .edgt-slide-element-add  {
+    padding: 20px; }
+  .edgt-meta-box .edgt-portfolio-add a:first-child,
+  .edgt-meta-box .edgt-slide-element-add a:first-child  {
+    margin-right: 3px; }
+  .edgt-meta-box .edgt-portfolio-add a:last-child,
+  .edgt-meta-box .edgt-slide-element-add a:last-child  {
+    margin-right: 10px; }
+  .edgt-meta-box .edgt-portfolio-add i,
+  .edgt-meta-box .edgt-slide-element-add i  {
+    margin-right: 5px; }
+  .edgt-meta-box .edgt-meta-box-hidden {
+    display: none; }
+  .edgt-meta-box .edgt-meta-box-holder .edgt-page-form-container-holder .edgt-page-form-container-holder {
+    border-left: none;
+    margin-left: 0; }
+  .edgt-meta-box .edgt-page.btn-default {
+    margin-right: 0; }
+
+.edgt-meta-box .edgt-repeater-add{
+	padding: 15px;
+}
+
+div.inside > div > div > div.edgt-page-form-section:first-child {
+  border-top: none; 
+}
+
+.edgt-meta-box-holder .edgt-page-section-subtitle {
+    color: #374a59;
+    font-weight: 400;
+    display: inline-block;
+    margin: 15px 0 15px;
+    font-size: 14px;
+    position: relative;
+    left: 0px;
+    padding: 0px 20px;
+    border-left: 3px solid #bba011;
+}
+
+/*# sourceMappingURL=edgt-meta-boxes.css.map */
+
+.edgt-slide-elements-holder-frame-scheme {
+    max-width: 300px;
+    background: white;
+    position: absolute;
+    top: 30px;
+    right: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+.edgt-slide-elements-holder-frame-scheme img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .edgt-slide-elements-holder-frame-scheme {
+    position: static;
+    padding: 0;
+  }
+}

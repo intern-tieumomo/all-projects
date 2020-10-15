@@ -1,0 +1,306 @@
+.edgt-btn {
+	display: inline-block;
+	position: relative;
+	outline: none;
+	padding: 16px 56px 16px;
+	font-style: normal;
+	font-weight: 400;
+	font-family: $headings-font-family;
+	font-size: 15px;
+	line-height: 26px;
+	text-transform: uppercase;
+	text-align: center;
+
+
+	cursor: pointer;
+
+	@include edgtTransition(color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out);
+	@include edgtBoxSizing(border-box);
+
+	.edgt-btn-icon-holder {
+		.edgt-btn-icon-elem {
+			vertical-align: middle;
+		}
+	}
+
+	.edgt-btn-icon-holder,
+	.edgt-btn-text {
+		position: relative;
+		z-index: 2;
+	}
+
+	&.edgt-btn-icon .edgt-btn-text {
+		margin-right: 6px;
+	}
+
+	.edgt-btn-helper {
+		position: absolute;
+		z-index: 1;
+
+		@include edgtTransition(all 0.25s ease-out);
+	}
+
+	/* #Button types styles - start
+	   ========================================================================== */
+	&.edgt-btn-solid {
+		background-color: $first-main-color;
+		border: 1px solid $first-main-color;
+		color: #fff;
+	}
+
+	&.edgt-btn-outline {
+		border: 1px solid $button-border-color;
+        color: $headings-text-color;
+        background-color: transparent;
+	}
+
+	&.edgt-btn-white {
+		border: 1px solid #fff;
+		background-color: #fff;
+		color: $headings-text-color;
+	}
+
+	&.edgt-btn-white-outline {
+		border: 1px solid #fff;
+		background-color: transparent;
+		color: #fff;
+	}
+
+	&.edgt-btn-black {
+		border: 1px solid $headings-text-color;
+		color: #fff;
+		background-color: $headings-text-color;
+	}
+
+	&.edgt-btn-underline {
+		padding: 0;
+		min-width: 0;
+		line-height: 1.4em;
+		letter-spacing: 0;
+        text-transform: lowercase;
+
+		&:hover .edgt-btn-underline-line {
+			width: 100%;
+		}
+
+		.edgt-btn-underline-line {
+			background-color: $first-main-color;
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 0;
+			position: absolute;
+
+			@include edgtTransition(width 0.3s ease);
+		}
+	}
+
+	/* #Button types styles - end
+	   ========================================================================== */
+
+	/* #Button hover types styles - start
+    ========================================================================== */
+	&.edgt-btn-hover-outline {
+		&:not(.edgt-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: $headings-text-color !important;
+		}
+
+		&:not(.edgt-btn-custom-hover-bg):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: transparent !important;
+		}
+
+		&:not(.edgt-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: $button-border-color !important;
+		}
+	}
+
+	&.edgt-btn-hover-solid {
+		&:not(.edgt-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff !important;
+		}
+
+		&:not(.edgt-btn-custom-hover-bg):not(.edgt-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: $first-main-color !important;
+		}
+
+		&.edgt-btn-white {
+			&:not(.edgt-btn-custom-hover-bg):not(.edgt-btn-with-animation):hover {
+				//important because of inline color attribute. :not is used so we don't have to use important in JS
+				background-color: #fff !important;
+				border-color: #fff !important;
+			}
+		}
+
+		.edgt-btn-helper {
+			background-color: #fff;
+		}
+
+		&:not(.edgt-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: $first-main-color !important;
+		}
+	}
+
+	&.edgt-btn-hover-white {
+		&:not(.edgt-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: $headings-text-color !important;
+		}
+
+		&:not(.edgt-btn-custom-hover-bg):not(.edgt-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: #fff !important;
+		}
+
+		.edgt-btn-helper {
+			background-color: #fff;
+		}
+
+		&:not(.edgt-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #fff !important;
+		}
+	}
+
+	&.edgt-btn-hover-white-outline {
+		&:not(.edgt-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff !important;
+		}
+
+		&:not(.edgt-btn-custom-hover-bg):not(.edgt-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: transparent !important;
+		}
+
+		&:not(.edgt-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #fff !important;
+		}
+	}
+
+	&.edgt-btn-hover-black {
+		&:not(.edgt-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff !important;
+		}
+
+		&:not(.edgt-btn-custom-hover-bg):not(.edgt-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: $headings-text-color !important;
+		}
+
+		.edgt-btn-helper {
+			background-color: $headings-text-color;
+		}
+
+		&:not(.edgt-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: $headings-text-color !important;
+		}
+	}
+
+	/* #Button hover types styles - end
+	========================================================================== */
+
+	/* #Button sizes styles - start
+	   ========================================================================== */
+	&.edgt-btn-small {
+		padding: 14px 50px 14px;
+		min-width: 120px;
+		font-size: 14px;
+
+		&.edgt-btn-icon .edgt-btn-text {
+			margin-right: 2px;
+		}
+	}
+
+	&.edgt-btn-medium {
+		//same as default
+		min-width: 145px;
+	}
+
+	&.edgt-btn-large {
+		font-size: 16px;
+        padding: 18px 56px 18px;
+		min-width: 165px;
+	}
+
+	&.edgt-btn-huge {
+		min-width: 190px;
+	}
+
+	&.edgt-btn-huge,
+	&.edgt-btn-huge-full-width {
+		font-size: 20px;
+		padding: 20px 60px 20px;
+	}
+
+	&.edgt-btn-huge-full-width {
+		display: block;
+		text-align: center;
+		padding: 40px 60px 35px;
+	}
+	/* #Button sizes styles - end
+	   ========================================================================== */
+
+	/* #Hover animations - start
+	   ========================================================================== */
+	&.edgt-btn-fill-from-top {
+		.edgt-btn-helper {
+			width: 100%;
+			height: 0;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover .edgt-btn-helper {
+			height: 100%;
+		}
+	}
+
+	&.edgt-btn-fill-from-left {
+		.edgt-btn-helper {
+			width: 0;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover .edgt-btn-helper {
+			width: 100%;
+		}
+	}
+
+	&.edgt-btn-fill-from-right {
+		.edgt-btn-helper {
+			width: 0;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+
+		&:hover .edgt-btn-helper {
+			width: 100%;
+		}
+	}
+
+	&.edgt-btn-glow {
+		@include edgtTransition(color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out, box-shadow 0.25s ease-out);
+		
+		&:hover {
+			box-shadow: 0 0 2px rgba(255,255,255,.75),
+			 			0 0 14px rgba(255,255,255,.5),
+			  			0 0 33px rgba(255,255,255,.25),
+			   			0 0 55px rgba(255,255,255,.25);
+		}
+	}
+
+	/* #Hover animations - end
+	   ========================================================================== */
+}

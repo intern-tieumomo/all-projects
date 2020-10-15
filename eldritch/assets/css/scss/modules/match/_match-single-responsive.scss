@@ -1,0 +1,56 @@
+
+@media only screen and (max-width: map-get($breakpoints, ipad-portrait)) {
+    .single-match-item {
+        .edgt-match-single-scoreboard {
+            height: 480px;
+
+            .edgt-match-item-holder {
+                width: 570px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+    .single-match-item {
+        .edgt-match-single-scoreboard {
+            height: auto;
+            padding: 20px 0;
+
+            .edgt-match-item-holder {
+                width: 390px;
+                text-align: center;
+
+                .edgt-match-single-team {
+                    display: block;
+                    width: 60%;
+                    margin: auto;
+                    > {
+                        .edgt-match-item-image-holder {
+                            padding: 0 20px;
+                        }
+                    }
+                }
+
+                .edgt-match-vs-image {
+                    display: block;
+                    width: 60%;
+                    margin: 20px auto;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+    .single-match-item {
+        .edgt-match-single-scoreboard {
+
+            .edgt-match-item-holder {
+                width: 270px;
+            }
+        }
+    }
+}

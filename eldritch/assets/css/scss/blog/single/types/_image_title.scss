@@ -1,0 +1,162 @@
+body.single-post {
+	.edgt-container > .edgt-post-image-title {
+		position: relative;
+		text-align: center;
+		padding: 14% 0;
+		background-size: cover;
+
+		&.left {
+			text-align: right;
+		}
+
+		&.right {
+			text-align: left;
+		}
+
+		.edgt-post-image-title-overlay {
+			background-color: #333232;
+			opacity: 0.85;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.edgt-post-image-title-inner {
+			position: relative;
+			z-index: 11;
+		}
+
+		.edgt-post-title {
+			color: #fff;
+            font-size: 100px;
+			margin-top: 0;
+            margin-bottom: 0;
+
+			@include ipad-portrait {
+				font-size: 40px;
+			}
+
+			@include phone-portrait {
+				font-size: 32px;
+			}
+		}
+
+		.edgt-post-info {
+			font-size: 13px;
+			font-family: $default-font-family;
+			color: #fff;
+
+			div {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			> div {
+				padding-right: 27px;
+			}
+
+			.edgt-avatar {
+				padding-right: 10px;
+			}
+
+            .edgt-author {
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+			.edgt-post-info-category {
+
+				a {
+					font-size: 13px;
+					color: #fff;
+				}
+			}
+		}
+	}
+    .edgt-container .edgt-post-image-title-subtitle {
+        margin: 0;
+        padding-left: 6px;
+        color: #fff;
+    }
+}
+
+.edgt-blog-holder {
+
+	&.edgt-blog-single {
+
+		&.edgt-blog-image-title {
+
+			& {
+				& > article, & > div {
+					width: 66%;
+					margin-left: auto;
+					margin-right: auto;
+
+					.edgt-grid-col-9 &, .edgt-grid-col-8 & {
+						width: 100%;
+					}
+				}
+			}
+
+			.edgt-post-content {
+				margin-bottom: 55px;
+			}
+
+			.edgt-tags {
+				a {
+                    display: inline-block;
+                    font-family: $headings-font-family;
+                    text-transform: uppercase;
+                    color: $default-text-color;
+                    font-size: 13px;
+                    padding: 0px 16px;
+                    height: 29px;
+                    line-height: 31px;
+                    margin-right: 10px;
+                    border-bottom: 1px solid $default-border-color;
+                    &:hover {
+                        color: $first-main-color;
+                        border-bottom: 1px solid $first-main-color;
+                    }
+                    @include edgtTransition(color $default-transition-property $default-transition-speed,
+                            border-color $default-transition-property $default-transition-speed)
+				}
+			}
+
+			.edgt-tags-share-holder {
+				margin-top: 33px;
+
+				.edgt-single-tags-holder {
+					float: left;
+				}
+
+                .edgt-share-icons-single:first-child {
+                    float: left;
+                    width: 100%;
+                }
+
+				.edgt-share-icons-single {
+					float: right;
+
+                    a {
+                        color: $default-post-info-color;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+
+					.edgt-social-share-holder {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+@import "../variables";
+@import "../mixins";
+
+.edgt-page,
+.edgt-meta-box {
+	@import "partials/buttons";
+	@import "partials/tabs";
+	@import "partials/back-to-top";
+	@import "partials/messages";
+	@import "partials/switch";
+	@import "partials/thumbnails";
+
+	.wp-color-result {
+		height: auto;
+		outline: none;
+	}
+}
+
+/* used on blog post formats for video cover image upload */
+input.upload_button{
+	border: 1px solid #acacac;
+	border-radius: 3px 3px 3px 3px;
+	color: #444;
+	padding: 2px;
+	width: auto;
+}
+
+/* tinymce in portfolio */
+
+/* used in multiple images upload for portfolio */
+.edgt-gallery-images-holder li.edgt-gallery-image-holder {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 100px;
+}
+
+.edgt-gallery-images-holder li.edgt-gallery-image-holder img {
+	width: 100%;
+	padding: 4px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+
+/* Edge Slider custom fields - start*/
+
+.form-field.slider-field input{
+	width: auto;
+}
+
+.form-field.slider-field .inline label{
+	float: left;
+	line-height: 28px;
+	margin-right: 5px;
+}
+
+.inline {
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+	font-size: 13px;
+}
+
+/* Edge Slider custom fields - end*/
+

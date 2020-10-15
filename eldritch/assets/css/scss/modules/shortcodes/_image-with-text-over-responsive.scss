@@ -1,0 +1,28 @@
+@include mac {
+    .edgt-iwt-over {
+        .edgt-text-holder {
+            .edgt-iwt-text {
+                font-size: 19px;
+            }
+
+            .edgt-iwt-icon {
+                top: 0;    
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+    .edgt-iwt-over {
+        .edgt-iwt-text-holder {
+            .edgt-iwt-text {
+                font-size: 16px;
+            }
+
+            .edgt-iwt-icon {
+                top: 1px;    
+            }
+        }
+    }
+}

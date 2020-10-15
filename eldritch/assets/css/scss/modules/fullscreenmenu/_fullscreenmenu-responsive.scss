@@ -1,0 +1,24 @@
+@include laptop-landscape-large {
+
+    nav.edgt-fullscreen-menu {
+        margin-top: 0;
+    }
+
+	.edgt-fullscreen-above-menu-widget-holder {
+		top: 10%;
+	}
+
+	nav.edgt-fullscreen-menu ul li {
+		a span {
+			margin: 12px 0 12px;
+		}
+	}
+}
+
+@include mac {
+	nav.edgt-fullscreen-menu ul li {
+		a span {
+			margin: 10px 0 10px;
+		}
+	}
+}

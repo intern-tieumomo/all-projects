@@ -1,0 +1,353 @@
+/* Fixed default inputs text color */
+button,
+input,
+select,
+textarea {
+    color: #000;
+}
+.youplay-input input,
+.youplay-input textarea,
+.youplay-textarea input,
+.youplay-textarea textarea,
+.youplay-select select {
+    color: inherit;
+}
+
+/* Styled Forms */
+.youplay-form {
+    padding: 4rem;
+    background: rgba($back_darken_color, .8);
+}
+
+
+/* Input and Textarea */
+.youplay-input,
+.youplay-textarea {
+    position: relative;
+    margin-bottom: 2rem;
+
+    // placeholder color
+    ::placeholder {
+        color: $text_mute_color;
+        transition: .3s color ease;
+    }
+    &.input-filled ::placeholder {
+        color: rgba($back_darken_color, .8);
+    }
+
+    // inputs
+    input,
+    textarea {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 1rem 1.8rem;
+        resize: none;
+        background: none;
+        border: none;
+        outline: none;
+        transition: .3s color ease;
+        z-index: 2;
+    }
+
+    // skew background
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($text_color, .1);
+        transition: .3s background ease;
+        transform: skew(-$skew_size);
+    }
+
+    // with error
+    &.has-error::after {
+        background: rgba($color_danger, .3);
+    }
+
+    // icon
+    .icon {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        font-size: 1.8rem;
+        color: $text_color;
+        transition: .3s color ease;
+        z-index: 2;
+
+        + input,
+        + textarea {
+            padding-left: 5rem;
+        }
+    }
+
+    // on focus styles
+    &.input-filled {
+        &::after {
+            background: rgba($text_color, 1);
+        }
+        .icon,
+        input,
+        textarea {
+            color: $back_darken_color;
+        }
+    }
+}
+.youplay-textarea::after {
+    transform: skew(-($skew_size * .62));
+}
+
+
+/* Ratings Selector */
+.youplay-rating {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    [type="radio"] + label {
+        width: auto;
+        height: auto;
+        padding: 0;
+        padding-right: .7rem;
+        font-size: 2rem;
+        line-height: 1;
+    }
+    input {
+        display: none;
+
+        &:checked ~ label {
+            color: $main_color;
+        }
+    }
+    label {
+        position: relative;
+        display: block;
+        float: right;
+        width: 2.2em;
+        height: 2em;
+        clear: none;
+        cursor: default;
+
+        &::after,
+        &::before {
+            content: none;
+            display: none;
+        }
+
+        &:hover,
+        &:hover ~ label {
+            color: $main_color;
+            opacity: .8;
+        }
+    }
+}
+
+
+/* Ratings */
+.rating {
+    position: relative;
+    display: inline-block;
+
+    .rating-front {
+        position: absolute;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .rating-back {
+        white-space: nowrap;
+    }
+}
+
+
+/* Selects */
+.youplay-select {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+
+    select {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.8rem;
+        padding-right: 3.6rem;
+        margin: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        appearance: none;
+    }
+
+    option,
+    optgroup {
+        color: #000;
+    }
+
+    // fix for firefox
+    @-moz-document url-prefix("") {
+        option,
+        optgroup {
+            color: inherit;
+        }
+    }
+
+    select[multiple] {
+        padding-right: 1.8rem;
+    }
+    select[multiple] option,
+    select[multiple] optgroup {
+        color: inherit;
+    }
+
+    /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+    // stylelint-disable-next-line
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        select {
+            padding-right: 4rem;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background: rgba($text_color, .1);
+        transition: .3s background ease;
+        transform: skew(-$skew_size);
+    }
+
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 1.8rem;
+        right: 1.8rem;
+        width: 0;
+        height: 0;
+        margin-left: -5px;
+        pointer-events: none;
+        border: solid transparent;
+        border-color: rgba($text_color, 0);
+        border-width: 5px;
+        border-top-color: $text_color;
+    }
+}
+
+
+/* Checkboxes */
+.youplay-checkbox {
+    margin-bottom: 2rem;
+
+    input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+
+        + label {
+            position: relative;
+            padding-left: 35px;
+            font-weight: 400;
+            cursor: pointer;
+
+            // new checkbox style
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: -2px;
+                left: -8px;
+                width: 25px;
+                height: 25px;
+                background: rgba($text_color, .1);
+                transition: .3s background ease;
+                transform: skew(-$skew_size);
+                z-index: 1;
+            }
+
+            // checked icon
+            &::before {
+                content: "\e013";
+                position: absolute;
+                top: 0;
+                left: -4px;
+                font: 17px "Glyphicons Halflings"; // stylelint-disable-line
+                color: $text_color;
+                opacity: 0;
+                transition: .3s opacity ease;
+                z-index: 2;
+            }
+        }
+
+        // checked styles
+        &:checked + label {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+/* Radios */
+.youplay-radio {
+    margin-bottom: 2rem;
+
+    input[type="radio"] {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+
+        + label {
+            position: relative;
+            padding-left: 35px;
+            font-weight: 400;
+            cursor: pointer;
+
+            // new checkbox style
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: -2px;
+                left: -8px;
+                width: 25px;
+                height: 25px;
+                background: rgba($text_color, .1);
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            // checked icon
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: -1px;
+                width: 11px;
+                height: 11px;
+                background: $text_color;
+                border-radius: 50%;
+                opacity: 0;
+                transition: .3s opacity ease;
+                z-index: 2;
+            }
+        }
+
+        // checked styles
+        &:checked + label {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

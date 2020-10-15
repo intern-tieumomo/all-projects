@@ -1,0 +1,183 @@
+{% set page_title = 'User Settings' %}
+{% set header_show = 'user' %}
+{% set header_image = 'assets/images/dark/game-diablo-iii-1400x656.jpg' %}
+{% set header_size = 'small' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <ul class="pagination pagination-sm mt-0">
+                    <li class="active">
+                        <a href="#">General</a>
+                    </li>
+                    <li>
+                        <a href="#">Security</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Notifications</a>
+                    </li>
+                </ul>
+
+                <form action="">
+                    <h3>Change Password:</h3>
+                    <div class="form-horizontal mt-30 mb-40">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="cur_password">Current Password:</label>
+                            <div class="col-sm-10">
+                                <div class="youplay-input">
+                                    <input type="password" id="cur_password" placeholder="Current Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="new_password">New Password:</label>
+                            <div class="col-sm-10">
+                                <div class="youplay-input">
+                                    <input type="password" id="new_password" placeholder="New Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Email:</h3>
+                    <div class="form-horizontal mt-30 mb-40">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Current Email:</label>
+                            <div class="col-sm-10">
+                                nk*******@gmail.com
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="new_email">New Email:</label>
+                            <div class="col-sm-10">
+                                <div class="youplay-input">
+                                    <input type="email" id="new_email" placeholder="New Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Change Email</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Phone Number:</h3>
+                    <div class="form-horizontal mt-30 mb-40">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Current Phone:</label>
+                            <div class="col-sm-10">
+                                +1 *** ** ** 11
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Change Phone</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Regional Settings:</h3>
+                    <div class="form-horizontal mt-30 mb-40">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Language:</label>
+                            <div class="col-sm-10">
+                                <div class="youplay-select">
+                                    <select>
+                                        <option>Azərbaycan dili</option>
+                                        <option>Bahasa Indonesia</option>
+                                        <option>Bosanski</option>
+                                        <option>Dansk</option>
+                                        <option>Deutsch</option>
+                                        <option>Eesti</option>
+                                        <option selected>English</option>
+                                        <option>Español</option>
+                                        <option>Esperanto</option>
+                                        <option>Français</option>
+                                        <option>Hrvatski</option>
+                                        <option>Italiano</option>
+                                        <option>Kiswahili</option>
+                                        <option>Latviešu</option>
+                                        <option>Lietuvių</option>
+                                        <option>Magyar</option>
+                                        <option>Moldovenească</option>
+                                        <option>Nederlands</option>
+                                        <option>Norsk</option>
+                                        <option>O‘zbek</option>
+                                        <option>Polski</option>
+                                        <option>Português</option>
+                                        <option>Română</option>
+                                        <option>Shqip</option>
+                                        <option>Slovenščina</option>
+                                        <option>Suomi</option>
+                                        <option>Svenska</option>
+                                        <option>Tagalog</option>
+                                        <option>Tiếng Việt</option>
+                                        <option>Türkmen</option>
+                                        <option>Türkçe</option>
+                                        <option>Čeština</option>
+                                        <option>Ελληνικά</option>
+                                        <option>Адыгэбзэ</option>
+                                        <option>Беларуская</option>
+                                        <option>Български</option>
+                                        <option>ГIалгIай мотт</option>
+                                        <option>Ирон</option>
+                                        <option>Монгол</option>
+                                        <option>Русский</option>
+                                        <option>Српски</option>
+                                        <option>Українська</option>
+                                        <option>ภาษาไทย</option>
+                                        <option>日本語</option>
+                                        <option>臺灣話</option>
+                                        <option>한국어</option>
+                                        <option>پنجابی</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Save Regional Settings</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Appearance:</h3>
+                    <div class="form-horizontal mt-30 mb-40">
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="youplay-checkbox">
+                                    <input type="checkbox" name="appearance" id="appearance">
+                                    <label for="appearance">Use Large Fonts</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-3">
+                {% include "shared/dark-sidebar-user.html" %}
+            </div>
+            <!-- Right Side -->
+
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+/* ==========================================================================
+# Pie Chart Basic - begin
+========================================================================== */
+
+.edgt-pie-chart-holder {
+	position: relative;
+	display: block;
+
+	&.edgt-pie-chart-typography-light {
+		span.edgt-to-counter,
+		.edgt-to-counter:after,
+		.edgt-pie-chart-text,
+		.edgt-pie-title {
+			color: #fff;
+		}
+	}
+
+	&.edgt-pie-chart-typography-dark {
+		span.edgt-to-counter,
+		.edgt-pie-title {
+			color: #303030;
+		}
+
+		.edgt-pie-chart-text {
+			color: #808080;
+		}
+	}
+
+	.edgt-percentage {
+		position: relative;
+		display: block;
+		height: 175px;
+		width: 175px;
+		line-height: 175px;
+		text-align: center;
+		margin: 0 auto;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		@include edgtTransition(opacity .3s ease-out);
+
+		.edgt-pie-title {
+			line-height: inherit;
+		}
+
+	}
+
+	.edgt-percentage canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.edgt-to-counter {
+		position: relative;
+		font-weight: 700;
+		font-size: 53px;
+		line-height: 3.6em;
+		display: inline-block;
+		margin-top:7px;
+		font-family: $headings-font-family;
+
+		&:after {
+			content: '%';
+			display: inline-block;
+			position: relative;
+			font-size: 0.5em;
+			top:-0.7em;
+			margin-left: 0.15em;
+		}
+	}
+
+	.edgt-pie-chart-text {
+		text-align: center;
+		margin: 27px 0 0;
+
+	}
+}
+
+/* ==========================================================================
+# Pie Chart Basic - end
+========================================================================== */

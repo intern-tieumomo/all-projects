@@ -1,0 +1,398 @@
+/* ==========================================================================
+   WooCommerce Checkout Page styles - begin
+   ========================================================================== */
+
+.edgt-woocommerce-page {
+
+	.checkout_coupon {
+		display: block;
+		margin: 0 0 34px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&.woocommerce-checkout form.login {
+		display: block;
+		margin: 0 0 34px;
+
+		> *:first-child {
+			margin: 0 0 15px;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		input[type='checkbox'] {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			top: -1px;
+			margin: 0 3px 0 5px;
+		}
+
+		.checkout_coupon {
+			input[type=text] {
+				width: 220px;
+			}
+
+			input[type=submit] {
+				height: 48px;
+				line-height: 52px;
+			}
+		}
+
+		.lost_password {
+			display: block;
+			margin: 15px 0 0;
+
+			a {
+				font-weight: 600;
+			}
+		}
+	}
+
+
+	.woocommerce-checkout .col2-set:before,
+	.woocommerce-checkout .col2-set:after {
+		content: '';
+		display: table;
+	}
+
+	.woocommerce-checkout .col2-set:after {
+		clear: both;
+	}
+
+	.woocommerce-checkout {
+
+		.woocommerce-billing-fields {
+			margin-top: 42px;
+		}
+
+		.woocommerce-billing-fields__field-wrapper:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		.col-1,
+		.col-2 {
+			position: relative;
+			display: block;
+			vertical-align: middle;
+
+			h3 {
+				margin: 30px 0 25px;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			label:not(.checkbox) {
+				display: block;
+				margin: 5px 0 0;
+				color: $headings-text-color;
+				font-family: $headings-font-family;
+				font-weight: 600;
+			}
+
+			.form-row {
+				width: 49%;
+				margin-right: 2%;
+				float: left;
+
+				&.create-account {
+					float: none;
+				}
+			}
+
+			.form-row-last {
+				margin-right: 0;
+			}
+
+			.form-row-wide,
+			.form-row.notes {
+				width: 100%;
+			}
+		}
+
+		input[type="text"], input[type="email"], input[type=tel] {
+			padding: 17px 20px;
+		}
+
+		.select2-container .select2-choice {
+			height: 55px;
+
+			> .select2-chosen {
+				line-height: 55px;
+			}
+		}
+
+		.create-account {
+			margin: 0 0 15px;
+
+			input, label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		h3#order_review_heading {
+			margin: 24px 0 28px;
+		}
+
+		table {
+			border: 1px solid $default-border-color;
+			padding: 0;
+			margin: 0 0 34px;
+
+			tr {
+				border: 0;
+				border-bottom: 1px solid $default-border-color;
+
+				&.order-total {
+
+					.amount {
+						color: $headings-text-color;
+					}
+				}
+
+				&.order-total, &.cart-subtotal {
+					td {
+						text-align: right;
+					}
+				}
+
+				&.shipping {
+
+					#shipping_method {
+						list-style: none;
+						margin: 0;
+
+						li {
+							margin: 3px 0;
+							padding: 0;
+
+							> * {
+								display: inline-block;
+								vertical-align: middle;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+
+			td, th {
+				padding: 15px 25px;
+				text-align: left;
+				vertical-align: middle;
+
+				&.product-total {
+					text-align: right;
+				}
+			}
+
+			th {
+				border: 0;
+				color: $headings-text-color;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			.variation {
+
+				> * {
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0;
+					margin: 0;
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.select2-container {
+			border-radius: 0;
+		}
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			top: -1px;
+			margin: 0 3px 0 5px;
+		}
+
+		.woocommerce-checkout-payment {
+			display: block;
+			margin: 20px 0 70px;
+			font-family: $headings-font-family;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				border: 1px solid #eaeaea;
+
+				li {
+					padding: 15px 25px;
+
+					input, label {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					div {
+						color: #ababab;
+					}
+
+					&.payment_method_paypal {
+
+						label {
+
+							img {
+								vertical-align: middle;
+								margin: 0 8px;
+							}
+						}
+					}
+
+					input[type=radio] {
+						opacity: 0;
+					}
+
+					input[type=radio] + label {
+						position: relative;
+						display: inline-block;
+						color: $headings-text-color;
+						font-weight: 600;
+					}
+
+					input[type=radio] + label:before {
+						content: '';
+						height: 9px;
+						width: 9px;
+						position: absolute;
+						top: 7px;
+						left: -24px;
+						border: 1px solid $headings-text-color;
+
+						@include edgtBorderRadius(50%);
+					}
+
+					input[type=radio]:checked + label:after {
+						content: '';
+						height: 5px;
+						width: 5px;
+						position: absolute;
+						background-color: $headings-text-color;
+						top: 10px;
+						left: -21px;
+
+						@include edgtBorderRadius(50%);
+					}
+
+					&.payment_method_paypal {
+
+						@include phone-landscape-min {
+
+							input[type=radio] + label:before {
+								top: 48px;
+							}
+
+							input[type=radio]:checked + label:after {
+								top: 51px;
+							}
+						}
+					}
+				}
+			}
+
+			.form-row.place-order {
+				border: 1px solid #eaeaea;
+				border-top: 0;
+				padding: 15px 28px;
+				background-color: #fafafa;
+
+				input[type="submit"] {
+					height: 47px;
+					padding: 0 25px;
+				}
+			}
+		}
+	}
+
+
+    &.woocommerce-checkout.edgt-woocommerce-dark-skin {
+        .edgt-content input[type="text"],
+        .edgt-content input[type="email"],
+        .edgt-content input[type="tel"], .w
+        .edgt-content input[type="password"],
+        .edgt-content textarea,
+        div.woocommerce input[type="text"],
+        div.woocommerce input[type="email"],
+        div.woocommerce input[type="tel"],
+        div.woocommerce input[type="password"],
+        div.woocommerce textarea {
+            border-color: #595757;
+            color: $default-text-color-dark;
+            &:focus,
+            &:hover {
+                border-color: $first-main-color;
+                color: #fff;
+            }
+        }
+
+        .col-1 label:not(.checkbox), .col-2 label:not(.checkbox) {
+            color: $default-text-color-dark;
+
+        }
+
+        table {
+            border-color: #595757;
+
+            th {
+                color: $default-text-color-dark;
+                border-color: #595757;
+            }
+
+            tr.order-total .amount {
+                color: $default-text-color-dark;
+            }
+
+            tr {
+                border-color: #595757;
+            }
+        }
+
+        .woocommerce-checkout-payment ul,
+        .woocommerce-message,
+        .woocommerce-info,
+        .woocommerce-checkout-payment form-row.place-order {
+            border-color: #595757;
+        }
+
+        .woocommerce-checkout-payment .form-row.place-order {
+            background-color: transparent;
+            border-color: #595757;
+        }
+
+        .woocommerce-checkout-payment ul li input[type="radio"] + label {
+            color: $default-text-color-dark;
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Checkout Page styles - end
+   ========================================================================== */

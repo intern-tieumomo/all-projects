@@ -1,0 +1,73 @@
+@include ipad-landscape {
+	.edgt-process-holder {
+
+		.edgt-process-item-holder {
+			&.edgt-pi-highlighted {
+				margin-top: 0;
+			}
+		}
+
+		.edgt-pi-image-holder:before {
+			display: none;
+		}
+
+		.edgt-pi-holder-inner {
+			width: 100%;
+		}
+
+		&.edgt-process-holder-items-four {
+			.edgt-process-item-holder {
+				width: 50%;
+				margin-bottom: 30px;
+			}
+
+			&.appeared {
+				.edgt-pi-holder:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-process-holder.edgt-process-horizontal {
+		&.edgt-process-holder-items-three, &.edgt-process-holder-items-four {
+			.edgt-process-item-holder {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+
+		&.appeared {
+			.edgt-pi-holder:before {
+				display: none;
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+	.edgt-process-holder.edgt-process-vertical {
+		.edgt-process-item-holder {
+			margin-bottom: 36px;
+		}
+
+		.edgt-pi-holder {
+			float:none;
+
+			.edgt-pi.icon {
+				margin:0 auto 26px auto;
+			}
+		}
+
+		.edgt-pi-content-holder {
+			padding:0 20px;
+			text-align: center;
+		}
+
+		&.appeared .edgt-process-item-holder:before {
+			display:none;
+		}
+	}
+}

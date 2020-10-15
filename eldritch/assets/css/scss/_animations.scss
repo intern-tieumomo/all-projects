@@ -1,0 +1,266 @@
+
+/* ==========================================================================
+   #Animation styles - start
+   ========================================================================== */
+
+@include keyframes(element-from-left) {
+	0% {
+		opacity: 0;
+		transform: translate(-20%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(element-from-right) {
+	0% {
+		opacity: 0;
+		transform: translate(20%, 0);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(element-from-top) {
+	0% {
+		opacity: 0;
+		transform: translate(0, -30%);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(element-from-bottom) {
+	0% {
+		opacity: 0;
+		transform: translate(0, 30%);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.edgt-element-from-left,
+.edgt-element-from-right,
+.edgt-element-from-top,
+.edgt-element-from-bottom,
+.edgt-element-from-fade {
+	display: inline-block;
+	width: 100%;
+}
+
+.touch .edgt-no-animations-on-touch .edgt-element-from-left,
+.touch .edgt-no-animations-on-touch .edgt-element-from-right,
+.touch .edgt-no-animations-on-touch .edgt-element-from-top,
+.touch .edgt-no-animations-on-touch .edgt-element-from-bottom,
+.touch .edgt-no-animations-on-touch .edgt-element-from-fade {
+
+	> div {
+		opacity: 1;
+		@include edgtAnimation(none);
+		@include edgtTransform(scale(1));
+	}
+}
+
+.edgt-element-from-left,
+.edgt-element-from-right,
+.edgt-element-from-top,
+.edgt-element-from-bottom,
+.edgt-element-from-fade {
+	
+	> div {
+		opacity: 0;
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+
+.edgt-element-from-fade {
+
+	&.edgt-element-from-fade-on {
+
+		> div {
+			opacity: 1;
+			@include edgtTransition(opacity .8s ease 0s);
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.edgt-element-from-left {
+
+	&.edgt-element-from-left-on {
+
+		> div {
+
+			@include edgtAnimation(element-from-left 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.edgt-element-from-right {
+
+	&.edgt-element-from-right-on {
+
+		> div {
+			@include edgtAnimation(element-from-right 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.edgt-element-from-top {
+
+	&.edgt-element-from-top-on {
+
+		> div {
+			@include edgtAnimation(element-from-top 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.edgt-element-from-bottom {
+
+	&.edgt-element-from-bottom-on {
+
+		> div {
+			@include edgtAnimation(element-from-bottom 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.touch .edgt-no-animations-on-touch .edgt-flip-in,
+.touch .edgt-no-animations-on-touch .edgt-grow-in,
+.touch .edgt-no-animations-on-touch .edgt-z-rotate,
+.touch .edgt-no-animations-on-touch .edgt-x-rotate,
+.touch .edgt-no-animations-on-touch .edgt-y-translate,
+.touch .edgt-no-animations-on-touch .edgt-fade-in-down,
+.touch .edgt-no-animations-on-touch .edgt-fade-in-left-x-rotate,
+.touch .edgt-no-animations-on-touch .edgt-fade-in{
+
+	@include edgtTransition(none !important);
+	@include edgtTransform(none !important);
+	opacity: 1 !important;
+
+}
+
+.edgt-flip-in {
+
+	opacity: 0;
+	@include edgtTransform(perspective(1000px) rotateY(25deg));
+	-webkit-transition: -webkit-transform 1s cubic-bezier(.38,.76,0,.87), opacity .4s;
+	transition: transform 1s cubic-bezier(.38,.76,0,.87), opacity .35s ease-out;
+
+	&.edgt-flip-in-on {
+		opacity: 1;
+		@include edgtTransform(rotateY(0deg));
+	}
+}
+
+.edgt-grow-in {
+
+	opacity: 0;
+	@include edgtTransform(scale(0.8));
+	@include edgtTransition(all 1s cubic-bezier(0,1,.5,1));
+	-webkit-backface-visibility: hidden;
+
+	&.edgt-grow-in-on {
+		opacity: 1;
+		@include edgtTransform(scale(1));
+	}
+}
+
+.edgt-z-rotate {
+
+	opacity: 0;
+	@include edgtTransform(rotateZ(7deg));
+	@include edgtTransition(all 300ms cubic-bezier(0.165, 0.84, 0.44, 1));
+	@include edgtTransformOrigin(top right);
+	-webkit-backface-visibility: hidden;
+
+	&.edgt-z-rotate-on {
+		opacity: 1;
+		@include edgtTransform(rotateZ(0deg));
+	}
+}
+
+
+.edgt-x-rotate {
+
+	opacity: 0;
+	@include edgtTransform(perspective(900px) rotateX(-45deg));
+	@include edgtTransition(all .6s cubic-bezier(.785,.135,.15,.86));
+	-webkit-backface-visibility: hidden;
+
+	&.edgt-x-rotate-on {
+		opacity: 1;
+		@include edgtTransform(rotateX(0deg));
+	}
+}
+
+.edgt-y-translate {
+
+	opacity: 0;
+	@include edgtTransform(translate(0,30px));
+	@include edgtTransition(all 700ms cubic-bezier(0.680, -0.650, 0.265, 1.650));
+
+	&.edgt-y-translate-on {
+		opacity: 1;
+		@include edgtTransform(translate(0,0));
+	}
+
+}
+
+.edgt-fade-in-down {
+	opacity: 0;
+	@include edgtTransform(translate(0,-25px));
+	@include edgtTransition(all .9s cubic-bezier(0,1,.5,1));
+
+	&.edgt-fade-in-down-on {
+		opacity: 1;
+		@include edgtTransform(translate(0,0));
+	}
+}
+
+.edgt-fade-in-left-x-rotate {
+	opacity: 0;
+	@include edgtTransform(rotateZ(-5deg) translate(-30px,0));
+	@include edgtTransition(all .4s ease);
+
+	&edgt-fade-in-left-x-rotate-on {
+		opacity: 1;
+		@include edgtTransform(rotateZ(0deg) translate(0,0));
+	}
+}
+
+
+.edgt-fade-in {
+	opacity: 0;
+	@include edgtTransition(all 1s ease);
+
+	&.edgt-fade-in-on {
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+   #Animation styles - end
+   ========================================================================== */

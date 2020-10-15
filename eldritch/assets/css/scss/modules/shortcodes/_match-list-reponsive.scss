@@ -1,0 +1,37 @@
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+    .edgt-match-list-holder {
+        article {
+            .edgt-match-item-holder {
+                display: inline-block;
+                vertical-align: middle;
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    &.edgt-match-single-team {
+                        width: 30%;
+                        float: left;
+                    }
+                    &.edgt-match-vs-image {
+                        width: 40%;
+                        float: left;
+                        padding: 20px 0 0 0;
+                    }
+                    &.edgt-match-info {
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px 0 0 0;
+                    }
+                    &.edgt-match-result-holder {
+                        padding: 15px 0 0 0;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .edgt-match-list-paging {
+            text-align: center;
+        }
+    }
+}

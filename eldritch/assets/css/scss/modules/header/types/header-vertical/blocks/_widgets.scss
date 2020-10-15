@@ -1,0 +1,21 @@
+.edgt-header-vertical {
+	.edgt-vertical-area-widget-holder {
+        position: relative;
+		z-index: 100;
+        font-size: 13px;
+        line-height: 23px;
+        text-align: center;
+        color: #465161;
+	}
+
+    .edgt-vertical-alignment-center{
+
+        .edgt-vertical-area-widget-holder {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+
+}

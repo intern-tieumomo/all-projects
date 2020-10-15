@@ -1,0 +1,37 @@
+{% import "macros/macros.html" as macros %}
+{% include "layouts/_head.html" %}
+
+<body>
+    {% if preloader_show %}
+        {% include "shared/preloader.html" %}
+    {% endif %}
+
+    {% include "shared/navbar.html" %}
+
+    {% block before_content %}{% endblock %}
+
+    <div class="content-wrap{{ ' no-banner' if not header_show }}{{ (' ' + content_class) if content_class }}">
+        {% if header_show == 'user' %}
+            {% include "shared/header-user.html" %}
+        {% elif header_show %}
+            {% include "shared/header.html" %}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+
+        {% if footer_show %}
+            {% include "shared/footer.html" %}
+        {% endif %}
+    </div>
+
+    {% block after_content %}{% endblock %}
+
+    {% if nav_search %}
+        {% include "shared/search-block.html" %}
+    {% endif %}
+
+    {% include "layouts/_foot.html" %}
+
+    {% block javascript %}{% endblock %}
+</body>
+</html>

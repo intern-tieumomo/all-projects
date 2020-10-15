@@ -1,0 +1,1587 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-27 07:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid "404"
+msgstr ""
+
+#: 404.php:21
+msgid "error"
+msgstr ""
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: comments.php:36
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:42
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:52 comments.php:73
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:55 comments.php:76
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:56 comments.php:77
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:90
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:56
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:57
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:58
+msgid "Footer Menu"
+msgstr ""
+
+#: header.php:44
+msgid "Skip to content"
+msgstr ""
+
+#: search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/template-functions.php:136
+msgctxt "Roboto Condensed font: on or off"
+msgid "on"
+msgstr ""
+
+#. If there are characters in your language that are not supported
+#. by Titillium Web, translate this to 'off'. Do not translate into your own language.
+#: inc/template-functions.php:144
+msgctxt "Titillium Web font: on or off"
+msgid "on"
+msgstr ""
+
+#. %s: post date.
+#. %s: post date.
+#: inc/template-tags.php:34 inc/template-tags.php:73 inc/template-tags.php:137
+#, php-format
+msgctxt "post date"
+msgid " %s"
+msgstr ""
+
+#. %s: post author.
+#. %s: post author.
+#: inc/template-tags.php:40 inc/template-tags.php:143
+#, php-format
+msgctxt "post author"
+msgid " %s"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:109 inc/template-tags.php:150
+msgid "0 "
+msgstr ""
+
+#: inc/template-tags.php:109 inc/template-tags.php:150
+msgid "1 "
+msgstr ""
+
+#: inc/template-tags.php:109 inc/template-tags.php:150
+msgid "% "
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:169
+msgctxt "list item separator"
+msgid " "
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:172
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:180 template-parts/content-page.php:38
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: template-parts/content-none.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:28
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:47
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:25 template-parts/content-single.php:48
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-single.php:37
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content.php:47 inc/customizer/nv-design-panel.php:131
+#: layouts/archive/classic.php:48 layouts/archive/grid.php:64
+msgid "Continue Reading"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#: inc/customizer/customizer.php:52 inc/welcome/welcome.php:462
+msgid "News Vibrant Pro"
+msgstr ""
+
+#: inc/customizer/customizer.php:53 inc/welcome/welcome.php:555
+msgid "Buy Pro"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:25
+msgid "Additional Settings"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:38
+#: inc/customizer/nv-header-panel.php:119
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:65
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:69
+msgid "Social Media Icon"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:70
+msgid "Add Icon"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:75
+msgid "Social Media Logo"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:76
+msgid "Choose social media icon."
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:80
+msgid "Social Icon Url"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:81
+msgid "Enter social media url."
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:96
+msgid "Categories Color"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:121
+#, php-format
+msgid " %s"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:138
+msgid "Widget Settings"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:161
+msgid "Category Link"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:162
+msgid ""
+"Enable/Disable option for category link for widget title in block layout "
+"widget."
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:165
+#: inc/customizer/nv-additional-panel.php:194
+#: inc/customizer/nv-header-panel.php:225
+msgid "Enable"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:166
+#: inc/customizer/nv-additional-panel.php:195
+#: inc/customizer/nv-header-panel.php:226
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:190
+msgid "Category Color"
+msgstr ""
+
+#: inc/customizer/nv-additional-panel.php:191
+msgid ""
+"Enable/Disable option for category color for widget title in block layout "
+"widget."
+msgstr ""
+
+#: inc/customizer/nv-custom-classes.php:313
+msgid "Delete"
+msgstr ""
+
+#: inc/customizer/nv-custom-classes.php:314
+msgid "Close"
+msgstr ""
+
+#: inc/customizer/nv-customizer-sanitize.php:47
+msgid "Fullwidth Layout"
+msgstr ""
+
+#: inc/customizer/nv-customizer-sanitize.php:48
+#: inc/customizer/nv-general-panel.php:120
+msgid "Boxed Layout"
+msgstr ""
+
+#: inc/customizer/nv-customizer-sanitize.php:64
+#: inc/customizer/nv-design-panel.php:289 inc/customizer/nv-footer-panel.php:65
+#: inc/customizer/nv-header-panel.php:64 inc/customizer/nv-header-panel.php:93
+#: inc/customizer/nv-header-panel.php:123
+#: inc/customizer/nv-header-panel.php:153
+#: inc/customizer/nv-header-panel.php:254
+#: inc/customizer/nv-header-panel.php:283
+#: inc/customizer/nv-header-panel.php:325
+msgid "Show"
+msgstr ""
+
+#: inc/customizer/nv-customizer-sanitize.php:65
+#: inc/customizer/nv-design-panel.php:290 inc/customizer/nv-footer-panel.php:66
+#: inc/customizer/nv-header-panel.php:65 inc/customizer/nv-header-panel.php:94
+#: inc/customizer/nv-header-panel.php:124
+#: inc/customizer/nv-header-panel.php:154
+#: inc/customizer/nv-header-panel.php:255
+#: inc/customizer/nv-header-panel.php:284
+#: inc/customizer/nv-header-panel.php:326
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:28
+msgid "Design Settings"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:41
+msgid "Archive Settings"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:63
+msgid "Archive Sidebars"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:64 inc/customizer/nv-design-panel.php:186
+#: inc/customizer/nv-design-panel.php:243
+msgid "Choose sidebar from available layouts"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:68 inc/customizer/nv-design-panel.php:190
+#: inc/customizer/nv-design-panel.php:247
+#: inc/widgets/nv-widget-functions.php:39
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:72 inc/customizer/nv-design-panel.php:194
+#: inc/customizer/nv-design-panel.php:251
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:76 inc/customizer/nv-design-panel.php:198
+#: inc/customizer/nv-design-panel.php:255
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:80 inc/customizer/nv-design-panel.php:202
+#: inc/customizer/nv-design-panel.php:259
+msgid "No Sidebar Center"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:105
+msgid "Archive Layouts"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:106 inc/customizer/nv-footer-panel.php:90
+msgid "Choose layout from available layouts"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:110
+msgid "Classic"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:114
+msgid "Grid"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:140
+msgid "Read More Text"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:141
+msgid "Enter read more button text for archive page."
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:163
+msgid "Page Settings"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:185
+msgid "Page Sidebars"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:220
+msgid "Post Settings"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:242
+msgid "Post Sidebars"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:285
+msgid "Related Post Option"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:286
+msgid "Show/Hide option for related posts section at single post page."
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:305 inc/hooks/nv-custom-hooks.php:39
+msgid "Related Posts"
+msgstr ""
+
+#: inc/customizer/nv-design-panel.php:314
+msgid "Related Post Section Title"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:25
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:38
+msgid "Widget Area"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:61
+msgid "Footer Widget Section"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:62
+msgid "Show/Hide option for footer widget area section."
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:89
+msgid "Footer Widget Layout"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:94
+msgid "Columns Four"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:98
+msgid "Columns Three"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:102
+msgid "Columns Two"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:106
+msgid "Column One"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:125
+msgid "Bottom Section"
+msgstr ""
+
+#. Name of the theme
+#: inc/customizer/nv-footer-panel.php:139 inc/hooks/nv-footer-hooks.php:74
+#: inc/welcome/welcome.php:461
+msgid "News Vibrant"
+msgstr ""
+
+#: inc/customizer/nv-footer-panel.php:148
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:34
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:55
+msgid "Theme Color"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:81
+msgid "Header Text Color"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:97
+msgid "Website Layout"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:98
+msgid "Choose a site to display your website more effectively."
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:116
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:119
+msgid "FullWidth Layout"
+msgstr ""
+
+#: inc/customizer/nv-general-panel.php:140
+msgid "Display Site Title and Tagline"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:25
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:37 inc/customizer/nv-header-panel.php:60
+msgid "Top Header Section"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:61
+msgid "Show/Hide option for top header section."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:89
+msgid "Current Date"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:90
+msgid "Show/Hide option for current date at top header section."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:120
+msgid "Show/Hide option for social media icons at top header section."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:149
+msgid "Featured Posts Section"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:150
+msgid "Show/Hide option for featured posts at top header section."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:182
+msgid "Categories for Featured Posts"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:198
+msgid "Header Option"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:221
+msgid "Sticky Menu"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:222
+msgid "Enable/Disable option for sticky menu."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:250
+msgid "Home Icon"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:251
+msgid "Show/Hide option for home icon at primary menu."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:279
+msgid "Search Icon"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:280
+msgid "Show/Hide option for search icon at primary menu."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:298
+msgid "Ticker Section"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:321
+msgid "Ticker Option"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:322
+msgid "Show/Hide option for news ticker section."
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:341 inc/hooks/nv-header-hooks.php:443
+msgid "Breaking News"
+msgstr ""
+
+#: inc/customizer/nv-header-panel.php:350
+msgid "Ticker Caption"
+msgstr ""
+
+#. 1: Theme name, 2: Theme author.
+#: inc/hooks/nv-footer-hooks.php:82
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:16
+msgid "Page Meta Options"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:29 inc/metaboxes/nv-post-metabox.php:29
+msgid "Default Sidebar"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:35 inc/metaboxes/nv-post-metabox.php:35
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:41 inc/metaboxes/nv-post-metabox.php:41
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:47 inc/metaboxes/nv-post-metabox.php:47
+msgid "No sidebar Full width"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:53 inc/metaboxes/nv-post-metabox.php:53
+msgid "No sidebar Content Centered"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:72 inc/metaboxes/nv-post-metabox.php:72
+msgid "Information"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:73 inc/metaboxes/nv-post-metabox.php:73
+msgid "Sidebars"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:80 inc/metaboxes/nv-post-metabox.php:80
+msgid "About Metabox Options"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:82 inc/metaboxes/nv-post-metabox.php:82
+msgid ""
+"In this section we have lots of features which make your post unique and "
+"completely different."
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:88 inc/metaboxes/nv-post-metabox.php:88
+msgid "Available Sidebars"
+msgstr ""
+
+#: inc/metaboxes/nv-page-metabox.php:89 inc/metaboxes/nv-post-metabox.php:89
+msgid ""
+"Select sidebar from available options which replaced sidebar layout from "
+"customizer settings."
+msgstr ""
+
+#: inc/metaboxes/nv-post-metabox.php:16
+msgid "Post Meta Options"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. %s: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. %s: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:334
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:340
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:346
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:352
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:364
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:386
+#: inc/tgm/class-tgm-plugin-activation.php:827
+#: inc/tgm/class-tgm-plugin-activation.php:2533
+#: inc/tgm/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:387
+#: inc/tgm/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:388
+#: inc/tgm/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. 1: dashboard link.
+#: inc/tgm/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:934
+#: inc/tgm/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1121
+#: inc/tgm/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. %s: version number
+#: inc/tgm/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2321 inc/welcome/welcome.php:290
+msgid "Active"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#. 1: install status, 2: update status
+#: inc/tgm/class-tgm-plugin-activation.php:2342
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#. %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2726 inc/welcome/welcome.php:329
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#. 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. 1: plugin name, 2: error message.
+#: inc/tgm/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#. 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/cv-recommend-plugins.php:64
+msgid "Contact Form, Drag and Drop Form Builder for WordPress – Everest Forms"
+msgstr ""
+
+#: inc/welcome/welcome.php:42
+msgid "About"
+msgstr ""
+
+#: inc/welcome/welcome.php:105
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: inc/welcome/welcome.php:107
+#, php-format
+msgid "Get started with %1$s"
+msgstr ""
+
+#: inc/welcome/welcome.php:128
+#, php-format
+msgid "About %1$s"
+msgstr ""
+
+#: inc/welcome/welcome.php:130
+#, php-format
+msgid "Version: %1$s"
+msgstr ""
+
+#: inc/welcome/welcome.php:142
+msgid "Theme Info"
+msgstr ""
+
+#: inc/welcome/welcome.php:144
+msgid "View Demo"
+msgstr ""
+
+#: inc/welcome/welcome.php:146 inc/welcome/welcome.php:223
+msgid "View PRO version"
+msgstr ""
+
+#: inc/welcome/welcome.php:148
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/welcome/welcome.php:150
+msgid "More Tutorials"
+msgstr ""
+
+#: inc/welcome/welcome.php:159
+msgid "Free Vs Pro"
+msgstr ""
+
+#: inc/welcome/welcome.php:163
+msgid "More Themes"
+msgstr ""
+
+#: inc/welcome/welcome.php:167
+msgid "Changelog"
+msgstr ""
+
+#: inc/welcome/welcome.php:203
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/welcome/welcome.php:204
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/welcome/welcome.php:205 inc/welcome/welcome.php:292
+msgid "Customize"
+msgstr ""
+
+#: inc/welcome/welcome.php:209 inc/welcome/welcome.php:211
+msgid "Documentation"
+msgstr ""
+
+#: inc/welcome/welcome.php:210
+msgid "Please view our documentation page to setup the theme."
+msgstr ""
+
+#: inc/welcome/welcome.php:215 inc/welcome/welcome.php:636
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/welcome/welcome.php:216
+msgid "Please put it in our dedicated support forum."
+msgstr ""
+
+#: inc/welcome/welcome.php:217
+msgid "Support"
+msgstr ""
+
+#: inc/welcome/welcome.php:221
+msgid "Need more features?"
+msgstr ""
+
+#: inc/welcome/welcome.php:222 inc/welcome/welcome.php:455
+msgid "Upgrade to PRO version for more exciting features."
+msgstr ""
+
+#: inc/welcome/welcome.php:227
+msgid "Have you need customization?"
+msgstr ""
+
+#: inc/welcome/welcome.php:228
+msgid "Please send message with your requirement."
+msgstr ""
+
+#: inc/welcome/welcome.php:229
+msgid "Customization"
+msgstr ""
+
+#: inc/welcome/welcome.php:234
+msgid "Click below to translate this theme into your own language."
+msgstr ""
+
+#: inc/welcome/welcome.php:245
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/welcome/welcome.php:245
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/welcome/welcome.php:248
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/welcome/welcome.php:248
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/welcome/welcome.php:338
+msgid "Install Now"
+msgstr ""
+
+#: inc/welcome/welcome.php:341
+msgid "Live Preview"
+msgstr ""
+
+#: inc/welcome/welcome.php:403
+msgid "View changelog below:"
+msgstr ""
+
+#: inc/welcome/welcome.php:460
+msgid "Features"
+msgstr ""
+
+#: inc/welcome/welcome.php:467
+msgid "Price"
+msgstr ""
+
+#: inc/welcome/welcome.php:468
+msgid "Free"
+msgstr ""
+
+#: inc/welcome/welcome.php:469
+msgid "$59"
+msgstr ""
+
+#: inc/welcome/welcome.php:472
+msgid "Import Demo Data"
+msgstr ""
+
+#: inc/welcome/welcome.php:477
+msgid "Pre Loaders"
+msgstr ""
+
+#: inc/welcome/welcome.php:482
+msgid "Header Layouts"
+msgstr ""
+
+#: inc/welcome/welcome.php:483 inc/welcome/welcome.php:488
+msgid "1"
+msgstr ""
+
+#: inc/welcome/welcome.php:484 inc/welcome/welcome.php:489
+msgid "3"
+msgstr ""
+
+#: inc/welcome/welcome.php:487
+msgid "Archive Pages Layouts"
+msgstr ""
+
+#: inc/welcome/welcome.php:492
+msgid "Excerpt Length on archive Options"
+msgstr ""
+
+#: inc/welcome/welcome.php:497
+msgid "Drop Caps Options"
+msgstr ""
+
+#: inc/welcome/welcome.php:502
+msgid "Related Posts on Post Page"
+msgstr ""
+
+#: inc/welcome/welcome.php:507
+msgid "Image Hover Effects Options"
+msgstr ""
+
+#: inc/welcome/welcome.php:512
+msgid "Sidebar Sticky Options"
+msgstr ""
+
+#: inc/welcome/welcome.php:517
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/welcome/welcome.php:518
+msgid "2"
+msgstr ""
+
+#: inc/welcome/welcome.php:519
+msgid "600+"
+msgstr ""
+
+#: inc/welcome/welcome.php:522
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/welcome/welcome.php:527
+msgid "Typography Options"
+msgstr ""
+
+#: inc/welcome/welcome.php:532
+msgid "WooCommerce Compatible"
+msgstr ""
+
+#: inc/welcome/welcome.php:537
+msgid "Featured Section"
+msgstr ""
+
+#: inc/welcome/welcome.php:542
+msgid "Custom 404 Page"
+msgstr ""
+
+#: inc/welcome/welcome.php:547
+msgid "WordPress Page Builders Compatible"
+msgstr ""
+
+#: inc/welcome/welcome.php:608
+#, php-format
+msgid ""
+"Howdy, %1$s! It seems that you have been using this theme for more than 15 "
+"days. We hope you are happy with everything that the theme has to offer. If "
+"you can spare a minute, please help us by leaving a 5-star review on "
+"WordPress.org.  By spreading the love, we can continue to develop new "
+"amazing features in the future, for free!"
+msgstr ""
+
+#: inc/welcome/welcome.php:620
+msgid "Sure"
+msgstr ""
+
+#: inc/welcome/welcome.php:625
+msgid "Maybe later"
+msgstr ""
+
+#: inc/welcome/welcome.php:630
+msgid "I already did"
+msgstr ""
+
+#: inc/welcome/welcome.php:717
+#, php-format
+msgid ""
+"If you like <strong>%1$s</strong> please leave us a %2$s rating. A huge "
+"thank you from <strong>CodeVibrant</strong> in advance!"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:20
+msgid "You can place banner as advertisement with links."
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:22
+msgid "CV: Ads Banner"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:35
+msgid "Banner title"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:41
+msgid "Select banner image"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:47
+msgid "Banner Link"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:53
+msgid "Open in new tab"
+msgstr ""
+
+#: inc/widgets/nv-ads-banner.php:59
+msgid "Rel attribute for link"
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:20
+msgid "Displays block posts from selected category in different layouts."
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:22
+msgid "CV: Block Posts"
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:35 inc/widgets/nv-carousel.php:37
+#: inc/widgets/nv-featured-posts.php:37
+msgid "Block title"
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:36 inc/widgets/nv-carousel.php:38
+#: inc/widgets/nv-featured-posts.php:38
+msgid "Enter your block title. (Optional - Leave blank to hide title.)"
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:42
+msgid "Block Category"
+msgstr ""
+
+#: inc/widgets/nv-block-posts.php:49 inc/widgets/nv-carousel.php:51
+msgid "Block Layouts"
+msgstr ""
+
+#: inc/widgets/nv-carousel.php:20
+msgid "Displays posts from selected categories in carousel layouts."
+msgstr ""
+
+#: inc/widgets/nv-carousel.php:22
+msgid "CV: Carousel"
+msgstr ""
+
+#: inc/widgets/nv-carousel.php:44 inc/widgets/nv-featured-posts.php:44
+msgid "Block Categories"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:20
+msgid "A widget shows recent posts and comment in tabbed layout."
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:22
+msgid "CV: Default Tabbed"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:35
+msgid "Latest Tab title"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:36 inc/widgets/nv-default-tabbed.php:64
+msgid "Latest"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:42
+msgid "Comments Tab title"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:43 inc/widgets/nv-default-tabbed.php:65
+msgid "Comments"
+msgstr ""
+
+#: inc/widgets/nv-default-tabbed.php:122
+msgid "&nbsp;commented on"
+msgstr ""
+
+#: inc/widgets/nv-featured-posts.php:20
+msgid "Displays featured posts from selected categories in different layouts."
+msgstr ""
+
+#: inc/widgets/nv-featured-posts.php:22
+msgid "CV: Featured Posts"
+msgstr ""
+
+#: inc/widgets/nv-featured-slider.php:20
+msgid ""
+"Displays posts from selected categories in slider with featured section."
+msgstr ""
+
+#: inc/widgets/nv-featured-slider.php:22
+msgid "CV: Featured Slider"
+msgstr ""
+
+#: inc/widgets/nv-featured-slider.php:36
+msgid "Slider Categories"
+msgstr ""
+
+#: inc/widgets/nv-featured-slider.php:43
+msgid "Featured Post Categories"
+msgstr ""
+
+#: inc/widgets/nv-recent-posts.php:20
+msgid "A widget shows recent posts with thumbnail."
+msgstr ""
+
+#: inc/widgets/nv-recent-posts.php:22
+msgid "CV: Recent Posts"
+msgstr ""
+
+#: inc/widgets/nv-recent-posts.php:35 inc/widgets/nv-social-media.php:35
+msgid "Widget title"
+msgstr ""
+
+#: inc/widgets/nv-recent-posts.php:41
+msgid "No. of Posts"
+msgstr ""
+
+#: inc/widgets/nv-social-media.php:20
+msgid "A widget shows the social media icons."
+msgstr ""
+
+#: inc/widgets/nv-social-media.php:22
+msgid "CV: Social Media"
+msgstr ""
+
+#: inc/widgets/nv-widget-fields.php:81
+msgid "- - Select Category - -"
+msgstr ""
+
+#: inc/widgets/nv-widget-fields.php:189
+msgid "No image selected"
+msgstr ""
+
+#: inc/widgets/nv-widget-fields.php:196
+msgid "Remove"
+msgstr ""
+
+#: inc/widgets/nv-widget-fields.php:197
+msgid "Select Image"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:24
+msgid "Sidebar"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:26
+#: inc/widgets/nv-widget-functions.php:41
+#: inc/widgets/nv-widget-functions.php:71
+#: inc/widgets/nv-widget-functions.php:86
+#: inc/widgets/nv-widget-functions.php:101
+#: inc/widgets/nv-widget-functions.php:116
+#: inc/widgets/nv-widget-functions.php:131
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:54
+msgid "Header Ads"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:56
+msgid "Add banner widgets here."
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:69
+msgid "Home Top Section"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:84
+msgid "Home Middle Section"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:99
+msgid "Home Middle Left Aside"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:114
+msgid "Home Middle Right Aside"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:129
+msgid "Home Bottom Section"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:144
+#, php-format
+msgid "Footer %d"
+msgstr ""
+
+#: inc/widgets/nv-widget-functions.php:146
+msgid "Added widgets are display at Footer Widget Area."
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"News Vibrant is a modern magazine theme with creative design and powerful "
+"features that lets you write articles and blog posts with ease. It uses the "
+"best clean SEO practices, responsive HTML5, and on top of that, it’s fast, "
+"simple, and easy to use.  Use the Customizer to add your own background, "
+"page layout, site width and more. Get free support at https://codevibrant."
+"com/support/forum/themes/free-themes/ and check the demo at https://demo."
+"codevibrant.com/news-vibrant-landing/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://codevibrant.com/wpthemes/news-vibrant"
+msgstr ""
+
+#. Author of the theme
+msgid "CodeVibrant"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://codevibrant.com"
+msgstr ""

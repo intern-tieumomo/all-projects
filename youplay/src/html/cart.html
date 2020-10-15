@@ -1,0 +1,120 @@
+{% set header_title = 'Cart' %}
+{% set header_image = 'assets/images/dark/banner-blog-bg.jpg' %}
+{% set header_size = 'xsmall' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="col-md-9">
+
+            <h2 class="mt-0">Your Games in Cart</h2>
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/dark/game-skyrim-500x375.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>Skyrim</h4>
+                                {{ macros.rating('100%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $11.99
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/dark/game-dragons-dogma-500x375.jpg" alt="">
+                                <div class="badge show bg-default">-30%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>Dragons Dogma</h4>
+                                {{ macros.rating('90%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $34.99 <sup><del>$49.99</del></sup>
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/dark/game-the-witcher-500x375.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>The Witcher</h4>
+                                {{ macros.rating('90%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $14.99
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <div class="align-right h3 mr-20 mb-20">
+                Total: <strong>$46.88</strong>
+            </div>
+            <div class="align-right">
+                <a href="checkout.html" class="btn btn-lg">Proceed to Checkout</a>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-3">
+            {% include "shared/dark-sidebar-store.html" %}
+        </div>
+        <!-- /Right Side -->
+
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+.widget_edgt_call_to_action_button {
+	&.edgt-top-bar-widget {
+		display: block;
+
+		.edgt-top-bar-widget-inner {
+			display: block;
+			height: 100%;
+		}
+	}
+
+	.edgt-call-to-action-button {
+		display: block;
+		height: 100%;
+
+		background-color: $first-main-color;
+		color: #fff;
+		padding: 0 23px 0 18px;
+		font-size: 12px;
+
+		@include edgtBoxSizing(border-box);
+
+		.edgt-ctab-holder {
+			display: block;
+			position: relative;
+			vertical-align: middle;
+			top: 50%;
+
+			@include edgtTransform(translateY(-50%));
+		}
+
+		.edgt-ctab-icon {
+			margin-right: 9px;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+	}
+}

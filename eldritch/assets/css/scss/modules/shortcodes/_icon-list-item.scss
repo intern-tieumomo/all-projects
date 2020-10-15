@@ -1,0 +1,79 @@
+/* ==========================================================================
+# Icon List Item style - begin
+========================================================================== */
+.edgt-icon-list-item {
+	width: 100%;
+	position: relative;
+	margin-bottom: 13px;
+
+	.edgt-icon-list-icon-holder {
+		display: table-cell;
+		vertical-align: top;
+		min-width: 13px;
+		padding-top: 3px;
+	}
+
+	.edgt-icon-list-icon-holder-inner i,
+	.edgt-icon-list-icon-holder-inner .font_elegant {
+		display: block;
+		color: $first-main-color;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.edgt-icon-list-text {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		padding-left: 10px;
+		font-size: 14px;
+		color: #999;
+		font-weight: 500;
+		text-align: left;
+		font-family: $headings-font-family;
+
+		span {
+			display: block;
+		}
+
+		.edgt-icon-list-subtitle {
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+
+	&.edgt-icon-list-item-headings-font-family .edgt-icon-list-text {
+		font-family: $headings-font-family;
+	}
+
+	.edgt-top-bar & {
+		display: block;
+		height: auto;
+		margin-bottom: 0;
+
+		.edgt-icon-list-text {
+			padding-left: 13px;
+			font-size: 12px;
+			color: #cacaca;
+			font-weight: 600;
+		}
+
+		.edgt-icon-list-icon-holder-inner i,
+		.edgt-icon-list-icon-holder-inner .font_elegant {
+			color: #cacaca;
+
+			.edgt-top-bar-light & {
+				color: $header-light-color;
+			}
+
+			.edgt-top-bar-dark & {
+				color: $header-dark-color;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Icon List Item style - end
+========================================================================== */
+

@@ -1,0 +1,35 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.edgt-instagram-feed.edgt-col-9 li {
+		width: 33.33%;
+	}
+
+	.edgt-instagram-feed.edgt-col-8 li {
+		width: 25%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, ipad-portrait)) {
+	.edgt-instagram-feed.edgt-col-4 li {
+		width: 50%;
+	}
+
+	.edgt-instagram-feed.edgt-col-6 li {
+		width: 33.33%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+	.edgt-instagram-feed.edgt-col-8 li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+	.edgt-instagram-feed.edgt-col-4 li,
+	.edgt-instagram-feed.edgt-col-3 li,
+	.edgt-instagram-feed.edgt-col-6 li,
+	.edgt-instagram-feed.edgt-col-8 li,
+	.edgt-instagram-feed.edgt-col-9 li {
+		width: 100%;
+	}
+}

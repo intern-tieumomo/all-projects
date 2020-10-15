@@ -1,0 +1,98 @@
+.edgt-page-header {
+	background-color: #252525;
+	color: #fff;
+	border-left: none;
+	position: relative;
+
+	&.edgt-header-fixed {
+		position: fixed;
+		z-index: 9;
+		border-bottom:1px solid #1e2c34;
+	}
+
+	img.edgt-header-logo {
+		width: 30px;
+	}
+
+	.edgt-page-title {
+		color: #fff;
+		padding: 0;
+		margin: 0 0 0 20px;
+		line-height: 35px;
+	}
+
+	@media only screen and (max-width: $first-break-point) {
+		img.edgt-header-logo {
+			width:20px;
+		}
+	}
+
+	.form-top-section-holder  {
+		display: table;
+		height: 67px;
+	}
+
+	.form-top-section-inner {
+		display: table-cell;
+		vertical-align: middle;
+		line-height: 0;
+		padding-top: 6px;
+	}
+
+	.edgt-top-section-holder {
+		margin-left: 253px;
+	}
+
+	.edgt-top-section-holder-inner {
+		display: table;
+		width: 100%
+	}
+
+	.form-top-section {
+		display: table-cell;
+		vertical-align: middle;
+		width: 80%
+	}
+
+	.edgt-top-buttons-holder {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+		width: 20%;
+		padding-right: 20px;
+	}
+
+	.edgt-theme-name {
+		color: #fff;
+		padding: 18px 15px 18px 30px;
+		width: 229px;
+	}
+
+	.edgt-theme-name h1 {
+		font-size: 18px;
+		margin-bottom: 0;
+		color: #fff;
+	}
+
+	.edgt-theme-name img {
+		width: 30px;
+		margin-right: 10px;
+	}
+
+	@media only screen and (max-width: $first-break-point) {
+		.edgt-theme-name {
+			padding: 18px 10px;
+			width: 40px;
+		}
+		.edgt-theme-name h1 {
+			display:none;
+		}
+		.edgt-theme-name img {
+			width: 20px;
+			height: auto;
+		}
+		.edgt-top-section-holder {
+			margin-left: 60px;
+		}
+	}
+}

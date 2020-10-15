@@ -1,0 +1,89 @@
+@include mac {
+	.edgt-comparision-pricing-tables-holder .edgt-cpt-table .edgt-cpt-table-content li {
+		font-size: 12px;
+	}
+}
+
+@include ipad-landscape {
+	.edgt-comparision-pricing-tables-holder {
+		&.edgt-three-columns {
+			.edgt-cpt-features-holder {
+				display: none;
+			}
+
+			.edgt-cpt-table {
+				width: 100%;
+				float: none;
+				margin-bottom: 46px;
+
+				+ .edgt-featured-comparision-table {
+					margin-top: 85px;
+				}
+
+				.edgt-cpt-table-head-holder,
+				.edgt-cpt-table-content {
+					border-left: 1px solid #f2f2f2 !important;
+				}
+			}
+
+			.edgt-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+
+		&.edgt-four-columns {
+			.edgt-cpt-table {
+				width: 50%;
+				margin-bottom: 70px;
+			}
+
+			.edgt-cpt-features-holder {
+				display: none;
+			}
+
+			.edgt-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.edgt-cpt-table-head-holder,
+			.edgt-cpt-table-content {
+				border-left: 1px solid #f2f2f2 !important;
+			}
+		}
+
+		.edgt-cpt-table .edgt-cpt-table-content li {
+			line-height: 1.7em;
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-comparision-pricing-tables-holder {
+		&.edgt-four-columns,
+		&.edgt-two-columns {
+			.edgt-cpt-table {
+				width: 100%;
+				margin-bottom: 70px;
+			}
+		}
+
+		&.edgt-two-columns {
+			.edgt-cpt-features-holder {
+				display: none;
+			}
+
+			.edgt-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.edgt-cpt-table-head-holder,
+			.edgt-cpt-table-content {
+				border-left: 1px solid #f2f2f2 !important;
+			}
+		}
+	}
+}
+

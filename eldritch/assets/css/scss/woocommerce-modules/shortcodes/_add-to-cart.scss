@@ -1,0 +1,26 @@
+/* ==========================================================================
+   WooCommerce Add to Cart shortcode styles - begin
+   ========================================================================== */
+
+.edgt-content {
+
+    .woocommerce.add_to_cart_inline {
+        margin: 0;
+        width: auto;
+
+        del,
+        ins {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 7px 0 0;
+            color: $headings-text-color;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 600;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Add to Cart shortcode styles - end
+   ========================================================================== */

@@ -1,0 +1,154 @@
+{% set header_title = 'Forums' %}
+{% set header_image = 'assets/images/dark/banner-blog-bg.jpg' %}
+{% set header_size = 'xsmall' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="col-md-9">
+
+            <!-- Breadcrumb -->
+            <div class="mt-10 pull-left">
+                <a href="index.html">Home</a>
+                <span class="fa fa-angle-right"></span>
+                <span>Forums</span>
+            </div>
+            <!-- /Breadcrumb -->
+
+            <!-- Search -->
+            <form action="search.html" class="pull-right">
+                <p>Search by Forum:</p>
+                <div class="youplay-input pull-left">
+                    <input type="text" name="search">
+                </div>
+                <button class="btn pull-right">Search</button>
+            </form>
+            <!-- /Search -->
+
+            <div class="clearfix"></div>
+
+            <!-- Forums List -->
+            <ul class="youplay-forum mr-10">
+                <li class="header">
+                    <ul>
+                        <li class="cell-icon"></li>
+                        <li class="cell-info">Forum</li>
+                        <li class="cell-topic-count">Topics</li>
+                        <li class="cell-reply-count">Posts</li>
+                        <li class="cell-freshness">Freshness</li>
+                    </ul>
+                </li>
+
+                <li class="body">
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Games</a>
+                            <div class="description">Games for different consoles</div>
+                            <ul class="forums-list">
+                                <li><a href="#"><i class="far fa-folder-open"></i> Xbox</a>,</li>
+                                <li><a href="#"><i class="far fa-folder-open"></i> PlayStation</a>,</li>
+                                <li><a href="#"><i class="far fa-folder-open"></i> PC</a></li>
+                            </ul>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">1 year, 4 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/dark/avatar-user-2.png" height="25" width="25"> John Doe
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Clothing</a>
+                            <div class="description">Clothing (Category)</div>
+                            <ul class="forums-list">
+                                <li><a href="#"><i class="far fa-folder-open"></i> Men’s</a>,</li>
+                                <li><a href="#"><i class="far fa-folder-open"></i> Women’s</a></li>
+                            </ul>
+                        </li>
+                        <li class="cell-topic-count">0</li>
+                        <li class="cell-reply-count">0</li>
+                        <li class="cell-freshness">
+                            No Topics
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Mobile Apps</a>
+                            <div class="description">Mobile Apps Forum</div>
+                        </li>
+                        <li class="cell-topic-count">0</li>
+                        <li class="cell-reply-count">0</li>
+                        <li class="cell-freshness">
+                            No Topics
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Mobile Games</a>
+                            <div class="description">Mobile games forum</div>
+                        </li>
+                        <li class="cell-topic-count">1</li>
+                        <li class="cell-reply-count">1</li>
+                        <li class="cell-freshness">
+                            <a href="#">6 months, 1 week ago</a>
+                            <p>
+                                <a href="#" class="bbp-author-avatar">
+                                    <img alt="" src="assets/images/dark/avatar-user-2.png" height="25" width="25">
+                                    John Doe
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Devide Market</a>
+                            <div class="description">Buy and sell old devides</div>
+                        </li>
+                        <li class="cell-topic-count">0</li>
+                        <li class="cell-reply-count">0</li>
+                        <li class="cell-freshness">
+                            No Topics
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- /Forums List -->
+
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-3">
+            {% include "shared/dark-sidebar-store.html" %}
+        </div>
+        <!-- /Right Side -->
+
+    </div>
+{% endblock %}

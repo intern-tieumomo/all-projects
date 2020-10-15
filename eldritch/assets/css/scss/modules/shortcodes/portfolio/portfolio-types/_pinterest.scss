@@ -1,0 +1,121 @@
+.edgt-portfolio-list-holder-outer.edgt-ptf-pinterest,
+.edgt-portfolio-list-holder-outer.edgt-ptf-masonry {
+	.edgt-portfolio-list-holder {
+		opacity: 0;
+	}
+}
+
+.edgt-ptf-pinterest {
+	margin:0 -5px;
+
+    &.edgt-ptf-with-spaces {
+        margin:0 -5px;
+        article {
+            padding:0 5px 10px;
+        }
+    }
+
+	article {
+		padding:0 5px 10px;
+		margin:0;
+
+		@include edgtBoxSizing(border-box);
+
+		.edgt-ptf-wrapper {
+			position: relative;
+		}
+
+		.edgt-ptf-item-text-holder {
+			text-align: center;
+
+			.edgt-ptf-item-title {
+				width:90%;
+				margin:7px auto;
+			}
+		}
+
+		.edgt-ptf-category-holder {
+			color:#fff;
+			font-size:12px;
+		}
+
+		.edgt-ptf-item-text-holder {
+			.edgt-ptf-item-title {
+				overflow: hidden;
+				text-align: center;
+
+				> a {
+					display: inline-block;
+					opacity: 0;
+					@include edgtTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+
+			.edgt-ptf-category-holder {
+				overflow: hidden;
+				text-align: center;
+
+				> span {
+					display: inline-block;
+					opacity: 0;
+					@include edgtTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+		}
+
+		.edgt-ptf-wrapper:hover {
+			.edgt-ptf-item-text-overlay {
+				opacity: 1;
+			}
+
+			.edgt-ptf-item-title > a {
+				opacity: 1;
+				@include edgtTransform(translate3d(0,0,0));
+				@include edgtTransition(all .5s cubic-bezier(.38,.76,0,.87));
+			}
+
+			.edgt-ptf-category-holder > span {
+				opacity: 1;
+				@include edgtTransform(translate3d(0,0,0));
+				@include edgtTransition(all .5s cubic-bezier(.38,.76,0,.87) .2s);
+			}
+		}
+	}
+
+	.edgt-portfolio-list-masonry-grid-gutter {
+		width: 0;
+	}
+
+	&.edgt-ptf-pinterest-three-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article {
+			width: 33.3333%;
+		}
+	}
+
+	&.edgt-ptf-pinterest-four-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article {
+			width: 25%;
+		}
+	}
+
+	&.edgt-ptf-pinterest-five-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article{
+			width:20%;
+		}
+	}
+
+	&.edgt-ptf-pinterest-six-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article{
+			width:16.66%;
+		}
+	}
+
+}

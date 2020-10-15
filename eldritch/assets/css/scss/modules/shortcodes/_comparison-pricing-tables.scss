@@ -1,0 +1,195 @@
+.edgt-comparision-pricing-tables-holder {
+	$border-color: #ebebeb;
+	font-size: 16px;
+	color: $headings-text-color;
+
+	@include edgtClearfix;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	h4, p {
+		margin: 0;
+	}
+
+	* {
+		@include edgtBoxSizing(border-box);
+	}
+
+	.edgt-cpt-table {
+		float: left;
+
+		@include edgtBoxShadow(1px 1px 1px 0px rgba(0, 0, 0, 0.08));
+	}
+
+	.edgt-cpt-table-item-feature {
+		display: none;
+	}
+
+	&.edgt-two-columns {
+		.edgt-cpt-table {
+			width: 33.33%;
+		}
+	}
+
+	&.edgt-three-columns {
+		.edgt-cpt-table {
+			width: 25%;
+		}
+	}
+
+	&.edgt-four-columns {
+		.edgt-cpt-table {
+			width: 20%;
+		}
+	}
+
+	.edgt-comparision-table-holder {
+		position: relative;
+		border-top: 6px solid $first-main-color;
+
+		&.edgt-featured-comparision-table {
+			z-index: 11;
+
+			.edgt-cpt-table-footer {
+				padding: 34px 0;
+			}
+		}
+
+		.edgt-featured-comparision-package {
+			position: absolute;
+			bottom: 100%;
+			background-color: $first-main-color;
+			width: 100%;
+			text-transform: uppercase;
+			padding: 10px 0;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+	}
+
+	.edgt-cpt-features-holder {
+		border-top: 6px solid #ababab;
+		text-align: left;
+
+		.edgt-cpt-features-title-holder.edgt-cpt-table-head-holder {
+			padding: 0px 28px;
+
+			.edgt-cpt-features-title {
+				strong {
+					color: $first-main-color;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.edgt-cpt-table-content {
+			li {
+				padding: 10px 28px;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				span {
+					display: block;
+					position: relative;
+					top: 50%;
+
+					@include edgtTransform(translateY(-50%));
+				}
+			}
+		}
+	}
+
+	.edgt-cpt-table {
+
+		border-right: none;
+		border-left: none;
+
+		&:not(.edgt-cpt-features-holder) {
+			text-align: center;
+
+			li {
+				line-height: 58px;
+
+				span {
+					line-height: 58px;
+				}
+			}
+		}
+
+		.edgt-cpt-table-head-holder,
+		.edgt-cpt-table-content {
+			border-left: 1px solid $border-color;
+		}
+
+		.edgt-cpt-table-head-holder {
+			display: table;
+			background-color: #fff;
+			height: 150px;
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid $border-color;
+
+			.edgt-cpt-table-head-holder-inner {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.edgt-cpt-table-title {
+				margin-bottom: 5px;
+			}
+
+			.edgt-cpt-table-price-holder {
+				font-family: $headings-font-family;
+				font-weight: 600;
+			}
+
+			.edgt-cpt-table-price {
+				font-size: 20px;
+				color: #ababab;
+			}
+
+			.edgt-cpt-table-currency {
+				font-size: 20px;
+				color: #ababab;
+			}
+
+			.edgt-cpt-table-period {
+				font-size: 14px;
+				color: #ababab;
+			}
+		}
+
+		.edgt-cpt-table-content {
+			li {
+				height: 59px;
+				border-bottom: 1px solid $border-color;
+
+				&.edgt-cpt-features-item {
+					font-weight: 600;
+				}
+
+				&:nth-child(odd) {
+					background-color: #f9f9f9;
+				}
+
+				&:nth-child(even) {
+					background-color: #fff;
+				}
+			}
+		}
+
+		.edgt-cpt-table-footer {
+			padding: 25px 0;
+			background-color: #fff;
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+
+		}
+	}
+}

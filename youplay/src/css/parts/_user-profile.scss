@@ -1,0 +1,226 @@
+.youplay-user {
+    .angled-img {
+        display: inline-block;
+        width: 150px;
+        vertical-align: top;
+
+        .img > img {
+            opacity: 1;
+        }
+        &:hover .img > img {
+            opacity: $images_hover_opacity;
+        }
+
+        .icon {
+            opacity: 0;
+        }
+        &:hover .icon {
+            opacity: .8;
+        }
+    }
+    .youplay-banner .info & h2 {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-size: 3.5rem;
+    }
+
+    .user-data {
+        position: relative;
+        display: inline-block;
+        height: 151px;
+        padding: 1.8rem 3rem;
+        margin-left: -4px;
+
+        // background
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($back_darken_color, .4);
+            transform: skew(-$skew_size);
+            z-index: 1;
+        }
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        // location
+        .location {
+            font-size: 1rem;
+            color: $text_mute_color;
+        }
+
+        // activity
+        .activity,
+        .youplay-user-activity {
+            margin-top: 1.3rem;
+
+            > div {
+                display: inline-block;
+                text-align: center;
+
+                + div {
+                    margin-left: 3rem;
+                }
+
+                .title {
+                    font-size: 1rem;
+                    color: $text_mute_color;
+                }
+
+                .num {
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}
+
+
+/* User Profile Navigation */
+.youplay-user-navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    ul {
+        max-width: 100%;
+        padding: 0;
+        padding-left: 10px;
+        margin: 0;
+        margin-left: -10px;
+        white-space: nowrap;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: block;
+            float: left;
+            z-index: 1;
+
+            > a {
+                position: relative;
+                display: block;
+                padding: 1.25rem 1.8rem;
+                font-size: 1.6rem;
+                color: $text_color;
+                text-decoration: none;
+                background: none;
+                border: none;
+                border-radius: 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: transparent;
+                    transition: .3s background-color;
+                    transform: skew(-$skew_size);
+                    z-index: -1;
+                }
+            }
+
+            &.active > a,
+            &:focus > a,
+            &:hover > a {
+                &::after {
+                    background-color: rgba($text_color, .1);
+                }
+            }
+            &.active > a::after {
+                background-color: $back_darken_color;
+            }
+        }
+
+        .flickity-viewport {
+            overflow: visible;
+        }
+    }
+
+    // additional padding for info block
+    + .info {
+        padding-bottom: 120px;
+    }
+}
+
+
+/* User Messages */
+.youplay-messages {
+    tbody > tr > td {
+        padding: 1.5rem;
+    }
+    tbody > tr {
+        transition: .3s background-color;
+    }
+
+    .message-unread {
+        background-color: rgba($text_color, .1);
+    }
+
+    .message-from {
+        width: 300px;
+        .angled-img {
+            float: left;
+            width: 80px;
+            margin-right: 20px;
+        }
+        .angled-img img {
+            width: auto;
+            opacity: 1;
+        }
+        .message-from-name {
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+    }
+    .message-description {
+        .message-description-name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .message-excerpt {
+            margin-top: .5rem;
+            font-size: 1.2rem;
+        }
+    }
+    .message-action {
+        position: relative;
+        width: 90px;
+
+        .messages-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 30px;
+            height: 30px;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-top: -15px;
+            margin-left: -15px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba($text_color, .1);
+            border-radius: 4px;
+        }
+        .message-delete {
+            float: right;
+            opacity: 0;
+            transition: .3s opacity, .3s color;
+        }
+    }
+    tbody > tr:hover .message-action .message-delete {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,34 @@
+/* ==========================================================================
+# Message responsive style - begin
+========================================================================== */
+/* Unique style for both types  - begin
+========================================================================== */
+.edgt-message {
+	@media only screen and (max-width: 480px) {
+		padding: 20px 22px;
+	}
+	.edgt-message-text {
+		@media screen and (max-width: 320px) {
+			line-height: normal;
+		}
+	}
+}
+
+/* Unique style for both types - end
+========================================================================== */
+
+/* Type with icon - begin
+========================================================================== */
+.edgt-message.edgt-with-icon {
+	.edgt-message-icon-holder {
+		@media only screen and (max-width: 600px) {
+			padding: 20px 22px;
+		}
+	}
+}
+
+/* Type with icon - end
+========================================================================== 
+/* ==========================================================================
+# Message responsive style - end
+========================================================================== */

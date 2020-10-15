@@ -1,0 +1,118 @@
+@include large-laptop {
+	.edgt-pl-holder.woocommerce.masonry {
+		&.edgt-six-columns, &.edgt-five-columns {
+			.edgt-product-list-masonry-grid-sizer,
+			.edgt-pl-item {
+				width: 25%;
+			}
+		}
+
+		&.edgt-six-columns, &.edgt-five-columns {
+			.eldritch_edge_large_width,
+			.eldritch_edge_large_width_height {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include laptop-landscape {
+	.edgt-pl-holder {
+		&.edgt-six-columns, &.edgt-five-columns {
+			.edgt-pl-item {
+				width: 25%;
+
+				@include ipad-portrait-min {
+					&:nth-child(4n+1) {
+						clear: both;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgt-pl-holder.woocommerce.masonry {
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns {
+			.edgt-product-list-masonry-grid-sizer,
+			.edgt-pl-item {
+				width: 33.3333%;
+			}
+		}
+
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns {
+			.eldritch_edge_large_width,
+			.eldritch_edge_large_width_height {
+				width: 66.6666%;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-pl-holder.woocommerce.masonry {
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns, &.edgt-three-columns {
+			.edgt-product-list-masonry-grid-sizer {
+				width: 50%;
+			}
+
+			.edgt-pl-item {
+				width: 50%;
+
+				&.eldritch_edge_large_width,
+				&.eldritch_edge_large_width_height {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.edgt-pl-holder {
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns, &.edgt-three-columns {
+			.edgt-pl-item {
+				width: 50%;
+
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	.edgt-pl-holder.woocommerce.masonry {
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns, &.edgt-three-columns {
+			.edgt-product-list-masonry-grid-sizer {
+				width: 100%;
+			}
+
+			.edgt-pl-item {
+				width: 100%;
+
+				&.eldritch_edge_large_width,
+				&.eldritch_edge_large_width_height {
+					width: 100%;
+				}
+			}
+		}
+
+		.edgt-pl-item.eldritch_edge_large_height .edgt-pl-item-inner .product-thumbnail img {
+			width: 100%;
+			height: auto;
+			left: 0;
+			top: 50%;
+
+			@include edgtTransform(translateY(-50%));
+		}
+	}
+
+	.edgt-pl-holder {
+		&.edgt-six-columns, &.edgt-five-columns, &.edgt-four-columns, &.edgt-three-columns {
+			.edgt-pl-item {
+				width: 100%;
+			}
+		}
+	}
+}

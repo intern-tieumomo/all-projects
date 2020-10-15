@@ -1,0 +1,478 @@
+{% set page_title = 'Blank Page' %}
+{% set header_show = false %}
+
+{% extends 'layouts/layout-light.html' %}
+
+{% block before_content %}
+    <!-- Slider Revolution -->
+    <div class="rev_slider_wrapper rs-youplay rs-fullscreen">
+        <div class="rev_slider" data-version="5.4.6.4">
+            <ul>
+                <!-- SLIDE NR. 1  -->
+                <li data-thumb="assets/images/light/banner-bg.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+                    <!-- MAIN IMAGE -->
+                    <img src="assets/images/light/dummy.png"  alt="" data-lazyload="assets/images/light/banner-bg.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="-65"
+
+                         data-frames='[{"from":"opacity:0;y:-10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <h2 class="h1">Journey</h2>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="65"
+
+                         data-frames='[{"from":"opacity:0;y:10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <a class="btn btn-lg" href="#">Purchase</a>
+                    </div>
+                </li>
+
+                <!-- SLIDE NR. 2  -->
+                <li data-thumb="assets/images/light/game-botanicula-1920x1080.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+                    <!-- MAIN IMAGE -->
+                    <img src="assets/images/light/dummy.png"  alt="" data-lazyload="assets/images/light/game-botanicula-1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="-65"
+
+                         data-frames='[{"from":"opacity:0;y:-10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <h2 class="h1">Botanicula</h2>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="65"
+
+                         data-frames='[{"from":"opacity:0;y:10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <a class="btn btn-lg" href="#">Purchase</a>
+                    </div>
+                </li>
+
+                <!-- SLIDE NR. 3  -->
+                <li data-thumb="assets/images/light/game-road-no-taken-1400x788.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+                    <!-- MAIN IMAGE -->
+                    <img src="assets/images/light/dummy.png"  alt="" data-lazyload="assets/images/light/game-road-no-taken-1400x788.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="-65"
+
+                         data-frames='[{"from":"opacity:0;y:-10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <h2 class="h1">Road Not Taken</h2>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption customin customout"
+                         data-x="left"
+                         data-hoffset="60"
+
+                         data-y="center"
+                         data-voffset="65"
+
+                         data-frames='[{"from":"opacity:0;y:10","speed":1000,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                    >
+                        <a class="btn btn-lg" href="#">Purchase</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer"></div>
+        </div>
+    </div>
+    <!-- /Slider Revolution-->
+{% endblock %}
+
+{% block content %}
+    <div class="container youplay-store store-grid">
+
+        <!-- Games List -->
+        <div class="col-md-9 isotope">
+            <!-- Sort Categories -->
+            <ul class="pagination isotope-options">
+                <li data-filter="all" class="active"><span>All</span></li>
+                <li data-filter="free"><span>Free</span></li>
+                <li data-filter="popular"><span>Popular</span></li>
+                <li data-filter="specials"><span>Specials</span></li>
+                <li data-filter="upcoming"><span>Upcoming</span></li>
+            </ul>
+            <!-- /Sort Categories -->
+
+            <div class="isotope-list row vertical-gutter">
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-road-no-taken-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Road Not Taken</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $50.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular,specials">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-botanicula-500x375.jpg" alt="">
+                            <div class="badge show bg-default">-20%</div>
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Botanicula</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('90%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $39.99 <sup><del>$49.99</del></sup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-journey-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Journey</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $20.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-broken-age-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Broken Age</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('90%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $14.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="specials">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-flower-500x375.jpg" alt="">
+                            <div class="badge show bg-default">-25%</div>
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Flower</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $26.25 <sup><del>$35.00</del></sup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-no-mans-sky-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>No Man's Sky</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('80%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $29.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="specials,free">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-brothers-a-tale-of-two-sons-500x375.jpg" alt="">
+                            <div class="badge show bg-success">-100%</div>
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Brothers: A Tale of Two Sons</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('90%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        <span class="text-success">FREE!</span> <sup><del>$29.99</del></sup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-world-of-goo-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>World of Goo</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $10.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="specials">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-dream-500x375.jpg" alt="">
+                            <div class="badge show bg-default">-30%</div>
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Dream</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('90%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $34.99 <sup><del>$49.99</del></sup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-machinarium-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Machinarium</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('80%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $14.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="upcoming">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-proteus-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Proteus</h4>
+                            <div class="date">
+                                <i class="fa fa-calendar"></i> beginning of 2015
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-deponia-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Deponia</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('60%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $9.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-dreamfall-chapters-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>Dreamfall Chapters</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $13.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-flow-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>flOw</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    {{ macros.rating('100%') }}
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="price">
+                                        $21.99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+
+                <!-- Single Product Block -->
+                <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="upcoming">
+                    <a href="#" class="angled-img">
+                        <div class="img img-offset">
+                            <img src="assets/images/light/game-mirrormoon-500x375.jpg" alt="">
+                        </div>
+                        <div class="bottom-info">
+                            <h4>MirrorMoon</h4>
+                            <div class="date">
+                                <i class="fa fa-calendar"></i> never
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /Single Product Block -->
+            </div>
+
+        </div>
+        <!-- /Games List -->
+
+        <!-- Right Side -->
+        <div class="col-md-3">
+            {% include "shared/light-sidebar-store.html" %}
+        </div>
+        <!-- /Right Side -->
+    </div>
+{% endblock %}

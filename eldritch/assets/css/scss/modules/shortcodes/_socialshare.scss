@@ -1,0 +1,164 @@
+/* ==========================================================================
+# Social Share style - begin
+========================================================================== */
+
+.edgt-social-share-holder {
+
+	ul {
+		list-style: none;
+		display: inline-block;
+		margin: 0;
+	}
+}
+
+.edgt-share-label {
+	font-size: 17px;
+	font-weight: 400;
+	color: $default-post-info-color;
+	font-family: $headings-font-family;
+	margin-right: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* List type - begin
+========================================================================== */
+
+.edgt-social-share-holder.edgt-list {
+	font-size: 16px;
+
+	ul {
+		vertical-align: middle;
+	}
+
+	li {
+		display: inline-block;
+
+		a {
+			color: #979797;
+			padding: 0 10px;
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		&:first-child a {
+			padding-left: 0;
+		}
+
+		&:last-child a {
+			padding-right: 0;
+		}
+	}
+
+}
+
+/* List type - end
+========================================================================== */
+
+/* Dropdown type - begin
+========================================================================== */
+
+.edgt-social-share-holder.edgt-dropdown {
+	position: relative;
+	display: block;
+
+	.edgt-social-share-dropdown-opener {
+		display: block;
+		color: #a7b0be;
+        i {
+            top:0 !important;
+        }
+	}
+
+	.edgt-social-share-title {
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	.edgt-social-share-dropdown {
+		visibility: hidden;
+		position: absolute;
+		z-index: 999;
+		left: -1px;
+		top: 100%;
+		opacity: 0;
+		@include edgtTransition(all .2s);
+
+		li {
+			a {
+				display: block;
+				padding: 9px 12px;
+				color: #c5c5c5;
+				background-color: #fff;
+
+				@include edgtTransition(background-color .1s linear);
+
+				&:hover {
+					background-color: #f3f5f6;
+					.edgt-social-network-icon, .edgt-social-share-label {
+						color: #8c8b8b;
+					}
+				}
+
+				img {
+					display: inline-block;
+				}
+
+				.edgt-social-network-icon {
+					color: #c5c5c5;
+					float: left;
+					margin-top: 6px;
+				}
+
+				.edgt-social-share-label {
+					color: #c5c5c5;
+					font-size: 9px;
+					font-family: $headings-font-family;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+			}
+
+			&:not(.edgt-custom-icon) {
+				.edgt-social-share-label {
+					padding-left: 25px;
+					display: block;
+				}
+			}
+		}
+		ul {
+			min-width: 120px;
+			border: 1px solid $default-border-color-light;
+		}
+		img {
+			width: auto;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+}
+
+.edgt-social-share-holder.edgt-dropdown:hover {
+
+	.edgt-social-share-dropdown {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+/* Dropdown type - end
+========================================================================== */
+
+/* ==========================================================================
+# Social Share style - end
+========================================================================== */
+
+
+
+
+
+
+
+

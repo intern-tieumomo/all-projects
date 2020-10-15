@@ -1,0 +1,30 @@
+{% set main_style_file = 'youplay-anime' %}
+{% set google_fonts = 'https://fonts.googleapis.com/css?family=Passion+One|Cantarell:400,400italic,700' %}
+{% set custom_css = 'assets/css/custom-anime.css' %}
+{% set header_image = 'assets/images/anime/banner-bg.jpg' %}
+{% set footer_bg = 'assets/images/anime/footer-bg.jpg' %}
+{% set footer_parallax = false %}
+{% set nav_small = true %}
+{% set nav_search = false %}
+{% set nav_cart = false %}
+{% set nav_login = false %}
+{% set navigation = {
+    "anime-index.html#screenshots": {
+        "name": "Screenshots"
+    },
+    "anime-index.html#about": {
+        "name": "About"
+    },
+    "anime-index.html#testimonials": {
+        "name": "Testimonials"
+    },
+    "anime-index.html#news": {
+        "name": "News"
+    },
+    "anime-index.html#exclusive": {
+        "name": "Exclusive"
+    }
+} %}
+{% set navigation_right = false %}
+
+{% extends 'layouts/layout-1.html' %}

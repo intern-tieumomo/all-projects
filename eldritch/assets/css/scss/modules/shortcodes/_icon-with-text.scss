@@ -1,0 +1,181 @@
+.edgt-iwt {
+	$icon-tiny-content-padding: 15px;
+	$icon-small-content-padding: 35px;
+	$icon-medium-content-padding: 65px;
+	$icon-large-content-padding: 105px;
+	$icon-huge-content-padding: 135px;
+
+	.edgt-iwt-custom-icon {
+		display: inline-block;
+		line-height: 0;
+	}
+
+	.edgt-iwt-icon-link {
+		position: relative;
+		z-index: 2;
+	}
+
+	.edgt-iwt-title {
+		line-height: 1.46em;
+	}
+
+	&.edgt-iwt-icon-top,
+	&.edgt-iwt-icon-left,
+	&.edgt-iwt-icon-left-from-title {
+		text-align: left;
+	}
+
+	&.edgt-iwt-icon-top {
+		.edgt-iwt-content-holder {
+			margin-top:-3px;
+		}
+
+		.edgt-iwt-title-holder {
+			margin-top: 21px;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+		}
+
+		.edgt-iwt-text-holder {
+			margin-top: 15px;
+		}
+	}
+
+	&.edgt-iwt-icon-left {
+		.edgt-iwt-icon-holder {
+			float: left;
+		}
+
+		&.edgt-iwt-icon-tiny .edgt-iwt-content-holder {
+			padding-left: $icon-tiny-content-padding;
+		}
+
+		&.edgt-iwt-icon-small .edgt-iwt-content-holder {
+			padding-left: $icon-small-content-padding;
+		}
+
+		&.edgt-iwt-icon-medium .edgt-iwt-content-holder {
+			padding-left: $icon-medium-content-padding;
+		}
+
+		&.edgt-iwt-icon-large .edgt-iwt-content-holder {
+			padding-left: $icon-large-content-padding;
+		}
+
+		&.edgt-iwt-icon-huge .edgt-iwt-content-holder {
+			padding-left: $icon-huge-content-padding;
+		}
+
+		.edgt-iwt-title-holder {
+			margin-top:0;
+			margin-bottom:15px;
+
+			.edgt-iwt-title {
+				margin-top:0;
+			}
+		}
+
+		.edgt-iwt-text-holder {
+			margin-top:0;
+
+			> p {
+				margin-top:0;
+			}
+		}
+	}
+
+	&.edgt-iwt-icon-right {
+		text-align: right;
+
+		.edgt-iwt-icon-holder {
+			float: right;
+		}
+
+		&.edgt-iwt-icon-tiny .edgt-iwt-content-holder {
+			padding-right: $icon-tiny-content-padding;
+		}
+
+		&.edgt-iwt-icon-small .edgt-iwt-content-holder {
+			padding-right: $icon-small-content-padding;
+		}
+
+		&.edgt-iwt-icon-medium .edgt-iwt-content-holder {
+			padding-right: $icon-medium-content-padding;
+		}
+
+		&.edgt-iwt-icon-large .edgt-iwt-content-holder {
+			padding-right: $icon-large-content-padding;
+		}
+
+		&.edgt-iwt-icon-huge .edgt-iwt-content-holder {
+			padding-right: $icon-huge-content-padding;
+		}
+
+		.edgt-iwt-title-holder {
+			margin: 0;
+
+			.edgt-iwt-title {
+				margin-top:0;
+                margin-bottom: 5px;
+			}
+		}
+
+		.edgt-iwt-text-holder {
+			margin-top:0;
+
+			> p {
+				margin-top:0;
+			}
+		}
+	}
+
+	&.edgt-iwt-left-from-title {
+		.edgt-iwt-icon-title-holder {
+			margin-bottom: 12px;
+		}
+
+		.edgt-iwt-icon-holder,
+		.edgt-iwt-title-holder {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&.edgt-iwt-loading-animation {
+		visibility: hidden;
+
+		.touch & {
+			visibility: visible;
+		}
+
+		.no-touch & {
+			visibility: visible;
+
+			.edgt-iwt-icon-holder {
+				opacity: 0;
+				@include edgtTransform(scale(.7));
+				-webkit-transform-origin:0% 50%;
+				transform-origin:0% 50%;
+			}
+
+			.edgt-iwt-content-holder {
+				opacity: 0;
+				@include edgtTransform(translateX(-20px));
+			}
+
+			&.edgt-iwt-item-appeared {
+				.edgt-iwt-icon-holder {
+					opacity: 1;
+					@include edgtTransform(scale(1));
+					@include edgtTransition(all .3s);
+				}
+
+				.edgt-iwt-content-holder {
+					opacity: 1;
+					@include edgtTransform(translateX(0));
+					@include edgtTransition(all .4s .1s);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.edgt-top-bar {
+	@include ipad-landscape {
+		height: auto;
+		.edgt-vertical-align-containers {
+			height: auto;
+
+			.edgt-position-left,
+			.edgt-position-right {
+				float: none;
+				text-align: center;
+				width: 100%;
+			}
+			.edgt-position-right,
+			.edgt-position-center {
+				display: none;
+			}
+			.edgt-position-left {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	@include phone-landscape {
+		display: none;
+	}
+}
+
+@include phone-landscape {
+	.edgt-top-bar, .edgt-top-bar-background {
+		display: none;
+	}
+}
+

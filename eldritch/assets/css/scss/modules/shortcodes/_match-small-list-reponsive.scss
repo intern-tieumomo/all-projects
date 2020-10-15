@@ -1,0 +1,50 @@
+@media only screen and (min-width: map-get($breakpoints, ipad-landscape-plus-pixel)) and (max-width: map-get($breakpoints, mac)) {
+
+    .edgt-match-list-widget .edgt-match-small-list-holder {
+        article {
+            .edgt-match-info > * {
+                font-size: 12px;
+            }
+            .edgt-match-item-holder .edgt-match-result-holder {
+                font-size: 15px;
+                width: 50px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+    .edgt-match-small-list-holder {
+        article {
+            .edgt-match-item-holder {
+                display: inline-block;
+                vertical-align: middle;
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    &.edgt-match-single-team {
+                        width: 30%;
+                        float: left;
+                    }
+                    &.edgt-match-vs-image {
+                        width: 40%;
+                        float: left;
+                        padding: 20px 0 0 0;
+                    }
+                    &.edgt-match-info {
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px 0 0 0;
+                    }
+                    &.edgt-match-result-holder {
+                        padding: 15px 0 0 0;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

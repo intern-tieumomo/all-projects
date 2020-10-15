@@ -1,0 +1,114 @@
+/* ==========================================================================
+# Carousels style - begin
+========================================================================== */
+
+.edgt-carousel-holder {
+
+    .edgt-carousel {
+        opacity: 0;
+
+        &.appeared {
+            opacity: 1;
+        }
+    }
+
+    .edgt-carousel-item-holder {
+        position: relative;
+
+        span {
+            display: block;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        /* Image zoom - begin
+        ========================================================================== */
+
+        .edgt-carousel-first-image-holder.edgt-image-zoom img {
+            @include edgtTransition(transform 0.15s ease-out);
+            -webkit-backface-visibility: hidden;
+        }
+
+        .edgt-carousel-first-image-holder.edgt-image-zoom:hover img {
+            @include edgtTransform(scale(1.1));
+        }
+
+        /* Image zoom - end
+        ========================================================================== */
+
+        /* Image change on hover - begin
+        ========================================================================== */
+
+        .edgt-carousel-first-image-holder.edgt-image-change {
+            position: relative;
+            opacity: 1;
+            z-index: 5;
+            @include edgtTransition(opacity 0.3s ease-in-out);
+        }
+
+        &:hover .edgt-carousel-first-image-holder.edgt-has-hover-image.edgt-image-change {
+            opacity: 0;
+        }
+
+        .edgt-carousel-second-image-holder {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            @include edgtTransition(opacity 0.3s ease-in-out);
+        }
+
+        &:hover .edgt-carousel-second-image-holder {
+            opacity: 1;
+        }
+
+        /* Image change on hover - end
+        ========================================================================== */
+
+    }
+
+    .edgt-carousel-item-outer-holder.border {
+        border-right: 1px solid $default-border-color;
+    }
+
+    .border .edgt-carousel-item-holder {
+        padding: 20px;
+        border-bottom: 1px solid $default-border-color;
+        text-align: center;
+    }
+
+    .border .edgt-carousel-item-holder:last-child {
+        border-bottom: 0;
+    }
+
+    &.edgt-light-skin {
+        .edgt-carousel-item-outer-holder.border {
+            border-right-color: $default-border-color-light;
+        }
+
+        .border .edgt-carousel-item-holder {
+            border-bottom-color: $default-border-color-light;
+        }
+    }
+
+    //slick
+
+    .slick-slide:last-child .edgt-carousel-item-outer-holder.border {
+        border-right: 0;
+    }
+
+    .slick-slider {
+        margin-bottom: 0;
+    }
+
+    .slick-track {
+        padding: 1% 0;
+    }
+}
+
+/* ==========================================================================
+# Carousels style - end
+========================================================================== */

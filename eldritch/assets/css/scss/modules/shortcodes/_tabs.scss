@@ -1,0 +1,248 @@
+/* ==========================================================================
+# Tabs style - begin
+========================================================================== */
+.edgt-tabs {
+
+	.edgt-tabs-nav {
+		display: block;
+		position: relative;
+		list-style: none outside none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		vertical-align: middle;
+
+		li a {
+			display: block;
+			padding: 10px 30px;
+			color: $headings-text-color;
+			background-color: #ffffff;
+			font-weight: 400;
+			font-family: $headings-font-family;
+
+			@include edgtBoxSizing(border-box);
+			@include edgtTransition(color 0.15s ease-out, background-color 0.15s ease-out, border-color 0.15s ease-out);
+
+			.edgt-tab-title-subtitle, .edgt-tab-title, .edgt-tab-subtitle {
+				display: block;
+			}
+			.edgt-tab-subtitle {
+				font-size: 16px;
+				color: $default-text-color;
+				margin-top: 6px;
+			}
+		}
+
+		li.ui-state-active a {
+			position: relative;
+			z-index: 20;
+		}
+
+		.edgt-tab-container {
+			position: relative;
+			background-size:cover;
+			background-position:bottom;
+
+			@include edgtBoxSizing(border-box);
+		}
+	}
+
+    &.edgt-light-skin {
+        .edgt-tabs-nav li a {
+            background-color: transparent;
+            color: #fff;
+
+            .edgt-tab-subtitle {
+                color: $default-text-color-dark;
+            }
+        }
+    }
+
+}
+
+/* Horizontal tabs styles
+   ========================================================================== */
+.edgt-tabs.edgt-horizontal {
+
+	.edgt-tabs-nav li {
+		display: table-cell;
+		vertical-align: middle;
+		border-bottom-color: #f2f2f2;
+		position: relative;
+		background-color: #ffffff;
+
+		&.ui-tabs-active:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			left: 0;
+			bottom: 0;
+			background-color: $first-main-color;
+			z-index: 21;
+		}
+
+		a {
+			padding: 8px 15px;
+			border-left: 0;
+		}
+
+        &:last-child {
+            border-bottom-color: $first-main-color;
+        }
+	}
+
+	.edgt-tab-container {
+		padding: 37px 0;
+		border-top: 1px solid #f2f2f2;
+		top: -1px;
+		position: relative;
+		z-index: 10;
+		background-size:cover;
+		background-position:bottom;
+	}
+
+    &:not(.edgt-tab-text-icon) {
+        .edgt-tabs-nav li:first-child a {
+            padding-left: 0;
+        }
+    }
+
+    &.edgt-light-skin {
+        .edgt-tabs-nav li {
+            background-color: transparent;
+            border-color: $default-border-color-dark;
+        }
+
+        .edgt-tab-container {
+            border-top-color: $first-main-color;
+        }
+    }
+
+}
+
+/* Vertical tabs styles
+   ========================================================================== */
+.edgt-tabs.edgt-vertical {
+
+	.edgt-tabs-nav {
+		float: left;
+		width: 32%;
+
+		@include edgtBoxSizing(border-box);
+
+		li:not(.ui-state-active) {
+
+			a:after {
+				background: #ebebeb !important;
+			}
+		}
+
+		li {
+			display: block;
+			border-bottom: 1px solid #f2f2f2;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			a {
+				border-bottom: 0;
+				padding: 27px 32px;
+
+				.edgt-tab-title {
+					font-size: 20px;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 100%;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	.edgt-tab-container {
+		float: left;
+		padding: 0 45px 10px 45px;
+		width: 68%;
+		background-size:cover;
+		background-position:bottom;
+
+		@include edgtBoxSizing(border-box);
+	}
+
+	&.edgt-vertical-nav-width-small {
+		.edgt-tabs-nav {
+			width: 22.92%;
+		}
+
+		.edgt-tab-container {
+			width: 77.08%;
+			background-size:cover;
+			background-position:bottom;
+		}
+	}
+
+    &.edgt-light-skin {
+        .edgt-tabs-nav {
+            li:not(.ui-state-active) {
+
+                a:after {
+                    background: transparent !important;
+                }
+            }
+
+            li:not(:last-child) {
+                border-bottom-color: $default-border-color-dark;
+            }
+        }
+    }
+
+}
+
+/* Tabs with icon and text styles start
+   ========================================================================== */
+
+.edgt-tabs.edgt-tab-text-icon .edgt-tabs-nav li a {
+
+	.edgt-tab-text-after-icon {
+		padding-left: 10px;
+		@include edgtTransition(initial);
+	}
+	.edgt-icon-frame {
+		float: left;
+		margin-left:-7px;
+	}
+	.edgt-tab-title-subtitle {
+		padding-left: 20px;
+	}
+}
+
+/* Tabs with icon styles - start
+   ========================================================================== */
+
+.edgt-tabs.edgt-tab-icon .edgt-tabs-nav li a {
+	i,
+	span {
+		@include edgtTransition(initial);
+	}
+
+	.edgt-icon-frame {
+		display: inline-block;
+		min-width: 20px;
+	}
+
+}
+
+/* ==========================================================================
+# Tabs style - end
+========================================================================== */

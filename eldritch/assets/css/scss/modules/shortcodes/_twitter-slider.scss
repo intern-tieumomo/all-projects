@@ -1,0 +1,27 @@
+.edgt-twitter-slider {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	color: $headings-text-color;
+
+	.edgt-twitter-slider-inner {
+		margin-top: 18px;
+		opacity: 0;
+	}
+
+	.twitter-icon {
+		font-size: 40px;
+	}
+
+	.edgt-twitter-slider-item {
+		h2 {
+			color: inherit;
+			font-weight: 400;
+
+			a {
+				display: block;
+				margin-top: 17px;
+			}
+		}
+	}
+}

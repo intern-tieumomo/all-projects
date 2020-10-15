@@ -1,0 +1,48 @@
+{% set page_title = 'User Messages Compose' %}
+{% set header_show = 'user' %}
+{% set header_image = 'assets/images/dark/game-diablo-iii-1400x656.jpg' %}
+{% set header_size = 'small' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <ul class="pagination pagination-sm mt-0">
+                    <li>
+                        <a href="user-messages.html">Inbox</a>
+                    </li>
+                    <li class="active">
+                        <a href="user-messages-compose.html">Compose</a>
+                    </li>
+                </ul>
+
+                <form action="">
+                    <div class="youplay-input">
+                        <input type="text" placeholder="Send To" name="message-to">
+                    </div>
+                    <div class="youplay-input">
+                        <input type="text" placeholder="Subject" name="message-subject">
+                    </div>
+                    <div class="youplay-textarea">
+                        <textarea placeholder="Message" name="message" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-default">Send</button>
+                </form>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-3">
+                {% include "shared/dark-sidebar-user.html" %}
+            </div>
+            <!-- Right Side -->
+
+        </div>
+
+    </div>
+{% endblock %}

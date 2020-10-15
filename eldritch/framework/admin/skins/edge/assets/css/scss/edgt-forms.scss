@@ -1,0 +1,15 @@
+@import "mixins";
+@import "variables";
+
+.edgt-page {
+
+    @import "edgt-forms/inputs";
+    @import "edgt-forms/holders";
+}
+
+@media only screen and (max-width: $second-break-point) {
+    #wpbody select.edgt-form-element {
+        font-size: 13px;
+        height: 34px;
+    }
+}

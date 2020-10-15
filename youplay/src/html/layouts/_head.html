@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{{ headerComment | safe }}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Youplay{% if page_title %}{{ ' | ' + page_title }}{% elif header_title %}{{ ' | ' + header_title }}{% endif %}</title>
+
+    <meta name="description" content="Youplay - Gaming HTML Template based on Bootstrap">
+    <meta name="keywords" content="gaming, game, community, template, html, bootstrap, webpack">
+    <meta name="author" content="nK">
+
+    <link rel="icon" type="image/png" href="assets/images/dark/icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="{{ google_fonts }}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Flickity -->
+    <link rel="stylesheet" href="assets/vendor/flickity/dist/flickity.min.css" />
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/dist/magnific-popup.css" />
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="assets/vendor/slider-revolution/css/settings.css">
+    <link rel="stylesheet" href="assets/vendor/slider-revolution/css/layers.css">
+    <link rel="stylesheet" href="assets/vendor/slider-revolution/css/navigation.css">
+
+    <!-- Bootstrap Sweetalert -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-sweetalert/dist/sweetalert.css" />
+
+    <!-- Social Likes -->
+    <link rel="stylesheet" href="assets/vendor/social-likes/dist/social-likes_flat.css" />
+
+    <!-- FontAwesome -->
+    <script defer src="assets/vendor/font-awesome/svg-with-js/js/fontawesome-all.min.js"></script>
+    <script defer src="assets/vendor/font-awesome/svg-with-js/js/fa-v4-shims.min.js"></script>
+
+    <!-- Youplay -->
+    <link rel="stylesheet" href="assets/css/{{ main_style_file }}{{ '.min' if ENV == 'production' }}.css">
+
+    <!-- RTL (uncomment this to enable RTL support) -->
+    <!-- <link rel="stylesheet" href="assets/css/youplay-rtl.min.css" /> -->
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    {% if custom_css %}<link rel="stylesheet" href="{{ custom_css }}">{% endif %}
+    <!-- END: Styles -->
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    {% block head %}{% endblock %}
+    {% if custom_styles %}
+    <style>{{ custom_styles }}</style>
+    {% endif %}
+</head>

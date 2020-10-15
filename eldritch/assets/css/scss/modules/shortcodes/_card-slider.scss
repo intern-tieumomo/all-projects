@@ -1,0 +1,103 @@
+.edgt-card-slider-holder {
+	.edgt-card-slider {
+		opacity: 0;
+		
+		.slick-track {
+			cursor: -webkit-grab;
+			cursor: grab;
+		}
+
+		&.appeared {
+			opacity: 1;
+		}
+
+		.slick-list {
+			padding-bottom: 20px;
+			margin-bottom: -30px;
+		}
+	}
+
+	.edgt-card-slide {
+		padding: 0 15px;
+		margin: 6px 0 10px 0;
+
+		.edgt-icon-holder {
+			text-align: center;
+			font-size: 47px;
+			color: $headings-text-color;
+		}
+
+		.edgt-card-image img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.edgt-card-content {
+			padding: 17px 60px;
+			text-align: center;
+
+			.edgt-separator {
+				border-bottom-color: $first-main-color;
+			}
+
+			.edgt-card-title {
+				margin: 0 0 2px;
+			}
+
+			.edgt-card-subtitle, .edgt-card-text {
+				margin: 0;
+			}
+
+			.edgt-card-subtitle {
+				font-weight: 600;
+				color: #a7b0be;
+				margin-top: 6px;
+			}
+
+			.edgt-card-text {
+				margin: 1px 0 21px;
+			}
+		}
+	}
+
+    &.edgt-dark-skin {
+        .edgt-card-slide {
+
+            .edgt-card-content {
+
+                .edgt-card-title {
+                    color: $header-dark-color;
+                }
+
+                .edgt-card-subtitle {
+                    color: $header-dark-color;
+                }
+
+                .edgt-card-text {
+                    color: $header-dark-color;
+                }
+            }
+
+
+        }
+    }
+
+    &.edgt-light-skin {
+
+        .edgt-card-content {
+
+            .edgt-card-title {
+                color: #fff;
+            }
+
+            .edgt-card-subtitle {
+                color: #fff;
+            }
+
+            .edgt-card-text {
+                color: $default-text-color-dark;
+            }
+        }
+
+    }
+}

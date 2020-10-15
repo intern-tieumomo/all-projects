@@ -1,0 +1,40 @@
+.youplay-store {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+
+    // pagination
+    .isotope-options {
+        margin-top: 0;
+    }
+
+    // item in store 2
+    .isotope-list a.item {
+        margin-bottom: 2rem;
+    }
+    .isotope .isotope-options {
+        margin-bottom: 2rem;
+    }
+
+    // grid special styles
+    &.store-grid {
+        .item .angled-img {
+            // margin-right: 1.5rem;
+            // margin-left: 1.5rem;
+        }
+        .isotope .isotope-options {
+            margin-bottom: 4rem;
+        }
+        .isotope-list {
+            margin-right: 1.5rem;
+        }
+        .isotope .isotope-list .item {
+            margin-bottom: 1rem;
+        }
+
+        @media #{$media-xs} {
+            .isotope-list {
+                margin-left: 1.4rem;
+            }
+        }
+    }
+}

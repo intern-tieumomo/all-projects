@@ -1,0 +1,13 @@
+/* Global Responsive styles
+   ========================================================================== */
+@import 'variables';
+@import 'mixins';
+/*------------------------------------------------------------------
+ * This is BBPress responsive css file for theme. It is broken into following sections:
+ * 1.  Global Responsive
+
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   1. BBPress responsive styles
+   ========================================================================== */
+@import 'plugins/bbpress/bbpress-responsive';

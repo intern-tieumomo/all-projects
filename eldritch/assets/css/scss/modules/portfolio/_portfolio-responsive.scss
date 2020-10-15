@@ -1,0 +1,120 @@
+@include mac {
+	.edgt-portfolio-single-holder {
+		&.small-slider, &.small-images {
+			.edgt-portfolio-item-content {
+				margin-top: 18px;
+				margin-bottom: 10px;
+			}
+
+			.edgt-portfolio-author-holder {
+				margin: 15px 0 10px;
+			}
+
+			.edgt-portfolio-fields {
+				padding: 24px 30px 16px;
+			}
+
+			.edgt-portfolio-fields {
+				.edgt-portfolio-info-item {
+					margin-bottom: 10px;
+				}
+
+				.edgt-portfolio-item-social {
+					padding-top: 15px;
+				}
+
+				.edgt-portfolio-single-likes .edgt-like {
+					top: 19px;
+				}
+
+				> div:nth-last-child(2) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+
+		&.big-images, &.big-slider {
+			.edgt-portfolio-item-title {
+				margin-bottom: 17px;
+			}
+
+			.edgt-portfolio-author-holder {
+				margin: 12px 0 25px;
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgt-portfolio-single-holder {
+		.edgt-portfolio-single-nav {
+			margin-top: 50px;
+		}
+
+		&.small-images,
+		&.big-images {
+			.edgt-portfolio-single-media {
+				margin-bottom: 25px;
+			}
+		}
+
+		.edgt-portfolio-info-holder {
+			margin-top: 40px !important; //to override script inline css
+		}
+
+		&.small-images, &.small-slider {
+			.edgt-portfolio-author-holder {
+				margin: 30px 0 25px;
+			}
+
+			.edgt-portfolio-item-content {
+				margin-top: 23px;
+			}
+		}
+
+		&.big-images, &.big-slider {
+			.edgt-portfolio-item-title {
+				margin-bottom: 17px;
+			}
+
+			.edgt-portfolio-author-holder {
+				margin: 12px 0 33px;
+			}
+		}
+	}
+
+	.gallery.edgt-portfolio-gallery-four-columns {
+		.edgt-portfolio-single-media {
+			width: 50%;
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-portfolio-single-holder {
+		.edgt-portfolio-single-nav {
+			.edgt-single-nav-image-holder {
+				display: none;
+			}
+
+			.edgt-single-nav-content-holder {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.gallery.edgt-portfolio-gallery-four-columns,
+	.gallery.edgt-portfolio-gallery-three-columns,
+	.gallery.edgt-portfolio-gallery-two-columns {
+		.edgt-portfolio-single-media {
+			width: 100%;
+		}
+	}
+}
+
+@include phone-landscape {
+	.edgt-portfolio-single-nav .edgt-portfolio-prev .edgt-single-nav-content-holder,
+	.edgt-portfolio-single-nav .edgt-portfolio-next .edgt-single-nav-content-holder {
+		display: none;
+	}
+}

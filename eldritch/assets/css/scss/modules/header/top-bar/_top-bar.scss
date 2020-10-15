@@ -1,0 +1,124 @@
+$top-bar-height: 38px;
+
+.edgt-top-bar-background {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #333232;
+    z-index: 101;
+}
+
+.edgt-top-bar {
+	width: 100%;
+	background-color: #333232;
+	color: #fff;
+	position: relative;
+	font-weight: 400;
+	height: $top-bar-height;
+	font-size: 13px;
+	z-index: 111;
+    display: inline-block;
+    vertical-align: middle;
+
+	@include edgtBoxSizing(border-box);
+
+	.edgt-grid {
+		height: 100%;
+
+		.edgt-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+    .edgt-vertical-align-containers {
+        .edgt-position-left:before,
+        .edgt-position-center:before,
+        .edgt-position-right:before {
+            margin-right: 0px;
+        }
+    }
+
+	.edgt-top-bar-widget-area,
+	.edgt-top-bar-widget-area-inner {
+		height: 100%;
+	}
+
+	.edgt-top-bar-widget {
+		display: table;
+		float: left;
+		height: 100%;
+
+		padding-right: 24px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&.widget_text {
+			position: relative;
+		}
+	}
+
+	.edgt-top-bar-widget-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.edgt-logo-wrapper a {
+		max-height: $top-bar-height;
+	}
+}
+
+.edgt-top-bar-light .edgt-top-bar {
+	color: $header-light-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-light-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-light-color !important; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.edgt-top-bar-dark .edgt-top-bar {
+	color: $header-dark-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-dark-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-dark-color !important; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.edgt-top-bar-gray .edgt-top-bar {
+    color: #777777; //Beacause of inline color styles
+
+    .widget {
+        color: #777777; //Beacause of inline color styles
+
+        p,
+        a,
+        span,
+        i,
+        .widgettitle {
+            color: #777777; //Beacause of inline color styles
+        }
+
+    }
+}

@@ -1,0 +1,34 @@
+.edgt-logo-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+
+        img {
+            height: 100%;
+			width: auto;
+
+            @include edgtTransition(opacity 0.2s ease);
+
+            &.edgt-normal-logo{
+                opacity: 1;
+            }
+
+            &.edgt-dark-logo{
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            &.edgt-light-logo{
+                opacity: 0;
+                -webkit-transform: translateY(-200%);
+                transform: translateY(-200%);
+            }
+        }
+    }
+}

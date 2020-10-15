@@ -1,0 +1,128 @@
+/* Search covers header - begin
+========================================================================== */
+.edgt-search-cover {
+	display: none;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 115;
+	background: #fff;
+
+	.edgt-form-holder-outer {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.edgt-form-holder {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 45px;
+		position: relative;
+	}
+
+	.edgt-form-holder-inner {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		width: 100%;
+	}
+
+	.edgt-container-inner {
+
+		.edgt-form-holder {
+			padding: 0;
+		}
+
+		.edgt-search-close {
+			right: 0;
+		}
+
+	}
+
+	input,
+	input:focus {
+		background-color: transparent;
+		border: medium none;
+		box-shadow: none;
+		color: #696969;
+		font-size: 15px;
+		font-weight: 700;
+		display: inline-block;
+		width: 90%;
+		padding: 0;
+		font-family: inherit;
+		outline: none;
+		outline-offset: 0px;
+		-webkit-appearance: none;
+		border-radius: 0;
+		float: left;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	input:focus {
+		outline-offset: 0 !important;
+	}
+
+	input[type="submit"] {
+		border: 0 none;
+		clip: rect(0px, 0px, 0px, 0px);
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		visibility: hidden;
+	}
+
+	.edgt-search-close {
+		font-size: 34px;
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		line-height: 1em;
+	}
+
+	.edgt-search-close {
+
+		a {
+			color: #9d9d9d;
+			display: inline-block;
+		}
+
+		a:hover {
+			color: $first-main-color;
+		}
+
+		a i {
+			vertical-align: top;
+		}
+
+	}
+
+}
+
+.edgt-search-cover.disabled {
+
+	input,
+	input:focus {
+		font-weight: normal;
+	}
+
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+	color: #959595;
+	margin: 10px 0px 0px 0px;
+}

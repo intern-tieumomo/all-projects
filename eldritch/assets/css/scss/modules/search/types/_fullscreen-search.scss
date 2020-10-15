@@ -1,0 +1,398 @@
+/* Fullscreen search general style - start
+========================================================================== */
+.edgt-fullscreen-search-holder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 105;
+	opacity: 0;
+
+	.edgt-close-fullscreen-search-holder {
+		display: table;
+		height: 90px;
+		position: absolute;
+		top: 30px;
+		right: 40px;
+		z-index: 1000;
+	}
+
+	.edgt-close-fullscreen-search-holder-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	a.edgt-close-fullscreen-search {
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		padding: 0 2px 4px 0; /* in order to align icon in horizontal and vertical center */
+		z-index: 1000;
+		@include edgtTransition(transform .5s ease);
+
+		span {
+			color: #fff;
+			display: inline-block;
+			font-size: 30px;
+			height: 30px;
+			line-height: 30px;
+			position: relative;
+			text-align: center;
+			width: 30px;
+		}
+
+	}
+
+	a.edgt-close-fullscreen-search:hover {
+		@include edgtTransform(rotate(180deg));
+	}
+
+	.edgt-search-label {
+		font-size: 30px;
+		line-height: 1em;
+		color: #a1a1a1;
+		vertical-align: bottom;
+	}
+
+	.edgt-field-holder {
+		width: 30%;
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
+		border-bottom: 2px solid rgba(255,255,255, 0.14);
+		padding-bottom: 10px;
+
+		.edgt-line {
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			height: 1px;
+			width: 0;
+			background-color: #696969;
+			@include edgtTransition(width 0s .5s);
+		}
+
+		@include mac {
+			width: 40%;
+			padding-bottom: 0;
+		}
+	}
+
+	.edgt-search-field {
+		width: 88%;
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+		background: transparent;
+		outline: none;
+		height: 100%;
+		font-size: 30px;
+		color: #fff;
+		line-height: 1em;
+		position: relative;
+		float: left;
+		font-family: $headings-font-family;
+        font-weight: 600;
+
+		&::-webkit-input-placeholder {
+			font-weight: 600 !important;
+		}
+
+		&:-moz-placeholder {
+            font-weight: 600 !important;
+		}
+
+		&::-moz-placeholder {
+            font-weight: 600 !important;
+		}
+
+		&:-ms-input-placeholder {
+            font-weight: 600 !important;
+		}
+	}
+
+	.edgt-search-submit {
+		border: none;
+		background: transparent;
+		outline: none;
+		width: auto;
+		cursor: pointer;
+		font-family: 'simple-line-icons';
+		font-size: 30px;
+		line-height: 1em;
+		color: #fff;
+		float: right;
+		@include edgtTransition(color 0.2s ease);
+
+		@include mac {
+			padding-top: 3px;
+		}
+	}
+
+	.edgt-search-submit:hover {
+		color: #696969;
+	}
+
+	.edgt-search-close-holder {
+		float: right;
+		margin-right: 45px;
+	}
+
+	.edgt-fullscreen-search-close-container {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+
+		a {
+            font-size: 30px;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: opacity 0.2s ease, color 0.2s ease;
+			transition: opacity 0.2s ease, color 0.2s ease;
+			position: absolute;
+			color: #fff;
+			top: 40px;
+			right: 40px;
+			height: 42px;
+			width: 42px;
+			line-height: 42px;
+		}
+
+	}
+
+}
+
+.edgt-fullscreen-search-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.edgt-fullscreen-search-cell {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+//Fix for woocommerce page
+.edgt-fullscreen-search-opened .edgt-form-holder .edgt-search-field {
+	width: 88%;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+	background: transparent;
+	outline: none;
+	height: 100%;
+	font-size: 30px;
+	color: #fff;
+	line-height: 43px;
+	position: relative;
+	padding: 0;
+	float: left;
+
+	&::-webkit-input-placeholder {
+		color: #fff;
+		font-size: 36px;
+		font-weight: 400;
+	}
+
+	&:-moz-placeholder {
+		color: #fff;
+		font-size: 36px;
+		font-weight: 400;
+	}
+
+	&::-moz-placeholder {
+		color: #fff;
+		font-size: 36px;
+		font-weight: 400;
+	}
+
+	&:-ms-input-placeholder {
+		color: #fff;
+		font-size: 36px;
+		font-weight: 400;
+	}
+}
+
+/* Fullscreen search general style - end
+========================================================================== */
+
+/* Fullscreen search from circle style - start
+========================================================================== */
+
+.edgt-fullscreen-search-overlay {
+	position: absolute;
+	width: 2000px;
+	height: 2000px;
+	margin-top: -1000px;
+	margin-left: -1000px;
+	top: 50%;
+	left: 0;
+	border-radius: 100%;
+	opacity: 0;
+	z-index: 99;
+	-ms-transform-origin: 50%;
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	@include edgtTransform(scale(0));
+	background-color: rgba(255, 255, 255, 0.98);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.edgt-fullscreen-search-overlay.edgt-animate {
+	@include edgtTransform(scale(3));
+	opacity: 1;
+}
+
+.edgt-search-from-circle .edgt-fullscreen-search-holder {
+	@include edgtTransition(opacity 0.3s ease);
+	display: none;
+	opacity: 0;
+	visibility: visible;
+	z-index: 112;
+}
+
+/* Fullscreen search from circle style - end
+========================================================================== */
+
+/* Fullscreen search fade style - start
+========================================================================== */
+
+.edgt-search-fade .edgt-fullscreen-search-holder {
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	opacity: 0;
+	z-index: 112;
+
+	@include edgtBoxSizing(border-box);
+
+	.edgt-fullscreen-search-table {
+		background-color: #282828;
+	}
+}
+
+body.edgt-fullscreen-search-with-bg-image.edgt-search-fade .edgt-fullscreen-search-table {
+	background-color: transparent;
+}
+
+.edgt-search-fade-out.edgt-search-fade .edgt-fullscreen-search-holder {
+	@include edgtAnimation(search_fade_out .25s linear both);
+}
+
+.edgt-search-fade-in.edgt-search-fade .edgt-fullscreen-search-holder.edgt-animate {
+	@include edgtAnimation(search_fade_in .25s linear both);
+}
+
+.edgt-search-fade .edgt-fullscreen-search-holder.edgt-animate .edgt-fullscreen-search-close {
+	opacity: 1;
+	visibility: visible;
+}
+
+@-webkit-keyframes search_fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes search_fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes search_fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes search_fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+/* Fullscreen search fade style - end
+========================================================================== */
+
+/*---------------Fade animation with PUSH TEXT TOP------------*/
+
+@-webkit-keyframes search_push_text_top {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(60px);
+		transform: translateY(60px)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes search_push_text_top {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(60px);
+		transform: translateY(60px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+.edgt-search-fade.edgt-fullscreen-search-opened .edgt-fullscreen-search-holder .edgt-form-holder {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include edgtAnimation(search_push_text_top .4s cubic-bezier(0.19, 1, 0.22, 1) both .25s);
+}
+
+.edgt-search-fade.edgt-fullscreen-search-opened .edgt-fullscreen-search-holder .edgt-field-holder {
+	.edgt-line {
+		@include edgtTransition(width 0.3s ease);
+	}
+}
+
+.edgt-search-fade-out.edgt-search-fade .edgt-fullscreen-search-holder .edgt-search-label,
+.edgt-search-fade-out.edgt-search-fade .edgt-fullscreen-search-holder .edgt-search-submit,
+.edgt-search-fade-out.edgt-search-fade .edgt-fullscreen-search-holder .edgt-field-holder {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include edgtTransform(translateY(0));
+	@include edgtTransition(transform 0.5s cubic-bezier(0.19, 1, 0.22, 1));
+}
+
+/*----------------------FULLSCREEN SEARCH style end--------------------------*/

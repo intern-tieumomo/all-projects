@@ -1,0 +1,104 @@
+@import "mixins";
+@import "variables";
+
+.edgt-options-page {
+	margin: 20px 20px 0 2px;
+	position:relative;
+
+	table th {
+		font-weight: 400;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.5em;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: none;
+	}
+
+	.edgt-page-content-wrapper {
+		background-color: $navigation-background-color;
+	}
+
+	.edgt-page-content-wrapper.edgt-page-content-offset {
+		position:relative;
+	}
+
+	@import "edgt-options/navigation";
+	@import "edgt-options/header";
+	@import "edgt-options/content";
+	@import "edgt-options/anchors";
+	@import "edgt-options/notification";
+}
+
+//Progress bar section must be outside .edgt-options page because browsers don't apply specific styles to them
+progress[value] {
+	/* Reset the default appearance */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	/* Get rid of default border in Firefox. */
+	border: none;
+
+	/* Dimensions */
+	width: 250px;
+	height: 10px;
+}
+
+progress[value]::-webkit-progress-bar {
+	background-color: #eee;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* IE10 */
+progress {
+	color: #78cd51;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+	background: #7fb76c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7fb76c 0%, #3c763d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7fb76c), color-stop(100%,#3c763d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7fb76c 0%,#3c763d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb76c', endColorstr='#3c763d',GradientType=0 ); /* IE6-9 */
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+	background: #7fb76c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7fb76c 0%, #3c763d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7fb76c), color-stop(100%,#3c763d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7fb76c 0%,#3c763d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb76c', endColorstr='#3c763d',GradientType=0 ); /* IE6-9 */
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+	background: #7fb76c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7fb76c 0%, #3c763d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7fb76c), color-stop(100%,#3c763d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7fb76c 0%,#3c763d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7fb76c 0%,#3c763d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb76c', endColorstr='#3c763d',GradientType=0 ); /* IE6-9 */
+
+}

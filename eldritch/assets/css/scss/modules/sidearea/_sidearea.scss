@@ -1,0 +1,750 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+//TODO Delete commented code
+
+/* Side area general style - start
+========================================================================== */
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-side-menu-button-opener,
+.edgt-light-header.edgt-header-style-on-scroll .edgt-page-header .edgt-side-menu-button-opener,
+.edgt-top-bar-light .edgt-top-bar .edgt-side-menu-button-opener {
+    color: $header-light-color !important; //Color can be set inline from widget opener;
+}
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-side-menu-button-opener:hover,
+.edgt-light-header.edgt-header-style-on-scroll .edgt-page-header .edgt-side-menu-button-opener:hover,
+.edgt-top-bar-light .edgt-top-bar .edgt-side-menu-button-opener:hover {
+    color: rgba($header-light-color, 0.7) !important; //Color can be set inline from widget opener;
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-side-menu-button-opener,
+.edgt-dark-header.edgt-header-style-on-scroll .edgt-page-header .edgt-side-menu-button-opener,
+.edgt-top-bar-dark .edgt-top-bar .edgt-side-menu-button-opener {
+    color: $header-dark-color !important; //Color can be set inline from widget opener
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-side-menu-button-opener:hover,
+.edgt-dark-header.edgt-header-style-on-scroll .edgt-page-header .edgt-side-menu-button-opener:hover,
+.edgt-top-bar-dark .edgt-top-bar .edgt-side-menu-button-opener:hover {
+    color: rgba($header-dark-color, 0.8) !important;
+}
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header):not(.fixed) {
+    .edgt-side-menu-button-opener > .edgt-side-area-icon {
+        border-color: $header-light-color !important;
+    }
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header):not(.fixed) {
+    .edgt-side-menu-button-opener > .edgt-side-area-icon {
+        border-color: $header-dark-color !important;
+    }
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header):not(.fixed) {
+    .edgt-side-menu-button-opener:hover > .edgt-side-area-icon {
+        border-color: $header-light-color !important;
+    }
+}
+
+.widget_edgt_side_area_opener {
+    width: 20px;
+    padding: 0 10px;
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.edgt-side-menu-button-opener {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    color: $menu-item-color;
+
+    &:hover {
+        color: rgba($menu-item-color, 0.7);
+    }
+}
+
+.edgt-side-menu-button-opener.medium {
+    display: inline-block;
+    font-size: 21px;
+    line-height: 30px;
+    height: 30px;
+    width: 19px;
+}
+
+.edgt-side-menu-button-opener.large {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 34px;
+    height: 34px;
+    width: 24px;
+}
+
+.edgt-side-menu-button-opener.edgt-side-menu-button-opener-default {
+    width: 7px;
+    height: 30px;
+}
+
+.edgt-side-menu-button-opener > .edgt-side-area-icon {
+    display: block;
+    line-height: inherit;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    @include edgtTransform(translateY(-50%));
+    > *{
+        position: relative;
+        //top:1px;
+    }
+}
+
+@-webkit-keyframes sai-size {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes sai-size {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes sai-size {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.edgt-side-menu-button-opener > i {
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    vertical-align: bottom;
+    width: inherit;
+    text-align: center;
+    -webkit-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+    -moz-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+    -ms-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+    -o-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+    transition: opacity 0.15s ease-out, color 0.15s ease-out;
+}
+
+.edgt-side-menu-button-opener span.social_icon {
+    font-family: 'ElegantIcons' !important;
+}
+
+.edgt-side-menu-button-opener i.social_icon {
+    font-family: 'FontAwesome', serif !important;
+
+}
+
+.edgt-side-menu {
+    background-color: $default-dark-color;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 25px 50px;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 210px;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+
+    background-image: url("./img/pattern-dark.png");
+    background-position: 0 0;
+    background-repeat: repeat;
+
+    .edgt-icon-shortcode {
+        a:not(.qbutton) {
+            line-height: 1em;
+        }
+    }
+
+    h4 {
+        margin: 0 0 20px 0;
+        color: #545454;
+    }
+
+    h5,
+    h6 {
+        margin: 0 0 12px 0;
+    }
+
+    .widget {
+        position: relative;
+        margin: 0 0 30px;
+        text-align: left;
+
+        li {
+            position: relative;
+            list-style-type: none;
+            margin-bottom: 7px;
+        }
+
+        ul li.page_item_has_children,
+        ul li.menu-item-has-children {
+            padding-right: 0;
+            border-bottom: none;
+        }
+
+        ul ul {
+            padding: 6px 0 0 10px;
+        }
+
+        &.widget_edgt_instagram_widget {
+            margin-top: 36px;
+            margin-bottom: 25px;
+
+            body:not(.edgt-side-area-uncovered-from-content) & {
+                .edgt-instagram-feed {
+                    padding-right: 112px;
+                }
+            }
+        }
+
+    }
+
+    a:not(.qbutton) {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: $headings-font-family;
+
+        &:hover {
+            color: $first-main-color;
+        }
+    }
+
+    li,
+    span,
+    p,
+    .widget_rss li a.rsswidget {
+        color: $default-text-color;
+        line-height: 31px;
+        @include edgtTransition(color 0.15s ease-out);
+    }
+
+    .widget_calendar {
+        font-size: 14px;
+
+        a {
+            color: #fff;
+        }
+
+        caption,
+        th,
+        td {
+            color: #9d9d9d;
+            line-height: 31px;
+            @include edgtTransition(color 0.15s ease-out);
+        }
+
+        thead tr,
+        tbody tr,
+        tbody td {
+            border-color: #9d9d9d;
+        }
+
+    }
+
+    .edgt-side-menu-title {
+        display: block;
+        margin: 0 0 12px;
+    }
+
+    .widget_nav_menu {
+
+        li:last-child,
+        li a {
+            margin: 0;
+        }
+
+    }
+
+    .edgt-close-side-menu-holder {
+        display: table;
+        height: 97px;
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        z-index: 1000;
+    }
+
+    .edgt-close-side-menu-holder-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    a.edgt-close-side-menu {
+        display: inline-block;
+        height: 26px;
+        width: 26px;
+        padding: 0 2px 4px 0; /* in order to align icon in horizontal and vertical center */
+        z-index: 1000;
+        @include edgtTransition(transform .5s ease);
+
+        span {
+            color: #fff;
+            display: inline-block;
+            font-size: 22px;
+            height: 26px;
+            line-height: 29px;
+            position: relative;
+            text-align: center;
+            width: 26px;
+        }
+
+    }
+
+    a.edgt-close-side-menu:hover {
+        @include edgtTransform(rotate(180deg));
+    }
+
+    .widget.widget_search {
+        .searchform {
+            position: relative;
+            margin-bottom: 50px;
+            max-width: 251px;
+        }
+    }
+
+    .widget .searchform input[type=text] {
+        width: 100%;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #656364;
+        background-color: transparent;
+        height: 38px;
+        padding: 8px 40px 0px 0;
+        margin: 0;
+        font-family: $headings-font-family;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+        outline: none;
+
+        @include edgtPlaceholder() {
+            color: #fff;
+            opacity: 1;
+        };
+
+        &:focus {
+            border-bottom: 1px solid #fff;
+        }
+
+        @include edgtTransition(border-color $default-transition-speed $default-transition-property);
+        @include edgtBoxSizing(border-box);
+    }
+
+    .widget .searchform input[type=submit] {
+        font-family: 'ElegantIcons';
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        width: 20px;
+        right: 0;
+        bottom: 8px;
+        cursor: pointer;
+
+        &:hover {
+            color: $first-main-color;
+        }
+
+        @include edgtTransition(color $default-transition-speed $default-transition-property);
+    }
+
+    .widget.widget_archive select,
+    .widget.widget_categories select,
+    .widget.widget_text select {
+        width: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        padding: 0 18px;
+        height: 51px;
+        outline: none;
+        color: #7f8385;
+        font-family: inherit;
+        border: 1px solid #e5e5e5;
+
+        @include edgtBoxSizing(border-box);
+    }
+
+}
+
+.admin-bar .edgt-side-menu .edgt-close-side-menu-holder {
+    top: 32px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.edgt-right-side-menu-opened {
+
+    //.edgt-wrapper,
+    //footer.uncover,
+    //.edgt-fixed-wrapper.fixed,
+    //.edgt-sticky-header,
+    //.mobile-header-appear .edgt-mobile-header-inner {
+    //    left: -270px;
+    //}
+
+}
+
+.edgt-right-side-menu-opened.edgt-paspartu-enabled {
+    .edgt-wrapper-paspartu {
+        @include edgtTransform(translateX(-270px));
+    }
+
+    .edgt-wrapper {
+        left: 0px;
+    }
+}
+
+.edgt-side-menu-slide-from-right {
+
+    .edgt-wrapper {
+        background-color: #fff;
+        position: relative;
+        z-index: 1000;
+        @include edgtTransition(left 0.2s cubic-bezier(.645, .045, .355, 1.000));
+
+        .edgt-cover {
+            z-index: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            background: #000;
+            -webkit-transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out, z-index 0.2s ease-in-out;
+            -moz-transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out, z-index 0.2s ease-in-out;
+            -o-transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out, z-index 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out, z-index 0.2s ease-in-out;
+        }
+
+    }
+
+    .carousel-inner {
+        @include edgtTransition(left 0.2s cubic-bezier(.645, .045, .355, 1.000));
+    }
+
+    .edgt-side-menu {
+        padding: 50px 50px 50px 50px;
+        top: 0;
+        right: -46%;
+        width: 25%;
+        max-width: 470px;
+        z-index: 9999;
+        text-align: center;
+        visibility: hidden;
+
+        @include edgtBoxSizing(border-box);
+        @include edgtTransition(0.4s cubic-bezier(0.6, 0, 0.26, 0.99));
+
+        .widget.widget_archive select,
+        .widget.widget_categories select,
+        .widget.widget_text select {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            padding: 0 18px;
+            height: 51px;
+            outline: none;
+            color: #7f8385;
+            font-family: inherit;
+            border: 1px solid #f2f2f2;
+            float: left;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            text-align: left;
+
+            @include edgtBoxSizing(border-box);
+        }
+    }
+
+    //	header.sticky,
+    //	header.fixed_top_header .top_header
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper.fixed {
+        -webkit-transition: left 0.2s cubic-bezier(.645, .045, .355, 1.000), -webkit-transform 0.33s ease;
+        transition: left 0.2s cubic-bezier(.645, .045, .355, 1.000), transform 0.33s ease;
+    }
+
+    footer.uncover {
+        @include edgtTransition(left 0.2s cubic-bezier(.645, .045, .355, 1.000));
+    }
+
+}
+
+.edgt-side-menu-slide-from-right.edgt-right-side-menu-opened {
+
+    .edgt-cover {
+        z-index: 1002;
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+    }
+
+    .edgt-side-menu {
+        right: 0px;
+        visibility: visible;
+    }
+
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* Side area slides with content style - start
+========================================================================== */
+
+.edgt-side-menu-slide-with-content {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+    -webkit-overflow-scrolling: auto !important;
+    -webkit-transition: left 0.2s ease, right 0.2s ease;
+    -moz-transition: left 0.2s ease, right 0.2s ease;
+    -o-transition: left 0.2s ease, right 0.2s ease;
+    transition: left 0.2s ease, right 0.2s ease;
+
+    .edgt-side-menu {
+        position: fixed;
+        visibility: visible;
+        width: 470px;
+        right: -470px;
+        height: 100%;
+        top: 0;
+        z-index: 9999;
+
+        @include edgtTransition(left 0.2s ease, right 0.2s ease);
+        @include edgtBoxSizing(border-box);
+
+    }
+
+    //	header.fixed,
+    //	header.fixed_top_header .top_header,
+    //	header.fixed_hiding,
+    footer.uncover,
+    .edgt-wrapper {
+        -webkit-transition: left 0.2s ease, right 0.2s ease;
+        -moz-transition: left 0.2s ease, right 0.2s ease;
+        -o-transition: left 0.2s ease, right 0.2s ease;
+        transition: left 0.2s ease, right 0.2s ease;
+    }
+
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper.fixed,
+    .edgt-mobile-header-inner {
+        -webkit-transition: left 0.2s ease, right 0.2s ease, -webkit-transform 0.33s ease;
+        transition: left 0.2s ease, right 0.2s ease, transform 0.33s ease;
+    }
+
+    .carousel-inner {
+        left: 0 !important;
+        @include edgtTransition(left 0.2s ease);
+    }
+
+}
+
+.edgt-side-menu-slide-with-content.edgt-side-menu-open {
+
+    .edgt-wrapper,
+    footer.uncover,
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper,
+    .edgt-mobile-header-inner {
+        left: -470px;
+    }
+
+    .edgt-side-menu {
+        right: 0;
+    }
+
+    .carousel-inner:not(.relative_position) {
+        left: -470px !important;
+    }
+
+    //	header.fixed,
+    //	header.fixed_top_header .top_header,
+    //	header.fixed_hiding,
+    //	header.sticky {
+    //		left: -470px;
+    //	}
+
+}
+
+/* width 270px start */
+.edgt-side-menu-slide-with-content.edgt-width-270.edgt-side-menu-open {
+
+    .edgt-wrapper,
+    footer.uncover,
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper,
+    .edgt-mobile-header-inner {
+        left: -270px;
+    }
+
+    .edgt-side-menu {
+        right: 0;
+    }
+
+    .carousel-inner:not(.relative_position) {
+        left: -270px !important;
+    }
+
+    //	header.fixed,
+    //	header.fixed_hiding,
+    //	header.sticky,
+    //	header.fixed_top_header .top_header{
+    //		left: -270px;
+    //	}
+
+}
+
+.edgt-side-menu-slide-with-content.edgt-width-270 {
+
+    .edgt-side-menu {
+        width: 270px;
+        right: -270px;
+    }
+
+}
+
+/* width 270px end */
+
+/* width 370px start */
+.edgt-side-menu-slide-with-content.edgt-width-370.edgt-side-menu-open {
+
+    .edgt-wrapper,
+    footer.uncover,
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper,
+    .edgt-mobile-header-inner {
+        left: -370px;
+    }
+
+    .edgt-side-menu {
+        right: 0;
+    }
+
+    .carousel-inner:not(.relative_position) {
+        left: -370px !important;
+    }
+
+    //	header.fixed,
+    //	header.fixed_hiding,
+    //	header.sticky,
+    //	header.fixed_top_header .top_header{
+    //		left: -370px;
+    //	}
+
+}
+
+.edgt-side-menu-slide-with-content.edgt-width-370 {
+
+    .edgt-side-menu {
+        width: 370px;
+        right: -370px;
+    }
+}
+
+/* width 370px end */
+
+/* Side area slides with content style - end
+========================================================================== */
+
+/* Side area uncovering - start
+========================================================================== */
+
+.edgt-side-area-uncovered-from-content {
+
+    .edgt-side-menu {
+        background-color: #1b1b1b;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 210px;
+        z-index: 90;
+        visibility: hidden;
+    }
+
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper.fixed {
+        -webkit-transition: left 0.3s ease, right 0.2s ease;
+        -moz-transition: left 0.3s ease, right 0.2s ease;
+        -o-transition: left 0.3s ease, right 0.2s ease;
+        transition: left 0.3s ease, right 0.2s ease;
+    }
+
+}
+
+.edgt-side-area-uncovered-from-content.edgt-right-side-menu-opened {
+
+    .edgt-sticky-header,
+    .edgt-fixed-wrapper.fixed,
+    .edgt-mobile-header-inner {
+        left: -270px;
+    }
+
+}
+
+/* Side area uncovering - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

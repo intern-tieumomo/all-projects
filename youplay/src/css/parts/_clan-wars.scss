@@ -1,0 +1,191 @@
+.youplay-match {
+    display: inline-block;
+    white-space: nowrap;
+
+    .angled-img {
+        display: inline-block;
+        width: 150px;
+        vertical-align: top;
+
+        .img > img {
+            opacity: 1;
+        }
+    }
+
+    .youplay-match-data {
+        position: relative;
+        display: inline-block;
+        height: 151px;
+        padding: 1.8rem 3rem;
+        margin-right: -4px;
+        margin-left: -4px;
+
+        // background
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($back_darken_color, .4);
+            transform: skew(-$skew_size);
+            z-index: 1;
+        }
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        h3 {
+            margin-top: 3.5rem;
+            margin-bottom: 0;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+    }
+}
+.youplay-match-left {
+    text-align: right;
+}
+.youplay-match-left,
+.youplay-match-right {
+    @media #{$media-sm} {
+        text-align: center;
+    }
+    @media #{$media-xs} {
+        text-align: center;
+    }
+}
+.youplay-match-vs {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 4.7rem;
+    margin-bottom: 4.7rem;
+    font-size: 2.5rem;
+
+    // background
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($back_darken_color, .4);
+        transform: skew(-$skew_size);
+        z-index: 1;
+    }
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+/* Game Maps */
+.youplay-game-maps {
+    .youplay-single-map {
+        padding-left: 1rem;
+
+        &::after,
+        &::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .angled-img {
+            float: left;
+            max-width: 10rem;
+
+            img {
+                opacity: 1;
+            }
+        }
+
+        .youplay-single-map-description {
+            margin-left: 13rem;
+        }
+
+        + .youplay-single-map {
+            margin-top: 2rem;
+        }
+    }
+}
+
+
+/* Matches List */
+.youplay-matches-list {
+    .youplay-single-match {
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        border-bottom: 1px solid rgba($text_color, .1);
+
+        + .youplay-single-match {
+            margin-top: 2rem;
+        }
+
+        .youplay-match-title {
+            transition: .3s color ease;
+        }
+        &:hover .youplay-match-title {
+            color: $main_color;
+        }
+
+        .angled-img {
+            max-width: 10rem;
+
+            img {
+                opacity: 1;
+            }
+        }
+
+        .youplay-match-count {
+            float: right;
+            padding: 1rem 2rem;
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
+
+        // styles for sidebar widget
+        .side-block & {
+            text-decoration: none;
+
+            + .youplay-single-match {
+                margin-top: 1rem;
+            }
+
+            .angled-img {
+                max-width: 4rem;
+            }
+
+            .youplay-match-count {
+                padding: .5rem;
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+/* Match Widget */
+.youplay-match-widget {
+    text-align: center;
+
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+
+    .youplay-match-title {
+        transition: .3s color ease;
+    }
+    &:hover .youplay-match-title {
+        color: $main_color;
+    }
+}

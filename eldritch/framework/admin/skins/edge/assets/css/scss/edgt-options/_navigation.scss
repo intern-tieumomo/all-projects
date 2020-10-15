@@ -1,0 +1,36 @@
+.edgt-tabs-navigation-wrapper {
+	.nav-tabs > li.active > a {
+		border: 0px solid #566269;
+	}
+
+	.nav-tabs li > a > i {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: $first-break-point) {
+	.edgt-tabs-wrapper.vertical .edgt-tabs-navigation-wrapper {
+		width: 40px !important;
+	}
+
+	.edgt-tabs-wrapper.vertical .edgt-tabs-navigation-wrapper .nav-tabs li span {
+		display: none !important;
+	}
+
+	.edgt-tabs-wrapper.vertical.left .nav-tabs > li > a {
+		padding:13px !important;
+	}
+
+	.edgt-tabs-wrapper.vertical .edgt-tabs-content {
+		margin-left: 40px !important;
+	}
+
+	.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a {
+		border:none;
+		background-color:$edgt-first-color;
+	}
+
+	.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a i {
+		color:#fff;
+	}
+}

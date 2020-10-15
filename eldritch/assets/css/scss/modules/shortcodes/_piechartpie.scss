@@ -1,0 +1,49 @@
+/* ==========================================================================
+# Pie Chart Pie - begin
+========================================================================== */
+
+.edgt-pie-chart-pie-holder {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	.edgt-pie-chart-pie {
+		margin: 0 22px 0 0;
+		float: left;
+	}
+
+	.edgt-pie-legend {
+		position: relative;
+		float: left;
+	}
+
+	.edgt-pie-legend ul {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: block;
+			margin: 0 0 10px 0;
+		}
+
+		li .edgt-pie-color-holder {
+			width: 25px;
+			height: 25px;
+			background-color: $first-main-color;
+			float: left;
+		}
+
+		li p {
+			line-height: 25px;
+			margin: 0;
+			padding: 0 0 0 35px;
+			text-align: left;
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+# Pie Chart Pie - end
+========================================================================== */

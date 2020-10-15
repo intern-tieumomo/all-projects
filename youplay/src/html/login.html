@@ -1,0 +1,28 @@
+{% set page_title = 'Login' %}
+{% set header_image = 'assets/images/dark/banner-bg.jpg' %}
+{% set header_size = 'full' %}
+{% set header_text = '
+    <div class="youplay-login">
+        <div class="youplay-form text-center">
+            <h1>Login</h1>
+
+            <div class="btn-group social-list dib">
+                <a class="btn btn-default" title="Share on Facebook" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="btn btn-default" href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-default" href="#" title="Share on Google Plus"><i class="fab fa-google-plus"></i></a>
+            </div>
+
+            <form action="/">
+                <div class="youplay-input">
+                    <input type="text" name="login" placeholder="Login">
+                </div>
+                <div class="youplay-input">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <button class="btn btn-default db">Login</button>
+            </form>
+        </div>
+    </div>
+' %}
+
+{% extends 'layouts/layout-1.html' %}

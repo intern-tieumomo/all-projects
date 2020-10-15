@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Blockquote shortcode start styles
+   ========================================================================== */
+blockquote {
+	position: relative;
+	display: table;
+    margin: 40px 0 40px 0;
+    @include edgtDarkBackgroundImage();
+
+	.edgt-blockquote-text {
+		display: table-cell;
+        padding: 32px 70px 32px 40px;
+		color: #d1d1d1;
+
+	}
+}
+
+/* ==========================================================================
+   Blockquote shortcode end styles
+   ========================================================================== */

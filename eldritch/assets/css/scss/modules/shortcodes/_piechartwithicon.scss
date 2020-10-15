@@ -1,0 +1,53 @@
+/* ==========================================================================
+# Pie Chart With Icon - begin
+========================================================================== */
+
+.edgt-pie-chart-with-icon-holder {
+	position: relative;
+	display: block;
+
+	.edgt-percentage-with-icon {
+		position: relative;
+		display: block;
+		height: 175px;
+		width: 175px;
+		line-height: 175px;
+		text-align: center;
+		margin: 0 auto;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-webkit-transition: opacity .3s ease 0s;
+		-moz-transition: opacity .3s ease 0s;
+		-o-transition: opacity .3s ease 0s;
+
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		i,
+		span {
+			color: $first-main-color;
+			vertical-align: middle;
+		}
+
+		.edgt_icon_font_elegant {
+			line-height: inherit;
+		}
+	}
+
+	.edgt-pie-chart-text {
+		text-align: center;
+		margin: 26px 0 0;
+
+		h4.edgt-pie-title {
+			margin: 0 0 12px;
+			font-size: 20px;
+		}
+	}
+}
+
+/* ==========================================================================
+# Pie Chart With Icon - end
+========================================================================== */

@@ -1,0 +1,214 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav %}
+        <li{% if isActiveMenuItem(file, item, filename) or item.sub %} class="{{ 'active' if isActiveMenuItem(file, item, filename) }}{{ ' dropdown dropdown-hover' if item.sub }}"{% endif %}>
+            <a href="{{file | safe}}"{% if item.sub %} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"{% endif %}{{ ' target="' + item.target + '"' if item.target }}>
+                {{item.name | safe}}
+                {% if item.badge -%}
+                    <span class="badge bg-default">{{item.badge | safe}}</span>
+                {%- endif %}
+                {% if item.sub %}<span class="caret"></span>{% endif %}
+                {% if item.description -%}
+                    <span class="label">{{item.description | safe}}</span>
+                {%- endif %}
+            </a>
+            {%- if item.sub -%}
+                <div class="dropdown-menu">
+                    {%- if item.mega -%}
+                        {{ megamenu(item.sub) }}
+                    {%- else -%}
+                        <ul role="menu">
+                            {{ submenu(item.sub) }}
+                        </ul>
+                    {%- endif -%}
+                </div>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+{% macro megamenu(nav) %}
+    {% for file, item in nav %}
+        <ul role="menu">
+            {% if item.sub %}
+                {{ submenu(item.sub) }}
+            {% endif %}
+        </ul>
+    {% endfor %}
+{% endmacro %}
+
+
+
+<!-- Navbar -->
+<nav class="navbar-youplay navbar navbar-default navbar-fixed-top{{ ' navbar-small' if nav_small }}">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {% if nav_logo %}
+                <a class="navbar-brand" href="index.html">
+                    <img src="{{ nav_logo }}" alt="">
+                </a>
+            {% endif %}
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            {% if navigation %}
+                <ul class="nav navbar-nav">
+                    {{ submenu(navigation) }}
+                </ul>
+            {% endif %}
+
+            {% if navigation_right or nav_search or nav_cart or nav_login %}
+            <ul class="nav navbar-nav navbar-right">
+                {% if navigation_right %}
+                    {{ submenu(navigation_right) }}
+                {% endif %}
+
+                {% if nav_search %}
+                    <li>
+                        <a class="search-toggle" href="search.html">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if nav_cart %}
+                    <li class="dropdown dropdown-hover dropdown-cart">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="row youplay-side-news">
+                                <div class="col-xs-3 col-md-4">
+                                    <a href="#" class="angled-img">
+                                        <div class="img">
+                                            {% if main_style_file === 'youplay' %}
+                                                <img src="assets/images/dark/game-bloodborne-500x375.jpg" alt="">
+                                                {% elif main_style_file === 'youplay-light' %}
+                                                <img src="assets/images/light/game-journey-500x375.jpg" alt="">
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-9 col-md-8">
+                                    <a href="#" class="pull-right mr-10"><i class="fa fa-times"></i></a>
+                                    {% if main_style_file === 'youplay' %}
+                                        <h4 class="ellipsis"><a href="#">Bloodborne</a></h4>
+                                        {% elif main_style_file === 'youplay-light' %}
+                                        <h4 class="ellipsis"><a href="#">Journey</a></h4>
+                                    {% endif %}
+                                    <span class="quantity">1 × <span class="amount">$50.00</span></span>
+                                </div>
+                            </div>
+
+                            <div class="row youplay-side-news">
+                                <div class="col-xs-3 col-md-4">
+                                    <a href="#" class="angled-img">
+                                        <div class="img">
+                                            {% if main_style_file === 'youplay' %}
+                                                <img src="assets/images/dark/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
+                                            {% elif main_style_file === 'youplay-light' %}
+                                                <img src="assets/images/light/game-road-no-taken-500x375.jpg" alt="">
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-9 col-md-8">
+                                    <a href="#" class="pull-right mr-10"><i class="fa fa-times"></i></a>
+                                    {% if main_style_file === 'youplay' %}
+                                        <h4 class="ellipsis"><a href="#">Kingdoms of Amalur</a></h4>
+                                        {% elif main_style_file === 'youplay-light' %}
+                                        <h4 class="ellipsis"><a href="#">Road Not Taken</a></h4>
+                                    {% endif %}
+                                    <span class="quantity">1 × <span class="amount">$20.00</span></span>
+                                </div>
+                            </div>
+
+                            <div class="ml-20 mr-20 pull-right"><strong>Subtotal:</strong> <span class="amount">$70.00</span></div>
+
+                            <div class="btn-group pull-right m-15">
+                                <a href="#" class="btn btn-default btn-sm">View Cart</a>
+                                <a href="#" class="btn btn-default btn-sm">Checkout</a>
+                            </div>
+                        </div>
+                    </li>
+                {% endif %}
+
+                {% if nav_login %}
+                    <li class="dropdown dropdown-hover dropdown-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                            <i class="fa fa-user"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form class="navbar-login-form" action="#" method="post">
+                                <p>Username:</p>
+                                <div class="youplay-input">
+                                    <input type="text" name="log">
+                                </div>
+
+                                <p>Password:</p>
+                                <div class="youplay-input">
+                                    <input type="password" name="pwd">
+                                </div>
+
+                                <div class="youplay-checkbox mb-15 ml-5">
+                                    <input type="checkbox" name="rememberme" value="forever" id="nav-rememberme">
+                                    <label for="nav-rememberme">Remember Me</label>
+                                </div>
+
+                                <button class="btn btn-sm ml-0 mr-0" name="submit">Log In</button>
+                                <br>
+
+                                <p>
+                                    <a class="no-fade" href="#">Lost password?</a> | <a href="#" class="no-fade" data-toggle="modal" data-target="#nav-registration">Register</a>
+                                </p>
+                            </form>
+                        </div>
+                    </li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+<!-- /Navbar -->
+
+{% if nav_login %}
+    <!-- Registration Form -->
+    <div id="nav-registration" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Register</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div>
+                            <p>Username:</p>
+                            <div class="youplay-input">
+                                <input type="text" name="user_login" />
+                            </div>
+
+                            <p>E-mail:</p>
+                            <div class="youplay-input">
+                                <input type="text" name="user_email" />
+                            </div>
+
+                            <p>
+                                <em>A password will be e-mailed to you.</em>
+                            </p>
+
+                            <button class="btn ml-3" name="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Registration Form -->
+{% endif %}

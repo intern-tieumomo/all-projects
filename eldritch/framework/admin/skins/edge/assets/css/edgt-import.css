@@ -1,0 +1,43 @@
+.edgt-import-page-holder .alert {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 20px;
+}
+
+.edgt-import-page-holder .import_load {
+	display: block;
+	font-size: 13px;
+	color: #acb5bf;
+}
+
+.edgt-import-page-holder .import_load progress {
+	background-color: #f3f3f3;
+	border: 0;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.edgt-import-page-holder .import_load progress::-webkit-progress-bar {
+	background-color: #f3f3f3;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.edgt-import-page-holder .import_load progress::-webkit-progress-value {
+	background: #57CEEB;
+}
+
+.edgt-import-page-holder .import_load progress::-moz-progress-bar {
+	background: #57CEEB;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.edgt-import-page-holder .import_load .alert-success {
+	margin-top: 15px;
+	margin-bottom: 0;
+}

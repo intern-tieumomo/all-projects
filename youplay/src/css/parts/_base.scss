@@ -1,0 +1,234 @@
+html,
+body {
+    height: 100%;
+}
+
+/*
+ * Font
+ */
+body {
+    font: 14px/1.42857143 $font_body;
+    color: $text_color;
+    // color: rgba($text_color, 0.9);
+    letter-spacing: $body_letter_spacing;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+    background: $back_darken_color;
+    background: rgba($back_darken_color, .9);
+}
+
+
+/*
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font_headings;
+    color: $text_color;
+}
+
+// h1 style modify
+h1,
+.h1 {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    font-size: 5rem;
+
+    // button inside header
+    .btn {
+        margin-top: 7px;
+    }
+    .btn-lg {
+        margin-top: 0;
+    }
+}
+
+// h2 style modify
+h2,
+.h2 {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+// paragraph style modify
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+// bootstrap label change
+.label {
+    font-weight: 400;
+}
+
+// iframes fix
+iframe {
+    border: none;
+}
+
+// fontawesome fix left side crop
+.fa {
+    transform: none;
+}
+
+
+/*
+ * Links
+ */
+a {
+    color: inherit;
+    text-decoration: underline;
+    transition: .3s color ease;
+}
+a:hover,
+a:focus {
+    color: $main_color;
+}
+
+
+/*
+ * Images max width
+ */
+img {
+    max-width: 100%;
+}
+
+
+/*
+ * Social List
+ */
+.social-list {
+    display: block;
+    margin: 1rem 0;
+
+    clear: both;
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+/*
+ * Tags
+ */
+.tags {
+    display: block;
+    margin: 1rem 0;
+    clear: both;
+    font-size: 1.2rem;
+    color: $text_mute_color;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+/*
+ * Date
+ */
+.date {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: $text_mute_color;
+
+    i {
+        margin-right: 3px;
+    }
+}
+
+
+/*
+ * Meta
+ */
+.meta {
+    display: block;
+    margin: 1rem 0;
+    clear: both;
+    font-size: 1.2rem;
+
+    .item {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+
+    .meta-icon {
+        margin-right: 3px;
+        font-size: 1.5rem;
+        vertical-align: text-bottom;
+    }
+
+    a {
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+
+/*
+ * Description
+ */
+.description {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/*
+ * Content
+ */
+.content-wrap {
+    max-width: 1400px;
+    padding: .1px; // fix margins on blocks inside
+    margin: 0 auto;
+    overflow: hidden;
+    background: $back_darken_color;
+
+    .youplay-content {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    &.full,
+    &.wide {
+        max-width: none;
+    }
+
+    // add top margin for sidebar
+    @media #{$media-xs}, #{$media-sm} {
+        .youplay-content .side-block:first-child {
+            margin-top: 6rem;
+        }
+        .youplay-content .side-block:last-child {
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+.youplay-section {
+    margin-bottom: 6rem;
+}
+
+/*
+ * Google Maps
+ */
+.youplay-gmaps {
+    width: 100%;
+    height: 450px;
+}

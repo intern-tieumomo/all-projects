@@ -1,0 +1,82 @@
+$preloader-size: 200px !default;
+$preloader-thickness: 5px !default;
+$preloader-speed: 1s !default;
+
+.preloader-wrapp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $back_darken_color;
+    z-index: 100000000;
+
+    .preloader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -$preloader-size/2;
+        margin-left: -$preloader-size/2;
+    }
+}
+.preloader-wrapp > img {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 180px;
+    margin-bottom: -10px;
+    margin-left: -90px;
+    z-index: 2;
+}
+
+.preloader {
+    position: relative;
+    box-sizing: border-box;
+    width: $preloader-size;
+    height: $preloader-size;
+    background-clip: padding-box;
+    border: $preloader-thickness solid hsla(0, 0%, 100%, .1);
+    border-radius: $preloader-size / 2;
+    transform: perspective($preloader-size) rotateX(80deg);
+    transform-origin: 50% 60%;
+
+    // mask smoothens out the anti-aliasing artifacts in the back.
+    -webkit-mask: linear-gradient(hsla(0, 0%, 0%, .1), hsla(0, 0%, 0%, 1) 90%); // stylelint-disable-line
+}
+
+.preloader::before,
+.preloader::after {
+    content: "";
+    position: absolute;
+    box-sizing: inherit;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    margin: -$preloader-thickness;
+    border: $preloader-thickness solid hsla(0, 0%, 100%, .1);
+    border-color: transparent;
+    border-top-color: $main_color;
+    border-radius: inherit;
+    opacity: .85;
+    animation: youplay-preloader-spin $preloader-speed infinite;
+}
+
+.preloader::after {
+    animation-delay: $preloader-speed * .35;
+}
+
+@keyframes youplay-preloader-spin {
+    100% { transform: rotate(360deg); }
+}
+
+
+.preloader-wrapp > img,
+.preloader-wrapp > .preloader {
+    animation: youplay-preloader-fade .5s;
+}
+@keyframes youplay-preloader-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

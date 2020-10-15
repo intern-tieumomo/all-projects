@@ -1,0 +1,49 @@
+.side-block {
+    margin-bottom: 3rem;
+
+    &.right-side,
+    &.right-side input {
+        text-align: right;
+    }
+
+    // title
+    .block-title {
+        position: relative;
+        padding: 1rem 1.8rem;
+        margin: 0;
+        margin-bottom: 1rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($text_color, .1);
+            transform: skew(-$skew_size);
+        }
+    }
+
+    // content
+    .block-content {
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    // list change
+    ul {
+        list-style-type: none;
+        a {
+            display: block;
+            padding: .4rem 0;
+        }
+    }
+
+    // price and date
+    .price,
+    .date {
+        display: block;
+        margin: .5rem 0;
+    }
+}

@@ -1,0 +1,20 @@
+.youplay-404 {
+
+    // title
+    .youplay-banner .info h2 {
+        margin-top: 0;
+        margin-bottom: 3rem;
+        font-size: 8rem;
+    }
+
+    // search
+    form {
+        max-width: 400px;
+        margin: 3rem auto;
+    }
+}
+
+.full.youplay-404,
+.full.youplay-404 .youplay-banner {
+    min-height: 400px;
+}

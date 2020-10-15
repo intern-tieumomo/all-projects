@@ -1,0 +1,47 @@
+/* ==========================================================================
+   WooCommerce Result and Ordering styles - begin
+   ========================================================================== */
+.edgt-woocommerce-page {
+
+    .woocommerce-result-count,
+    .woocommerce-ordering {
+        display: inline;
+        width: 50%;
+        margin: 0 0 28px;
+        float: left;
+    }
+
+    .woocommerce-result-count {
+        line-height: 52px;
+    }
+
+    .woocommerce-ordering {
+
+        .select2-container {
+            float: right;
+        }
+
+        .orderby {
+            float: right;
+            width: auto;
+            min-width: 250px;
+            margin: 0;
+        }
+    }
+
+
+    &.edgt-woocommerce-dark-skin {
+        .select2-container--default .select2-selection--single {
+            border-color: $default-input-color-dark;
+            background-color: transparent;
+            .select2-selection__rendered,
+            .select2-selection__arrow{
+                color: $default-text-color-dark;
+            }
+        }
+    }
+
+}
+/* ==========================================================================
+   WooCommerce Result and Ordering styles - end
+   ========================================================================== */

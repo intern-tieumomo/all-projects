@@ -1,0 +1,120 @@
+{% set header_title = 'Cart' %}
+{% set header_image = 'assets/images/light/banner-blog-bg.jpg' %}
+{% set header_size = 'xsmall' %}
+
+{% extends 'layouts/layout-light.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="col-md-9">
+
+            <h2 class="mt-0">Your Games in Cart</h2>
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/light/game-broken-age-500x375.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>Broken Age</h4>
+                                {{ macros.rating('90%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $14.99
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/light/game-dream-500x375.jpg" alt="">
+                                <div class="badge show bg-default">-30%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>Dream</h4>
+                                {{ macros.rating('90%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $34.99 <sup><del>$49.99</del></sup>
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <!-- Single Product Block -->
+            <div class="item angled-bg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-xs-4">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/light/game-machinarium-500x375.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-9">
+                                <h4>Machinarium</h4>
+                                {{ macros.rating('80%', 'hidden-xs') }}
+                            </div>
+                            <div class="col-xs-6 col-md-3 align-right">
+                                <div class="price">
+                                    $14.99
+                                </div>
+                                <a href="#" class="remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Single Product Block -->
+
+            <div class="align-right h3 mr-20 mb-20">
+                Total: <strong>$46.88</strong>
+            </div>
+            <div class="align-right">
+                <a href="light-checkout.html" class="btn btn-lg">Proceed to Checkout</a>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-3">
+            {% include "shared/light-sidebar-store.html" %}
+        </div>
+        <!-- /Right Side -->
+
+    </div>
+{% endblock %}

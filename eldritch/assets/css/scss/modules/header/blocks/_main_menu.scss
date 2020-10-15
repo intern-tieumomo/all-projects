@@ -1,0 +1,839 @@
+.edgt-main-menu {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	margin-left: 15px;
+
+	ul {
+		list-style: none outside none;
+		margin: 0px;
+		padding: 0px;
+		text-align: left;
+
+		li {
+
+			position: relative;
+			display: inline-block;
+			float: left;
+			padding: 0px;
+			margin: 0px;
+			background-repeat: no-repeat;
+			background-position: right;
+
+			a {
+				font-size: 15px;
+				font-family: $headings-font-family;
+
+				&.no_link {
+					cursor: default;
+				}
+			}
+		}
+
+		.edgt-menu-item-description {
+			display: block;
+			text-transform: none;
+			font-size: 10px;
+			color: #ccc;
+			font-weight: 400;
+			line-height: 1.7em;
+			margin-top: -4px;
+		}
+
+		.edgt-menu-featured-icon {
+			position: relative;
+			display: inline-block !important;
+			top: -3px;
+			margin-left: 5px;
+			color: $first-main-color;
+			font-size: 11px;
+		}
+	}
+
+	> ul {
+
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		height: 100%;
+
+		> li {
+
+			height: 100%;
+			background-color: transparent;
+			@include edgtTransition(background-color 0.2s ease);
+
+			&:last-child > a span.plus {
+				display: none;
+
+			}
+
+			&.has_sub {
+				> a .q_menu_arrow {
+					display: inline-block;
+
+                    height: 12px;
+                    width: 16px;
+                    vertical-align: middle;
+
+                    background-image: url("./img/slick/arrow_white_right.png");
+
+				}
+
+				> a .item_inner .q_menu_arrow {
+					position: relative;
+					left: 4px;
+				}
+			}
+
+			&.edgt-menu-item-with-description {
+				text-align: center;
+			}
+
+			&:hover {
+
+			}
+
+			&.current-menu-item, 
+			&.edgt-active-item {
+				> a {
+					color: $first-main-color;
+				}
+			}
+
+			> a {
+				position: relative;
+				display: inline-block;
+				height: 100%;
+				padding: 0;
+				vertical-align: middle;
+				color: $menu-item-color;
+				background-color: transparent;
+				text-transform: uppercase;
+
+				@include edgtTransition(color 0.2s ease-out);
+
+				&:before {
+					height: 2px;
+					bottom: 0px;
+				}
+
+				&:after {
+					height: 1px;
+					bottom: 4px;
+				}
+
+				> span.item_outer {
+					display: block;
+					position: relative;
+					top: 50%;
+					@include edgtTransform(translateY(-50%));
+				}
+
+				span.item_inner {
+					display: inline-block;
+					padding: 11px 16px;
+					border-width: 0px;
+					position: relative;
+					border-color: transparent;
+					background-color: transparent;
+					-webkit-transition: text-decoration 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out;
+					transition: text-decoration 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out;
+				}
+
+				span.item_inner:before,
+				span.item_inner:after,
+				&:before,
+				&:after {
+					content: "";
+					display: none;
+					position: absolute;
+					left: 0px;
+					background-color: transparent;
+					-webkit-transition: background-color 0.15s ease-out;
+					transition: background-color 0.15s ease-out;
+					width: 100%;
+
+				}
+
+				span.item_inner:before {
+					bottom: 0px;
+					height: 2px;
+				}
+
+				span.item_inner:after {
+					height: 1px;
+					bottom: 4px;
+				}
+
+				.edgt-menu-arrow {
+					padding-left: 3px;
+				}
+
+				> i.blank {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-main-menu > ul > li,
+.edgt-light-header.edgt-header-style-on-scroll .edgt-page-header .edgt-main-menu > ul > li {
+
+    &:hover, &.current-menu-item, &.edgt-active-item  {
+        > a {
+            color: $header-light-color;
+
+        }
+    }
+
+	> a {
+		color: $header-light-color;
+	}
+
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-main-menu > ul > li,
+.edgt-dark-header.edgt-header-style-on-scroll .edgt-page-header .edgt-main-menu > ul > li {
+
+	&:hover, &.current-menu-item, &.edgt-active-item {
+        > a {
+            color: $header-dark-color;
+        }
+	}
+
+	> a {
+		color: $header-dark-color;
+	}
+
+}
+
+/* Narrow drop down styles
+   ========================================================================== */
+.edgt-drop-down ul {
+	list-style: none;
+}
+
+.edgt-drop-down ul li {
+	position: relative;
+}
+
+header.transparent.fixed.scrolled .edgt-drop-down .second,
+header.transparent.fixed_hiding.scrolled .edgt-drop-down .second {
+	top: 100%;
+}
+
+.edgt-main-menu > ul > li {
+	> a span.item_inner  span {
+	    position: relative;
+
+		&:after {
+		    content: "";
+		    position: absolute;
+		    top: calc(50% - 1px);
+		    left: -2px;
+		    height: 1px;
+		    width: 0;
+		    background: #fff;
+		    transition: all 0.25s cubic-bezier(0.6, 0, 0.26, 0.99) 0.15s;
+		    z-index: -1;
+		    opacity: 0.8;
+		}
+	}
+
+    &.edgt-active-item,
+    &:hover {
+		> a span.item_inner span:after {
+		    width: calc(100% + 4px);
+		}
+	}
+}
+
+.edgt-drop-down .second {
+	left: 0;
+	margin: 0;
+	top: 100%;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 10;
+	@include edgtTransition(top 0.15s ease-out);
+}
+
+header.transparent:not(.sticky) .edgt-drop-down .second {
+	top: 75%;
+}
+
+header.transparent.with_border:not(.sticky) .edgt-drop-down .second,
+header.transparent.edgt-menu-item-first-level-bg-color:not(.sticky) .edgt-drop-down .second {
+	top: 100%;
+}
+
+.edgt-drop-down li.left_position .second {
+	left: 0px;
+}
+
+header.transparent.edgt-menu-item-first-level-bg-color .edgt-drop-down .second:not(.right) {
+	left: 0;
+}
+
+.edgt-drop-down li.right_position .second {
+	left: auto;
+	right: 0;
+}
+
+.edgt-drop-down .second.edgt-drop-down-start {
+	visibility: visible;
+	overflow: visible;
+	opacity: 1;
+	transition: opacity 0.2s ease-out;
+	-webkit-transition: opacity 0.2s ease-out;
+}
+
+.edgt-drop-down > ul > li:hover > .second {
+	z-index: 20;
+}
+
+.edgt-drop-down .second .inner {
+	position: relative;
+	padding: 0px;
+	display: block;
+	z-index: 997;
+}
+
+.edgt-drop-down .narrow .second i {
+	display: inline-block;
+	vertical-align: middle;
+	color: inherit;
+}
+
+.edgt-drop-down .second .inner > ul,
+.edgt-drop-down li.narrow .second .inner ul {
+	display: inline-block;
+	position: relative;
+	background-color: $header-dark-color;
+	padding: 26px 0px 32px;
+
+	@include edgtBoxSizing(border-box);
+	@include edgtBoxShadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.edgt-drop-down .second .inner ul li {
+	display: block;
+	padding: 0 15px;
+	position: relative;
+	float: none;
+	height: auto;
+	background: 0;
+	width: 190px;
+	transition: background-color .15s ease-out;
+	-webkit-transition: background-color 0.15s ease-out;
+	-moz-transition: background-color 0.15s ease-out;
+	-ms-transition: background-color 0.15s ease-out;
+	-o-transition: background-color 0.15s ease-out;
+}
+
+li.narrow .second .inner ul li:last-child {
+	border-bottom: none;
+}
+
+.edgt-drop-down .wide.left_position .second ul li,
+.edgt-drop-down .wide.right_position .second ul li {
+	width: 180px;
+}
+
+.edgt-drop-down .narrow .second .inner ul li {
+	padding: 0px;
+	width: 271px;
+
+	@include edgtBoxSizing(border-box);
+	@include edgtTransition(background-color 0.2s ease);
+}
+
+.edgt-drop-down .second .inner ul li a {
+	display: block;
+	color: $header-light-color;
+	height: auto;
+	font-size: 15px;
+	line-height: 20px;
+	padding: 10px 23px;
+	position: relative;
+
+	@include edgtTransition(color 0.2s ease);
+
+	.item_text {
+		display: inline-block;
+		position: relative;
+	}
+}
+
+.edgt-drop-down .second .inner ul li.current-menu-item > a,
+.edgt-drop-down .second .inner ul li.current-menu-parent > a,
+.edgt-drop-down .second .inner > ul > li:hover > a,
+.edgt-drop-down .second .inner ul li.sub ul li:hover > a,
+.edgt-drop-down .second .inner ul li ul li:hover > a {
+	color: $first-main-color;
+
+	.q_menu_arrow {
+		opacity: 1 !important;
+	}
+}
+
+.edgt-drop-down .wide .second i {
+	display: none;
+}
+
+.edgt-drop-down .narrow .second .inner ul li ul {
+	position: absolute;
+	left: 100%;
+	top: -26px; /* same as padding in father ul, minus 1px for border */
+	height: auto;
+	opacity: 0;
+	transition: opacity 0.4s;
+	transition: opacity 0.4s;
+	overflow: hidden;
+	z-index: 10;
+	-webkit-transform: translateZ(0);
+}
+
+.edgt-drop-down .second .inner ul li:hover ul {
+	z-index: 20;
+	opacity: 1;
+}
+
+.edgt-drop-down .second .inner ul li ul li:hover ul {
+	z-index: 20;
+	opacity: 1 !important;
+	display: block !important;
+	visibility: visible !important;
+
+}
+
+.edgt-drop-down .menu_icon_wrapper {
+	margin-right: 10px;
+	font-size: 14px;
+	color: inherit;
+}
+
+/* slide_from_bottom start */
+
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .second {
+	-webkit-transition: top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.25s;
+	transition: top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.25s;
+}
+
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .wide .second .inner > ul,
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .narrow .second .inner > ul {
+	visibility: hidden;
+	top: 30px;
+	opacity: 0;
+	-webkit-transition: all .25s cubic-bezier(0, 0.57, 0.58, 1);
+	transition: all .25s cubic-bezier(0, 0.57, 0.58, 1);
+}
+
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .narrow .second .inner ul li ul {
+	opacity: 0;
+	visibility: hidden;
+	top: 22px;
+	-webkit-transition: all .25s cubic-bezier(0, 0.57, 0.58, 1);
+	transition: all .25s cubic-bezier(0, 0.57, 0.58, 1);
+}
+
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .wide .second.edgt-drop-down-start .inner > ul,
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .narrow .second.edgt-drop-down-start .inner > ul {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+	overflow: visible;
+}
+
+body.edgt-dropdown-slide-from-bottom .edgt-drop-down .narrow .second .inner ul li:hover ul {
+	opacity: 1;
+	visibility: visible;
+	top: -11px; /* same as padding in father ul */
+}
+
+/* slide_from_bottom end */
+
+/* slide_from_top start */
+
+body.edgt-dropdown-slide-from-top .edgt-drop-down .second {
+	overflow: visible;
+	-webkit-transition: top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.5s;
+	transition: top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.5s;
+}
+
+body.edgt-dropdown-slide-from-top .edgt-drop-down .wide .second .inner > ul,
+body.edgt-dropdown-slide-from-top .edgt-drop-down .narrow .second .inner > ul {
+	top: -30px;
+	-webkit-transition: all 0.3s cubic-bezier(.39, .575, .565, 1);
+	transition: all 0.3s cubic-bezier(.39, .575, .565, 1);
+}
+
+body.edgt-dropdown-slide-from-top .edgt-drop-down .narrow .second .inner ul li ul {
+	top: -22px;
+	-webkit-transition: all 0.3s cubic-bezier(.39, .575, .565, 1);
+	transition: all 0.3s cubic-bezier(.39, .575, .565, 1);
+}
+
+body.edgt-dropdown-slide-from-top .edgt-drop-down .wide .second.edgt-drop-down-start .inner > ul,
+body.edgt-dropdown-slide-from-top .edgt-drop-down .narrow .second.edgt-drop-down-start .inner > ul {
+	top: 0;
+}
+
+body.edgt-dropdown-slide-from-top .edgt-drop-down .narrow .second .inner ul li:hover ul {
+	top: -1px; /* same as padding in father ul */
+}
+
+/* slide_from_top end */
+
+/* slide_from_left start */
+
+body.edgt-dropdown-slide-from-left .edgt-drop-down .second {
+	overflow: visible;
+	-webkit-transition: top 0.2s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.4s;
+	transition: top 0.2s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.4s;
+}
+
+body.edgt-dropdown-slide-from-left .edgt-drop-down .wide .second .inner > ul,
+body.edgt-dropdown-slide-from-left .edgt-drop-down .narrow .second .inner > ul {
+	left: -30px;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+body.edgt-dropdown-slide-from-left .edgt-drop-down .narrow .second .inner ul li ul {
+	left: calc(100% - 30px);
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+body.edgt-dropdown-slide-from-left .edgt-drop-down .wide .second.edgt-drop-down-start .inner > ul,
+body.edgt-dropdown-slide-from-left .edgt-drop-down .narrow .second.edgt-drop-down-start .inner > ul {
+	left: 0;
+}
+
+body.edgt-dropdown-slide-from-left.edgt-drop-down .narrow .second .inner ul li:hover ul {
+	left: 100%;
+}
+
+/* slide_from_left end */
+
+.edgt-drop-down .second.right {
+	right: 0px;
+	left: auto;
+}
+
+.edgt-drop-down .second .inner ul.right li a {
+	text-align: right;
+}
+
+.edgt-drop-down .second .inner ul.right li ul {
+	left: -100%;
+}
+
+.edgt-drop-down .second .inner ul li.sub ul li a,
+.edgt-drop-down .second .inner ul.right li.sub ul li a {
+	background: none;
+}
+
+/* Wide drop down styles
+   ========================================================================== */
+.edgt-drop-down .wide .second ul {
+	padding: 27px 0 27px;
+	vertical-align: middle;
+}
+
+.edgt-drop-down .wide .second.edgt-dropdown-with-background-image ul {
+	background-color: transparent;
+}
+
+.edgt-drop-down .wide .second ul li {
+	float: left;
+	width: 274px;
+	padding: 0px;
+	border-bottom: 0;
+	width: 100%;
+	border-right: 1px solid #444;
+	@include edgtBoxSizing(border-box);
+
+	&:last-child {
+		border: 0;
+	}
+}
+
+.edgt-drop-down .wide .second > .inner > ul {
+	width: 1100px;
+}
+
+.edgt-grid .edgt-drop-down .wide .second > .inner > ul {
+    width: 1150px;
+}
+
+@media only screen and (min-width: 1400px) {
+	.edgt-grid-1300 .edgt-drop-down .wide .second > .inner > ul {
+		width: $grid-width-1300;
+	}
+
+    .edgt-grid-1300 .edgt-grid .edgt-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1300 + 50px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+	.edgt-grid-1200 .edgt-drop-down .wide .second > .inner > ul {
+		width: $grid-width-1200;
+	}
+
+    .edgt-grid-1200 .edgt-grid .edgt-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1200 + 50px;
+    }
+}
+
+.edgt-grid-1000 .edgt-drop-down .wide .second > .inner > ul {
+	width: $grid-width-1000;
+}
+
+.edgt-grid-1000 .edgt-grid .edgt-drop-down .wide .second > .inner > ul {
+    width: $grid-width-1000 + 50px;
+}
+
+.edgt-grid-800 .edgt-drop-down .wide .second > .inner > ul {
+	width: $grid-width-800;
+}
+
+.edgt-grid-800 .edgt-grid .edgt-drop-down .wide .second > .inner > ul {
+    width: $grid-width-800 + 50px;
+}
+
+.edgt-drop-down .wide .second > .inner > ul > li {
+	width: 25%;
+}
+
+.edgt-drop-down .wide .second ul li:last-child {
+	margin-right: 0;
+}
+
+.edgt-drop-down .wide.right_position .second ul li {
+	float: right;
+}
+
+.edgt-drop-down .wide .second ul li:hover {
+	background-color: transparent;
+}
+
+.edgt-drop-down .wide .second ul li:nth-child(4n+1) {
+	clear: both;
+}
+
+.edgt-drop-down .second .inner ul li.sub a .q_menu_arrow {
+	position: absolute;
+	top: 50%;
+	@include edgtTransform(translate3d(0,-50%,0));
+	right: 22px;
+	display: inline-block;
+	vertical-align: middle;
+	color: inherit;
+	opacity: 0.8;
+	@include edgtTransition(all 0.2s cubic-bezier(0.6, 0, 0.26, 0.99));
+    height: 11px;
+    width: 14px;
+    background-size: cover;
+    background-image: url("./img/slick/arrow_white_right.png");
+}
+
+.edgt-drop-down .second .inner ul li.sub:hover a .q_menu_arrow {
+	@include edgtTransform(translate3d(5px,-50%,0));
+}
+
+.edgt-drop-down .second .inner ul li.sub ul li a .q_menu_arrow,
+.edgt-drop-down .wide .second .inner ul li.sub a .q_menu_arrow {
+	display: none;
+}
+
+.edgt-drop-down .second .inner ul.right li.sub a .q_menu_arrow {
+	right: auto;
+	left: 22px;
+	@include edgtTransition(all 0.2s cubic-bezier(0.6, 0, 0.26, 0.99));
+	@include edgtTransform(translate3d(0,-50%,0) rotate(180deg));
+}
+
+.edgt-drop-down .second .inner ul.right li.sub:hover a .q_menu_arrow {
+	@include edgtTransform(translate3d(-5px,-50%,0) rotate(180deg));
+}
+
+.edgt-drop-down .wide .second .inner > ul > li > a {
+
+	.edgt-menu-item-description {
+		font-size: 12px;
+	}
+}
+
+.edgt-drop-down .wide .second ul li ul {
+	display: block;
+	left: 0;
+	padding: 15px 0 0;
+	position: relative;
+	top: 0;
+	visibility: visible;
+	background-color: transparent !important;
+
+	@include edgtClearfix;
+}
+
+.edgt-drop-down .wide .second ul li ul li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+//.edgt-drop-down .wide .second ul li ul li.menu-item-has-children > a,
+//.edgt-drop-down .wide .second ul li ul li.menu-item-has-children > a:hover {
+//	border-bottom: 0 none;
+//	color: #393939;
+//}
+
+/* Wide drop down with full width background styles
+   ========================================================================== */
+.edgt-full-width-wide-menu {
+	.edgt-drop-down .wide .second {
+		background-color: #fff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+		.inner ul {
+			background-color: transparent !important;
+			box-shadow: none !important;
+		}
+	}
+
+	.wide .second .inner {
+		text-align: center;
+	}
+
+	.second .inner ul {
+		text-align: left;
+	}
+}
+
+/* Wide with icons drop down styles
+   ========================================================================== */
+
+.edgt-drop-down .wide.icons .second ul li.edgt-menu-item-with-icon > a .item_text {
+	padding: 0 !important;
+}
+
+.edgt-drop-down .wide.icons .second i {
+	width: 10px;
+	height: auto;
+	float: left;
+	margin-right: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	color: inherit;
+	line-height: inherit;
+}
+
+.edgt-drop-down .wide.icons .second i.blank {
+	background: none;
+	border: 0px;
+	display: none;
+}
+
+/* Begining of menu latest post widget styles
+========================================================================== */
+
+.edgt-drop-down .wide .second ul li div.flexslider li:nth-child(4n+1) {
+	clear: none;
+}
+
+.edgt-drop-down .wide .second ul li .flexslider ul {
+	padding: 0;
+	border: none;
+}
+
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider ul li a:hover,
+.edgt-drop-down .wide .second ul li .flexslider ul li a:hover {
+	color: $first-main-color;
+}
+
+.edgt-drop-down .wide .second .inner ul li .flexslider.widget_flexslider .menu_recent_post_text a,
+.edgt-drop-down .wide .second .inner ul li .flexslider.widget_flexslider a {
+	display: inline-block;
+	margin: 0;
+}
+
+.edgt-drop-down .wide .second .inner ul li .flexslider.widget_flexslider > a {
+	vertical-align: middle;
+}
+
+.edgt-drop-down .wide .second ul li ul.flex-direction-nav a {
+	position: absolute;
+	top: 0;
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border: none;
+	margin: 0px 0 0 0;
+}
+
+.edgt-drop-down .wide .second ul li ul.flex-direction-nav {
+	position: absolute;
+	top: 50%;
+	overflow: visible;
+	width: 100%;
+}
+
+.edgt-drop-down .wide .second ul li div.flexslider {
+	margin: 0 !important;
+}
+
+.edgt-drop-down .wide .second ul li .flexslider.widget_flexslider ul.flex-direction-nav li {
+	width: 100%;
+}
+
+.flexslider.widget_flexslider ul.flex-direction-nav a.flex-prev,
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider ul.flex-direction-nav a.flex-prev {
+	left: 0;
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	padding: 0;
+}
+
+.flexslider.widget_flexslider ul.flex-direction-nav a.flex-next,
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider ul.flex-direction-nav a.flex-next {
+	right: 0;
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	padding: 0;
+}
+
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider .menu_recent_post_text {
+	padding: 10px 0;
+}
+
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider .menu_recent_post_text a {
+	display: inline;
+	padding: 0;
+	color: #000;
+}
+
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider .menu_recent_post_text a:hover {
+	color: $first-main-color;
+}
+
+.edgt-drop-down .wide .second .inner ul li.sub .flexslider.widget_flexslider a, .edgt-drop-down .wide .second ul li .flexslider.widget_flexslider a {
+	padding: 0;
+	text-align: center;
+}
+
+/* ==========================================================================
+   End of menu latest post widget styles
+   ========================================================================== */

@@ -1,0 +1,39 @@
+/* ==========================================================================
+# Portfolio Single Small Images - begin
+========================================================================== */
+
+.edgt-portfolio-single-holder.small-images {
+	.edgt-portfolio-media .edgt-portfolio-single-media {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.edgt-portfolio-fields {
+		padding: 42px 40px 21px;
+
+		.edgt-portfolio-item-social {
+			padding-top: 27px;
+		}
+	}
+
+	.edgt-portfolio-item-content {
+		margin-top: 34px;
+	}
+
+	.edgt-portfolio-author-holder {
+		margin: 34px 0 30px;
+	}
+
+	.edgt-follow-portfolio-info {
+		position: relative;
+
+		//@include edgtTransition(margin-top 0.2s ease);
+	}
+}
+
+/* ==========================================================================
+# Portfolio Single Small Images - end
+========================================================================== */

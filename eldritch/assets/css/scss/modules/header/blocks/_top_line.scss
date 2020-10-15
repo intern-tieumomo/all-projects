@@ -1,0 +1,24 @@
+.edgt-top-line-holder {
+    position: relative;
+    width: 100%;
+
+    .edgt-top-line-color{
+        display: inline-block;
+        vertical-align: middle;
+        height: 15px;
+        float: left;
+        width: 100%;
+    }
+
+    &.columns-2 .edgt-top-line-color{
+        width: 50%;
+    }
+
+    &.columns-3 .edgt-top-line-color{
+        width: 33.33%;
+    }
+
+    &.columns-4 .edgt-top-line-color{
+        width: 25%;
+    }
+}

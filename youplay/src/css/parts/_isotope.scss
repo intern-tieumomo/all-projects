@@ -1,0 +1,19 @@
+.isotope {
+    // options list
+    .isotope-options {
+        margin-bottom: 4rem;
+    }
+
+    // isotope items
+    .isotope-list .item {
+        margin-bottom: 3rem;
+
+        // offset items
+        .img-offset {
+            transform: skew(-$skew_size) translateX(-5%);
+        }
+        .img-offset + * {
+            transform: translateX(-5%);
+        }
+    }
+}

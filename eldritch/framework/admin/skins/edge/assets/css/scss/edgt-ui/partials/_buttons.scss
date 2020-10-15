@@ -1,0 +1,74 @@
+$button-border-radius: 0;
+
+.btn-default:hover
+.btn-default:active,
+.btn-default.active,
+.btn-default:hover,
+.btn-default:active,
+.btn-default.active {
+	background-color: transparent;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active {
+	background-color:$edgt-first-color
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+	border-color: $edgt-first-color;
+	color: $edgt-first-color;
+}
+
+.btn {
+	border: 1px solid transparent;
+	padding: 8px 20px;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+
+	@include edgt-border-radius($button-border-radius);
+}
+
+.btn:active {
+	@include edgt-box-shadow(none);
+}
+
+.btn-sm:focus {
+	border: none;
+	outline: none;
+	background-color:#fff;
+	color:$edgt-first-color;
+}
+
+.btn-primary {
+	background-color: $edgt-first-color;
+}
+
+.btn-primary:hover {
+	border: none;
+	background-color: transparent;
+	color: $edgt-first-color;
+	border: 1px solid $edgt-first-color;
+}
+
+.btn-default {
+	background-color: #ABB7C7;
+	color: #fff;
+	margin-left: 3px;
+}
+
+.btn-info {
+	background-color: $edgt-first-color;
+	color: #fff;
+}

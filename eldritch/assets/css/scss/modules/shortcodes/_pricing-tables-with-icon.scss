@@ -1,0 +1,128 @@
+.edgt-pricing-tables-wi {
+  display: table;
+  width: 100%;
+}
+
+.edgt-pricing-table-wi {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 33.333%;
+  overflow: hidden;
+  background-color: #009cff;
+  padding: 23px;
+  text-align: center;
+
+  @include edgtBoxSizing(border-box);
+  @include edgtTransition(background 0.3s ease-in-out);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    display: block;
+    height: calc(100% - 46px);
+    width: calc(100% - 46px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+
+    @include edgtBoxSizing(border-box);
+    @include edgtTransform(scale(1.25, 1.25));
+    @include edgtTransition(transform 0.3s ease-in-out);
+  }
+
+  &:hover {
+    background-color: #0064c1;
+
+    &:before {
+      @include edgtTransform(scale(1, 1));
+    }
+  }
+
+  .edgt-pricing-table-wi-inner {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .edgt-pt-icon {
+    font-size: 72px;
+    margin-top: 72px;
+    color: #fff;
+  }
+
+  .edgt-pt-title {
+    margin-top: 26px;
+    color: #fff;
+  }
+
+  .edgt-pt-subtitle {
+    margin-top: 26px;
+    color: #fff;
+  }
+
+  .edgt-price-currency-period {
+    margin-top: 43px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .edgt-currency, .edgt-price {
+    display: inline;
+    color: #fff;
+  }
+
+  .edgt-price {
+    margin-left: -5px;
+  }
+
+  .edgt-price-period {
+    margin-left: -4px;
+  }
+
+  .edgt-pt-content {
+    margin-top: 35px;
+  }
+
+  .edgt-pt-content-inner {
+    list-style-type: none;
+
+    li {
+      list-style-type: none;
+      font-size: 16px;
+      margin: 11px 0;
+      color: #fff;
+
+      &:nth-child(even) {
+        color: #a6a6a6;
+      }
+    }
+
+    .edgt-icon-shortcode {
+      vertical-align: middle;
+    }
+  }
+
+  .edgt-price-button {
+    margin-top: 40px;
+    margin-bottom: 58px;
+  }
+
+  &.edgt-active {
+    background-color: #fff;
+
+    .edgt-pt-icon, .edgt-pt-title, .edgt-pt-subtitle, .edgt-price-currency-period, .edgt-pt-content-inner li {
+      color: $headings-text-color;
+    }
+
+    .edgt-price-currency-period {
+      .edgt-currency, .edgt-price {
+        color: $headings-text-color;
+      }
+    }
+
+    .edgt-pt-content-inner li:nth-child(even) {
+      color: #a6a6a6;
+    }
+  }
+}

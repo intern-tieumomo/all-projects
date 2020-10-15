@@ -1,0 +1,76 @@
+/* ==========================================================================
+# Counter style - begin
+========================================================================== */
+
+.edgt-counter-holder {
+	display: block;
+	opacity: 0;
+	@include edgtTransition(opacity 0.3s ease-in);
+	padding: 20px 0;
+
+	.edgt-counter {
+		font-size: 80px;
+		line-height: 1em;
+		height: 1em;
+		font-weight: 400;
+		overflow: hidden;
+		letter-spacing: 0.2px;
+		color: $first-main-color;
+		font-family: $headings-font-family;
+		display: inline-block !important;
+	}
+
+    .edgt-counter-text {
+        font-size: 18px;
+    }
+
+	.edgt-counter-content {
+
+		.edgt-counter-title {
+			margin-top: 2px;
+		}
+		.edgt-counter-text {
+			margin-top: 1px;
+		}
+		.edgt-counter-link {
+			margin-top: 5px;
+		}
+	}
+
+	&.edgt-counter-light {
+		.edgt-counter {
+			color: #fff;
+		}
+
+		.edgt-counter-content {
+			.edgt-counter-title {
+				color: #fff;
+			}
+
+			.edgt-counter-text {
+				color: #fff;
+			}
+		}
+	}
+
+	&.edgt-counter-dark {
+		.edgt-counter {
+			color: #000;
+		}
+
+		.edgt-counter-content {
+			.edgt-counter-title {
+				color: #000;
+			}
+
+			.edgt-counter-text {
+				color: #000;
+			}
+		}
+	}
+
+}
+
+/* ==========================================================================
+# Counter style - end
+========================================================================== */

@@ -1,0 +1,171 @@
+{% set main_style_file = 'youplay-light' %}
+{% set preloader_logo = 'assets/images/light/logo.png' %}
+{% set nav_logo = 'assets/images/light/logo.png' %}
+{% set footer_bg = 'assets/images/light/footer-bg.jpg' %}
+
+{% set navigation = {
+    "light-store-1.html": {
+        "name": "Store",
+        "description": "games",
+        "mega": true,
+        "sub": {
+            "#1": {
+                "name": "Column 1",
+                "sub": {
+                    "light-store-1.html": {
+                        "name": "Store Style 1"
+                    },
+                    "light-store-2.html": {
+                        "name": "Store Style 2"
+                    },
+                    "light-cart.html": {
+                        "name": "Cart"
+                    }
+                }
+            },
+            "#2": {
+                "name": "Column 2",
+                "sub": {
+                    "light-store-product-1.html": {
+                        "name": "Product Style 1"
+                    },
+                    "light-store-product-2.html": {
+                        "name": "Product Style 2"
+                    },
+                    "light-checkout.html": {
+                        "name": "Checkout"
+                    }
+                }
+            }
+        }
+    },
+    "light-blog-1.html": {
+        "name": "Blog",
+        "description": "news",
+        "mega": true,
+        "sub": {
+            "#1": {
+                "name": "Column 1",
+                "sub": {
+                    "light-blog-1.html": {
+                        "name": "Blog Style 1"
+                    },
+                    "light-blog-2.html": {
+                        "name": "Blog Style 2"
+                    },
+                    "light-blog-3.html": {
+                        "name": "Blog Style 3"
+                    }
+                }
+            },
+            "#2": {
+                "name": "Column 2",
+                "sub": {
+                    "light-blog-post-1.html": {
+                        "name": "Blog Post 1"
+                    },
+                    "light-blog-post-2.html": {
+                        "name": "Blog Post 2"
+                    },
+                    "light-blog-post-3.html": {
+                        "name": "Blog Post 3"
+                    }
+                }
+            }
+        }
+    },
+    "light-components.html": {
+        "name": "Features",
+        "description": "full list",
+        "mega": true,
+        "sub": {
+            "#1": {
+                "name": "Column 1",
+                "sub": {
+                    "light-forums.html": {
+                        "name": "Forums"
+                    },
+                    "light-forums-topics.html": {
+                        "name": "Forums Topics"
+                    },
+                    "light-forums-single-topic.html": {
+                        "name": "Forums Single Topic"
+                    },
+                    "light-matches-list.html": {
+                        "name": "Matches List"
+                    },
+                    "light-match.html": {
+                        "name": "Match"
+                    },
+                    "light-match-2.html": {
+                        "name": "Match with Maps"
+                    },
+                    "light-login.html": {
+                        "name": "Login"
+                    }
+                }
+            },
+            "#2": {
+                "name": "Column 2",
+                "sub": {
+                    "light-widgets.html": {
+                        "name": "Widgets",
+                        "badge": "New"
+                    },
+                    "light-components.html": {
+                        "name": "Components"
+                    },
+                    "light-coming-soon.html": {
+                        "name": "Coming Soon"
+                    },
+                    "light-contact.html": {
+                        "name": "Contact Us"
+                    },
+                    "light-search.html": {
+                        "name": "Search"
+                    },
+                    "light-404.html": {
+                        "name": "404"
+                    },
+                    "light-blank.html": {
+                        "name": "Blank"
+                    }
+                }
+            }
+        }
+    }
+} %}
+
+{% set navigation_right = {
+    "light-user-activity.html": {
+        "name": "KuroKy",
+        "description": "user",
+        "badge": "8",
+        "sub": {
+            "light-user-activity.html": {
+                "name": "Activity"
+            },
+            "light-user-profile.html": {
+                "name": "Profile"
+            },
+            "light-user-messages.html": {
+                "name": "Messages",
+                "badge": "8"
+            },
+            "light-user-messages-compose.html": {
+                "name": "Messages Compose"
+            },
+            "light-user-settings.html": {
+                "name": "Settings"
+            },
+            "https://nkdev.info/docs/youplay-html/": {
+                "name": "Documentation"
+            },
+            "https://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=_nK": {
+                "name": "Purchase"
+            }
+        }
+    }
+} %}
+
+{% extends 'layouts/layout-1.html' %}

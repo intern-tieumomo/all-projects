@@ -1,0 +1,135 @@
+.comments-block,
+.reviews-block {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+
+    // user avatar
+    .comment-avatar,
+    .review-avatar {
+        display: block;
+        width: 50px;
+        margin-right: 2rem;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 25px;
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    // user name
+    .comment-author,
+    .review-author {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    // comment form
+    .comment-form,
+    .review-form {
+        margin: 3rem 0;
+
+        .comment-avatar ~ .comment-cont,
+        .review-avatar ~ .comment-cont {
+            margin-left: 70px;
+        }
+    }
+
+    // comment container
+    .comment-cont,
+    .review-cont {
+        position: relative;
+    }
+
+    // comments-list
+    .comments-list,
+    .comments-list .child-comment,
+    .reviews-list,
+    .reviews-list .child-comment {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        > li > article {
+            margin-bottom: 2.5rem;
+        }
+
+        .date {
+            margin-top: 6px;
+            font-size: 1.2rem;
+            color: $text_mute_color;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    .comments-list .child-comment,
+    .reviews-list .child-review {
+        margin-left: 50px;
+    }
+    .comments-list,
+    .reviews-list {
+        margin: 3rem 0;
+        margin-bottom: 6rem;
+    }
+    .comments-list > li + li,
+    .comments-list .child-comment > li + li,
+    .comments-list .child-comment,
+    .reviews-list > li + li,
+    .reviews-list .child-review > li + li,
+    .reviews-list .child-review {
+        margin-top: 30px;
+    }
+
+
+    // comment text
+    .comment-text,
+    .review-text {
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: -20px;
+            right: 0;
+            left: 0;
+            border-top: 1px solid;
+            border-top: 1px dotted;
+            opacity: .3;
+        }
+    }
+
+    // ratings
+    .rating {
+        margin-top: .3rem;
+    }
+
+    // like
+    .review-like,
+    .comment-like {
+        position: relative;
+        opacity: .5;
+        transition: .3s opacity ease;
+
+        a {
+            display: inline-block;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+    }
+    .comment-cont:hover,
+    .review-cont:hover {
+        .review-like,
+        .comment-like {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@mixin edgt-border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin edgt-box-shadow($box-shadow-param) {
+    -webkit-box-shadow: $box-shadow-param;
+       -moz-box-shadow: $box-shadow-param;
+            box-shadow: $box-shadow-param;
+}
+
+@mixin edgt-transition($transition-param) {
+    -webkit-transition: $transition-param;
+       -moz-transition: $transition-param;
+        -ms-transition: $transition-param;
+         -o-transition: $transition-param;
+            transition: $transition-param;
+}
+
+@mixin edgt-transform($transform-param) {
+	-webkit-transform: $transform-param;
+	   -moz-transform: $transform-param;
+	    -ms-transform: $transform-param;
+	     -o-transform: $transform-param;
+	        transform: $transform-param;
+}

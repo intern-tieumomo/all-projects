@@ -1,0 +1,88 @@
+@include ipad-landscape {
+    .carousel-inner{
+        position: relative;
+    }
+
+    .carousel-inner > .item,
+    .edgt-slider .carousel-control{
+        padding-top: 0px !important;
+    }
+
+    .carousel .carousel-inner .edgt-slider-content-outer {
+        display: table;
+        display: table;
+        padding: 0 5px;
+
+		@include edgtBoxSizing(border-box);
+    }
+
+    .carousel .carousel-inner .edgt-slider-content .edgt-thumb {
+        height: auto;
+    }
+
+    .carousel .carousel-inner .edgt-slider-content {
+        display: table-cell;
+        vertical-align: middle;
+        position: static;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .carousel .carousel-inner .edgt-graphic-content{
+        text-align: center;
+    }
+
+    .edgt-slider-thumbs .carousel-control.left:hover .edgt-thumb-holder{
+        left: 0;
+    }
+
+    .carousel:not(.in_progress).edgt-slider-thumbs .carousel-control.left:hover .prev_nav{
+        left: -200px;
+    }
+
+    .edgt-slider-thumbs .carousel-control.right:hover .edgt-thumb-holder{
+        right: 0;
+    }
+
+    .carousel:not(.in_progress).edgt-slider-thumbs .carousel-control.right:hover .next_nav{
+        right: -200px;
+    }
+
+    .carousel-inner .item.edgt-animate-image.zoom_center .edgt-image,
+    .carousel-inner .item.edgt-animate-image.zoom_top_left .edgt-image,
+    .carousel-inner .item.edgt-animate-image.zoom_top_right .edgt-image,
+    .carousel-inner .item.edgt-animate-image.zoom_bottom_left .edgt-image,
+    .carousel-inner .item.edgt-animate-image.zoom_bottom_right .edgt-image{
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+}
+
+@include ipad-portrait {
+    .carousel-control .icon-prev,
+    .carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+    }
+
+    .carousel-caption {
+        right: 20%;
+        left: 20%;
+        padding-bottom: 30px;
+    }
+}
+
+@include phone-landscape {
+    .carousel-control {
+        display: none;
+    }
+}
+
+@include phone-portrait {
+    .carousel .carousel-inner .edgt-slider-content-outer {
+        width: 100% !important;
+    }
+}

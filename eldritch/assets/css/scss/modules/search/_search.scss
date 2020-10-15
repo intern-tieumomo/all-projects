@@ -1,0 +1,66 @@
+@import 'types/fullscreen-search';
+@import 'types/search-covers-header';
+@import 'types/search-dropdown';
+@import 'types/slide-from-window-top';
+
+/* ==========================================================================
+# Search style - begin
+========================================================================== */
+
+.search .edgt-container {
+  background: #fff;
+}
+
+.edgt-search-opener {
+  @include edgtTransition(all 0.15s ease-out);
+
+  .edgt-search-icon-text {
+    @include edgtTransition(all 0.15s ease-out);
+  }
+}
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-search-opener,
+.edgt-light-header.edgt-header-style-on-scroll .edgt-page-header .edgt-search-opener,
+.edgt-top-bar-light .edgt-top-bar .edgt-search-opener {
+  color: $header-light-color !important; //Color can be set inline from widget opener
+}
+
+.edgt-light-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-search-opener:hover,
+.edgt-light-header.edgt-header-style-on-scroll .edgt-page-header .edgt-search-opener:hover,
+.edgt-top-bar-light .edgt-top-bar .edgt-search-opener:hover {
+  color: rgba($header-light-color, 0.7) !important; //Color can be set inline from widget opener
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-search-opener,
+.edgt-dark-header.edgt-header-style-on-scroll .edgt-page-header .edgt-search-opener,
+.edgt-top-bar-dark .edgt-top-bar .edgt-search-opener {
+  color: $header-dark-color !important; //Color can be set inline from widget opener
+}
+
+.edgt-dark-header .edgt-page-header > div:not(.edgt-sticky-header) .edgt-search-opener:hover,
+.edgt-dark-header.edgt-header-style-on-scroll .edgt-page-header .edgt-search-opener:hover,
+.edgt-top-bar-dark .edgt-top-bar .edgt-search-opener:hover {
+  color: rgba($header-dark-color, 0.7) !important; //Color can be set inline from widget opener
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #959595;
+  margin-top: 10px;
+}
+
+.search .format-quote h2.edgt-post-title,
+.search .format-link h2.edgt-post-title {
+  color: #fff;
+}
+
+.search .format-quote h2.edgt-post-title a:hover,
+.search .format-link h2.edgt-post-title a:hover {
+  color: #fff;
+}
+
+/* ==========================================================================
+# Search style - end
+========================================================================== */

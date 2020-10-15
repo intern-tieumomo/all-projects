@@ -1,0 +1,46 @@
+@import 'grid-mixins';
+
+.edgt-grid-row {
+	@include createGridRow();
+}
+
+//generate column classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	.edgt-grid-col-#{$i} {
+		@include createGridColumn($i);
+
+		@include createGridColumnResponsive(map-get($gridConfig, stackOn));
+	}
+}
+
+//generate push / pull classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	.edgt-grid-col-push-#{$i} {
+		@include createGridColumnPush($i);
+	}
+
+	.edgt-grid-col-pull-#{$i} {
+		@include createGridColumnPull($i);
+	}
+}
+
+//generate responsive witdh column classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	@each $size, $width in $breakpoints {
+		.edgt-grid-col-#{$size}-#{$i} {
+			$stack: false;
+
+			//check if current column is max number of columns.
+			//if it is than we need to stack columns
+			@if($i == map-get($gridConfig, numberOfCols)) {
+				$stack: true;
+			}
+
+			//if current column isn't the max number of columns
+			//than generate responsive for it.
+			@if($i < (map-get($gridConfig, numberOfCols) + 1)) {
+				@include createGridColumnResponsive($size, $i, $stack);
+			}
+		}
+	}
+}

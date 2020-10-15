@@ -1,0 +1,76 @@
+.edgt-header-centered {
+
+    .edgt-vertical-align-containers {
+        padding: 0 100px;
+
+    }
+
+	.edgt-page-header {
+		.edgt-logo-area {
+			background-color: #fff;
+			height: 175px;
+			z-index: 2; //to be above menu area in order to cover shadow
+			overflow: visible;
+
+            .edgt-position-center {
+                &:before {
+                    content: normal;
+                }
+            }
+
+            .edgt-position-center-inner {
+                height: 100%;
+                display: table;
+                width: 100%;
+
+            }
+
+			.edgt-logo-wrapper {
+
+                display: table-cell;
+                vertical-align: bottom;
+
+                a {
+                    max-height: 157px; //(logo-area height * 0.9)
+                }
+            }
+
+			@include edgtBoxSizing(border-box);
+		}
+
+		.edgt-menu-area {
+			background-color: #fff;
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+			z-index: 1;
+
+			@include edgtBoxSizing(border-box);
+
+			.edgt-vertical-align-containers {
+				.edgt-position-center-inner {
+					height: 100%;
+				}
+			}
+		}
+
+		.edgt-page-header .edgt-sticky-header {
+			.edgt-position-left-inner {
+				height: auto;
+			}
+
+			.edgt-position-right-inner {
+				height: 100%;
+			}
+		}
+	}
+
+	&.edgt-header-centered-logo-border-disable .edgt-logo-area,
+	&.edgt-header-centered-logo-in-grid-border-disable .edgt-page-header .edgt-logo-area .edgt-grid .edgt-vertical-align-containers {
+		border-bottom: none !important;
+	}
+
+	&.edgt-header-centered-menu-shadow-disable .edgt-menu-area,
+	&.edgt-header-centered-menu-in-grid-shadow-disable .edgt-page-header .edgt-menu-area .edgt-grid .edgt-vertical-align-containers {
+		box-shadow: none !important;
+	}
+}
+

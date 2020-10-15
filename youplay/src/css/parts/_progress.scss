@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+
+  Progress Bars
+
+-------------------------------------------------------------------*/
+.youplay-progress {
+    background-color: rgba($text_color, .1);
+    border-radius: 0;
+    box-shadow: none;
+    transform: skew(-$skew_size);
+    -webkit-backface-visibility: hidden; // stylelint-disable-line
+
+    // colors
+    .progress-bar {
+        background-color: $main_color;
+    }
+    .progress-bar-primary {
+        background-color: $color_primary;
+    }
+    .progress-bar-success {
+        background-color: $color_success;
+    }
+    .progress-bar-info {
+        background-color: $color_info;
+    }
+    .progress-bar-warning {
+        background-color: $color_warning;
+    }
+    .progress-bar-danger {
+        background-color: $color_danger;
+    }
+}

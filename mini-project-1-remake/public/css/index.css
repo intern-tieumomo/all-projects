@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+	font-family: 'Nunito', sans-serif;
+}
+
+header{
+
+}
+
+.account-name{
+	padding: 20px;
+	float: left;
+	font-size: 19px;
+}
+
+.logout{
+	float: right;
+	padding: 20px;
+}
+
+.btn-logout{
+	width: 100px;
+	border-radius: 100px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	padding: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.content{
+	position: relative;
+	top: 150px;
+	width: 100%;
+	text-align: center;
+}
+
+.title{
+	font-size: 40px;
+	width: 50%;
+	margin: auto;
+}
+
+.create-btn{
+	padding: 20px;
+}
+
+.crud-table{
+	width: 1000px;
+	margin: auto;
+	padding: 10px;
+}

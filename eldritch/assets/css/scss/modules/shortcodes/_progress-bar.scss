@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Progress bar shortcode start styles
+   ========================================================================== */
+.edgt-progress-bar {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	text-align: left;
+
+	.edgt-progress-title-holder {
+		position: relative;
+		margin-bottom: 8px;
+
+		.edgt-progress-title {
+			display: inline-block;
+			z-index: 100;
+		}
+	}
+
+	.edgt-progress-number-wrapper {
+		text-align: right;
+		position: absolute;
+		right: 0;
+		z-index: 10;
+		opacity: 0;
+		bottom: 0;
+
+		.edgt-progress-number {
+			display: inline-block;
+			text-align: center;
+			float: right;
+			padding-left: 8px;
+			padding-right: 5px;
+		}
+
+		.edgt-progress-number .edgt-percent:after {
+			content: '%';
+			margin-left: 0.1em;
+			font-size: 1em;
+		}
+
+	}
+
+	.edgt-progress-number-wrapper.edgt-floating {
+		width: 100%;
+		height: 100%;
+
+		.edgt-progress-number {
+			position: absolute;
+			@include edgtTransform(translateX(-50%));
+			bottom: 0;
+		}
+
+		.edgt-down-arrow {
+			width: 0;
+			height: 0;
+			border-left: 3px solid transparent;
+			border-right: 3px solid transparent;
+			border-top: 3px solid $first-main-color;
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			@include edgtTransform(translateX(-50%));
+		}
+
+	}
+
+	.edgt-progress-number-wrapper.edgt-floating-inside .edgt-progress-number {
+		@include edgtTransform(translateX(-100%));
+		height: 16px;
+		line-height: 16px;
+
+		.edgt-percent {
+			display: inline-block;
+		}
+	}
+
+	.edgt-progress-content-outer {
+		background-color: #e7e7e7;
+		position: relative;
+		overflow: hidden;
+		height: 12px;
+
+		.edgt-progress-content {
+			max-width: 100%;
+			overflow: hidden;
+			background-color: $first-main-color;
+			height: 12px;
+
+			@include edgtBoxSizing(border-box);
+		}
+	}
+}
+
+/* ==========================================================================
+   Progress bar shortcode end styles
+   ========================================================================== */

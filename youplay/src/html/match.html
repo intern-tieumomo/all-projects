@@ -1,0 +1,126 @@
+{% set page_title = 'Match' %}
+{% set header_image = 'assets/images/dark/game-diablo-iii-1400x656.jpg' %}
+{% set header_size = '' %}
+{% set header_text = '
+    <div class="pt-40 pb-40">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>The International 2015</h1>
+                <div class="h5 mnt-10 mb-40">17th February 2017, 6:00 pm</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="youplay-match-left">
+                    <div class="youplay-match">
+                        <div class="youplay-match-data text-right">
+                            <h3>Youplay</h3>
+                        </div>
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/dark/clan-youplay.jpg" alt="Youplay">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="youplay-match-vs">
+                    <span>0 : 0</span>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="youplay-match-right">
+                    <div class="youplay-match">
+                        <div class="angled-img">
+                            <div class="img">
+                                <img src="assets/images/dark/clan-team-secret.jpg" alt="Team Secret">
+                            </div>
+                        </div>
+                        <div class="youplay-match-data">
+                            <h3>Team Secret</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="row">
+
+            <div class="col-md-9">
+                <h2 class="mt-0">Description</h2>
+                <p>Aliquam euismod at <strong>potenti</strong> velit risus erat nulla blandit leo. Sagittis cubilia turpis. Taciti gravida litora. Id. Vestibulum. Eu augue augue duis rhoncus sociosqu. Quam nec erat <strong>a</strong> volutpat eleifend nibh Bibendum malesuada ridiculus. Dapibus vel nascetur. Sollicitudin dictumst, leo donec vivamus potenti cursus cras phasellus ullamcorper.</p>
+
+                <blockquote>Dui <em>sociosqu</em> litora suscipit senectus id etiam aliquet gravida adipiscing <strong>dignissim</strong> hac Luctus. Pretium orci nunc est diam lobortis cursus. Faucibus diam ante. Odio. Maecenas. Lacus ornare montes condimentum sit fames torquent quis dignissim scelerisque ullamcorper <em>at</em> ullamcorper Lacinia iaculis nisi aliquam consectetuer per dolor <strong>porttitor</strong> libero pulvinar sociis elit nam. Turpis, congue mi Nisi ipsum.</blockquote>
+
+                <p><strong>Ante</strong> suspendisse sociosqu facilisis augue Penatibus urna Dapibus volutpat Lacus enim sit Quam posuere vestibulum metus aenean eget imperdiet donec sed eget morbi mus erat platea per mollis semper torquent curae; arcu a sapien. Interdum sollicitudin <em>luctus</em> curabitur vestibulum mus facilisis a ipsum nibh facilisis aenean convallis curabitur tempus.</p>
+
+                <p>Sit commodo tortor natoque ut donec suscipit imperdiet magna, netus magna aliquet, natoque molestie <strong>non</strong> mauris pellentesque primis eu non lorem convallis <strong>lorem</strong> ipsum, habitant augue eros tristique amet vehicula non facilisis a eget aliquet feugiat mollis class <em>enim</em> habitant posuere suspendisse, ridiculus etiam. Ultricies <strong>platea</strong> ridiculus nostra.</p>
+
+
+                <!-- Post Comments -->
+                <div class="comments-block">
+                    <h3>Comments <small>(1)</small></h3>
+
+                    <!-- Comment Form -->
+                    <form action="#" class="comment-form">
+                        <div class="comment-avatar pull-left">
+                            <img src="assets/images/dark/avatar.png" alt="">
+                        </div>
+                        <div class="comment-cont clearfix">
+                            <div class="youplay-input">
+                                <input type="text" name="username" placeholder="Your Name *">
+                            </div>
+                            <div class="youplay-input">
+                                <input type="email" name="email" placeholder="Your Email *">
+                            </div>
+                            <div class="youplay-textarea">
+                                <textarea name="message" rows="5" placeholder="Your Comment..."></textarea>
+                            </div>
+                            <button class="btn btn-default pull-right">Submit</button>
+                        </div>
+                    </form>
+                    <!-- /Comment Form -->
+
+                    <!-- Comments List -->
+                    <ul class="comments-list">
+                        <!-- Kristen Bradley comment -->
+                        <li>
+                            <article>
+                                <div class="comment-avatar pull-left">
+                                    <img src="assets/images/dark/avatar-user-1.png" alt="">
+                                </div>
+                                <div class="comment-cont clearfix">
+                                    <a class="comment-author h4" href="#">Kristen Bradley</a>
+                                    <div class="date"><i class="fa fa-calendar"></i> 25 minutes ago</div>
+                                    <div class="comment-text">
+                                        Ludum mutavit. Verbum est ex. Et ... sunt occidat. Videtur quod est super omne oppidum. Quis transfretavit tu iratus es contudit cranium cum dolor apparatus. Qui curis! Modo nobis certamen est, qui non credunt at.
+                                    </div>
+                                    <a href="#" class="pull-right">Reply</a>
+                                </div>
+                            </article>
+                        </li>
+                        <!-- /Kristen Bradley comment -->
+                    </ul>
+                    <!-- /Comments List -->
+                </div>
+                <!-- /Post Comments -->
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-3">
+                {% include "shared/dark-sidebar-matches.html" %}
+            </div>
+            <!-- Right Side -->
+
+        </div>
+
+    </div>
+{% endblock %}

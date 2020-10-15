@@ -1,0 +1,208 @@
+.edgt-ptf-masonry {
+
+    &.edgt-ptf-with-spaces {
+        margin: 0 -10px;
+        article {
+            padding: 0 10px 20px;
+        }
+    }
+
+	article {
+
+		@include edgtBoxSizing(border-box);
+
+		.edgt-ptf-wrapper {
+			height: 100%;
+		}
+
+		.edgt-portfolio-masonry-item {
+			position: relative;
+			height: 100%;
+		}
+
+		.edgt-item-image-holder {
+			height: 100%;
+			overflow: hidden;
+
+			img {
+				position: relative;
+				vertical-align: middle;
+				@include edgtTransition(all 0.4s cubic-bezier(0.6, 0, 0.26, 0.99));
+			}
+		}
+
+		.edgt-ptf-item-text-holder {
+			text-align: center;
+
+			.edgt-ptf-item-title {
+				width: 90%;
+				margin: 7px auto;
+			}
+		}
+
+		.edgt-ptf-category-holder {
+			color: #fff;
+			font-size: 12px;
+		}
+
+		.edgt-item-image-holder {
+			@include edgtTransition(all .4s cubic-bezier(0.6, 0, 0.26, 0.99));
+		}
+
+		.edgt-ptf-item-text-holder {
+			.edgt-ptf-item-title {
+				text-align: center;
+
+				> a {
+					display: inline-block;
+					opacity: 0;
+					@include edgtTransform(scale(1.2, .8));
+	    			text-shadow: $glowing-text-shadow;
+	    			-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), opacity 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), text-shadow 0.25s cubic-bezier(0.6, 0, 0.26, 0.99) 0.15s;
+	    			transition: transform 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), opacity 0.4s cubic-bezier(0.6, 0, 0.26, 0.99), text-shadow 0.25s cubic-bezier(0.6, 0, 0.26, 0.99) 0.15s;
+				}
+			}
+
+			.edgt-ptf-category-holder {
+				overflow: hidden;
+				text-align: center;
+
+				> span {
+					display: inline-block;
+					opacity: 0;
+					@include edgtTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+		}
+
+		.edgt-ptf-wrapper:hover {
+			.edgt-ptf-item-text-overlay {
+				opacity: 1;
+			}
+
+			.edgt-item-image-holder {
+				@include edgtTransform(scale(1.07));
+			}
+
+			.edgt-ptf-item-title > a {
+				opacity: 1;
+				color:#fff;
+				@include edgtTransform(scale(1));
+				@include edgtTransition(all .4s cubic-bezier(0.6, 0, 0.26, 0.99));
+			}
+
+			.edgt-ptf-category-holder > span {
+				opacity: 1;
+				@include edgtTransform(translate3d(0,0,0));
+				@include edgtTransition(all .4s cubic-bezier(0.6, 0, 0.26, 0.99) .2s);
+			}
+		}
+	}
+
+	.edgt-portfolio-list-masonry-grid-gutter {
+		width: 0;
+	}
+
+	//masonry item width
+
+	.edgt-portfolio-list-masonry-grid-sizer,
+	article.edgt-default-masonry-item,
+	article.edgt-large-height-masonry-item {
+		width: 25%;
+	}
+
+	&.edgt-ptf-masonry-three-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article.edgt-default-masonry-item,
+		article.edgt-large-height-masonry-item {
+			width: 33.33%;
+		}
+	}
+
+	&.edgt-ptf-masonry-five-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article.edgt-default-masonry-item,
+		article.edgt-large-height-masonry-item {
+			width: 20%;
+		}
+	}
+
+	&.edgt-ptf-masonry-six-columns {
+		.edgt-portfolio-list-masonry-grid-sizer,
+		article.edgt-default-masonry-item,
+		article.edgt-large-height-masonry-item {
+			width: 16.66%;
+		}
+	}
+
+	//large item width
+
+	.edgt-large-width-masonry-item,
+	.edgt-large-width-height-masonry-item {
+		width: 50%;
+	}
+
+	&.edgt-ptf-masonry-three-columns {
+		.edgt-large-width-masonry-item,
+		.edgt-large-width-height-masonry-item {
+			width: 66.66%;
+		}
+	}
+
+	&.edgt-ptf-masonry-five-columns {
+		.edgt-large-width-masonry-item,
+		.edgt-large-width-height-masonry-item {
+			width: 40%;
+		}
+	}
+
+	&.edgt-ptf-masonry-six-columns {
+		.edgt-large-width-masonry-item,
+		.edgt-large-width-height-masonry-item {
+			width: 33.33%;
+		}
+	}
+
+	//portfolio Masonry content
+
+	.edgt-portfolio-masonry-content .edgt-masonry-content-inner-holder {
+		display: table;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		background-color: #f5f5f5;
+
+		@include edgtBoxSizing(border-box);
+
+		.edgt-portfolio-masonry-subtitle {
+			color: #a7b0be;
+			text-transform: uppercase;
+			margin-top: 10px;
+			margin-bottom: 4px;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+
+		.edgt-portfolio-masonry-title {
+			color: #303030;
+			margin-top: 5px;
+		}
+
+		p {
+			font-size: $default-text-size;
+			color: #737c8b;
+			margin-top: 10px;
+			margin-bottom: 13px;
+		}
+
+		.edgt-masonry-content-inner {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 3% 8%;
+		}
+	}
+}

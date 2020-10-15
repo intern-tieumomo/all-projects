@@ -1,0 +1,47 @@
+/* ==========================================================================
+   WooCommerce Message styles - begin
+   ========================================================================== */
+.edgt-woocommerce-page {
+
+	.woocommerce-message,
+	.woocommerce-info,
+	.woocommerce-error {
+		position: relative;
+		display: block;
+		line-height: 43px;
+		margin-bottom: 47px;
+		list-style: none;
+		background-color: transparent;
+		border-bottom: 1px solid #eaeaea;
+        padding-bottom: 10px;
+
+		&:last-of-type {
+			margin-bottom: 49px;
+		}
+
+		.button.wc-forward {
+			float: right;
+			color: $headings-text-color;
+			background-color: transparent;
+			padding: 0;
+			line-height: 39px;
+
+			&:hover {
+				background-color: transparent;
+				color: $first-main-color;
+			}
+		}
+	}
+
+    &.edgt-woocommerce-dark-skin {
+        .woocommerce-message,
+        .woocommerce-info,
+        .woocommerce-error {
+            border-color: #595757;
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Message styles - end
+   ========================================================================== */

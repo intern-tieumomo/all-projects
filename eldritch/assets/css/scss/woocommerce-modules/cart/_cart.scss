@@ -1,0 +1,353 @@
+/* ==========================================================================
+   WooCommerce Cart Page styles - begin
+   ========================================================================== */
+.edgt-woocommerce-page {
+
+	table.cart {
+		font-family: $headings-font-family;
+
+		thead {
+			tr {
+				th {
+					color: $headings-text-color;
+					font-weight: 600;
+					padding: 29.5px 10px;
+					text-align: left;
+				}
+			}
+		}
+
+		tr.cart_item {
+			border-top: 0;
+
+			td {
+				padding: 42px 10px;
+				vertical-align: middle;
+				text-align: inherit;
+				color: $headings-text-color;
+
+				&.product-subtotal {
+					color: $first-main-color;
+				}
+
+				&.product-remove {
+					width: 60px;
+					text-align: center;
+
+					a {
+						position: relative;
+						display: inline-block;
+						vertical-align: middle;
+						font-family: 'ElegantIcons';
+						speak: none;
+						color: #ababab;
+						font-style: normal;
+						font-weight: normal;
+						font-variant: normal;
+						text-transform: none;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						font-size: 0;
+						line-height: 1;
+
+						&:before {
+							content: "\4d";
+							display: block;
+							font-size: 18px;
+						}
+					}
+				}
+
+				&.product-thumbnail {
+
+					a {
+						position: relative;
+						display: inline-block;
+						vertical-align: middle;
+						max-width: 80px;
+
+						img {
+							display: block;
+						}
+					}
+				}
+
+				&.product-name {
+
+					a {
+						color: $headings-text-color;
+						display: inline-block;
+						vertical-align: middle;
+						font-weight: 500;
+					}
+				}
+
+				.variation {
+
+					> * {
+						display: inline-block;
+						vertical-align: middle;
+						padding: 0;
+						margin: 0;
+					}
+
+					p {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		td.actions {
+			padding: 26px 29px 23px;
+			text-align: inherit;
+
+			.coupon {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				float: left;
+
+				label {
+					display: none;
+				}
+
+				input {
+					display: inline-block;
+					vertical-align: top;
+					font-family: $headings-font-family;
+				}
+
+				input[type="text"] {
+					margin: 0;
+					padding: 14px 21px;
+					min-width: 221px;
+					border: 1px solid #eaeaea;
+					color: #ababab;
+					border-radius: 0;
+					font-family: $headings-font-family;
+					font-size: 12px;
+                    line-height: 18px;
+
+					@include edgtPlaceholder {
+						color: #ababab;
+					}
+				}
+
+				input[type="submit"] {
+					color: #ababab;
+                    background-color: #fff;
+					border: 1px solid #eaeaea;
+					margin-left: -5px;
+					height: 48px;
+					border-radius: 0;
+					font-family: $headings-font-family;
+
+                    @include edgtTransition(background-color 0.3s ease, color 0.3s ease);
+
+					&:hover {
+						color: #fff;
+						background-color: transparent;
+					}
+				}
+			}
+
+			> input,
+			  button {
+				float: right;
+				color: #ababab;
+				background-color: #f7f7f7;
+				border: 1px solid #eaeaea;
+				height: 48px;
+
+				@include edgtTransition(background-color 0.3s ease, color 0.3s ease);
+
+				&:hover {
+					color: #ababab;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+	.cart-collaterals {
+		@include edgtRelativeHolderLayout;
+		font-family: $headings-font-family;;
+		margin: 46px 0 60px;
+
+		.cross-sells,
+		.cart_totals {
+			margin: 16px 0 10px;
+
+			> h2 {
+				display: block;
+				margin: 18px 0;
+				font-size: 16px;
+			}
+		}
+
+		table {
+			margin: 0 0 24px;
+
+			tr {
+
+				&:not(:first-child) {
+					border-top: 0;
+				}
+
+				&.cart-subtotal {
+					> td {
+						text-align: right;
+					}
+
+					.amount {
+						color: #ababab;
+					}
+				}
+
+				&.order-total {
+
+					> td {
+						text-align: right;
+					}
+
+					.amount {
+						color: $first-main-color;
+					}
+				}
+			}
+
+			td, th {
+				padding: 22px 25px;
+				text-align: left;
+				vertical-align: middle;
+				font-weight: 500;
+			}
+
+			th {
+				width: 20%;
+				border: 0;
+				color: $headings-text-color;
+			}
+		}
+
+		tr.shipping {
+
+			#shipping_method {
+				list-style: none;
+				margin: 0 0 7px;
+
+				li {
+					margin: 3px 0;
+					padding: 0;
+
+					> * {
+						display: inline-block;
+						vertical-align: middle;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.woocommerce-shipping-calculator {
+
+			p {
+				margin: 0;
+			}
+
+			.shipping-calculator-button {
+				display: block;
+				margin: 0 0 10px;
+				font-weight: 600;
+			}
+
+			.shipping-calculator-form {
+				margin: 10px 0;
+			}
+		}
+	}
+
+	.wc-proceed-to-checkout a.button {
+		height: 51px;
+		line-height: 53px;
+		padding: 0 23px;
+		float: right;
+	}
+}
+
+.edgt-woocommerce-page {
+
+	.cart-empty {
+		position: relative;
+		display: block;
+		font-family: inherit;
+		font-size: 25px;
+		line-height: 1.32em;
+		font-weight: 600;
+		text-align: center;
+		color: $headings-text-color;
+		margin: 40px 0 33px;
+	}
+
+	.return-to-shop {
+		position: relative;
+		display: block;
+		text-align: center;
+		margin: 0 0 70px;
+	}
+
+    &.woocommerce-cart.edgt-woocommerce-dark-skin {
+
+        .cart-empty {
+            color: #fff;
+        }
+
+        table {
+            thead tr, tbody tr {
+                border-color: #595757;
+            }
+
+            thead tr th {
+                color: $default-text-color-dark;
+            }
+
+            tr.cart_item td.product-name a {
+                color: #fff;
+            }
+
+            tr.cart_item td {
+                color : #fff;
+            }
+        }
+
+        .cart-collaterals table th {
+            color: $default-text-color-dark;
+        }
+
+        .cart-collaterals table tr.cart-subtotal .amount {
+            color: $default-text-color-dark;
+        }
+    }
+
+    &.edgt-woocommerce-dark-skin { 
+    	a.button,
+    	button[type=submit] {
+    		@include edgtTransition(all 0.3s ease-out);
+
+    		&:hover {
+	        	background-color:transparent !important;
+	        	color:#fff !important;
+				box-shadow: 0 0 2px rgba(255,255,255,.75),
+					0 0 14px rgba(255,255,255,.5),
+					0 0 33px rgba(255,255,255,.25),
+					0 0 55px rgba(255,255,255,.25);
+			}
+        }
+    }
+
+}
+
+/* ==========================================================================
+   WooCommerce Cart Page styles - end
+   ========================================================================== */

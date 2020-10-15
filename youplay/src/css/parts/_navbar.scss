@@ -1,0 +1,583 @@
+.no-transition *,
+.no-transition *::before,
+.no-transition *::after {
+    transition: none !important; // stylelint-disable-line
+}
+.navbar-youplay {
+    min-height: $navbar-sm-height;
+    background: rgba($back_darken_color, .4);
+    border: none;
+    transition: .3s background ease;
+
+    a {
+        text-decoration: none;
+    }
+
+    // fix container offsets
+    .container .navbar-right {
+        margin-right: 0;
+    }
+    .container .navbar-brand {
+        margin-left: 0;
+    }
+    @media #{$media-xs} {
+        .container > .navbar-header {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    // height
+    .navbar-brand {
+        display: block;
+        width: 160px;
+        height: $navbar-height;
+        padding: 0;
+        line-height: $navbar-height - 5; // i don't know why without 5px logo is centered :(
+        transition: .3s ease;
+        will-change: height, width, line-height;
+
+        @media #{$media-xs} {
+            float: none;
+            margin: 0 auto;
+        }
+
+        img {
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+    .navbar-nav > li > a {
+        height: $navbar-height;
+        padding: $navbar-height/3.3 0;
+        font-size: 13px;
+        text-transform: uppercase;
+        transition: .3s ease;
+        will-change: height, padding;
+    }
+
+    // labels
+    .navbar-nav > li > a > .label {
+        display: block;
+        padding: 0;
+        color: $text_mute_color;
+        text-align: left;
+        text-transform: none;
+        opacity: 1;
+        transition: .3s ease;
+
+        &::before {
+            content: none;
+        }
+    }
+    .navbar-nav > li > a:hover > .label,
+    .navbar-nav > li > a:focus > .label,
+    .navbar-nav > li.open > a > .label {
+        color: $text_color;
+    }
+
+    // menu items
+    .navbar-nav > li > a,
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a:focus,
+    .navbar-nav > li.open > a {
+        color: $text_color;
+    }
+    .navbar-nav > li {
+        margin-left: 30px;
+    }
+
+    // caret
+    .caret {
+        border-width: 3px;
+    }
+
+    // badge
+    .badge {
+        position: absolute;
+        min-width: 17px;
+        height: 17px;
+        padding: 0 6px;
+        margin-top: -4px;
+        margin-left: -4px;
+        font-size: 10px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    // active/open menu items colors change
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:focus,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .open > a,
+    .navbar-nav > .open > a:focus,
+    .navbar-nav > .open > a:hover,
+    .nav .open > a,
+    .nav .open > a:focus,
+    .nav .open > a:hover {
+        color: $text_color;
+        background: none;
+    }
+
+    // active menu items decoration
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:focus,
+    .navbar-nav > .active > a:hover {
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: $text_color;
+        }
+    }
+
+    // dropdown
+    .navbar-nav > li > .dropdown-menu,
+    .dropdown-menu {
+        display: table;
+
+        // change default colors
+        background: $back_darken_color;
+        background: rgba($back_darken_color, .8);
+        border: none;
+
+        > ul {
+            display: table-cell;
+            min-width: 160px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            > li > a {
+                position: relative;
+                display: block;
+                padding: 10px 25px;
+                padding-bottom: 5px;
+                color: $text_color;
+                white-space: nowrap;
+
+                // submenu items decoration
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 7px;
+                    border-bottom: 2px solid;
+                    opacity: 0;
+                    transition: .15s transform ease, .15s opacity ease;
+                    transform: scaleX(.3);
+                    transform-origin: 10% 50%;
+                }
+            }
+            > li > a:focus,
+            > li > a:hover,
+            > li.active > a,
+            > li.open > a {
+                &::after {
+                    opacity: .4;
+                    transform: scaleX(1);
+                }
+            }
+            > li.active > a::after {
+                opacity: .7;
+            }
+
+            // divider
+            .divider {
+                background: rgba($text_color, .15);
+            }
+        }
+    }
+
+    // dropdown on hover
+    .dropdown-hover > .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s visibility ease, .2s opacity ease, .2s transform ease;
+        transform: translateY(10px);
+    }
+    .dropdown-hover:hover > .dropdown-menu,
+    .dropdown-hover.open > .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // dropdown top offset
+    .navbar-nav > li > .dropdown-menu {
+        margin-top: 10px;
+
+        // fix on hover gap
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+        }
+    }
+
+    // arrow for first dropdown
+    .nav > .dropdown > .dropdown-menu::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        left: 20px;
+        width: 0;
+        height: 0;
+        margin-right: -6px;
+        pointer-events: none;
+        border: solid transparent;
+        border-width: 6px;
+        border-bottom-color: rgba($back_darken_color, .8);
+    }
+    .navbar-right > .dropdown > .dropdown-menu::after {
+        right: 20px;
+        left: auto;
+        margin-right: 0;
+        margin-left: -6px;
+    }
+
+    // small navbar size
+    &.navbar-small {
+        background: $back_darken_color;
+        background: rgba($back_darken_color, .94);
+
+        .navbar-brand {
+            width: 110px;
+            height: $navbar-sm-height;
+            line-height: $navbar-sm-height - 5; // i don't know why without 5px logo is centered :(
+        }
+        .navbar-nav > li > a {
+            height: $navbar-sm-height;
+            padding: $navbar-sm-height/3.3 0;
+
+            > .label {
+                opacity: 0;
+            }
+        }
+    }
+
+    // toggle button
+    .navbar-toggle,
+    .navbar-toggle:hover,
+    .navbar-toggle:focus {
+        background: none;
+        border: none;
+
+        .icon-bar {
+            width: 25px;
+            background: $text_color;
+            transition: .3s margin-top ease, .3s transform ease, .3s opacity ease;
+            transform-origin: 100% 50%;
+        }
+        .icon-bar + .icon-bar {
+            margin-top: 6px;
+        }
+    }
+    .navbar-toggle {
+        margin-top: 23px;
+        transition: .2s margin-top ease;
+    }
+    &.navbar-small .navbar-toggle {
+        margin-top: 8px;
+    }
+
+    &.youplay-navbar-collapsed .navbar-toggle,
+    &.youplay-navbar-collapsed .navbar-toggle:hover {
+        :nth-child(3) {
+            opacity: 0;
+        }
+        :nth-child(2) {
+            transform: rotate(45deg) translate(9px, 15px);
+        }
+        :nth-child(4) {
+            transform: rotate(-45deg) translate(9px, -15px);
+        }
+    }
+
+
+    // navbar collapse
+    @media #{$media-xs} {
+        &,
+        &.navbar-small {
+            background: none;
+        }
+        .navbar-header {
+            position: relative;
+            background: $back_darken_color;
+            background: rgba($back_darken_color, .4);
+            z-index: 1;
+        }
+        &.navbar-small .navbar-header {
+            background: $back_darken_color;
+            background: rgba($back_darken_color, .94);
+        }
+        .navbar-collapse {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 90%;
+            max-width: 400px;
+            max-height: 100%;
+            padding: 30px;
+            padding-top: $navbar-height + 15px;
+            margin: 0;
+            overflow-y: auto;
+            background: $back_darken_color;
+            border: none;
+            transition: .3s padding-top ease, .5s transform ease;
+
+            &::before {
+                content: "";
+                position: fixed;
+                display: block;
+            }
+
+            &.collapse {
+                display: block;
+                transform: translateX(100%);
+            }
+
+            .navbar-nav {
+                margin: 0;
+            }
+
+            // menu items
+            .navbar-nav > li {
+                margin-left: 0;
+                clear: both;
+            }
+            .navbar-nav > li > a {
+                height: $navbar-sm-height;
+                padding: $navbar-sm-height/3.3 0;
+            }
+            .dropdown-menu > ul > li > a,
+            .navbar-nav > li > .dropdown-menu > ul > li > a {
+                padding: 10px 0;
+            }
+
+            .dropdown-submenu > .dropdown-menu,
+            .dropdown-hover > .dropdown-menu {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+
+                &::after {
+                    content: none;
+                }
+            }
+            .dropdown-submenu > [data-toggle] + .dropdown-menu,
+            .dropdown-hover > [data-toggle] + .dropdown-menu {
+                display: none;
+            }
+            .dropdown-submenu.open > .dropdown-menu,
+            .dropdown-hover.open > .dropdown-menu {
+                display: block;
+            }
+
+            // dropdown menu
+            .open .dropdown-menu > li > a {
+                color: $text_mute_color;
+            }
+            .open .dropdown-menu > li.open > a,
+            .open .dropdown-menu > li > a:hover,
+            .open .dropdown-menu > li > a:focus {
+                color: $text_color;
+            }
+            .navbar-nav > li > .dropdown-menu,
+            .navbar-nav > li > .dropdown-menu > ul {
+                position: relative;
+                display: block;
+                width: 100% !important; // stylelint-disable-line
+                margin: 0;
+            }
+            .dropdown-submenu > .dropdown-menu {
+                position: relative;
+                right: auto;
+                left: auto;
+                width: 100% !important; // stylelint-disable-line
+                margin: 0;
+
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+            .dropdown-submenu > .dropdown-menu > ul {
+                float: none;
+            }
+            .dropdown-submenu > a::before {
+                border-color: transparent;
+                border-top-color: $text_color;
+            }
+            .dropdown > .dropdown-menu {
+                padding-left: 20px;
+            }
+        }
+
+        // small navbar
+        &.navbar-small .navbar-collapse {
+            padding-top: $navbar-sm-height + 15px;
+
+            .navbar-nav > li > a > .label {
+                display: block;
+            }
+        }
+
+        // remove shadows
+        .dropdown-menu {
+            box-shadow: none;
+        }
+
+        // hide content
+        ~ .content-wrap {
+            opacity: 1;
+            transition: .5s opacity ease;
+        }
+        &.youplay-navbar-collapsed ~ .content-wrap {
+            opacity: .3;
+        }
+    }
+}
+
+
+/*
+ * bootstrap dropdown submenus
+ * from http://www.bootply.com/86684
+ */
+.dropdown-submenu {
+    position: relative;
+
+    > .dropdown-menu {
+        display: block;
+        top: 0;
+        left: 100%;
+        margin-top: -15px;
+        margin-left: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s visibility ease, .2s opacity ease, .2s transform ease;
+        transform: translateY(10px);
+
+        // arrow
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 30px;
+            right: 100%;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            border: solid transparent;
+            border-width: 6px;
+            border-right-color: rgba($back_darken_color, .8);
+        }
+
+        // fix gap
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 10px;
+            height: 100%;
+        }
+    }
+    &:hover > .dropdown-menu,
+    &.open > .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // arrow
+    > a::before {
+        content: " ";
+        display: block;
+        float: right;
+        width: 0;
+        height: 0;
+        margin-top: 7px;
+        margin-right: -10px;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 3px;
+        border-left-color: $text_color;
+    }
+    &:hover > a::before {
+        border-left-color: $text_color;
+    }
+
+    // left drop
+    &.pull-left {
+        float: none !important; // stylelint-disable-line
+
+        // change arrow direction
+        > a::before {
+            border-color: transparent;
+            border-right-color: $text_color;
+        }
+
+        > .dropdown-menu {
+            right: 100%;
+            left: auto;
+            margin-right: 10px;
+            margin-left: 0;
+
+            // arrow
+            &::after {
+                right: auto;
+                left: 100%;
+                border: solid transparent;
+                border-width: 6px;
+                border-left-color: $back_darken_color;
+                border-left-color: rgba($back_darken_color, .8);
+            }
+
+            // fix gap
+            &::before {
+                top: 0;
+                right: -10px;
+                left: auto;
+            }
+        }
+    }
+}
+
+
+/*
+ * Shopping Cart
+ */
+.navbar-youplay .dropdown-cart {
+    .dropdown-menu {
+        width: 300px;
+        padding-top: 1rem;
+    }
+    .youplay-side-news {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
+}
+
+
+/*
+ * Login Form
+ */
+.navbar-youplay .navbar-login-form {
+    min-width: 300px;
+    padding: 0 20px;
+
+    @media #{$media-xs} {
+        padding-left: 0;
+        margin-top: -15px;
+        margin-left: -20px;
+    }
+}

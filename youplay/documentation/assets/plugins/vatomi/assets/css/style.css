@@ -1,0 +1,151 @@
+/* Button */
+.vatomi-btn-wrapper {
+    margin-bottom: 25px;
+}
+.vatomi-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+    vertical-align: baseline;
+    cursor: pointer;
+    background-color: #82b440;
+    border: 1px solid;
+    border-color: #7ba738 #6f9a37 #6f9a37;
+    box-shadow: 0 1px 0 #6f9a37 !important; /* Important overrides default themes styles */
+    color: #fff;
+    text-shadow: 0 -1px 1px #769c43,
+    1px 0 1px #769c43,
+    0 1px 1px #769c43,
+    -1px 0 1px #769c43;
+    -webkit-appearance: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.vatomi-btn:hover {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #7cab3e;
+    border-color: #719a3c #689034 #689034;
+    box-shadow: 0 1px 0 #6f9a37 !important; /* Important overrides default themes styles */
+}
+.vatomi-btn:focus {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #7cab3e;
+    border-color: #6f943e;
+    box-shadow: 0 1px 0 #719a3c, 0 0 2px 1px #91b95e !important; /* Important overrides default themes styles */
+}
+.vatomi-btn:active {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #77a23d;
+    border-color: #6f943e;
+    box-shadow: inset 0 2px 0 #6f923f !important; /* Important overrides default themes styles */
+    transform: translateY(1px);
+}
+
+/* small button */
+.vatomi-btn-sm {
+    font-size: 12px;
+    padding: 3px 14px;
+}
+
+/* dark button */
+.vatomi-btn-dark {
+    background-color: #404040;
+    border-color: #2d2d2d #232323 #232323;
+    box-shadow: 0 1px 0 #232323 !important;
+    text-shadow: 0 -1px 1px #232323, 1px 0 1px #232323, 0 1px 1px #232323, -1px 0 1px #232323;
+}
+.vatomi-btn-dark:hover {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #2f2f2f;
+    border-color: #252525 #1d1d1d #1d1d1d;
+    box-shadow: 0 1px 0 #1d1d1d !important; /* Important overrides default themes styles */
+}
+.vatomi-btn-dark:focus {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #2f2f2f;
+    border-color: #292929;
+    box-shadow: 0 1px 0 #252525, 0 0 2px 1px #393939 !important; /* Important overrides default themes styles */
+}
+.vatomi-btn-dark:active {
+    color: #fff !important; /* Important overrides default themes styles */
+    background-color: #393939;
+    border-color: #292929;
+    box-shadow: inset 0 2px 0 #292929 !important; /* Important overrides default themes styles */
+    transform: translateY(1px);
+}
+
+/* Loading btn animation */
+.vatomi-btn-loading {
+    padding-right: 35px;
+    background-image: url('../images/loading-spin.svg');
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+
+
+/**
+ * Alerts
+ */
+.vatomi-alert {
+    padding: 10px 15px;
+    background-color: #b5b5b5;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.vatomi-alert-success {
+    background-color: #60d668;
+}
+.vatomi-alert-error {
+    background-color: #d66060;
+}
+
+
+/**
+ * WordPress Login Form
+ */
+#login .vatomi-btn-wrapper {
+    text-align: center;
+    margin-top: 20px;
+    padding: 26px 24px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+    border-bottom: 1px solid #ecebeb;
+}
+#login .vatomi-btn {
+    width: 100%;
+}
+
+.vatomi-btn-wrapper + #loginform {
+    margin-top: -25px;
+}
+
+
+/**
+ * Licenses
+ */
+.vatomi-licenses .vatomi-licenses-site {
+    min-width: 110px;
+    max-width: 250px;
+}
+.vatomi-licenses .vatomi-licenses-deactivate {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.vatomi-licenses tr:hover .vatomi-licenses-deactivate {
+    opacity: 1;
+    visibility: visible;
+}
+.vatomi-licenses tr:hover .vatomi-licenses-deactivate + span {
+    opacity: 0;
+    visibility: hidden;
+}
+.vatomi-licenses form select {
+    width: 100%;
+    margin-bottom: 15px;
+}

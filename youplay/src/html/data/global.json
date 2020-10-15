@@ -1,0 +1,196 @@
+{
+    "main_style_file": "youplay",
+    "google_fonts": "https://fonts.googleapis.com/css?family=Lato:300,400,700",
+    "custom_css": false,
+    "custom_styles": false,
+    "custom_script": false,
+    "page_title": false,
+    "content_class": false,
+    "preloader_show": true,
+    "preloader_logo": "assets/images/logo-light.png",
+    "header_show": true,
+    "header_size": "small",
+    "header_parallax": true,
+    "header_parallax_speed": 0.4,
+    "header_title": false,
+    "header_title_show": true,
+    "header_title_class": "h1",
+    "header_text": false,
+    "header_text_col": false,
+    "header_image": "assets/images/dark/banner-bg.jpg",
+    "nav_logo": "assets/images/logo-light.png",
+    "nav_small": false,
+    "nav_search": true,
+    "nav_cart": true,
+    "nav_login": true,
+    "footer_show": true,
+    "footer_text": "<p>2018 &copy; <strong>nK</strong>. All rights reserved</p>",
+    "footer_bg": "assets/images/dark/footer-bg.jpg",
+    "footer_social_block": true,
+    "footer_widgets_block": false,
+    "footer_parallax": true,
+    "footer_parallax_speed": 0.4,
+    "navigation": {
+        "store-1.html": {
+            "name": "Store",
+            "description": "games",
+            "mega": true,
+            "sub": {
+                "#1": {
+                    "name": "Column 1",
+                    "sub": {
+                        "store-1.html": {
+                            "name": "Store Style 1"
+                        },
+                        "store-2.html": {
+                            "name": "Store Style 2"
+                        },
+                        "cart.html": {
+                            "name": "Cart"
+                        }
+                    }
+                },
+                "#2": {
+                    "name": "Column 2",
+                    "sub": {
+                        "store-product-1.html": {
+                            "name": "Product Style1"
+                        },
+                        "store-product-2.html": {
+                            "name": "Product Style 2"
+                        },
+                        "checkout.html": {
+                            "name": "Checkout"
+                        }
+                    }
+                }
+            }
+        },
+        "blog-1.html": {
+            "name": "Blog",
+            "description": "news",
+            "mega": true,
+            "sub": {
+                "#1": {
+                    "name": "Column 1",
+                    "sub": {
+                        "blog-1.html": {
+                            "name": "Blog Style 1"
+                        },
+                        "blog-2.html": {
+                            "name": "Blog Style 2"
+                        },
+                        "blog-3.html": {
+                            "name": "Blog Style 3"
+                        }
+                    }
+                },
+                "#2": {
+                    "name": "Column 2",
+                    "sub": {
+                        "blog-post-1.html": {
+                            "name": "Blog Post 1"
+                        },
+                        "blog-post-2.html": {
+                            "name": "Blog Post 2"
+                        },
+                        "blog-post-3.html": {
+                            "name": "Blog Post 3"
+                        }
+                    }
+                }
+            }
+        },
+        "components.html": {
+            "name": "Features",
+            "description": "full list",
+            "mega": true,
+            "sub": {
+                "#1": {
+                    "name": "Column 1",
+                    "sub": {
+                        "forums.html": {
+                            "name": "Forums"
+                        },
+                        "forums-topics.html": {
+                            "name": "Forums Topics"
+                        },
+                        "forums-single-topic.html": {
+                            "name": "Forums Single Topic"
+                        },
+                        "matches-list.html": {
+                            "name": "Matches List"
+                        },
+                        "match.html": {
+                            "name": "Match"
+                        },
+                        "match-2.html": {
+                            "name": "Match with Maps"
+                        },
+                        "login.html": {
+                            "name": "Login"
+                        }
+                    }
+                },
+                "#2": {
+                    "name": "Column 2",
+                    "sub": {
+                        "widgets.html": {
+                            "name": "Widgets",
+                            "badge": "New"
+                        },
+                        "components.html": {
+                            "name": "Components"
+                        },
+                        "coming-soon.html": {
+                            "name": "Coming Soon"
+                        },
+                        "contact.html": {
+                            "name": "Contact Us"
+                        },
+                        "search.html": {
+                            "name": "Search"
+                        },
+                        "404.html": {
+                            "name": "404"
+                        },
+                        "blank.html": {
+                            "name": "Blank"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "navigation_right": {
+        "user-activity.html": {
+            "name": "KuroKy",
+            "description": "user",
+            "badge": "8",
+            "sub": {
+                "user-activity.html": {
+                    "name": "Activity"
+                },
+                "user-profile.html": {
+                    "name": "Profile"
+                },
+                "user-messages.html": {
+                    "name": "Messages",
+                    "badge": "8"
+                },
+                "user-messages-compose.html": {
+                    "name": "Messages Compose"
+                },
+                "user-settings.html": {
+                    "name": "Settings"
+                },
+                "https://nkdev.info/docs/youplay-html/": {
+                    "name": "Documentation"
+                },
+                "https://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=_nK": {
+                    "name": "Purchase"
+                }
+            }
+        }
+    }
+}

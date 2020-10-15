@@ -1,0 +1,8 @@
+.edgt-page {
+    a {
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

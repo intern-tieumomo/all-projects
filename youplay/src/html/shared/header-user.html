@@ -1,0 +1,71 @@
+{% set user_header_prefix = '' %}
+{% if main_style_file === 'youplay-light' %}
+    {% set user_header_prefix = 'light-' %}
+{% endif %}
+
+<!--
+    Banner
+
+    Additional classes:
+        .small
+        .xsmall
+        .big
+        .full
+-->
+<section class="youplay-banner banner-top{{ ' youplay-banner-parallax' if header_parallax }}{{ (' ' + header_size) if header_size }}">
+    {% if header_image %}
+        <div class="image"{{ (' data-speed="' + header_parallax_speed + '"') | safe if header_parallax }}>
+            <img src="{{ header_image }}" alt=""{{ ' class="jarallax-img"' | safe if header_parallax }}>
+        </div>
+    {% endif %}
+
+    <div class="youplay-user-navigation">
+        <div class="container">
+            <ul>
+                <li{{ ' class="active"' | safe if isActiveMenuItem(user_header_prefix + 'user-activity.html', {}, filename) }}><a href="{{ user_header_prefix }}user-activity.html">Activity</a></li>
+                <li{{ ' class="active"' | safe if isActiveMenuItem(user_header_prefix + 'user-profile.html', {}, filename) }}><a href="{{ user_header_prefix }}user-profile.html">Profile</a></li>
+                <li{{ ' class="active"' | safe if isActiveMenuItem(user_header_prefix + 'user-messages.html', {}, filename) or isActiveMenuItem(user_header_prefix + 'user-messages-compose.html', {}, filename) }}><a href="{{ user_header_prefix }}user-messages.html">Messages <span class="badge">6</span></a></li>
+                <li{{ ' class="active"' | safe if isActiveMenuItem(user_header_prefix + 'user-settings.html', {}, filename) }}><a href="{{ user_header_prefix }}user-settings.html">Settings</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Forums</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info">
+        <div>
+            <div class="container youplay-user">
+                <a href="assets/images/dark/user-photo.jpg" class="angled-img image-popup">
+                    <div class="img">
+                        <img src="assets/images/dark/user-avatar.jpg" alt="">
+                    </div>
+                    <i class="fa fa-search-plus icon"></i>
+                </a>
+                <div class="user-data">
+                    <h2>KuroKy</h2>
+                    <div class="location"><i class="fa fa-map-marker"></i> Los Angeles</div>
+                    <div class="activity">
+                        <div>
+                            <div class="num">69</div>
+                            <div class="title">Posts</div>
+                        </div>
+                        <div>
+                            <div class="num">12</div>
+                            <div class="title">Games</div>
+                        </div>
+                        <div>
+                            <div class="num">689</div>
+                            <div class="title">Followers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-20">
+                <a href="#" class="btn btn-sm btn-default ml-0">Add Friend</a>
+                <a href="#" class="btn btn-sm btn-default">Private Message</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Banner -->

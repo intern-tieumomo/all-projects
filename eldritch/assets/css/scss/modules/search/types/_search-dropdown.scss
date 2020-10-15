@@ -1,0 +1,101 @@
+.edgt-search-dropdown {
+	.widget_edgt_search_opener {
+		position: relative;
+		cursor: pointer;
+	}
+
+	.edgt-search-dropdown-holder {
+		position: absolute;
+		top: calc(100% + 1px);
+		right: 0;
+		padding: 13px;
+		width: 378px;
+		height: 61px;
+
+		z-index: 10;
+		opacity: 0;
+		visibility: hidden;
+
+		background-color: #fff;
+		border: 1px solid #f2f2f2;
+
+		line-height: $default-text-line-height;
+
+		@include edgtBoxSizing(border-box);
+		@include edgtTransition(visibility 0s linear 0.2s, opacity 0.2s ease-in-out 0s);
+
+		input[type=text] {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			width: 75%;
+			display: block;
+
+			font-family: $default-font-family;
+			font-size: 12px;
+			color: #969696;
+			float: left;
+			background-color: #f7f7f7;
+			padding: 10px 17px;
+			height: 35px;
+
+			@include edgtBoxSizing(border-box);
+
+			&::-webkit-input-placeholder,
+			.edgt-dark-header &::-webkit-input-placeholder,
+			.edgt-light-header &::-webkit-input-placeholder,
+			.edgt-top-bar-dark &::-webkit-input-placeholder,
+			.edgt-top-bar-light &::-webkit-input-placeholder {
+				color: #969696;
+			}
+
+			&:-moz-placeholder,
+			.edgt-dark-header &:-moz-placeholder,
+			.edgt-light-header &:-moz-placeholder,
+			.edgt-top-bar-dark &:-moz-placeholder,
+			.edgt-top-bar-light &:-moz-placeholder {
+				color: #969696;
+				opacity: 1;
+			}
+
+			&::-moz-placeholder,
+			.edgt-dark-header &::-moz-placeholder,
+			.edgt-light-header &::-moz-placeholder,
+			.edgt-top-bar-light &::-moz-placeholder,
+			.edgt-top-bar-dark &::-moz-placeholder {
+				color: #969696;
+				opacity: 1;
+			}
+		}
+
+		input[type=submit] {
+			float: left;
+			width: 25%;
+			min-width: auto;
+			padding: 7px 0;
+			font-weight: 600;
+		}
+	}
+
+	&.edgt-header-standard-border-disable .edgt-search-dropdown-holder {
+		top: 100%;
+	}
+
+	.widget_edgt_search_opener:hover .edgt-search-dropdown-holder {
+		opacity: 1;
+		visibility: visible;
+
+		@include edgtTransitionDelay(0s);
+	}
+
+
+}
+
+.edgt-top-bar {
+	.edgt-position-left {
+		.edgt-search-dropdown-holder {
+			left: 0;
+			right: auto;
+		}
+	}
+}

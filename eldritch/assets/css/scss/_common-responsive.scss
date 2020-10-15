@@ -1,0 +1,78 @@
+@include mac {
+	.edgt-comment-list .children {
+		padding-left: 60px;
+	}
+
+	.edgt-error-page-title {
+		font-size: 40px;
+	}
+
+	.edgt-comment-list .children > li:before {
+		margin-right: 5px;
+	}
+
+	.edgt-page-not-found .edgt-404-button {
+		padding: 16px 30px 14px;
+	}
+}
+
+@include ipad-landscape {
+	.error404 {
+		.edgt-content {
+			margin-top: -143px !important;
+			padding-top: 143px;
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgt-comment-list .children {
+		padding-left: 40px;
+	}
+
+	.edgt-comment-list .children > li:before {
+		font-size: 45px;
+		margin-right: 2px;
+	}
+}
+
+@include phone-landscape {
+	.edgt-comment-holder {
+		.edgt-comment-text {
+			padding-left: 0;
+
+			.edgt-comment-name {
+				margin-top: 15px;
+			}
+		}
+
+		.edgt-comment {
+			padding: 25px;
+		}
+		.edgt-comment-reply-holder {
+			top: 23px;
+			right: 9px;
+		}
+	}
+
+	.edgt-error-page-title {
+		font-size: 40px;
+	}
+
+	.edgt-404-image {
+		display: none;
+	}
+}
+
+@include phone-portrait {
+	.edgt-comment-list .children {
+		padding-left: 20px;
+	}
+
+	.edgt-comment-list .children > li:before {
+		font-size: 26px;
+		top: 2px;
+		margin-right: 0px;
+	}
+
+}

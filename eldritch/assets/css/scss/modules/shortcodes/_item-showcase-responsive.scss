@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Item Showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	 .edgt-item-showcase-holder {
+		 .edgt-is-item {
+			 .edgt-is-text {
+				 width: 90%;
+			 }
+		 }
+	 }
+ }
+
+@include mac {
+	.edgt-item-showcase-holder {
+		.edgt-is-item {
+
+			&.edgt-is-left {
+				padding-right: 22%;
+			}
+
+			&.edgt-is-right {
+				padding-left: 22%;
+			}
+
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgt-item-showcase-holder {
+		.edgt-is-image {
+			img {
+				display: none;
+			}
+		}
+
+		.edgt-is-item-holder.edgt-is-left-holder,
+		.edgt-is-item-holder.edgt-is-right-holder {
+			width: 50%;
+			padding:0 15px;
+		}
+
+		.edgt-is-item {
+
+			&.edgt-is-left {
+				padding-right: 0;
+			}
+
+			&.edgt-is-right {
+				padding-left: 0;
+			}
+		}
+
+		.edgt-is-item-holder.edgt-is-left-holder {
+			float: left;
+		}
+
+		.edgt-is-item-holder.edgt-is-right-holder {
+			float: right;
+		}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	
+	.edgt-item-showcase-holder {
+		
+		.edgt-is-item-holder {
+			
+			&.edgt-is-left-holder,
+			&.edgt-is-right-holder {
+				float: none;
+				width: 100%;
+				padding: 0;
+			}
+		}
+		
+		.edgt-is-item {
+			opacity: 1;
+			-webkit-transform: translateX(0) translateY(0) !important;
+			-moz-transform: translateX(0) translateY(0) !important;
+			transform: translateX(0) translateY(0) !important;
+		}
+	}
+}
+
+/* ==========================================================================
+   Item Showcase shortcode responsive style - end
+   ========================================================================== */

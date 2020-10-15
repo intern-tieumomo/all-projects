@@ -1,0 +1,42 @@
+/*** SELECTPICKER ***/
+.edgt-selectpicker-row{
+	width: 160px;
+}
+.btn-info.selectpicker{
+	background-color: #57CEEB;
+	color:#fff;
+	border: 1px solid #fff;
+}
+.edgt-selectpicker-row .dropdown-menu{
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+}
+.edgt-selectpicker-row .dropdown-menu.inner{
+	border-top: none;
+}
+.edgt-selectpicker-row .dropdown-menu.inner{
+	margin: -5px -1px 0 -1px;
+}
+.edgt-selectpicker-row .dropdown-menu.selectpicker li a{
+	border: none;
+}
+.edgt-selectpicker-row .form-control{
+	border-radius: 2px;
+}
+.edgt-selectpicker-row .dropdown-menu.selectpicker > .active > a{
+	background-color: transparent;
+	color: #333333;
+}
+.edgt-selectpicker-row .dropdown-menu .bs-searchbox{
+	padding: 8px 15px;
+}
+.form-control:focus{
+	border-color: #cccccc;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.edgt-selectpicker-row .dropdown-menu.selectpicker li{
+	margin: 0 3px 6px 9px;
+	min-width: 202px;
+}
+/*** END OF SELECTPICKER ***/

@@ -1,0 +1,36 @@
+<!--
+    Banner
+
+    Additional classes:
+        .small
+        .xsmall
+        .big
+        .full
+-->
+<section class="youplay-banner banner-top{{ ' youplay-banner-parallax' if header_parallax }}{{ (' ' + header_size) if header_size }}">
+    {% if header_image %}
+        <div class="image"{{ (' data-speed="' + header_parallax_speed + '"') | safe if header_parallax }}>
+            <img src="{{ header_image }}" alt=""{{ ' class="jarallax-img"' | safe if header_parallax }}>
+        </div>
+    {% endif %}
+
+    <div class="info">
+        <div>
+            <div class="container">
+                {% if header_text_col %}
+                    <div class="row"><div class="{{ header_text_col }}">
+                {% endif %}
+                {% if header_title and header_title_show %}
+                    <h1 class="{{ header_title_class }}">{{ header_title | safe }}</h1>
+                {% endif %}
+                {% if header_text %}
+                    {{ header_text | safe }}
+                {% endif %}
+                {% if header_text_col %}
+                    </div></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Banner -->

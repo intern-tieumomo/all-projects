@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Section subtitle start styles
+   ========================================================================== */
+
+.edgt-section-title{
+
+    .edgt-st-subtitle {
+        margin-bottom: 0;
+    }
+
+    .edgt-st-title {
+        margin-top: 4px;
+    }
+
+    .edgt-separator-image {
+        margin-top: 24px;
+        margin-bottom: 28px;
+        > img {
+            vertical-align: middle;
+        }
+    }
+
+    &.edgt-section-align-left{
+        text-align: left;
+    }
+
+    &.edgt-section-align-center{
+        text-align: center;
+    }
+
+    &.edgt-section-align-right{
+        text-align: right;
+    }
+
+    &.edgt-section-align-justify{
+        text-align: justify;
+    }
+
+    .edgt-st-text-text {
+        line-height: 27px;
+    }
+}

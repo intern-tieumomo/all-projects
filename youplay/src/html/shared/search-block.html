@@ -1,0 +1,12 @@
+<!-- Search Block -->
+<div class="search-block">
+    <a href="#" class="search-toggle">
+        <i class="fa fa-times"></i>
+    </a>
+    <form action="search.html">
+        <div class="youplay-input">
+            <input type="text" name="search" placeholder="Search...">
+        </div>
+    </form>
+</div>
+<!-- /Search Block -->

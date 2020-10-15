@@ -1,0 +1,11 @@
+@include mac {
+	.widget.woocommerce.widget_price_filter .price_slider_amount .button {
+		float: left;
+	}
+}
+
+@include ipad-landscape {
+	.widget.woocommerce.widget_price_filter .price_slider_amount .button {
+		float: right;
+	}
+}

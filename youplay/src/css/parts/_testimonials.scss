@@ -1,0 +1,46 @@
+.testimonials {
+    blockquote {
+        position: relative;
+        min-height: 150px;
+        padding: 20px 30px;
+        margin-bottom: 75px;
+        background: rgba($text_color, .1);
+        border: none;
+    }
+
+    blockquote::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -10px;
+        border-top: 10px solid rgba($text_color, .1);
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+
+    blockquote img {
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+    }
+
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    blockquote p.clients-words {
+        font-size: 14px;
+    }
+    .author-name {
+        font-size: 14px;
+        text-align: right;
+    }
+}

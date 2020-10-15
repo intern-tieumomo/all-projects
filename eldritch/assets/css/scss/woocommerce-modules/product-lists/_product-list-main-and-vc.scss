@@ -1,0 +1,431 @@
+/* Woocommerce Product List Main and VC Shortcode - begin
+========================================================================== */
+
+@include keyframes(cart-jump) {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    5% {
+        transform: translate3d(0, -7%, 0);
+    }
+    10% {
+        transform: translate3d(0, 7%, 0);
+    }
+    13.75% {
+        transform: translate3d(0, -7%, 0);
+    }
+    17.5% {
+        transform: translate3d(0, 7%, 0);
+    }
+    20% {
+        transform: translate3d(0, -7%, 0);
+    }
+    22.5% {
+        transform: translate3d(0, 7%, 0);
+    }
+    25% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    37.5% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@include keyframes(added-to-cart) {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.edgt-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells,
+.edgt-content .woocommerce {
+    @include edgtRelativeHolderLayout();
+}
+
+.edgt-pl-main-holder {
+    margin: 0 0 14px;
+}
+
+ul.products {
+    list-style: none;
+    clear: both;
+
+    .edgt-content & {
+        margin: 0 -13px;
+    }
+
+    > .product {
+        position: relative;
+        float: left;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 13px;
+        margin: 0 0 32px;
+        @include edgtBoxSizing(border-box);
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        &:hover {
+
+            .edgt-pl-inner .edgt-pl-text {
+                opacity: 1;
+            }
+        }
+
+        .edgt-pl-outer {
+
+            .edgt-pl-text-wrapper {
+                position: relative;
+                overflow: hidden;
+
+                .edgt-pl-text-wrapper-inner {
+                    position: relative;
+                    margin-top: 20px;
+                }
+
+                .edgt-product-list-title {
+                    margin: 0;
+                    display: inline-block;
+                    float: left;
+                    width: 70%;
+                }
+
+                .price {
+                    float: right;
+                    text-align: right;
+                    width: 30%;
+                    font-size: 17px;
+                    font-family: $headings-font-family;
+
+
+                    span {
+                        color: $headings-text-color;
+                        text-decoration: none;
+
+                    }
+
+                    > span {
+                        float: right;
+                    }
+
+                    ins {
+                        text-decoration: none;
+                    }
+
+                    del span {
+                        font-size: 14px;
+                        color: #ababab;
+                    }
+                }
+            }
+
+            .edgt-product-list-category {
+                display: inline-block;
+                float: left;
+                line-height: 22px;
+                clear: left;
+
+                a {
+                    color: $default-text-color;
+                    text-transform: lowercase;
+
+                    &:hover {
+                        color: $first-main-color;
+                    }
+
+                    &:not(:last-child):after {
+                        content: ',';
+                        margin-right: 3px;
+                    }
+                }
+            }
+
+            &:hover {
+                .edgt-pl-inner .edgt-pl-cart {
+                    opacity: 1;
+                }
+
+                .edgt-pl-text-wrapper {
+
+                    .edgt-pl-text-wrapper-inner {
+                        @include edgtTransform(translateY(0));
+                        @include edgtTransition(transform .2s ease-in-out);
+                    }
+                    .edgt-pl-rating-holder {
+                        opacity: 1;
+                        @include edgtTransition(opacity .2s ease-in-out .1s);
+                    }
+                }
+            }
+
+            .edgt-pl-inner {
+                @include edgtRelativeHolderLayout();
+                overflow: hidden;
+
+                .edgt-pl-image {
+                    @include edgtRelativeHolderLayout();
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    border-bottom: 1px solid $first-main-color;
+                }
+
+                .edgt-pl-cart-holder {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    z-index:11;
+                }
+
+                .edgt-pl-cart {
+                    z-index: 11;
+                    opacity: 0;
+                    display: table;
+                    background-color:rgba(0,0,0,0.8);
+                    width: 100%;
+                    height: calc(100% - 1px);
+
+                    @include edgtTransition(opacity 0.4s cubic-bezier(0.6, 0, 0.26, 0.99));
+
+                    .edgt-pl-cart-inner {
+                        display: table-cell;
+                        vertical-align: middle;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+
+                        a {
+                            display: inline-block;
+                            position: relative;
+                            outline: none;
+                            padding: 16px 56px 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-family: $headings-font-family;
+                            font-size: 15px;
+                            line-height: 26px;
+                            text-transform: uppercase;
+                            text-align: center;
+                            color:#fff;
+                            border: 1px solid #fff;
+                            background-color: transparent;
+                            @include edgtTransition(all 0.3s cubic-bezier(0.6, 0, 0.26, 0.99));
+
+                            &.added {
+                                display:none;
+                            }
+
+                            &:hover {
+                                color:#fff;
+                                background-color: transparent;
+                                border: 1px solid #fff;
+                                box-shadow:0 0 2px rgba(255,255,255,.75), 0 0 14px rgba(255,255,255,.5), 0 0 33px rgba(255,255,255,.25), 0 0 55px rgba(255,255,255,.25);
+                            }
+                        }
+                    }
+                }
+
+                > a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.edgt-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells {
+
+    $product_list_columns: ('columns-3', 'columns-4');
+
+    @for $i from 0 to length($product_list_columns) {
+        $column_width: 100%/($i+3);
+
+        > .products {
+
+            > .product {
+
+                @media only screen and (min-width: map-get($breakpoints, ipad-landscape-plus-pixel)) {
+
+                    .edgt-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        width: $column_width;
+
+                        &:nth-child(#{$i+3}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+
+                @media only screen and (min-width: map-get($breakpoints, ipad-landscape-plus-pixel)) {
+
+                    .edgt-woocommerce-#{nth($product_list_columns,$i+1)} .edgt-woocommerce-with-sidebar & {
+                        $column_width: 100%/($i+3-1);
+                        width: $column_width;
+
+                        &:nth-child(#{$i+3}n+1) {
+                            clear: none;
+                        }
+
+                        &:nth-child(#{$i+3-1}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce {
+
+    &.columns-1 {
+
+        > .products {
+
+            > .product {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+
+    $product_list_vc_columns: ('columns-2', 'columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+    @for $i from 0 to length($product_list_vc_columns) {
+        &.#{nth($product_list_vc_columns,$i+1)} {
+            $column_vc_width: 100%/($i+2);
+
+            > .products {
+
+                > .product {
+                    width: $column_vc_width;
+                    $product_list_vc_columns_label: #{nth($product_list_vc_columns,$i+1)};
+
+                    @if $product_list_vc_columns_label == 'columns-5' {
+                        @media only screen and (min-width: map-get($breakpoints, laptop-landscape-plus-pixel)) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-6' {
+                        @media only screen and (min-width: map-get($breakpoints, laptop-landscape-large-plus-pixel)) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-3' {
+                        @media only screen and (min-width: map-get($breakpoints, ipad-portrait-plus-pixel)) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-2' {
+                        @media only screen and (min-width: map-get($breakpoints, phone-landscape-plus-pixel)) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else {
+                        @media only screen and (min-width: map-get($breakpoints, ipad-landscape-plus-pixel)) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin,
+body.edgt-page-content-skin-light {
+    color: $default-text-color-dark;
+
+    .edgt-content {
+
+        a {
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+
+    .select2-dropdown {
+        background-color: #141112;
+        border: 1px solid $default-input-color-dark;
+    }
+
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: #413A3F;
+        color: #fff;
+    }
+
+    ul.products > .product .edgt-pl-outer {
+        .edgt-pl-text-wrapper {
+            .price span {
+                color: #fff;
+            }
+        }
+
+        .edgt-product-list-category a {
+            color: $default-text-color-dark;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .edgt-pl-inner .edgt-pl-cart a {
+            color: #fff;
+
+            &:hover {
+                color: #fff !important;
+                background-color: transparent !important;
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+/* Woocommerce Product List VC Shortcode - end
+========================================================================== */

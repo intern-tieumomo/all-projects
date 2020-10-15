@@ -1,0 +1,216 @@
+@import 'variables';
+@import 'mixins';
+
+$gridConfig: (
+	gutter: 15px,
+	numberOfCols: 12,
+	stackOn: ipad-landscape
+);
+
+@function getColWidth($col) {
+	@if ($col != '' and round($col) == $col) {
+		$col: $col;
+	} @else {
+		$col: map-get($gridConfig, numberOfCols);
+	}
+
+	@return ($col / map-get($gridConfig, numberOfCols)) * 100%;
+}
+
+@mixin createGridRow($padding: '') {
+	@include edgtClearfix;
+
+	@if ($padding == '') {
+		$padding: map-get($gridConfig, gutter);
+	}
+
+	margin-left: -$padding;
+	margin-right: -$padding;
+}
+
+@mixin createGridColumn($cols: map-get($gridConfig, numberOfCols), $padding: '') {
+	float: left;
+	position: relative;
+
+	@include edgtBoxSizing(border-box);
+	@include edgtClearfix;
+
+	@if ($padding == '') {
+		$padding: map-get($gridConfig, gutter);
+	}
+
+	padding-left: $padding;
+	padding-right: $padding;
+
+	width: getColWidth($cols);
+}
+
+@mixin createGridColumnPush($cols: 1, $size: map-get($gridConfig, stackOn)) {
+	left: getColWidth($cols);
+
+	@include createGridColumnPushResponsive($size);
+}
+
+@mixin createGridColumnPull($cols: 1, $size: map-get($gridConfig, stackOn)) {
+	right: getColWidth($cols);
+
+	@include createGridColumnPullResponsive($size);
+}
+
+@mixin createGridColumnResponsive($size: ipad-landscape, $cols: map-get($gridConfig, numberOfCols), $stack: true) {
+	$colWidth: getColWidth($cols);
+
+	@if ($size == 'large-laptop') {
+		@include large-laptop {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'laptop-landscape') {
+		@include laptop-landscape {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'mac') {
+		@include mac {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'ipad-landscape') {
+		@include ipad-landscape {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'ipad-portrait') {
+		@include ipad-portrait {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'phone-landscape') {
+		@include phone-landscape {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'phone-portrait') {
+		@include phone-portrait {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	} @else if ($size == 'smaller-phone-portrait') {
+		@include smaller-phone-portrait {
+			width: $colWidth;
+
+			@if ($stack) {
+				float: none;
+			} @else {
+				float: left;
+			}
+		}
+	}
+}
+
+@mixin createGridColumnPushResponsive($size: map-get($gridConfig, stackOn)) {
+	@if ($size == 'large-laptop') {
+		@include large-laptop {
+			left: 0;
+		}
+	} @else if ($size == 'laptop-landscape') {
+		@include laptop-landscape {
+			left: 0;
+		}
+	} @else if ($size == 'mac') {
+		@include mac {
+			left: 0;
+		}
+	} @else if ($size == 'ipad-landscape') {
+		@include ipad-landscape {
+			left: 0;
+		}
+	} @else if ($size == 'ipad-portrait') {
+		@include ipad-portrait {
+			left: 0;
+		}
+	} @else if ($size == 'phone-landscape') {
+		@include phone-landscape {
+			left: 0;
+		}
+	} @else if ($size == 'phone-portrait') {
+		@include phone-portrait {
+			left: 0;
+		}
+	} @else if ($size == 'smaller-phone-portrait') {
+		@include smaller-phone-portrait {
+			left: 0;
+		}
+	}
+}
+
+@mixin createGridColumnPullResponsive($size: map-get($gridConfig, stackOn)) {
+	@if ($size == 'large-laptop') {
+		@include large-laptop {
+			right: 0;
+		}
+	} @else if ($size == 'laptop-landscape') {
+		@include laptop-landscape {
+			right: 0;
+		}
+	} @else if ($size == 'mac') {
+		@include mac {
+			right: 0;
+		}
+	} @else if ($size == 'ipad-landscape') {
+		@include ipad-landscape {
+			right: 0;
+		}
+	} @else if ($size == 'ipad-portrait') {
+		@include ipad-portrait {
+			right: 0;
+		}
+	} @else if ($size == 'phone-landscape') {
+		@include phone-landscape {
+			right: 0;
+		}
+	} @else if ($size == 'phone-portrait') {
+		@include phone-portrait {
+			right: 0;
+		}
+	} @else if ($size == 'smaller-phone-portrait') {
+		@include smaller-phone-portrait {
+			right: 0;
+		}
+	}
+}

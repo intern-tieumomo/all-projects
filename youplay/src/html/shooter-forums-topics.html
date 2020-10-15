@@ -1,0 +1,176 @@
+{% set header_title = 'Topics' %}
+{% set header_size = 'xsmall' %}
+
+{% extends 'layouts/layout-shooter.html' %}
+
+{% block content %}
+    <div class="container youplay-content">
+
+        <div class="col-md-9">
+
+            <!-- Breadcrumb -->
+            <div class="mt-10 mb-20 pull-left">
+                <a href="index.html">Home</a>
+                <span class="fa fa-angle-right"></span>
+                <a href="shooter-forums.html">Forums</a>
+                <span class="fa fa-angle-right"></span>
+                <span>Games</span>
+            </div>
+            <!-- /Breadcrumb -->
+
+            <div class="clearfix"></div>
+
+            <!-- Forums List -->
+            <ul class="youplay-forum mr-10">
+                <li class="header">
+                    <ul>
+                        <li class="cell-icon"></li>
+                        <li class="cell-info">Topic</li>
+                        <li class="cell-topic-count">Voices</li>
+                        <li class="cell-reply-count">Posts</li>
+                        <li class="cell-freshness">Freshness</li>
+                    </ul>
+                </li>
+
+                <li class="body">
+                    <ul class="sticky">
+                        <li class="cell-icon">
+                            <i class="fas fa-thumbtack"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Sticky Topic</a>
+                            <div class="description">
+                                Started by:
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-2.png" height="15" width="15"> John Doe
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">2 year, 9 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-1.png" height="25" width="25"> Kristen Bradley
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Normal Topic</a>
+                            <div class="description">
+                                Started by:
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-2.png" height="15" width="15"> John Doe
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">2 year, 9 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-1.png" height="25" width="25"> Kristen Bradley
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Normal Topic</a>
+                            <div class="description">
+                                Started by:
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-2.png" height="15" width="15"> John Doe
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">2 year, 9 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-1.png" height="25" width="25"> Kristen Bradley
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="cell-icon">
+                            <i class="far fa-folder-open"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Normal Topic</a>
+                            <div class="description">
+                                Started by:
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-2.png" height="15" width="15"> John Doe
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">2 year, 9 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-1.png" height="25" width="25"> Kristen Bradley
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul class="closed">
+                        <li class="cell-icon">
+                            <i class="fa fa-lock"></i>
+                        </li>
+                        <li class="cell-info">
+                            <a href="#" class="title h4">Closed Topic</a>
+                            <div class="description">
+                                Started by:
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-2.png" height="15" width="15"> John Doe
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cell-topic-count">7</li>
+                        <li class="cell-reply-count">21</li>
+                        <li class="cell-freshness">
+                            <a href="#">2 year, 9 months ago</a>
+                            <p>
+                                <a href="#">
+                                    <img alt="" src="assets/images/shooter/avatar-user-1.png" height="25" width="25"> Kristen Bradley
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+            <!-- /Forums List -->
+
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-3">
+            {% include "shared/shooter-sidebar-forums.html" %}
+        </div>
+        <!-- /Right Side -->
+
+    </div>
+{% endblock %}

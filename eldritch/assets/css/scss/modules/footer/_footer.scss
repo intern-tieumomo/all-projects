@@ -1,0 +1,592 @@
+/* ==========================================================================
+# Footer style - begin
+========================================================================== */
+
+footer {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 100;
+	position: relative;
+	color: #cdcdcd;
+    font-weight: 300;
+	@include edgtBoxSizing(border-box);
+
+	.edgt-footer-inner {
+		position: relative; /* for triangle back to top and ajax transitions */
+	}
+
+	.edgt-container {
+		background-color: inherit;
+	}
+
+	.edgt-container-inner {
+		position: relative;
+	}
+
+	.edgt-container-inner > .widget {
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.edgt-footer-ingrid-border-holder-outer {
+		background-color: #393939;
+	}
+
+	.edgt-footer-top-border-holder,
+	.edgt-footer-bottom-border-holder {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	.edgt-footer-top-border-holder.edgt-in-grid,
+	.edgt-footer-bottom-border-holder.edgt-in-grid {
+		width: 1100px;
+		margin: 0 auto;
+	}
+
+	.edgt-footer-top-holder {
+		display: block;
+		background-color: #0f0f0f;
+		position: relative;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	body.edgt-footer-with-bg-image & {
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		.edgt-footer-top-holder,
+		.edgt-footer-bottom-holder {
+			background-color: transparent;
+		}
+	}
+
+	.edgt-icon-list-item .edgt-icon-list-text {
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.edgt-footer-top .edgt-container-inner {
+		padding: 81px 0;
+	}
+
+	.edgt-footer-top.edgt-footer-top-full {
+		padding: 81px 50px;
+	}
+
+	.edgt-footer-top.edgt-footer-top-aligment-center {
+		text-align: center;
+	}
+	.edgt-footer-top.edgt-footer-top-aligment-left {
+		text-align: left;
+	}
+	.edgt-footer-top.edgt-footer-top-aligment-right {
+		text-align: right;
+	}
+
+	.edgt-footer-bottom-holder {
+		display: table;
+		width: 100%;
+		background-color: #272727;
+		color: #fff;
+		vertical-align: middle;
+		height: 60px;
+		position: relative;
+
+		.edgt-footer-bottom-holder-inner {
+			display: table-cell;
+			vertical-align: middle;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: calc(100% - 90px); //45px from left and right side
+				height: 2px;
+				top: 0;
+				left: 45px;
+				background-color: rgba(#fff, 0.1);
+				display: none;
+			}
+		}
+
+		&.edgt-footer-bottom-enable-border {
+			.edgt-footer-bottom-holder-inner {
+				padding: 50px 0;
+
+				&:before {
+					display: block;
+				}
+			}
+		}
+
+		.edgt-footer-bottom-left {
+			text-align: left;
+		}
+
+		.edgt-footer-bottom-right {
+			text-align: right;
+		}
+
+		.edgt-grid-col-6.edgt-left {
+			& + .edgt-grid-col-3.edgt-left {
+				.edgt-footer-bottom-right {
+					text-align: left;
+				}
+			}
+		}
+
+		.edgt-column-inner {
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.edgt-three-columns .edgt-column:first-child .edgt-column-inner {
+			text-align: left;
+		}
+
+		.edgt-three-columns .edgt-column:last-child .edgt-column-inner {
+			text-align: right;
+		}
+
+		.edgt-two-columns-50-50 .edgt-column:first-child .edgt-column-inner {
+			text-align: left;
+		}
+
+		.edgt-two-columns-50-50 .edgt-column:last-child .edgt-column-inner {
+			text-align: right;
+		}
+
+		.edgt-footer-bottom-border-bottom-holder {
+			clear: both;
+		}
+
+	}
+}
+
+/* Footer uncover - begin
+========================================================================== */
+
+footer.edgt-footer-uncover {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	@include edgtTransition(left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
+
+}
+
+.edgt-right-side-menu-opened footer.edgt-footer-uncover {
+	left: -270px;
+}
+
+/* Footer uncover - end
+========================================================================== */
+
+/* Footer boxed - begin
+========================================================================== */
+
+.boxed footer {
+	width: 100% !important;
+
+	@include edgtBoxSizing(border-box);
+}
+
+/* Footer boxed - end
+========================================================================== */
+
+/* Footer fullwidth - begin
+========================================================================== */
+
+.edgt-fullwidth-footer footer {
+	.edgt-footer-bottom-holder {
+		.edgt-footer-bottom-holder-inner {
+			padding: 50px;
+		}
+	}
+}
+
+/* Footer fullwidth - end
+========================================================================== */
+
+
+/* Footer disabled - begin
+========================================================================== */
+
+footer.edgt-disable-footer {
+	display: none;
+}
+
+/* Footer disabled - end
+========================================================================== */
+
+/* ==========================================================================
+# Footer style - end
+========================================================================== */
+
+/* ==========================================================================
+# Footer widgets - begin
+========================================================================== */
+
+footer .edgt-footer-top-holder .widget,
+footer .edgt-footer-bottom-holder .widget {
+
+	&.widget_archive ul li a,
+	&.widget_pages ul li a,
+	&.widget_meta ul li a,
+	&.widget_nav_menu ul li a {
+		padding-bottom: 6px;
+		padding-top: 6px;
+	}
+
+	ul li a {
+		font-weight: 400;
+		display: inline-block;
+		font-size: 14px;
+		color: #bcbcbc;
+		font-family: $headings-font-family;
+		@include edgtTransition(color 0.2s ease-out);
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.edgt-footer-widget-title {
+		color: #fff;
+		margin-top: 3px;
+		margin-bottom: 21px;
+	}
+
+	.edgt-widget-title {
+		color: #fff;
+		margin-top: 3px;
+		margin-bottom: 21px;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			color: #fff;
+			font-family: $headings-font-family;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	select,
+	input[type="text"] {
+
+        &:not(.wpcf7-form-control) {
+
+            width: 100%;
+            overflow: hidden;
+            padding: 0 18px;
+            height: 51px;
+            outline: none;
+            color: #7f8385;
+            font-family: inherit;
+
+            @include edgtBoxSizing(border-box);
+        }
+	}
+
+	&.widget_categories {
+
+		h4 {
+			margin-bottom: 10px;
+		}
+
+		ul li {
+			position: relative;
+		}
+
+		ul {
+			list-style: none;
+			margin-top: 0;
+		}
+
+		ul li a {
+			display: inline-block;
+			padding-bottom: 3px;
+			padding-top: 3px;
+			font-family: $headings-font-family;
+		}
+
+	}
+
+	&.widget_nav_menu {
+		.edgt-widget-title {
+			margin-bottom: 34px;
+		}
+	}
+
+    .searchform {
+
+        &.edgt-search-form {
+            position: relative;
+            max-width: 255px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #656364;
+            background-color: transparent;
+            height: 38px;
+            padding: 8px 40px 0px 0;
+            margin: 0;
+            font-family: $headings-font-family;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #fff;
+            outline: none;
+
+            @include edgtPlaceholder() {
+                color: #fff;
+                opacity: 1;
+            };
+
+            &:focus {
+                border-bottom: 1px solid #fff;
+            }
+
+            @include edgtTransition(border-color $default-transition-speed $default-transition-property);
+            @include edgtBoxSizing(border-box);
+        }
+
+        input[type=submit] {
+
+            font-family: 'ElegantIcons';
+            margin: 0px;
+            padding: 0px;
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 14px;
+            position: absolute;
+            width: 20px;
+            right: 0;
+            bottom: 8px;
+            cursor: pointer;
+
+            &:hover {
+                color: $first-main-color;
+            }
+
+            @include edgtTransition(color $default-transition-speed $default-transition-property);
+        }
+    }
+
+	&.widget_product_tag_cloud .tagcloud a,
+	&.widget_tag_cloud .tagcloud a {
+		font-size: 12px !important;
+		display: inline-block;
+		font-family: $headings-font-family;
+		text-transform: capitalize;
+		font-weight: 400;
+		color: #fff;
+		padding: 0 18px;
+		margin-bottom: 5px;
+		border: 1px solid #535353;
+		background-color: #535353;
+
+		@include edgtBorderRadius(15px);
+		@include edgtTransition(background-color .2s ease-out, border .2s ease-out);
+
+		&:hover {
+			background-color: #323232;
+			border: 1px solid #323232;
+		}
+	}
+
+	&.widget_tag_cloud h4 {
+		margin-bottom: 20px;
+		margin-top: 35px;
+	}
+
+	&.widget_text select {
+		overflow: hidden;
+		padding: 0 45px;
+		height: 37px;
+		background-color: transparent;
+		outline: none;
+		color: #979797;
+		font-family: inherit;
+		float: left;
+
+		@include edgtBorderRadius(30px);
+		@include edgtBoxSizing(border-box);
+		&::-webkit-input-placeholder {
+			color: #979797;
+		}
+
+		&:-moz-placeholder {
+			/* Firefox 18- */
+			color: #979797;
+		}
+
+		&::-moz-placeholder {
+			/* Firefox 19+ */
+			color: #979797;
+		}
+
+		&:-ms-input-placeholder {
+			color: #979797;
+		}
+	}
+
+	&.widget_product_search input[type=submit] {
+		border: none;
+		outline: 0;
+		position: absolute;
+		left: 0;
+		background-color: transparent;
+		font-family: 'Simple-Line-Icons';
+		height: 37px;
+		width: 37px;
+		padding: 0 14px;
+		cursor: pointer;
+		color: #a7b0be;
+		font-size: 16px;
+	}
+
+	&.widget_categories ul li a {
+		font-family: $headings-font-family;
+	}
+
+	&.widget_recent_comments li.recentcomments {
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+
+	&.widget_rss ul li {
+		padding-bottom: 3px;
+		padding-top: 3px;
+	}
+	.select2-container .select2-choice {
+		color: #979797;
+
+		.select2-arrow {
+			color: #979797;
+		}
+
+		&:hover {
+			color: #b1b1b1;
+
+			.select2-arrow {
+				color: #b1b1b1;
+			}
+		}
+	}
+
+	&.widget_edgt_twitter_widget {
+
+        .edgt-tweet-icon {
+            display: inline-block;
+            color: #fff;
+            float: left;
+            font-size: 17px;
+            margin-right: 15px;
+        }
+
+
+        .edgt-tweet-time {
+            a {
+                font-family: $default-font-family;
+                font-size: 13px;
+                color: #fff;
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .edgt-tweet-text {
+            margin-top: 2px;
+            color: #fff;
+
+            a {
+                font-family: $default-font-family;
+                font-size: 15px;
+                color: #fff;
+                font-weight: 400;
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        ul.edgt-twitter-widget {
+
+            li:not(:last-child) {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+        }
+	}
+
+}
+
+footer .edgt-footer-top-holder {
+	.widget {
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+}
+
+footer .edgt-footer-bottom-holder {
+	.edgt-left {
+		text-align: left;
+	}
+
+	.edgt-right {
+		text-align: right;
+	}
+
+	.widget {
+		margin: 10px 0;
+
+		ul {
+			list-style-type: none;
+		}
+
+        p {
+            line-height: 41px;
+        }
+
+		.select2-container .select2-choice {
+			color: #979797;
+
+			.select2-arrow {
+				color: #979797;
+			}
+
+			&:hover {
+				color: #b1b1b1;
+
+				.select2-arrow {
+					color: #b1b1b1;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Footer widgets - end
+========================================================================== */
+

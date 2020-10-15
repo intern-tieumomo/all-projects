@@ -1,0 +1,47 @@
+{% set page_title = 'Blank Page' %}
+{% set header_image = 'assets/images/light/banner-broken-age.jpg' %}
+{% set header_size = 'full' %}
+{% set header_text = '
+    <div class="text-center">
+        <img src="assets/images/light/logo-broken-age-400x197.png" alt="">
+
+        <br><br>
+
+        <!-- See countdown init in bottom of the page -->
+        <div class="countdown h2" data-end="2019-05-21 12:00" data-timezone="EST"></div>
+
+        <br><br>
+        <a class="btn btn-lg" href="#">Pre-Order</a>
+    </div>
+' %}
+{% set custom_script = "
+    $(\".countdown\").each(function() {
+        var tz = $(this).attr('data-timezone');
+        var end = $(this).attr('data-end');
+            end = moment.tz(end, tz).toDate();
+        $(this).countdown(end, function(event) {
+            $(this).html(
+                event.strftime([
+                    '<div class=\"countdown-item\">',
+                        '<span>Days</span>',
+                        '<span><span>%D</span></span>',
+                    '</div>',
+                    '<div class=\"countdown-item\">',
+                        '<span>Hours</span>',
+                        '<span><span>%H</span></span>',
+                    '</div>',
+                    '<div class=\"countdown-item\">',
+                        '<span>Minutes</span>',
+                        '<span><span>%M</span></span>',
+                    '</div>',
+                    '<div class=\"countdown-item\">',
+                        '<span>Seconds</span>',
+                        '<span><span>%S</span></span>',
+                    '</div>'
+                ].join(''))
+            );
+        });
+    });
+" %}
+
+{% extends 'layouts/layout-light.html' %}

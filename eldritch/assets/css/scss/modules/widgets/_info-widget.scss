@@ -1,0 +1,39 @@
+.edgt-sidebar-holder {
+	aside.edgt-sidebar {
+		.widget_edgt_info_widget {
+			background-color: $first-main-color;
+			background-image: url('./img/widget_info.png');
+			background-position: 107% 126%;
+			background-repeat: no-repeat;
+			padding: 30px 32px 15px 32px;
+
+			.edgt-widget-title {
+				margin-bottom: 21px;
+				color: #fff;
+			}
+
+			.edgt-sidearea-title, .edgt-info-text {
+				color: #fff;
+			}
+
+			.edgt-info-phone {
+				font-family: $headings-font-family;
+				margin-top: 21px;
+				color: #fff;
+
+				span {
+					display: inline-block;
+					margin-top: -5px;
+					padding-right: 7px;
+					vertical-align: middle;
+					font-size: 18px;
+				}
+
+				a {
+					font-size: 13px;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

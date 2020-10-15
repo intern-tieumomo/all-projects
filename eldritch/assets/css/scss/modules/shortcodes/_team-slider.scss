@@ -1,0 +1,199 @@
+.edgt-team-slider-holder {
+
+	.edgt-team-slider {
+		opacity: 0;
+
+		&.appeared {
+			opacity: 1;
+		}
+
+		.edgt-team-slide {
+			padding: 0 12px;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+
+		.slick-list {
+			margin: -30px 0;
+			padding: 30px 0;
+		}
+	}
+
+	&.simple {
+		.edgt-team-slider {
+			.edgt-member-image {
+				margin-bottom: 30px;
+
+				img {
+					margin: 0 auto;
+					width: auto;
+				}
+			}
+
+			.edgt-team-slide-inner:hover .edgt-content {
+				@include edgtBoxShadow(5px 8.66px 30px 0 rgba(31, 35, 37, .078));
+				@include edgtTransform(translate3d(0, -6px, 0));
+			}
+
+			.edgt-content {
+				position: relative;
+				background-color: #fff;
+				padding: 26px 25px 34px 25px;
+
+				@include edgtBorderRadius(5px);
+				@include edgtBoxShadow(1px 1px 1px 0px rgba(0, 0, 0, 0.08));
+				@include edgtTransition(all 0.3s ease);
+
+				&:before {
+					content: '';
+					display: block;
+					width: 0;
+					height: 0;
+					position: absolute;
+					bottom: 100%;
+					left: calc(50% - 16px);
+
+					border-left: 16px solid transparent;
+					border-right: 16px solid transparent;
+
+					border-bottom: 20px solid #fff;
+				}
+
+				.edgt-name {
+					margin-bottom: 4px;
+				}
+
+				.edgt-position {
+					text-transform: uppercase;
+					color: #93a4b5;
+					font-weight: 500;
+				}
+
+				.edgt-text {
+					margin-top: 14px;
+				}
+			}
+		}
+	}
+
+	&.boxed {
+
+		.edgt-team-slider {
+			.edgt-team-slide {
+				margin: 6px 0px 10px 0px;
+			}
+
+			.edgt-team-slide-inner {
+				background-color: #fff;
+
+				@include edgtBoxShadow(0px 1px 3px rgba(0, 0, 0, 0.08));
+				@include edgtTransition(all 0.3s ease-in-out);
+
+				&:hover {
+					@include edgtTransform(translate3d(0, -6px, 0));
+					@include edgtBoxShadow(5px 8.66px 30px 0 rgba(31, 35, 37, .078));
+				}
+
+				.edgt-logo-text {
+					padding: 57px 10% 59px 10%;
+					margin: 0 auto;
+				}
+
+				.edgt-logo-image img {
+					margin: 0 auto;
+					width: auto;
+				}
+
+				.edgt-text {
+					margin-top: 26px;
+					font-size: 18px;
+					line-height: 33px;
+					font-style: italic;
+				}
+
+				.edgt-team-member-info {
+					position: relative;
+					padding: 34px 10% 23px 10%;
+					background-color: #fafbfb;
+				}
+
+				.edgt-name {
+					margin-bottom: 5px;
+				}
+
+				.edgt-position {
+					font-weight: 500;
+				}
+
+				.edgt-member-image {
+					height: 50px;
+					width: 50px;
+					position: absolute;
+					top: -25px;
+					left: calc(50% - 25px);
+					overflow: hidden;
+
+					@include edgtBorderRadius(50%);
+
+					img {
+						@include edgtBorderRadius(50%);
+					}
+				}
+			}
+		}
+	}
+
+	&.hover {
+		.edgt-team-slide {
+			padding: 0;
+			margin-bottom: 0;
+		}
+
+		.edgt-team-slide-inner {
+			position: relative;
+
+			.edgt-team-info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				opacity: 0;
+
+				@include edgtTransition(opacity 0.3s ease);
+
+				.edgt-team-info-tb {
+					@include edgtTransform(translateY(30px));
+					@include edgtTransition(all 0s .25s);
+				}
+			}
+
+			&:hover {
+				.edgt-team-info {
+					opacity: 1;
+				}
+
+				.edgt-team-info-tb {
+					@include edgtTransform(translateY(0));
+					@include edgtTransition(all .25s);
+				}
+			}
+
+			.edgt-team-info-tb {
+				display: table;
+				height: 100%;
+				width: 100%;
+			}
+
+			.edgt-team-info-tc {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.edgt-name, .edgt-position, .edgt-text {
+				color: #fff;
+			}
+		}
+	}
+}

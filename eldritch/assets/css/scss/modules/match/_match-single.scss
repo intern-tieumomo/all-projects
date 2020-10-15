@@ -1,0 +1,214 @@
+.single-match-item {
+    .edgt-match-single-scoreboard {
+        height: 646px;
+
+
+        .edgt-match-item-holder {
+            display: table;
+            width: 764px;
+            margin: auto;
+            height: 100%;
+            > * {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .edgt-match-single-team {
+
+                text-align: center;
+
+
+                .edgt-match-item-image-holder {
+                    vertical-align: middle;
+                }
+
+                img {
+                    vertical-align: middle;
+                }
+
+                .edgt-match-team-title {
+                    margin: 19px 0 0;
+                }
+            }
+
+            .edgt-match-vs-image {
+                width: 165px;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+    .edgt-section-title {
+        .edgt-st-title {
+
+            margin-top: 29px;
+        }
+        .edgt-separator-image {
+            margin-bottom: 128px;
+        }
+    }
+
+    .edgt-match-info-item {
+        .edgt-match-item-title {
+            border-bottom: 1px solid $default-border-color;
+            margin: 0;
+            padding-bottom: 2px;
+
+            .edgt-page-content-skin-light & {
+                border-bottom-color: $first-main-color;
+            }
+        }
+
+        .edgt-match-date,
+        .edgt-match-item-categories{
+            display: inline-block;
+            vertical-align: middle;
+            width: auto;
+            color: $default-text-color-dark;
+        }
+
+        .edgt-match-item-categories:not(:last-child):after {
+            content: ' / ';
+        }
+    }
+
+    .edgt-match-single-result-holder {
+
+        margin-top: 32px;
+
+        > *:last-child {
+            font-size: 45px;
+            position: relative;
+        }
+    }
+}
+
+.single-match-item.edgt-page-content-skin-light {
+    .edgt-match-info-item .edgt-match-item-title {
+        border-bottom-color: $first-main-color;
+    }
+
+
+    aside.edgt-sidebar .widget ul li:not(:last-child),
+    .wpb_widgetised_column .widget ul li:not(:last-child) {
+        border-color: $default-border-color-dark;
+    }
+
+    .edgt-comment-holder .edgt-comment {
+        border-color: $default-border-color-dark;
+    }
+
+    .edgt-comment-holder .edgt-comment-reply-holder a {
+        color:#fff;
+    }
+}
+
+
+.edgt-match-single-nav {
+    position: relative;
+    border: 1px solid #eaecef;
+    border-left: none;
+    border-right: none;
+    padding: 30px 0;
+    margin-top: 30px;
+
+    .edgt-page-content-skin-light & {
+        border-color: $default-border-color-dark;
+    }
+
+    @include edgtClearfix;
+
+    h6 {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .edgt-match-prev,
+    .edgt-match-next {
+        width: 35%;
+
+        h5 {
+            color: #303030;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .edgt-match-prev {
+        float: left;
+        text-align: left;
+
+        .edgt-single-nav-content-holder {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: calc(100% - 75px);
+            margin-left: 12px;
+        }
+
+        .edgt-single-nav-arrow {
+            margin-right: 7px;
+        }
+    }
+
+    .edgt-match-next {
+        float: right;
+        text-align: right;
+
+
+        .edgt-single-nav-content-holder {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: calc(100% - 75px);
+            margin-right: 12px;
+        }
+
+        .edgt-single-nav-arrow {
+            margin-left: 7px;
+        }
+    }
+
+    .edgt-single-nav-content-holder {
+
+        .edgt-single-nav-label-holder {
+            color: #b8b8b8;
+            font-family: $headings-font-family;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            edgt-page-content-skin-light & {
+                color: $default-text-color-dark;
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .edgt-single-nav-arrow {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+    }
+
+    .edgt-match-back-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        a {
+            color: #5c5c5c;
+            .edgt-page-content-skin-light & {
+                color:#fff;
+            }
+        }
+
+        @include edgtTransform(translate(-50%, -50%));
+    }
+}
+
+
+

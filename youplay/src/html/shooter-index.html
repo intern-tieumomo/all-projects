@@ -1,0 +1,155 @@
+{% set page_title = 'Call of Shooter' %}
+{% set header_size = 'big' %}
+{% set header_text = '
+    <div class="text-center">
+        <h1 class="fs-60">Call of Shooter</h1>
+        <a class="btn btn-md video-popup" href="https://www.youtube.com/watch?v=c7nRTF2SowQ"><i class="fa fa-play-circle"></i>&nbsp; Watch The Trailer</a>
+    </div>
+' %}
+{% set custom_script = "
+  $(\".countdown\").each(function() {
+      $(this).countdown($(this).attr('data-end'), function(event) {
+        $(this).html(
+            event.strftime([
+                '<div class=\"countdown-item\">',
+                    '<span>Days</span>',
+                    '<span><span>%D</span></span>',
+                '</div>',
+                '<div class=\"countdown-item\">',
+                    '<span>Hours</span>',
+                    '<span><span>%H</span></span>',
+                '</div>',
+                '<div class=\"countdown-item\">',
+                    '<span>Minutes</span>',
+                    '<span><span>%M</span></span>',
+                '</div>',
+                '<div class=\"countdown-item\">',
+                    '<span>Seconds</span>',
+                    '<span><span>%S</span></span>',
+                '</div>'
+            ].join(''))
+        );
+      });
+  });
+" %}
+
+{% extends 'layouts/layout-shooter.html' %}
+
+{% block content %}
+    <!-- Links with Images -->
+    <div class="container mt-60">
+
+        <!--
+            Carousel
+
+            Additional classes:
+                .youplay-carousel-size-1
+                .youplay-carousel-size-2
+                .youplay-carousel-size-3
+                .youplay-carousel-size-4
+                .youplay-carousel-size-5
+                .youplay-carousel-size-6
+
+            Additional attributes:
+                data-autoplay
+                data-loop
+                data-dots
+                data-arrows
+                data-stage-padding
+                data-item-padding
+        -->
+        <div class="youplay-carousel" data-stage-padding="0" data-item-padding="15" data-autoplay="8000" data-loop="false">
+            <a class="angled-img" href="index.html#preorder">
+                <div class="img">
+                    <img src="assets/images/shooter/game-cos-1-500x375.jpg" alt="">
+                </div>
+                <div class="bottom-info">
+                    <h4>Preorder Today</h4>
+                    <div>We will send you Early Edition of Call of Shooter.</div>
+                </div>
+            </a>
+            <a class="angled-img" href="blog.html">
+                <div class="img">
+                    <img src="assets/images/shooter/game-cos-6-500x375.jpg" alt="">
+                </div>
+                <div class="bottom-info">
+                    <h4>Our News</h4>
+                    <div>Get news from the source, and you don't miss anything important.</div>
+                </div>
+            </a>
+            <a class="angled-img" href="forums.html">
+                <div class="img">
+                    <img src="assets/images/shooter/game-cos-3-500x375.jpg" alt="">
+                </div>
+                <div class="bottom-info">
+                    <h4>Join Community</h4>
+                    <div>Be the part of huge gaming community.</div>
+                </div>
+            </a>
+            <a class="angled-img" href="https://twitter.com/nkdevv" target="_blank">
+                <div class="img">
+                    <img src="assets/images/shooter/game-cos-4-500x375.jpg" alt="">
+                </div>
+                <div class="bottom-info">
+                    <h4>Follow on Twitter</h4>
+                    <div>We love and use this social network for smart people.</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- /Links with Images -->
+
+
+    <!-- Realistic Battles -->
+    <section class="youplay-banner big mt-40">
+        <div class="image" data-speed="0.4">
+            <img class="jarallax-img" src="assets/images/shooter/game-cos-2-1920x1200.jpg" alt="">
+        </div>
+
+        <div class="info">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2 class="fs-40">Realistic Battles</h2>
+                            <p class="lead">Eleifend sem ipsum conubia euismod potenti ante ad sem sed, dictumst hymenaeos torquent quis. Class leo. Odio orci velit nulla habitasse conubia tempor eleifend dui suscipit mauris eget mollis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Realistic Battles -->
+
+
+    <!-- The True Emotions -->
+    <section class="container mt-120">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="assets/images/shooter/game-cos-7-1920x1200.jpg" alt="">
+                <h2 class="fs-40">The True Emotions</h2>
+                <p class="lead">Vivamus maecenas, praesent. Sociosqu laoreet risus purus. Sed mus vivamus. Pede metus rutrum dui Aliquet ac auctor nulla montes Donec fermentum penatibus feugiat elementum interdum Consequat ipsum turpis proin taciti cursus senectus urna ultrices orci dui id vitae massa hendrerit consectetuer lectus augue inceptos viverra erat. Vitae nostra fames neque.</p>
+            </div>
+        </div>
+    </section>
+    <!-- /The True Emotions -->
+
+
+    <!-- Preorder -->
+    <section class="youplay-banner big mt-120" id="preorder">
+        <div class="image" data-speed="0.4">
+            <img class="jarallax-img" src="assets/images/shooter/game-cos-5-1920x1080.jpg" alt="">
+        </div>
+
+        <div class="info container align-center">
+            <div>
+                <h2>Pre-Order Today</h2>
+                <h3>Xbox One and Play Station 4</h3>
+
+                <br><br>
+                <a class="btn btn-lg" href="#">Pre-Order</a>
+            </div>
+        </div>
+    </section>
+    <!-- /Preorder -->
+{% endblock %}

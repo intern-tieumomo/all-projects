@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Top Navbar - nK</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v6.2 - https://yoa.st/1yg?utm_content=6.2 -->
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Top Navbar - nK" />
+<meta property="og:description" content="Top navbar have bootstrap navbar structure with some modifications (submenus): [crayon-5aa2afd7bf917343745673/] &nbsp;" />
+<meta property="og:url" content="2.1.top-navbar.html" />
+<meta property="og:site_name" content="nK" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Top navbar have bootstrap navbar structure with some modifications (submenus): [crayon-5aa2afd7bf917343745673/] &nbsp;" />
+<meta name="twitter:title" content="Top Navbar - nK" />
+<meta name="twitter:site" content="@nkdevv" />
+<meta name="twitter:creator" content="@nkdevv" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/nkdev.info\/","name":"nK","potentialAction":{"@type":"SearchAction","target":"https:\/\/nkdev.info\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/nkdev.info\/docs\/youplay-html\/template-structure\/top-navbar\/","sameAs":["https:\/\/www.youtube.com\/c\/NkDev","https:\/\/twitter.com\/nkdevv"],"@id":"#organization","name":"nK","logo":"https:\/\/nkdev.info\/wp-content\/uploads\/2016\/10\/favicon.jpg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/nkdev.info\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='./assets/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-coy-css'  href='./assets/plugins/crayon-syntax-highlighter/themes/coy/coy.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monospace-css'  href='./assets/plugins/crayon-syntax-highlighter/fonts/monospace.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='docspress-css'  href='./assets/plugins/docspress/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='edd-styles-css'  href='./assets/plugins/easy-digital-downloads/templates/edd.min.css?ver=2.8.17' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='./assets/css/dashicons.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='post-views-counter-frontend-css'  href='./assets/plugins/post-views-counter/css/frontend.css?ver=1.2.10' type='text/css' media='all' />
+<link rel='stylesheet' id='dpsp-frontend-style-css'  href='./assets/plugins/social-pug/assets/css/style-frontend.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vatomi-css'  href='./assets/plugins/vatomi/assets/css/style.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='tether-css'  href='./assets/themes/urchin/assets/bower_components/tether/dist/css/tether.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='./assets/themes/urchin/assets/bower_components/bootstrap/dist/css/bootstrap.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='./assets/themes/urchin/assets/bower_components/fontawesome/css/font-awesome.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ionicons-css'  href='./assets/themes/urchin/assets/bower_components/ionicons/css/ionicons.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='urchin-css'  href='./assets/themes/urchin/assets/css/urchin.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='urchin-style-css'  href='./assets/themes/urchin/style.css?ver=4.9.4' type='text/css' media='all' />
+<script type='text/javascript' src='./assets/js/jquery/jquery.js?ver=1.12.4'></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/nkdev.info\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+			var dpsp_ajax_url = 'https://nkdev.info/wp-admin/admin-ajax.php';
+
+			var dpsp_ajax_pull_post_share_counts_data = {
+				action  : 'dpsp_ajax_pull_post_share_counts',
+				post_id : '932'
+			}
+		
+</script>
+
+ 
+
+<style type="text/css" data-source="Social Pug"></style><meta name="twitter:card" 		content="summary_large_image" /><meta property="og:url"			content="2.1.top-navbar.html" /><meta property="og:type"			content="article" /><meta property="og:title"			content="Top Navbar" /><meta property="og:description" 	content="Top navbar have bootstrap navbar structure with some modifications (submenus): [crayon-5aa2afd7bf917343745673/] &nbsp;" /><meta property="og:image" 		content="" /><link rel="icon" href="./assets/uploads/2016/10/favicon.jpg" sizes="32x32" />
+<link rel="icon" href="./assets/uploads/2016/10/favicon.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="./assets/uploads/2016/10/favicon.jpg" />
+<meta name="msapplication-TileImage" content="./assets/uploads/2016/10/favicon.jpg" />
+<!-- BEGIN GADWP v5.1.2.5 Universal Analytics - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48958097-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END GADWP Universal Analytics -->
+<style type="text/css">.nk-header,
+.nk-header-title,
+.nk-navbar,
+.nk-footer,
+.docspress-single-feedback,
+#comments {
+    display: none;
+}
+body {
+    background-color: #fff;
+}</style>
+
+</head>
+
+<body class="docs-template-default single single-docs postid-932 nk-body group-blog">
+
+<header class="nk-header">
+
+    <!-- START: Navbar -->
+        <nav class="nk-navbar nk-navbar-top  nk-navbar-sticky nk-navbar-autohide nk-navbar-transparent">
+        <div class="container">
+            <div class="nk-nav-table">
+                                <a href="https://nkdev.info/" class="nk-nav-logo">
+                    <img src="./assets/uploads/2016/10/logo.png" alt="" width="25">
+                </a>
+                
+                <ul id="menu-navbar" class="nk-nav hidden-md-down nk-nav-right" data-nav-mobile="#nk-nav-mobile"><li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://nkdev.info/wordpress-themes/" role="button" aria-expanded="false">Themes</a></li><li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://nkdev.info/html-templates/" role="button" aria-expanded="false">Templates</a></li><li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://nkdev.info/free-goods-from-nk/" role="button" aria-expanded="false">Freebies</a></li><li id="menu-item-2446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nk-drop-item"><a href="https://nkdev.info/docs/" role="button" aria-expanded="false">Get Help</a><ul class='dropdown'>	<li id="menu-item-2445" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://nkdev.info/docs/" role="button" aria-expanded="false">Documentations</a></li>	<li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://nk.ticksy.com/" role="button" aria-expanded="false">Help Center</a></li></ul></li></ul>
+                <ul class="nk-nav nk-nav-right nk-nav-icons">
+                    <li class="single-icon hidden-lg-up">
+                        <a href="javascript:void(0)" class="no-link-effect" data-nav-toggle="#nk-nav-mobile">
+                            <span class="nk-icon-burger">
+                                <span class="nk-t-1"></span>
+                                <span class="nk-t-2"></span>
+                                <span class="nk-t-3"></span>
+                            </span>
+                        </a>
+                    </li>
+
+                                            <li class="single-icon nk-drop-item nk-drop-cart">
+                            <a href="https://nkdev.info/checkout/" class="no-link-effect">
+                                <span class="ion-android-cart"></span>
+                            </a>
+                            <span class="nk-badge hidden-xs-up">0</span>
+                            <ul class="dropdown">
+                                <li>
+                                    <p class="edd-cart-number-of-items" style="display:none;">Number of items in cart: <span class="edd-cart-quantity">0</span></p>
+<ul class="edd-cart">
+
+	<li class="cart_item empty"><span class="edd_empty_cart">Your cart is empty.</span></li>
+<li class="cart_item edd-cart-meta edd_total" style="display:none;">Total: <span class="cart-total">&#36;0.00</span></li>
+<li class="cart_item edd_checkout" style="display:none;"><a href="https://nkdev.info/checkout/">Checkout</a></li>
+
+</ul>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                                            <li class="single-icon">
+                            <a href="https://nkdev.info/my-account/" class="no-link-effect">
+                                <span class="ion-android-person"></span>
+                            </a>
+                        </li>
+                    
+                                            <li class="single-icon">
+                            <a href="javascript:void(0)" class="nk-search-toggle no-link-effect">
+                                <span class="ion-search"></span>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Navbar -->
+
+</header>
+
+<!-- START: Navbar Mobile -->
+
+<div id="nk-nav-mobile" class="nk-navbar nk-navbar-side hidden-lg-up  nk-navbar-right-side nk-navbar-overlay-content">
+    <div class="nano">
+        <div class="nano-content">
+                            <a href="https://nkdev.info/" class="nk-nav-logo">
+                    <img src="./assets/themes/urchin/assets/images/logo.png" alt="" width="25">
+                </a>
+                        <div class="nk-navbar-mobile-content">
+                <ul class="nk-nav">
+                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Navbar Mobile -->
+
+<div class="nk-main">
+<!-- START: Header Title
+
+    Additional Classes:
+        .nk-header-title-parallax
+        .nk-header-title-parallax-opacity
+-->
+    <div class="nk-header-title  nk-header-title-sm nk-header-title-parallax">
+                    <div class="bg-image">
+                <div style="background-image: url('./assets/uploads/2016/10/header.jpg');"></div>
+            </div>
+                <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                                        <h1 class="nk-title display-4">Documentations: Youplay HTML</h1>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        
+    </div>
+<!-- END: Header Title -->
+
+    <div class="container">
+        <div class="nk-gap-4"></div>
+
+    <article id="post-932" class="docspress-single docspress-single-ajax post-932 docs type-docs status-publish hentry">
+
+        
+<div class="docspress-single-sidebar">
+    
+            <ul class="docspress-nav-list">
+            <li class="page_item page-item-919 page_item_has_children"><a href="1.getting-started.html">Getting Started <sup>[2]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-16174"><a href="1.1.files-structure.html">Files Structure</a></li>
+	<li class="page_item page-item-16177"><a href="1.2.development.html">Development</a></li>
+</ul>
+</li>
+<li class="page_item page-item-931 page_item_has_children current_page_ancestor current_page_parent"><a href="2.template-structure.html">Template Structure <sup>[5]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-932 current_page_item"><a href="2.1.top-navbar.html">Top Navbar</a></li>
+	<li class="page_item page-item-933"><a href="2.2.content.html">Content</a></li>
+	<li class="page_item page-item-934"><a href="2.3.banner.html">Banner</a></li>
+	<li class="page_item page-item-935"><a href="2.4.footer.html">Footer</a></li>
+	<li class="page_item page-item-936"><a href="2.5.search-block.html">Search Block</a></li>
+</ul>
+</li>
+<li class="page_item page-item-942 page_item_has_children"><a href="3.php.html">PHP Features <sup>[3]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-946"><a href="3.1.contact-form.html">Contact Form</a></li>
+	<li class="page_item page-item-951"><a href="3.2.instagram.html">Instagram</a></li>
+	<li class="page_item page-item-952"><a href="3.3.twitter.html">Twitter</a></li>
+</ul>
+</li>
+<li class="page_item page-item-880 page_item_has_children"><a href="4.credits.html">Credits <sup>[2]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-882"><a href="4.1.plugins.html">Plugins</a></li>
+	<li class="page_item page-item-881"><a href="4.2.images.html">Images</a></li>
+</ul>
+</li>
+<li class="page_item page-item-879"><a href="5.thank-you.html">Thank You!</a></li>
+        </ul>
+    </div>
+        <div class="docspress-single-content">
+            
+<ul class="docspress-single-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://nkdev.info/"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+                    </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://nkdev.info/docs/"><span itemprop="name">Docs</span></a>
+                <meta itemprop="position" content="2" />
+                    </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="index.html"><span itemprop="name">Youplay HTML</span></a>
+                <meta itemprop="position" content="3" />
+                    </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="2.template-structure.html"><span itemprop="name">Template Structure</span></a>
+                <meta itemprop="position" content="4" />
+                    </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span>Top Navbar</span>
+                    </li>
+    </ul>
+<header class="entry-header">
+    <h1 class="entry-title" itemprop="headline">Top Navbar</h1></header><!-- .entry-header -->
+
+            <div class="entry-content">
+                <p>Top navbar have bootstrap navbar structure with some modifications (submenus):</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa2afd7bf917343745673" class="crayon-syntax crayon-theme-coy crayon-font-monospace crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 15px; margin-bottom: 15px; font-size: 14px !important; line-height: 20px !important;">
+		
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+&lt;!-- Navbar --&gt;
+&lt;nav class="navbar-youplay navbar navbar-default navbar-fixed-top "&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="index.html"&gt;
+        &lt;img src="assets/images/logo.png" alt=""&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="dropdown dropdown-hover "&gt;
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false"&gt;
+                    Store &lt;span class="caret"&gt;&lt;/span&gt; &lt;span class="label"&gt;games&lt;/span&gt;
+                  &lt;/a&gt;
+          &lt;div class="dropdown-menu" style="width: 320px;"&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="store-1.html"&gt;Store Style 1&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="store-2.html"&gt;Store Style 2&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="cart.html"&gt;Cart&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!--
+                      --&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="store-product-1.html"&gt;Product Style 1&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="store-product-2.html"&gt;Product Style 2&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="checkout.html"&gt;Checkout&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown dropdown-hover "&gt;
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false"&gt;
+                    Blog &lt;span class="caret"&gt;&lt;/span&gt; &lt;span class="label"&gt;news&lt;/span&gt;
+                  &lt;/a&gt;
+          &lt;div class="dropdown-menu" style="width: 320px;"&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="blog-1.html"&gt;Blog Style 1&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="blog-2.html"&gt;Blog Style 2&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="blog-3.html"&gt;Blog Style 3&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!--
+                      --&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="blog-post-1.html"&gt;Blog Post 1&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="blog-post-2.html"&gt;Blog Post 2&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="blog-post-3.html"&gt;Blog Post 3&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown dropdown-hover active"&gt;
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false"&gt;
+                    Features &lt;span class="caret"&gt;&lt;/span&gt; &lt;span class="label"&gt;full list&lt;/span&gt;
+                  &lt;/a&gt;
+          &lt;div class="dropdown-menu" style="width: 320px;"&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="components.html"&gt;Components&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="user-profile.html"&gt;User Profile&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="forums.html"&gt;Forums&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="forums-topics.html"&gt;Forums Topics&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="forums-single-topic.html"&gt;Single Topic&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!--
+                      --&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="coming-soon.html"&gt;Coming Soon&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="active"&gt;&lt;a href="contact.html"&gt;Contact Us&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="search.html"&gt;Search&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="login.html"&gt;Login&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="404.html"&gt;404&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="blank.html"&gt;Blank&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li class="dropdown dropdown-hover "&gt;
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false"&gt;
+                    John Doe &lt;span class="badge bg-default"&gt;2&lt;/span&gt; &lt;span class="caret"&gt;&lt;/span&gt; &lt;span class="label"&gt;it is you&lt;/span&gt;
+                  &lt;/a&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;ul role="menu"&gt;
+              &lt;li&gt;&lt;a href="../documentation"&gt;Documentation&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="http://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=_nK"&gt;Purchase&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="divider"&gt;&lt;/li&gt;
+ 
+              &lt;li&gt;&lt;a href="user-profile.html"&gt;Profile &lt;span class="badge pull-right bg-warning"&gt;13&lt;/span&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="cart.html"&gt;My Cart &lt;span class="badge pull-right bg-default"&gt;3&lt;/span&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="divider"&gt;&lt;/li&gt;
+ 
+              &lt;li&gt;&lt;a href="login.html"&gt;Log Out&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="dropdown-submenu pull-left"&gt;
+                &lt;a href="#!"&gt;More..&lt;/a&gt;
+                &lt;div class="dropdown-menu"&gt;
+                  &lt;ul role="menu"&gt;
+                    &lt;li&gt;&lt;a href="#!"&gt;3rd level&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#!"&gt;3rd level&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="search-toggle" href="search.html"&gt;
+            &lt;i class="fa fa-search"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown dropdown-hover dropdown-cart"&gt;
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false"&gt;
+            &lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;div class="dropdown-menu" style="width: 300px;"&gt;
+            &lt;div class="row youplay-side-news"&gt;
+              &lt;div class="col-xs-3 col-md-4"&gt;
+                &lt;a href="#" class="angled-img"&gt;
+                  &lt;div class="img"&gt;
+ 
+                    &lt;img src="assets/images/game-bloodborne-500x375.jpg" alt=""&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class="col-xs-9 col-md-8"&gt;
+                &lt;a href="#" style="text-decoration: none;" class="pull-right mr-10"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;
+ 
+                &lt;h4 class="ellipsis"&gt;&lt;a href="#"&gt;Bloodborne&lt;/a&gt;&lt;/h4&gt;
+                &lt;span class="quantity"&gt;1 × &lt;span class="amount"&gt;$50.00&lt;/span&gt;&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+ 
+            &lt;div class="row youplay-side-news"&gt;
+              &lt;div class="col-xs-3 col-md-4"&gt;
+                &lt;a href="#" class="angled-img"&gt;
+                  &lt;div class="img"&gt;
+ 
+                    &lt;img src="assets/images/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt=""&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class="col-xs-9 col-md-8"&gt;
+                &lt;a href="#" style="text-decoration: none;" class="pull-right mr-10"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;
+ 
+                &lt;h4 class="ellipsis"&gt;&lt;a href="#"&gt;Kingdoms of Amalur&lt;/a&gt;&lt;/h4&gt;
+                &lt;span class="quantity"&gt;1 × &lt;span class="amount"&gt;$20.00&lt;/span&gt;&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+ 
+            &lt;div class="ml-20 mr-20 pull-right"&gt;&lt;strong&gt;Subtotal:&lt;/strong&gt;  &lt;span class="amount"&gt;$70.00&lt;/span&gt;
+            &lt;/div&gt;
+ 
+            &lt;div class="btn-group pull-right m-15"&gt;
+              &lt;a href="#" class="btn btn-default btn-sm"&gt;View Cart&lt;/a&gt;
+              &lt;a href="#" class="btn btn-default btn-sm"&gt;Checkout&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- /Navbar --&gt;</textarea></div>
+			<div class="crayon-main" style=" max-height: 500px;">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-2">2</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-4">4</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-6">6</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-8">8</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-10">10</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-12">12</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-14">14</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-16">16</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-18">18</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-20">20</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-22">22</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-24">24</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-26">26</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-28">28</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-30">30</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-32">32</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-33">33</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-34">34</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-35">35</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-36">36</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-37">37</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-38">38</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-39">39</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-40">40</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-41">41</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-42">42</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-43">43</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-44">44</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-45">45</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-46">46</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-47">47</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-48">48</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-49">49</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-50">50</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-51">51</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-52">52</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-53">53</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-54">54</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-55">55</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-56">56</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-57">57</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-58">58</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-59">59</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-60">60</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-61">61</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-62">62</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-63">63</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-64">64</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-65">65</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-66">66</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-67">67</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-68">68</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-69">69</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-70">70</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-71">71</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-72">72</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-73">73</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-74">74</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-75">75</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-76">76</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-77">77</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-78">78</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-79">79</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-80">80</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-81">81</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-82">82</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-83">83</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-84">84</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-85">85</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-86">86</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-87">87</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-88">88</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-89">89</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-90">90</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-91">91</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-92">92</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-93">93</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-94">94</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-95">95</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-96">96</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-97">97</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-98">98</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-99">99</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-100">100</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-101">101</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-102">102</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-103">103</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-104">104</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-105">105</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-106">106</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-107">107</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-108">108</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-109">109</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-110">110</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-111">111</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-112">112</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-113">113</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-114">114</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-115">115</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-116">116</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-117">117</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-118">118</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-119">119</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-120">120</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-121">121</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-122">122</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-123">123</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-124">124</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-125">125</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-126">126</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-127">127</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-128">128</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-129">129</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-130">130</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-131">131</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-132">132</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-133">133</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-134">134</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-135">135</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-136">136</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-137">137</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-138">138</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-139">139</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-140">140</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-141">141</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-142">142</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-143">143</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-144">144</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-145">145</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-146">146</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-147">147</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-148">148</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-149">149</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-150">150</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-151">151</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-152">152</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-153">153</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-154">154</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-155">155</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-156">156</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-157">157</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-158">158</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-159">159</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-160">160</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-161">161</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-162">162</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-163">163</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-164">164</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-165">165</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-166">166</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-167">167</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-168">168</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-169">169</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-170">170</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-171">171</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-172">172</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-173">173</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-174">174</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-175">175</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-176">176</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-177">177</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-178">178</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-179">179</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-180">180</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-181">181</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-182">182</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-183">183</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-184">184</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-185">185</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-186">186</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-187">187</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-188">188</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-189">189</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-190">190</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-191">191</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-192">192</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-193">193</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa2afd7bf917343745673-194">194</div><div class="crayon-num" data-line="crayon-5aa2afd7bf917343745673-195">195</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-1"><span class="crayon-c">&lt;!-- Navbar --&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-2"><span class="crayon-r ">&lt;nav </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar-youplay navbar navbar-default navbar-fixed-top "</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-3"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"container"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-4"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar-header"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-5"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;button </span><span class="crayon-e ">type</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar-toggle collapsed"</span><span class="crayon-h"> </span><span class="crayon-e ">data-toggle</span><span class="crayon-o">=</span><span class="crayon-s ">"off-canvas"</span><span class="crayon-h"> </span><span class="crayon-e ">data-target</span><span class="crayon-o">=</span><span class="crayon-s ">"#navbar"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-controls</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-6"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"sr-only"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Toggle navigation</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-7"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"icon-bar"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-8"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"icon-bar"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-9"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"icon-bar"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-10"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/button&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-11"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar-brand"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"index.html"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-12"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;img </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s ">"assets/images/logo.png"</span><span class="crayon-h"> </span><span class="crayon-e ">alt</span><span class="crayon-o">=</span><span class="crayon-s ">""</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-13"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-14"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-15"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">id</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"navbar-collapse collapse"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-16"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"nav navbar-nav"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-17"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown dropdown-hover "</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-18"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-19"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Store </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"caret"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-i "> </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"label"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">games</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-20"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-21"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"width: 320px;"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-22"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-23"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"store-1.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Store Style 1</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-24"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-25"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"store-2.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Store Style 2</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-26"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-27"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"cart.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Cart</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-28"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-29"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-30"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">&lt;!--</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-31"><span class="crayon-c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-32"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-33"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"store-product-1.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Product Style 1</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-34"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-35"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"store-product-2.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Product Style 2</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-36"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-37"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"checkout.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Checkout</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-38"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-39"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-40"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-41"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-42"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown dropdown-hover "</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-43"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-44"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blog </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"caret"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-i "> </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"label"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">news</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-45"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-46"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"width: 320px;"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-47"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-48"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-1.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Style 1</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-49"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-50"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-2.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Style 2</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-51"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-52"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-3.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Style 3</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-53"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-54"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-55"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">&lt;!--</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-56"><span class="crayon-c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-57"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-58"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-post-1.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Post 1</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-59"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-60"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-post-2.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Post 2</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-61"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-62"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blog-post-3.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blog Post 3</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-63"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-64"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-65"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-66"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-67"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown dropdown-hover active"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-68"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-69"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Features </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"caret"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-i "> </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"label"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">full list</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-70"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-71"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"width: 320px;"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-72"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-73"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"components.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Components</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-74"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-75"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"user-profile.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">User Profile</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-76"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-77"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"forums.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Forums</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-78"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-79"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"forums-topics.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Forums Topics</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-80"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-81"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"forums-single-topic.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Single Topic</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-82"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-83"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-84"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">&lt;!--</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-85"><span class="crayon-c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-86"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-87"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"coming-soon.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Coming Soon</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-88"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-89"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"active"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"contact.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Contact Us</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-90"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-91"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"search.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Search</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-92"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-93"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"login.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Login</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-94"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-95"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"404.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">404</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-96"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-97"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"blank.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Blank</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-98"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-99"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-100"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-101"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-102"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-103"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"nav navbar-nav navbar-right"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-104"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown dropdown-hover "</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-105"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-106"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Doe </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"badge bg-default"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">2</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-i "> </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"caret"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-i "> </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"label"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">it is you</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-107"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-108"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-109"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-110"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"../documentation"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Documentation</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-111"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-112"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"http://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=_nK"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Purchase</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-113"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-114"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"divider"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-115"><span class="crayon-i "> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-116"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"user-profile.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Profile </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"badge pull-right bg-warning"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">13</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-117"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-118"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"cart.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">My Cart </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"badge pull-right bg-default"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">3</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-119"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-120"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"divider"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-121"><span class="crayon-i "> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-122"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"login.html"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Log Out</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-123"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-124"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-submenu pull-left"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-125"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">More..</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-126"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-127"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;ul </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"menu"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-128"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">3rd level</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-129"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-130"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">3rd level</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-131"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-132"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-133"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-134"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-135"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-136"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-137"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-138"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-139"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"search-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"search.html"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-140"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;i </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"fa fa-search"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/i&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-141"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-142"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-143"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;li </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown dropdown-hover dropdown-cart"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-144"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#!"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-toggle"</span><span class="crayon-h"> </span><span class="crayon-e ">role</span><span class="crayon-o">=</span><span class="crayon-s ">"button"</span><span class="crayon-h"> </span><span class="crayon-e ">aria-expanded</span><span class="crayon-o">=</span><span class="crayon-s ">"false"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-145"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;i </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"fa fa-shopping-cart"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/i&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-146"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-147"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"dropdown-menu"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"width: 300px;"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-148"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"row youplay-side-news"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-149"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"col-xs-3 col-md-4"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-150"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"angled-img"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-151"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"img"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-152"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-153"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;img </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s ">"assets/images/game-bloodborne-500x375.jpg"</span><span class="crayon-h"> </span><span class="crayon-e ">alt</span><span class="crayon-o">=</span><span class="crayon-s ">""</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-154"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-155"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-156"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-157"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"col-xs-9 col-md-8"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-158"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"text-decoration: none;"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"pull-right mr-10"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;i </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"fa fa-times"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/i&gt;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-159"><span class="crayon-i "> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-160"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;h4 </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"ellipsis"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Bloodborne</span><span class="crayon-r ">&lt;/a&gt;</span><span class="crayon-r ">&lt;/h4&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-161"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"quantity"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">1 × </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"amount"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">$50.00</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-162"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-163"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-164"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-165"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"row youplay-side-news"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-166"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"col-xs-3 col-md-4"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-167"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"angled-img"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-168"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"img"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-169"><span class="crayon-i "> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-170"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;img </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s ">"assets/images/game-kingdoms-of-amalur-reckoning-500x375.jpg"</span><span class="crayon-h"> </span><span class="crayon-e ">alt</span><span class="crayon-o">=</span><span class="crayon-s ">""</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-171"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-172"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-173"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-174"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"col-xs-9 col-md-8"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-175"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">style</span><span class="crayon-o">=</span><span class="crayon-s ">"text-decoration: none;"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"pull-right mr-10"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;i </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"fa fa-times"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/i&gt;</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-176"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-177"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;h4 </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"ellipsis"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Kingdoms of Amalur</span><span class="crayon-r ">&lt;/a&gt;</span><span class="crayon-r ">&lt;/h4&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-178"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"quantity"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">1 × </span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"amount"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">$20.00</span><span class="crayon-r ">&lt;/span&gt;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-179"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-180"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-181"><span class="crayon-i "> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-182"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"ml-20 mr-20 pull-right"</span><span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;strong&gt;</span><span class="crayon-i ">Subtotal:</span><span class="crayon-r ">&lt;/strong&gt;</span><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"amount"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">$70.00</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-183"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-184"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-185"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"btn-group pull-right m-15"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-186"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"btn btn-default btn-sm"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">View Cart</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-187"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"#"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"btn btn-default btn-sm"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Checkout</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-188"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-189"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-190"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-191"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/ul&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-192"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-193"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa2afd7bf917343745673-194"><span class="crayon-r ">&lt;/nav&gt;</span></div><div class="crayon-line" id="crayon-5aa2afd7bf917343745673-195"><span class="crayon-c">&lt;!-- /Navbar --&gt;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0049 seconds] -->
+<p>&nbsp;</p>
+            </div><!-- .entry-content -->
+
+            
+<footer class="entry-footer">
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="nK" />
+        <meta itemprop="url" content="https://nkdev.info/author/craager/" />
+    </div>
+
+    <meta itemprop="datePublished" content="2017-02-26T15:04:13+00:00"/>
+    <time itemprop="dateModified" datetime="2017-02-26T15:04:13+00:00">Last modified February 26, 2017</time>
+</footer>    <nav class="docspress-single-adjacent-nav">
+        <h3 class="docspress-sr-only">Doc navigation</h3>
+        
+                    <span class="nav-next">
+                <a href="2.2.content.html"
+                   class="docspress-btn docspress-btn-md">Content <span class="icon">&gt;</span></a>
+            </span>
+            </nav>
+    
+<div class="docspress-single-feedback">
+    
+    <div>
+        Was this helpful to you?    </div>
+
+    <div class="docspress-single-feedback-vote">
+        <a href="#" class="docspress-btn" data-id="932" data-type="positive" title="3 persons found this useful">
+            Yes
+                            <span class="badge">3</span>
+                    </a>
+        <a href="#" class="docspress-btn" data-id="932" data-type="negative" title="No votes yet">
+            No
+                    </a>
+    </div>
+</div>        </div><!-- .docspress-single-content -->
+    </article><!-- #post-## -->
+
+            <div class="clearfix"></div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+    
+    <!-- START: Footer -->
+    <footer class="nk-footer bg-dark-2">
+        <div class="container">
+            <div class="nk-gap-5"></div>
+
+            <p style="text-align: center"><em>© 2017 <strong>nK</strong>. All rights reserved.</em></p>
+            <div class="nk-gap-5"></div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+</div>
+
+<!-- START: Search -->
+<div class="nk-search">
+    <div class="container">
+        <form action="https://nkdev.info">
+            <div class="nk-search-field">
+                <label for="searchInput"><span class="fa fa-search"></span></label>
+                <input type="text" class="form-control" id="searchInput" placeholder="Type something..." name="s">
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END: Search -->
+
+<!-- START: Modal -->
+    <div class="nk-modal modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="subscribe-Label" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                                <div class="modal-body">
+                    <p><script type="text/javascript">(function() {
+	if (!window.mc4wp) {
+		window.mc4wp = {
+			listeners: [],
+			forms    : {
+				on: function (event, callback) {
+					window.mc4wp.listeners.push({
+						event   : event,
+						callback: callback
+					});
+				}
+			}
+		}
+	}
+})();
+</script><!-- MailChimp for WordPress v4.1.14 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-288" method="post" data-id="288" data-name="Newsletter" ><div class="mc4wp-form-fields"><div class="text-xs-center">
+  <h3 class="mb-25">Newsletter</h3>
+  <p class="mb-25"><small>Join the newsletter to receive news, updates, new products and freebies in your inbox.</small></p>
+  <input class="form-control text-xs-center" type="email" name="EMAIL" placeholder="Your email address" required />
+  <button class="nk-btn nk-btn-md nk-btn-solid nk-btn-block nk-btn-color-main-1">Subscribe</button>
+  
+  <div class="mc4wp-response"></div>
+</div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1520611287" /><input type="hidden" name="_mc4wp_form_id" value="288" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></div></form><!-- / MailChimp for WordPress Plugin --></p>                </div>
+            </div>
+        </div>
+    </div>
+<!-- END: Modal -->
+
+        <!-- 
+            Lockers: user tracker for visibility filters
+            OnePress, bizpanda.com
+        -->
+        <script>
+            window.__bp_session_timeout = '900';
+            window.__bp_session_freezing = 0;
+            !function(){window.bizpanda||(window.bizpanda={}),window.bizpanda.bp_can_store_localy=function(){return!1},window.bizpanda.bp_ut_get_cookie=function(e){for(var n=e+"=",i=document.cookie.split(";"),o=0;o<i.length;o++){for(var t=i[o];" "==t.charAt(0);)t=t.substring(1);if(0==t.indexOf(n))return decodeURIComponent(t.substring(n.length,t.length))}return!1},window.bizpanda.bp_ut_set_cookie=function(e,n,i){var o=new Date;o.setTime(o.getTime()+24*i*60*60*1e3);var t="expires="+o.toUTCString();document.cookie=e+"="+encodeURIComponent(n)+"; "+t+"; path=/"},window.bizpanda.bp_ut_get_obj=function(e){var n=null;return(n=window.bizpanda.bp_can_store_localy()?window.localStorage.getItem("bp_ut_session"):window.bizpanda.bp_ut_get_cookie("bp_ut_session"))?(n=n.replace(/\-c\-/g,","),n=n.replace(/\-q\-/g,'"'),n=JSON.parse(n),n.started+1e3*e<(new Date).getTime()&&(n=null),n):!1},window.bizpanda.bp_ut_set_obj=function(e,n){e.started&&window.__bp_session_freezing||(e.started=(new Date).getTime());var e=JSON.stringify(e);e&&(e=e.replace(/\"/g,"-q-"),e=e.replace(/\,/g,"-c-")),window.bizpanda.bp_can_store_localy()?window.localStorage.setItem("bp_ut_session",e):window.bizpanda.bp_ut_set_cookie("bp_ut_session",e,5e3)},window.bizpanda.bp_ut_count_pageview=function(){var e=window.bizpanda.bp_ut_get_obj(window.__bp_session_timeout);e||(e={}),e.pageviews||(e.pageviews=0),0===e.pageviews&&(e.referrer=document.referrer,e.landingPage=window.location.href,e.pageviews=0),e.pageviews++,window.bizpanda.bp_ut_set_obj(e)},window.bizpanda.bp_ut_count_locker_pageview=function(){var e=window.bizpanda.bp_ut_get_obj(window.__bp_timeout);e||(e={}),e.lockerPageviews||(e.lockerPageviews=0),e.lockerPageviews++,window.bizpanda.bp_ut_set_obj(e)},window.bizpanda.bp_ut_count_pageview()}();
+        </script>
+        <!-- / -->
+            <script type="text/javascript">(function() {function addEventListener(element,event,handler) {
+	if(element.addEventListener) {
+		element.addEventListener(event,handler, false);
+	} else if(element.attachEvent){
+		element.attachEvent('on'+event,handler);
+	}
+}function maybePrefixUrlField() {
+	if(this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if( urlFields && urlFields.length > 0 ) {
+	for( var j=0; j < urlFields.length; j++ ) {
+		addEventListener(urlFields[j],'blur',maybePrefixUrlField);
+	}
+}/* test if browser supports date fields */
+var testInput = document.createElement('input');
+testInput.setAttribute('type', 'date');
+if( testInput.type !== 'date') {
+
+	/* add placeholder & pattern to all date fields */
+	var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+	for(var i=0; i<dateFields.length; i++) {
+		if(!dateFields[i].placeholder) {
+			dateFields[i].placeholder = 'YYYY-MM-DD';
+		}
+		if(!dateFields[i].pattern) {
+			dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+		}
+	}
+}
+
+})();</script><script type='text/javascript'>
+/* <![CDATA[ */
+var docspress_vars = {"ajaxurl":"https:\/\/nkdev.info\/wp-admin\/admin-ajax.php","nonce":"a383267c91"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+                (function ($) {
+                    $(document).on("docspress_ajax_loaded", function (event, new_page) {
+                        /*
+ * New page content loaded via ajax you can get in variable 'new_page'
+ * Example: console.log(new_page);
+ */
+var $new_html = $(new_page.html);
+
+// init syntax highlighter
+if (typeof CrayonSyntax !== 'undefined') {
+    CrayonSyntax.init();
+
+    // load additional styles
+    $new_html.filter('link[id*="crayon"]').each(function () {
+        var id = $(this).attr('id');
+        if (!$('#' + id).length) {
+            $(this).clone().appendTo('head');
+        }
+    })
+}
+                    });
+                }(jQuery));
+            
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var edd_scripts = {"ajaxurl":"https:\/\/nkdev.info\/wp-admin\/admin-ajax.php","position_in_cart":"","has_purchase_links":"","already_in_cart_message":"You have already added this item to your cart","empty_cart_message":"Your cart is empty","loading":"Loading","select_option":"Please select an option","is_checkout":"0","default_gateway":"","redirect_to_checkout":"1","checkout_page":"https:\/\/nkdev.info\/checkout\/","permalinks":"1","quantities_enabled":"","taxes_enabled":"0"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vatomiOptions = {"nonce":"b618344d4f","url":"https:\/\/nkdev.info\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mc4wp_forms_config = [];
+/* ]]> */
+</script>
+
+<!--[if lte IE 9]>
+<script type='text/javascript' src='./assets/plugins/mailchimp-for-wp/assets/js/third-party/placeholders.min.js?ver=4.1.14'></script>
+<![endif]-->
+<script type="text/javascript" defer src="./assets/cache/autoptimize/js/autoptimize_1b0809c2ebe72156522cfd2ba6481477.js"></script></body>
+</html>

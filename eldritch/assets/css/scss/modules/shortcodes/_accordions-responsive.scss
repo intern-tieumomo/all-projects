@@ -1,0 +1,10 @@
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+ 
+	.edgt-accordion-holder:not(.edgt-boxed) div.edgt-accordion-content {
+		padding: 10px;
+	}
+
+	.edgt-accordion-holder .edgt-title-holder .edgt-accordion-mark {
+		right: 10px;
+	}
+}

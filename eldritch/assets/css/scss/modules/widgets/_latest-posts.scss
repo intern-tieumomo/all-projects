@@ -1,0 +1,189 @@
+/* #Image in a box blog list styles
+   ========================================================================== */
+.edgt-latest-posts-widget {
+	.edgt-blog-list-holder.edgt-image-in-box {
+		.edgt-blog-list-item {
+			padding: 16px 0;
+			border-bottom: 1px solid $default-border-color-light;
+
+			.edgt-item-image {
+				float: left;
+				@include edgtTransition(0.2s opacity ease-in-out);
+
+				a img {
+					display: block;
+					width: 80px;
+				}
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+
+			.edgt-item-text-holder {
+				padding-left: 96px;
+			}
+
+			.edgt-item-title {
+				margin: 0;
+                padding-top: 18px;
+			}
+
+			.edgt-item-date {
+				span {
+					font-size: 13px;
+					color: $default-post-info-color;
+				}
+			}
+
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+
+/* #Image in a box blog list styles - end
+   ========================================================================== */
+
+/* #Minimal blog list styles
+   ========================================================================== */
+.edgt-latest-posts-widget {
+	.edgt-blog-list-holder.edgt-minimal {
+		margin: 14px 0 0;
+
+		.edgt-blog-list-item {
+			width: 100%;
+			border-bottom: 1px solid $default-border-color-light;
+			margin-bottom: 0;
+			padding: 20px 0 11px;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
+
+		.edgt-item-title {
+			margin-top: 0;
+			margin-bottom: 4px;
+		}
+
+
+		.edgt-item-date {
+			color: $default-post-info-color;
+			font-size: 13px;
+		}
+	}
+}
+
+/* #Minimal blog list styles - end
+   ========================================================================== */
+
+/* #Blog list footer styles - start
+   ========================================================================== */
+
+.edgt-page-footer .edgt-footer-top-holder .edgt-latest-posts-widget .edgt-footer-widget-title {
+    margin-bottom: 29px;
+}
+
+.edgt-page-footer .edgt-latest-posts-widget {
+    .edgt-blog-list-holder {
+
+        &.edgt-image-in-box .edgt-blog-list-item {
+            padding: 9px 0;
+            border: none;
+
+            .edgt-item-text-holder {
+                padding-left: 79px;
+            }
+
+            .edgt-item-image a img {
+                width: 60px;
+            }
+
+            .edgt-item-title {
+
+                padding-top: 4px;
+
+                a {
+                    color: #fff;
+                    font-weight: 300;
+                    @include edgtTransition(color 0.2s ease-out);
+
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .edgt-item-date {
+
+                margin-top: -2px;
+
+                span {
+                    color: #cdcdcd
+                }
+            }
+        }
+
+        &.edgt-minimal .edgt-blog-list-item {
+            border-bottom: 1px solid #3d3f46;
+
+            .edgt-item-title {
+                a {
+                    color: #fff;
+
+                    @include edgtTransition(color 0.2s ease-out);
+
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .edgt-excerpt {
+                color: #ababab;
+            }
+        }
+
+        &.edgt-image-in-box .edgt-blog-list-item:first-child {
+            padding-top: 0;
+        }
+
+        &.edgt-image-in-box .edgt-blog-list-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        &.edgt-simple {
+            .edgt-blog-list-item {
+                border-color: #3d3f46;
+
+                .edgt-blog-list-title {
+                    color: #fff;
+                }
+
+                .edgt-bl-item-excerpt {
+                    color: #ababab;
+                }
+
+                .edgt-author {
+                    color: #ffffff;
+
+                    a {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #Blog list footer styles - end
+   ========================================================================== */

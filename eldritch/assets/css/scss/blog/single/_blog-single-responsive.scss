@@ -1,0 +1,29 @@
+.edgt-blog-holder {
+	&.edgt-blog-single {
+		&.edgt-blog-standard {
+			@include ipad-landscape {
+				& {
+					& > article, & > div {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	.edgt-blog-holder.edgt-blog-single .edgt-author-description .edgt-author-description-text-holder {
+		padding-left: 0;
+	}
+
+	.edgt-blog-single-navigation .edgt-blog-single-prev.edgt-single-nav-with-image .edgt-single-nav-content-holder {
+		padding-left: 0 !important;
+		float: left !important;
+	}
+
+	.edgt-blog-single-navigation .edgt-blog-single-next.edgt-single-nav-with-image .edgt-single-nav-content-holder {
+		padding-right: 0 !important;
+		float: right !important;
+	}
+}

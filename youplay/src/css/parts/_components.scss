@@ -1,0 +1,953 @@
+/*---------------------------
+  Angled Buttons
+ ----------------------------*/
+// remove default bootstrap background, borders and outlines
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.active:hover,
+.btn:active:hover,
+.btn.active:focus,
+.btn:active:focus,
+.btn.active.focus,
+.btn:active.focus {
+    color: $text_color;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn {
+    position: relative;
+    padding: 10px 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    z-index: 1;
+
+    // extra small
+    &.btn-xs {
+        padding: 4px 15px;
+    }
+    // small
+    &.btn-sm {
+        padding: 8px 20px;
+    }
+    // middle
+    &.btn-md {
+        padding: 15px 40px;
+    }
+    // large
+    &.btn-lg {
+        padding: 15px 50px;
+    }
+
+    // full width
+    &.btn-full {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: none;
+        border: 2px solid $text_color;
+        transition: .3s background ease, .3s border ease;
+
+        transform: skew(-$skew_size);
+        z-index: -1;
+    }
+}
+// in light theme hover button change text color
+@if ($theme == light) {
+    .btn {
+        transition: .3s color ease;
+    }
+    .btn:hover,
+    .btn.active {
+        color: $back_darken_color;
+    }
+}
+// default
+.btn:hover::before,
+.btn:focus::before,
+.btn.focus::before,
+.btn:active::before,
+.btn.active::before,
+.open > .dropdown-toggle.btn::before {
+    background: $main_color;
+    border: 2px solid $main_color;
+}
+// primary
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary.focus::before,
+.btn-primary:active::before,
+.btn-primary.active::before,
+.open > .dropdown-toggle.btn-primary::before {
+    background: $color_primary;
+    border: 2px solid $color_primary;
+}
+// success
+.btn-success:hover::before,
+.btn-success:focus::before,
+.btn-success.focus::before,
+.btn-success:active::before,
+.btn-success.active::before,
+.open > .dropdown-toggle.btn-success::before {
+    background: $color_success;
+    border: 2px solid $color_success;
+}
+// info
+.btn-info:hover::before,
+.btn-info:focus::before,
+.btn-info.focus::before,
+.btn-info:active::before,
+.btn-info.active::before,
+.open > .dropdown-toggle.btn-info::before {
+    background: $color_info;
+    border: 2px solid $color_info;
+}
+// warning
+.btn-warning:hover::before,
+.btn-warning:focus::before,
+.btn-warning.focus::before,
+.btn-warning:active::before,
+.btn-warning.active::before,
+.open > .dropdown-toggle.btn-warning::before {
+    background: $color_warning;
+    border: 2px solid $color_warning;
+}
+// danger
+.btn-danger:hover::before,
+.btn-danger:focus::before,
+.btn-danger.focus::before,
+.btn-danger:active::before,
+.btn-danger.active::before,
+.open > .dropdown-toggle.btn-danger::before {
+    background: $color_danger;
+    border: 2px solid $color_danger;
+}
+// white
+.btn-white:hover,
+.btn-white:focus,
+.btn-white.focus,
+.btn-white:active,
+.btn-white.active,
+.open > .dropdown-toggle.btn-white {
+    color: #000;
+    &::before {
+        background: #fff;
+        border: 2px solid #fff;
+    }
+}
+// black
+.btn-black:hover,
+.btn-black:focus,
+.btn-black.focus,
+.btn-black:active,
+.btn-black.active,
+.open > .dropdown-toggle.btn-black {
+    color: #fff;
+    &::before {
+        background: #000;
+        border: 2px solid #000;
+    }
+}
+
+// dropdown
+.dropdown-menu {
+    padding: 15px 0;
+    margin-top: 0;
+    margin-left: -3px;
+    background-color: $text_color;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    .dropup & {
+        margin-bottom: 0;
+        margin-left: 3px;
+    }
+
+    > li > a {
+        padding: 10px 20px;
+        color: $back_darken_color;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            color: $back_darken_color;
+            background-color: darken($text_color, 5%);
+        }
+    }
+}
+.btn-group > .btn + .dropdown-toggle {
+    margin-left: -12px;
+}
+.open > .dropdown-toggle.btn {
+    color: $text_color;
+    background: none;
+    border: none;
+    box-shadow: none;
+
+    // in light theme hover button change text color
+    @if ($theme == light) {
+        color: $back_darken_color;
+    }
+}
+
+// disabled
+.btn-default.disabled,
+.btn-default.disabled.active,
+.btn-default.disabled.focus,
+.btn-default.disabled:active,
+.btn-default.disabled:focus,
+.btn-default.disabled:hover,
+.btn-default[disabled],
+.btn-default[disabled].active,
+.btn-default[disabled].focus,
+.btn-default[disabled]:active,
+.btn-default[disabled]:focus,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default.active,
+fieldset[disabled] .btn-default.focus,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    opacity: .3;
+}
+
+/*---------------------------
+  Bootstrap Grid Additions
+ ----------------------------*/
+// grid system gutters
+// no-gutter
+.row.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutter > [class*="col-"]:not(:first-child),
+.row.no-gutter > [class*="col-"]:not(:last-child) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// vertical gutter
+.row.vertical-gutter > [class*="col-"] {
+    padding-top: 30px;
+}
+.row.vertical-gutter {
+    margin-top: -30px;
+}
+
+// multi-colums clearing
+// https://github.com/sixfootsixdesigns/Bootstrap-3-Grid-Columns-Clearing
+// clear first in row in ie 8 or lower
+.multi-columns-row .first-in-row {
+    clear: left;
+}
+
+// clear the first in row for any block that has the class "multi-columns-row"
+.multi-columns-row {
+    .col-xs-6:nth-child(2n + 3) { clear: left; }
+    .col-xs-4:nth-child(3n + 4) { clear: left; }
+    .col-xs-3:nth-child(4n + 5) { clear: left; }
+    .col-xs-2:nth-child(6n + 7) { clear: left; }
+    .col-xs-1:nth-child(12n + 13) { clear: left; }
+    @media (min-width: 768px) {
+        // reset previous grid
+        .col-xs-6:nth-child(2n + 3) { clear: none; }
+        .col-xs-4:nth-child(3n + 4) { clear: none; }
+        .col-xs-3:nth-child(4n + 5) { clear: none; }
+        .col-xs-2:nth-child(6n + 7) { clear: none; }
+        .col-xs-1:nth-child(12n + 13) { clear: none; }
+
+        // clear first in row for small columns
+        .col-sm-6:nth-child(2n + 3) { clear: left; }
+        .col-sm-4:nth-child(3n + 4) { clear: left; }
+        .col-sm-3:nth-child(4n + 5) { clear: left; }
+        .col-sm-2:nth-child(6n + 7) { clear: left; }
+        .col-sm-1:nth-child(12n + 13) { clear: left; }
+    }
+    @media (min-width: 992px) {
+        // reset previous grid
+        .col-sm-6:nth-child(2n + 3) { clear: none; }
+        .col-sm-4:nth-child(3n + 4) { clear: none; }
+        .col-sm-3:nth-child(4n + 5) { clear: none; }
+        .col-sm-2:nth-child(6n + 7) { clear: none; }
+        .col-sm-1:nth-child(12n + 13) { clear: none; }
+
+        // clear first in row for medium columns
+        .col-md-6:nth-child(2n + 3) { clear: left; }
+        .col-md-4:nth-child(3n + 4) { clear: left; }
+        .col-md-3:nth-child(4n + 5) { clear: left; }
+        .col-md-2:nth-child(6n + 7) { clear: left; }
+        .col-md-1:nth-child(12n + 13) { clear: left; }
+    }
+    @media (min-width: 1200px) {
+        // reset previous grid
+        .col-md-6:nth-child(2n + 3) { clear: none; }
+        .col-md-4:nth-child(3n + 4) { clear: none; }
+        .col-md-3:nth-child(4n + 5) { clear: none; }
+        .col-md-2:nth-child(6n + 7) { clear: none; }
+        .col-md-1:nth-child(12n + 13) { clear: none; }
+
+        // clear first in row for large columns
+        .col-lg-6:nth-child(2n + 3) { clear: left; }
+        .col-lg-4:nth-child(3n + 4) { clear: left; }
+        .col-lg-3:nth-child(4n + 5) { clear: left; }
+        .col-lg-2:nth-child(6n + 7) { clear: left; }
+        .col-lg-1:nth-child(12n + 13) { clear: left; }
+    }
+}
+
+/*---------------------------
+  Angled Pagination
+ ----------------------------*/
+.pagination {
+    display: block;
+    margin: 4rem 0;
+
+    // clearfix
+    clear: both;
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    // remove default outline
+    > .active > a,
+    > .active > a:focus,
+    > .active > a:hover,
+    > .active > span,
+    > .active > span:focus,
+    > .active > span:hover {
+        border: none;
+    }
+
+    > li > a,
+    > li > span {
+        cursor: pointer;
+    }
+
+    // new style
+    > li:first-child > a,
+    > li > a,
+    > li > a:hover,
+    > li > a:focus,
+    > li:first-child > span,
+    > li > span,
+    > li > span:hover,
+    > li > span:focus {
+        position: relative;
+        padding: 10px 30px;
+        margin-left: -2px;
+        color: $text_color;
+        text-decoration: none;
+        background: none;
+        border: none;
+        box-shadow: none;
+        z-index: 1;
+
+        // in light theme hover button change text color
+        @if ($theme == light) {
+            transition: .3s color ease;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: none;
+            border: 2px solid $text_color;
+            transition: .3s background ease, .3s border ease;
+
+            transform: skew(-$skew_size);
+            z-index: -1;
+        }
+    }
+
+    // active item
+    > li.active > a,
+    > li.active > a:hover,
+    > li > a:hover,
+    > li.active > span,
+    > li.active > span:hover,
+    > li > span:hover {
+        background: none;
+
+        // in light theme hover button change text color
+        @if ($theme == light) {
+            color: $back_darken_color;
+        }
+
+        &::before {
+            background: $main_color;
+            border: 2px solid $main_color;
+        }
+    }
+}
+
+/*---------------------------
+  Progress Bars
+ ----------------------------*/
+.progress {
+    background-color: rgba($text_color, .1);
+    border-radius: 0;
+    box-shadow: none;
+    transform: skew(-$skew_size);
+    -webkit-backface-visibility: hidden; // stylelint-disable-line
+
+    // colors
+    .progress-bar {
+        background-color: $main_color;
+    }
+    .progress-bar-primary {
+        background-color: $color_primary;
+    }
+    .progress-bar-success {
+        background-color: $color_success;
+    }
+    .progress-bar-info {
+        background-color: $color_info;
+    }
+    .progress-bar-warning {
+        background-color: $color_warning;
+    }
+    .progress-bar-danger {
+        background-color: $color_danger;
+    }
+}
+
+/*---------------------------
+  Timeline
+ ----------------------------*/
+.youplay-timeline {
+    position: relative;
+
+    &::after { /* clearfix */
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    &::before {
+        /* this is the vertical line */
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 28px;
+        width: 4px;
+        height: 100%;
+        background: rgba($text_color, .1);
+    }
+
+    .youplay-timeline-block {
+        position: relative;
+        padding-left: 80px;
+        margin: 4rem 0;
+        clear: both;
+
+        &::after { /* clearfix */
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .youplay-timeline-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        font-size: 2rem;
+        line-height: 50px;
+        text-align: center;
+        background: $main_color;
+        transform: skew(-$skew_size);
+        -webkit-backface-visibility: hidden; // stylelint-disable-line
+
+        > i,
+        > .svg-inline--fa {
+            transform: skew($skew_size);
+            -webkit-backface-visibility: hidden; // stylelint-disable-line
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            transform: skew($skew_size) scale($skew_scale);
+            -webkit-backface-visibility: hidden; // stylelint-disable-line
+        }
+    }
+
+    .youplay-timeline-content {
+        position: relative;
+        width: 100%;
+        padding-top: 5px;
+        margin-left: 0;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .youplay-timeline-date {
+            position: relative;
+            display: inline-block;
+            float: left;
+            left: 0;
+
+            width: 100%;
+            padding: 1.5em 0;
+            font-size: 1rem;
+            opacity: .7;
+        }
+
+        .youplay-timeline-block & {
+            float: none;
+
+            .youplay-timeline-date {
+                left: 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
+/*---------------------------
+  Accordion
+ ----------------------------*/
+.panel-group {
+
+    .panel {
+        background: none;
+        border: none;
+    }
+
+    .panel-body {
+        padding: 1.25rem 1.8rem;
+    }
+
+    &.panel-group .panel + .panel {
+        margin-top: 1rem;
+    }
+
+    // heading
+    .panel-heading {
+        position: relative;
+        padding: 0;
+        color: $text_color;
+        background: none;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+
+        // heading
+        .panel-title a,
+        .panel-title a:hover,
+        .panel-title a:focus {
+            display: block;
+            padding: 1.25rem 1.8rem;
+            color: $text_color;
+            text-decoration: none;
+        }
+
+        + .panel-collapse > .panel-body {
+            border: none;
+        }
+
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+
+    // plus minus icons
+    .icon-plus,
+    .icon-minus {
+        float: right;
+        margin-top: -5px;
+        font-size: 2.5rem;
+        &::after {
+            content: "+";
+            display: block;
+            transition: .3s transform ease;
+        }
+    }
+    .icon-minus {
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+
+
+    // colors
+    .panel-default > .panel-heading {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($text_color, .1);
+            transform: skew(-$skew_size);
+            z-index: 1;
+        }
+    }
+
+}
+
+/*---------------------------
+  Tabs
+ ----------------------------*/
+.nav-tabs {
+    border-color: rgba($text_color, .1);
+}
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+    padding: 1.25rem 1.8rem;
+    margin-bottom: 1px;
+    margin-left: 3px;
+    font-size: 16px;
+    color: $text_color;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    z-index: 1;
+
+    // small tabs in sidebar
+    .side-block & {
+        padding: .75rem 1.3rem;
+        font-size: 1.2rem;
+    }
+}
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($text_color, .1);
+        transform: skew(-$skew_size);
+        z-index: -1;
+    }
+}
+.tab-content > .tab-pane {
+    padding: 1.25rem 1.8rem;
+}
+
+/*---------------------------
+  Features
+ ----------------------------*/
+.youplay-features {
+    margin-bottom: 4.5rem;
+
+    .feature {
+        position: relative;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            color: inherit;
+        }
+
+        // icon
+        i,
+        .svg-inline--fa {
+            font-size: 4.5rem;
+        }
+
+    }
+}
+
+/*---------------------------
+  Tables
+ ----------------------------*/
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th,
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    border-color: rgba($text_color, .1);
+}
+.table-hover > tbody > tr:hover,
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba($text_color, .1);
+}
+
+/*---------------------------
+  Pager
+ ----------------------------*/
+.pager li > a,
+.pager li > span {
+    position: relative;
+    z-index: 1;
+
+    &,
+    &:focus,
+    &:hover {
+        padding: 5px 14px;
+        padding: 10px 30px;
+        color: $text_color;
+        text-decoration: none;
+        background: none;
+        border: none;
+        border-radius: 0;
+    }
+    // in light theme hover button change text color
+    @if ($theme == light) {
+        &:focus,
+        &:hover {
+            color: $back_darken_color;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: none;
+        border: 2px solid $text_color;
+        transition: .3s background ease, .3s border ease;
+
+        transform: skew(-$skew_size);
+        z-index: -1;
+    }
+
+    &:hover::before,
+    &.active::before {
+        background: $main_color;
+        border: 2px solid $main_color;
+    }
+}
+
+/*---------------------------
+  Labels
+ ----------------------------*/
+.label {
+    position: relative;
+    background: none;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($text_color, .1);
+
+        transform: skew(-$skew_size);
+        z-index: -1;
+        // in light theme
+        @if ($theme == light) {
+            background: rgba($text_color, .4);
+        }
+    }
+
+    // colors
+    &-primary::before {
+        background: $color_primary;
+    }
+    &-success::before {
+        background: $color_success;
+    }
+    &-info::before {
+        background: $color_info;
+    }
+    &-warning::before {
+        background: $color_warning;
+    }
+    &-danger::before {
+        background: $color_danger;
+    }
+}
+
+/*---------------------------
+  Alerts
+ ----------------------------*/
+.alert {
+    position: relative;
+    color: inherit;
+    background: none;
+    border: none;
+    border-color: transparent;
+    border-radius: 0;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($text_color, .1);
+
+        transform: skew(-$skew_size);
+        z-index: -1;
+    }
+
+    // colors
+    &-primary::before {
+        background: $color_primary;
+    }
+    &-success::before {
+        background: $color_success;
+    }
+    &-info::before {
+        background: $color_info;
+    }
+    &-warning::before {
+        background: $color_warning;
+    }
+    &-danger::before {
+        background: $color_danger;
+    }
+}
+
+/*---------------------------
+  Modals
+ ----------------------------*/
+.modal-content {
+    background-color: $back_darken_color;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.modal-header,
+.modal-footer {
+    padding: 3rem;
+    border-color: rgba($text_color, .2);
+}
+.modal-body {
+    padding: 3rem;
+}
+.close,
+.close:hover,
+.close:focus {
+    color: $text_color;
+    text-shadow: none;
+    opacity: .5;
+}
+.close:hover {
+    opacity: 1;
+}
+
+/*---------------------------
+  Tooltips
+ ----------------------------*/
+.tooltip-inner {
+    position: relative;
+    padding: 8px 18px;
+    color: $back_darken_color;
+    background: none;
+    border-radius: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $text_color;
+
+        transform: skew(-$skew_size);
+        z-index: -1;
+    }
+}
+.tooltip.left .tooltip-arrow {
+    right: 1px;
+    border-left-color: $text_color;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: $text_color;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: $text_color;
+}
+.tooltip.right .tooltip-arrow {
+    left: 1px;
+    border-right-color: $text_color;
+}
+
+/*---------------------------
+  Popovers
+ ----------------------------*/
+.popover {
+    font: inherit;
+    color: $back_darken_color;
+    background-color: $text_color;
+    border: none;
+    border-radius: 0;
+}
+.popover.left > .arrow::after {
+    border-left-color: $text_color;
+}
+.popover.top > .arrow::after {
+    border-top-color: $text_color;
+}
+.popover.bottom > .arrow::after {
+    border-bottom-color: $text_color;
+}
+.popover.right > .arrow::after {
+    left: 1px;
+    border-right-color: $text_color;
+}

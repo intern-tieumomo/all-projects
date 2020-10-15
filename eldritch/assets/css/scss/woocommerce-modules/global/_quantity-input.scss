@@ -1,0 +1,113 @@
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - begin
+   ========================================================================== */
+
+.woocommerce-page .edgt-content,
+div.woocommerce {
+
+	.edgt-quantity-buttons {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		.edgt-quantity-input,
+		.edgt-quantity-minus,
+		.edgt-quantity-plus {
+			display: inline-block;
+			vertical-align: middle;
+			color: #a1a1a1;
+			background-color: transparent;
+			text-align: center;
+			border: 1px solid #eaeaea;
+
+			@include edgtBoxSizing(border-box);
+		}
+
+		.edgt-quantity-input {
+			position: relative;
+			height: 50px;
+			width: 53px;
+			padding: 0;
+			margin: 0 25px 0 0;
+			font-family: inherit;
+			line-height: 42px;
+			outline: none;
+			font-family: $headings-font-family;
+
+			&:focus {
+				border: 1px solid #eaeaea;
+			}
+		}
+
+		.edgt-quantity-minus,
+		.edgt-quantity-plus {
+			position: absolute;
+			right: 0;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			cursor: pointer;
+			border-left: 0;
+			font-size: 12px;
+
+			@include edgtTransition(color .15s ease-in-out);
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		.edgt-quantity-minus {
+			bottom: 0;
+			border-top: 0;
+			line-height: 20px;
+		}
+
+		.edgt-quantity-plus {
+			top: 0;
+			border-bottom: 0;
+			line-height: 29px;
+		}
+	}
+}
+
+.woocommerce-page .edgt-content,
+div.woocommerce {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+        @include inputStyle(false);
+
+	}
+
+	.coupon {
+
+		input[type="text"] {
+			width: 200px;
+		}
+	}
+}
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+        border-color: #595757;
+        color: $default-text-color-dark;
+        &:focus,
+        &:hover {
+            border-color: $first-main-color;
+            color: #fff;
+        }
+
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - end
+   ========================================================================== */

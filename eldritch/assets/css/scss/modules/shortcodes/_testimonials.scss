@@ -1,0 +1,149 @@
+/* ==========================================================================
+# Testimonial style - begin
+========================================================================== */
+.edgt-testimonials {
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+
+    .slick-track {
+        cursor: -webkit-grab;
+        cursor: grab;
+    }
+
+    .edgt-testimonial-quote {
+        text-align: center;
+
+        span {
+            font-size: 72px;
+            color: $first-main-color;
+        }
+    }
+
+    .edgt-testimonial-content-inner {
+        width: 89%;
+        margin: 0 auto;
+    }
+
+    .edgt-testimonial-text-holder {
+        position: relative;
+
+        .edgt-testimonial-text-inner {
+            text-align: center;
+            margin-top: 31px;
+        }
+    }
+
+    .edgt-testimonial-title {
+        margin: 15px 0;
+        text-transform: uppercase;
+    }
+
+    .edgt-testimonials-job {
+        color: #000;
+    }
+
+    .edgt-testimonial-author {
+        margin-top: 34px;
+    }
+
+    /* Testimonials image  styles */
+
+    .edgt-testimonial-image-holder {
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .slick-list {
+        margin-bottom: -30px;
+        padding-bottom: 30px;
+    }
+
+    /* testimonials slider start */
+
+    .edgt-testimonial-content {
+
+        .edgt-testimonial-author-image-quote {
+            position: relative;
+            width: 107px;
+            height: 107px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .edgt-quote-image {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            height: 26px;
+            width: 26px;
+            background-color: $first-main-color;
+            border-radius: 50%;
+        }
+
+        .edgt-testimonial-author-image {
+            width: 107px;
+            height: 107px;
+            overflow: hidden;
+            position: relative;
+            @include edgtBorderRadius(50%);
+
+            img {
+                display: block;
+                position: absolute;
+                top: 50%;
+
+                @include edgtTransform(translateY(-50%));
+            }
+        }
+
+        .edgt-testimonial-author-text {
+
+            &.light {
+                color: #fff;
+            }
+        }
+
+        .edgt-testimonial-title {
+            margin-bottom: 38px;
+        }
+
+        .edgt-testimonial-text {
+            line-height: 1.5em;
+        }
+
+        .edgt-testimonial-text-inner.light,
+        .edgt-testimonial-text-inner.light .edgt-testimonial-text,
+        .edgt-testimonials-job.light {
+            color: #fff;
+        }
+    }
+
+    //animation
+    .slick-slide {
+        opacity: 1;
+        @include edgtTransition(opacity .2s);
+        &.edgt-fade-out {
+            opacity: 0;
+        }
+
+        &.edgt-fade-in {
+            opacity: 1;
+            @include edgtTransition(opacity 1s .1s);
+        }
+    }
+
+    .edgt-testimonial-content-inner {
+        width: 77%;
+        max-width: 720px;
+    }
+    /* testimonials slider end */
+}
+
+/* ==========================================================================
+# Testimonial style - end
+========================================================================== */
+

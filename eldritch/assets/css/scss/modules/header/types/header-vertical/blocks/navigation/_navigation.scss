@@ -1,0 +1,149 @@
+@import "types/float";
+
+.edgt-header-vertical {
+
+	.edgt-vertical-menu-outer {
+
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		text-align: center;
+
+		@include edgtBoxSizing(border-box);
+	}
+
+	.edgt-vertical-alignment-center {
+		.edgt-vertical-menu-outer {
+			display: table;
+			padding: 100px 0 150px;
+			width: 100%;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			@include mac {
+				padding: 150px 0 150px;
+			}
+		}
+
+		.edgt-vertical-menu {
+			display: table-cell;
+			height: auto;
+			min-height: 0;
+			vertical-align: middle;
+		}
+	}
+
+	.edgt-vertical-alignment-top {
+		.edgt-vertical-menu-outer {
+			padding: 50px 0;
+		}
+	}
+
+	.edgt-vertical-menu {
+
+		position: relative;
+		z-index: 101;
+		margin: 0;
+
+		ul {
+			position: relative;
+			list-style-type: none;
+			margin: 0px -25px;
+		}
+
+		ul li {
+			position: relative;
+			@include edgtTransition(background-color 0.2s ease);
+		}
+
+		& > ul > li {
+			> a {
+				font-family: $headings-font-family;
+				font-size: 14px;
+				position: relative;
+				display: block;
+				padding: 13px 0px;
+				margin: 0px;
+				line-height: 20px;
+				color: #465161;
+				font-weight: 600;
+				text-decoration: none;
+				cursor: pointer;
+				text-transform: uppercase;
+
+				@include edgtTransition(
+						color 0.15s ease,
+						text-decoration 0.15s ease,
+						background-color 0.15s ease
+				);
+			}
+
+			&:last-child {
+				> a {
+					border-color: transparent;
+				}
+			}
+
+			&:hover {
+				> a {
+					color: #8a95a8;
+				}
+			}
+		}
+
+		& > ul > li > a > span.item_inner {
+			@include edgtTransition(text-decoration 0.2s ease);
+		}
+
+		ul > li.menu-item-has-children > a .plus {
+			width: 16px;
+			height: 16px;
+			z-index: 100;
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			display: block;
+			font-size: 16px;
+			line-height: 16px;
+			font-family: 'ElegantIcons';
+			cursor: pointer;
+
+			@include edgtTransform(translateY(-50%));
+
+			&:before {
+				content: "\35";
+			}
+		}
+
+		.q_menu_arrow {
+			display: inline-block;
+            height: 12px;
+            width: 16px;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			vertical-align: middle;
+
+            background-image: url("./img/slick/arrow_white_right.png");
+		}
+
+		.menu_icon_wrapper {
+			margin-right: 10px;
+			font-size: 14px;
+			color: inherit;
+		}
+
+		.edgt-menu-featured-icon {
+			color: $first-main-color;
+			display: inline-block !important;
+			font-size: 10px;
+			margin-left: 5px;
+			position: relative;
+			top: -3px;
+		}
+	}
+}

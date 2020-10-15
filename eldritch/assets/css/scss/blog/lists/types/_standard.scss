@@ -1,0 +1,243 @@
+.edgt-blog-holder {
+    &.edgt-blog-type-standard {
+        width: 70%;
+        margin: 0 auto;
+
+        .edgt-grid-col-9 &, .edgt-grid-col-8 & {
+            width: 94%;
+        }
+
+        article {
+            position: relative;
+            margin-bottom: 27px;
+
+            .edgt-post-content {
+                background-color: transparent;
+            }
+
+
+            .edgt-blog-whole-link {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+            }
+
+            .edgt-post-image {
+                position: relative;
+                line-height: 0;
+                a, img {
+                    display: block;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    background: rgba(255, 255, 255, 0.3);
+                    @include edgtTransition(0.3s all ease-in-out);
+                }
+
+                &:hover {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .edgt-post-text {
+                padding: 22px 0 20px;
+            }
+
+            .edgt-post-info-category {
+                font-size: 13px;
+
+                a {
+                    color: $default-post-info-color;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+
+                    &:not(:first-child):before {
+                        content: '/';
+                        padding-right: 3px;
+                        color: $default-post-info-color;
+
+                    }
+                }
+            }
+
+            .edgt-post-title {
+                margin-top: 6px;
+                margin-bottom: 9px;
+            }
+
+            .edgt-post-excerpt {
+                margin-top: 9px;
+                margin-bottom: 20px;
+                font-weight: 500;
+            }
+
+            .edgt-post-info {
+                padding: 17px 0;
+                border-top: 1px solid #e5e5e5;
+                font-size: 13px;
+                color: $default-post-info-color;
+
+                a {
+                    color: $default-post-info-color;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+
+                }
+
+                i {
+                    font-size: 16px;
+                    position: relative;
+                    top: 1px;
+                }
+
+                div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .edgt-avatar a {
+                    display: block;
+                    height: 28px;
+                    width: 28px;
+                    overflow: hidden;
+                }
+
+                .edgt-author {
+                    padding-left: 10px;
+                    color: $default-post-info-color;
+                }
+
+                .edgt-post-info-date {
+
+                    &:not(:first-child):before {
+                        content: '/';
+                    }
+
+                    .edgt-date {
+                        padding-left: 1px;
+                    }
+                }
+
+                .edgt-post-info-comments-holder {
+                    padding-left: 15px;
+
+                    .edgt-comments-number {
+                        padding-left: 5px;
+                    }
+                }
+
+                .edgt-post-info-comments-icon {
+                    position: relative;
+                    top: 2px;
+                }
+
+                .edgt-social-share-holder {
+                    padding-left: 21px;
+                }
+            }
+
+            &.format-gallery {
+                .edgt-slick-slider {
+                    opacity: 0;
+
+                }
+            }
+
+            &.format-link {
+
+                @include edgtLightBackgroundImage();
+
+                margin-bottom: 64px;
+
+                .edgt-post-content {
+                    padding: 26px 48px 26px 48px;
+                }
+
+                .edgt-post-text {
+                    padding: 21px 0 21px;
+                }
+
+                .edgt-post-mark {
+                    float: left;
+                    font-size: 28px;
+                    margin-right: 17px;
+                    color: #252525;
+                }
+
+                .edgt-post-title {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    color: #252525;
+                    @include edgtTransition(color $default-transition-property $default-transition-speed);
+                }
+
+                &:hover .edgt-post-title {
+                    color: $first-main-color;
+
+                }
+            }
+
+            &.format-quote {
+
+                @include edgtDarkBackgroundImage();
+
+                margin-bottom: 64px;
+
+                .edgt-post-content {
+                    padding: 26px 48px 26px 48px;
+                }
+
+                .edgt-post-text {
+                    padding: 21px 0 21px;
+                }
+
+
+                .edgt-post-mark {
+                    float: left;
+                    font-family: $headings-font-family;
+                    font-size: 115px;
+                    line-height: 89px;
+                    margin-right: 17px;
+                    color: #fff;
+                }
+
+                .edgt-post-title {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    color: #fff;
+                    @include edgtTransition(color $default-transition-property $default-transition-speed);
+
+                }
+
+                &:hover .edgt-post-title {
+                    color: $first-main-color;
+
+                }
+            }
+        }
+
+        .edgt-pagination {
+            margin-top: 10px;
+            text-align: center;
+
+            > ul {
+                display: inline-block;
+                vertical-align: middle;
+                margin: auto;
+            }
+        }
+    }
+}

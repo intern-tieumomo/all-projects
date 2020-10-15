@@ -1,0 +1,142 @@
+.nav > li > a {
+	padding: 0;
+}
+
+.nav-tabs > li > a {
+	border:none;
+}
+
+.nav-tabs > li {
+	margin-bottom: 0;
+}
+
+
+.edgt-tabs-wrapper .nav-tabs {
+	margin-top: 0;
+}
+
+.edgt-tabs-wrapper .nav-tabs > li.active > a {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+	border-left-color: transparent;
+}
+
+.edgt-tabs-wrapper .nav-tabs > li.active > a:hover,
+.edgt-tabs-wrapper .nav-tabs > li.active > a:focus {
+	@include edgt-border-radius(0);
+}
+
+.edgt-tabs-wrapper .nav-tabs > li a > i {
+	width: 19px;
+}
+
+.edgt-tabs-wrapper .edgt-tabs-content {
+	background-color: #fcfcfc;
+	padding: 20px 20px 20px 20px;
+
+}
+
+.edgt-tabs-wrapper.vertical .nav-tabs {
+	border-bottom: 0;
+}
+
+.edgt-tabs-wrapper.vertical .nav-tabs > li {
+	float: none;
+	border-bottom: 1px solid #191919;
+	width: 100%;
+}
+
+.edgt-tabs-wrapper.vertical .nav-tabs > li.active a,
+.edgt-tabs-wrapper.vertical .nav-tabs > li.active a:focus,
+.edgt-tabs-wrapper.vertical .nav-tabs > li.active a:hover {
+	border-bottom: 0px solid #566269;
+	margin-bottom: 0;
+	background-color: $edgt-first-color;
+	border-left: none;
+}
+
+.edgt-tabs-wrapper.vertical .nav-tabs > li a:focus,
+.edgt-tabs-wrapper.vertical .nav-tabs > li a:hover,
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a {
+	background-color: #080808;
+	color: #fff;
+	border-left: none;
+}
+
+.edgt-tabs-navigation-wrapper .nav-tabs li > a > i {
+	@include edgt-transition('color 0.3s ease-in-out');
+}
+
+//.edgt-tabs-navigation-wrapper .nav-tabs li > a:hover > i,
+//.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a  i {
+//	color:$edgt-first-color;
+//}
+//
+//.edgt-tabs-wrapper.vertical .edgt-tabs-navigation-wrapper .nav-tabs li.active > a:hover > i {
+//	color: #fff;
+//}
+
+.edgt-tabs-wrapper.vertical .edgt-tabs-navigation-wrapper,
+.edgt-tabs-wrapper.vertical .edgt-tabs-content {
+	min-height: 300px;
+}
+
+.edgt-tabs-wrapper.vertical .edgt-tabs-navigation-wrapper {
+	width: 226px;/*was 199*/
+}
+
+.edgt-tabs-wrapper.vertical .edgt-tabs-content {
+	margin-left: 226px;
+	background-color: #EBEFF2;
+	color: #34383C;
+	min-height: 780px;
+}
+
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li:first-child > a {
+	border-top: none;
+}
+
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li > a {
+	font-size: 13px;
+	color: #fff;
+	padding-left: 30px;
+	border-left: none;
+	margin-right: 0;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	border-radius: 0;
+}
+
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li > a:hover,
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a,
+.edgt-tabs-navigation-wrapper .nav-tabs li > a:hover > i,
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a  i {
+	color: $edgt-first-color;
+}
+
+//.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a {
+//	color: #fff;
+//}
+
+.edgt-tabs-wrapper.vertical.left .nav-tabs > li > a span {
+	display: inline-block;
+	padding: 10px;
+}
+
+//.edgt-tabs-wrapper.vertical.left .nav-tabs > li.active > a  i {
+//	color: #fff;
+//}
+
+.edgt-tabs-wrapper.vertical.left .edgt-tabs-navigation-wrapper {
+	float: left;
+	background-color: $navigation-background-color;
+}
+
+.edgt-tabs-wrapper.vertical.right .edgt-tabs-navigation-wrapper,
+.edgt-tabs-wrapper.vertical.right .edgt-tabs-wrapper.vertical.right .edgt-tabs-content {
+	float: right;
+}

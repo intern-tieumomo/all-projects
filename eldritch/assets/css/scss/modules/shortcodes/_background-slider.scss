@@ -1,0 +1,22 @@
+.edgt-bckg-slider-holder {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	.edgt-bckg-slider {
+		height: 100%;
+		opacity: 0;
+
+		.slick-list, .slick-track {
+			height: 100%;
+		}
+
+		.edgt-bckg-slider-item {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}

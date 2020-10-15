@@ -1,0 +1,31 @@
+{% set main_style_file = 'youplay-shooter' %}
+{% set google_fonts = 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:400,700' %}
+{% set custom_css = 'assets/css/custom-shooter.css' %}
+{% set header_image = 'assets/images/shooter/banner-bg.jpg' %}
+{% set footer_bg = false %}
+{% set header_parallax = false %}
+{% set footer_parallax = false %}
+{% set footer_social_block = false %}
+{% set footer_widgets_block = true %}
+{% set preloader_logo = 'assets/images/shooter/logo.png' %}
+{% set nav_logo = 'assets/images/shooter/logo.png' %}
+{% set nav_search = false %}
+{% set nav_cart = false %}
+{% set navigation = {
+    "shooter-index.html#preorder": {
+        "name": "Pre-Order",
+        "description": "Early Edition"
+    },
+    "shooter-blog.html": {
+        "name": "News",
+        "description": "Our Blog"
+    },
+    "shooter-forums.html": {
+        "name": "Community",
+        "description": "Forums"
+    }
+} %}
+
+{% set navigation_right = false %}
+
+{% extends 'layouts/layout-1.html' %}

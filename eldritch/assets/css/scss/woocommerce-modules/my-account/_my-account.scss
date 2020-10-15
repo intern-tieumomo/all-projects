@@ -1,0 +1,284 @@
+/* ==========================================================================
+   WooCommerce MyAccount Page styles - begin
+   ========================================================================== */
+
+.edgt-woocommerce-page.woocommerce-account {
+
+	.woocommerce-MyAccount-navigation,
+	.woocommerce-MyAccount-content {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+		@include edgtBoxSizing(border-box);
+	}
+
+	.woocommerce-MyAccount-navigation {
+		width: 30%;
+		padding: 0 30px 0 0;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			border-top: 1px solid $default-border-color;
+
+			li {
+				margin: 0;
+				padding: 10px 0;
+				border-bottom: 1px solid $default-border-color;
+
+				&.is-active {
+
+					a {
+						color: $headings-text-color;
+					}
+				}
+
+				a {
+					font-weight: 400;
+                    color: $headings-text-color;
+				}
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-content {
+		width: 70%;
+		padding: 0 0 0 30px;
+	}
+
+    .woocommerce {
+        margin: 0 0 55px;
+
+        form.login {
+            margin: 0 0 34px;
+
+            > *:first-child {
+                margin: 0 0 15px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            input[type='checkbox'] {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                top: -1px;
+                margin: 0 3px 0 5px;
+            }
+
+            .lost_password {
+                display: block;
+                margin: 15px 0 0;
+
+                a {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        form.edit-account {
+            margin: 0 0 15px;
+
+            p {
+                margin: 0;
+            }
+
+            label {
+                display: block;
+                margin: 0 0 5px;
+            }
+
+            fieldset {
+
+                > legend {
+                    display: block;
+                    color: $headings-text-color;
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+
+        .myaccount_user {
+
+            strong {
+                color: $headings-text-color;
+            }
+
+            a {
+                font-weight: 600;
+            }
+        }
+
+        > p {
+            display: block;
+            margin: 0 0 30px;
+        }
+
+        > h2,
+        > header h2 {
+            display: block;
+            margin: 16px 0 25px;
+            font-size: 25px;
+        }
+
+        table.shop_table {
+            border: 1px solid $default-border-color;
+            padding: 0;
+            margin: 0 0 30px;
+
+            tr {
+                border: 0;
+                border-bottom: 1px solid $default-border-color;
+
+                &.order-total {
+
+                    .amount {
+                        color: $headings-text-color;
+                    }
+                }
+            }
+
+            td, th {
+                padding: 15px 25px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                border: 0;
+                color: $headings-text-color;
+            }
+
+            td {
+
+                &.order-number {
+
+                    a {
+                        color: $headings-text-color;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+
+                &.order-actions {
+                    text-align: right;
+                }
+            }
+
+            a:not(.button) {
+                color: $default-text-color;
+
+                &:hover {
+                    color: $headings-text-color;
+                }
+            }
+
+            .variation {
+
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .col2-set.addresses {
+            @include edgtRelativeHolderLayout();
+            clear: both;
+            margin: 0 0 15px;
+
+            .col-1,
+            .col-2 {
+                position: relative;
+                display: inline-block;
+                width: 49%;
+                margin-right: 1%;
+                float: left;
+                vertical-align: middle;
+            }
+
+            .col-2 {
+                margin-left: 1%;
+                margin-right: 0;
+            }
+
+            .title {
+                margin: 4px 0 25px;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            .title {
+
+                .edit {
+                    font-weight: 600;
+                }
+            }
+
+            address {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+.edgt-woocommerce-page.woocommerce-account.woocommerce-edit-address {
+
+    .woocommerce {
+
+        > form {
+            margin: 0 0 15px;
+
+            > *:first-child {
+                margin: 0 0 25px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            label {
+                display: block;
+                margin: 0 0 5px;
+            }
+        }
+    }
+}
+
+.edgt-woocommerce-page.edgt-woocommerce-dark-skin.woocommerce-account {
+    .woocommerce-MyAccount-navigation {
+        ul,
+        ul li {
+            border-color: #595757;
+        }
+
+        li {
+            a {
+                color: $default-text-color-dark;
+            }
+            &.is-active a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce MyAccount Page styles - end
+   ========================================================================== */

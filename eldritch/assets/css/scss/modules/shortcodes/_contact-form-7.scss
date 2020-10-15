@@ -1,0 +1,147 @@
+
+/* contact form 7 start */
+
+
+// hide original loader
+div.wpcf7 .ajax-loader {
+    display: none;
+}
+
+// column system
+.edgt-cf7-50-50 {
+    .edgt-cf7-col-right {
+        width: 50%;
+        float: left;
+        padding-right: 4px;
+        box-sizing: border-box;
+    }
+
+    .edgt-cf7-col-left {
+        width: 50%;
+        float: left;
+        padding-left: 4px;
+        box-sizing: border-box;
+    }
+}
+
+.edgt-cf7-submit-fullwidth {
+    width: 100%;
+    max-width: 100%;
+    > input {
+        width: 100%;
+    }
+}
+
+
+.edgt-newsletter-footer {
+
+    position: relative;
+
+    .edgt-newsletter-input {
+        width: 100%;
+
+        input {
+            margin: 0;
+            color:#fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #656364;
+            padding: 3px 0;
+            font-family: $headings-font-family;
+
+            &::-webkit-input-placeholder {
+                color: #fff;
+            }
+
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: #fff;
+            }
+
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: #fff;
+            }
+
+            &:-ms-input-placeholder {
+                color: #fff;
+                opacity: 1;
+            }
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid #fff;
+            }
+
+        }
+
+    }
+
+    .edgt-newsletter-submit {
+        position: absolute;
+        right: 2px;
+        top: 0;
+        height: 100%;
+
+        &:before {
+            display: block;
+            font-family: ElegantIcons;
+            content: "\e010";
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 46%;
+            @include edgtTransform(translateY(-50%));
+            color:#fff;
+
+        }
+
+        input {
+            opacity: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.edgt-newsletter {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+
+    & > span {
+        float: left;
+        width: 250px;
+    }
+
+    .edgt-newsletter-input {
+        width: 78%;
+        float: left;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+    .edgt-newsletter-submit {
+        width: 22%;
+        float: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+
+    @include phone-landscape {
+        .edgt-newsletter-input {
+            width: 100%;
+            padding: 0;
+        }
+        .edgt-newsletter-submit {
+            width: auto;
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+
+}

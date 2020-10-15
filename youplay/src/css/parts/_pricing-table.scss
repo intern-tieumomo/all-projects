@@ -1,0 +1,55 @@
+.pricing-table {
+    padding: 0 0 20px;
+    margin: 0 0 15px;
+    text-align: center;
+    list-style: none;
+    background: rgba($text_color, .05);
+    transition: 300ms background-color;
+
+    &:hover {
+        background-color: rgba($text_color, .07);
+    }
+
+    li {
+        position: relative;
+        padding: 20px 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background-color: rgba($text_color, .05);
+        }
+    }
+
+    li.plan-price {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    li.plan-price::before,
+    li.plan-name::before,
+    li.plan-action::before {
+        content: none;
+    }
+
+    li.plan-name {
+        padding: 30px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        line-height: 24px;
+        background: rgba($text_color, .05);
+    }
+
+    li > strong {
+        color: $main_color;
+    }
+
+    li.plan-action {
+        margin-top: 10px;
+    }
+}

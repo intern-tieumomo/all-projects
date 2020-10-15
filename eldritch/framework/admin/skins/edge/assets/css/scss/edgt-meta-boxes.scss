@@ -1,0 +1,122 @@
+@import "mixins";
+@import "variables";
+
+.edgt-meta-box {
+	margin: -6px -12px -12px;
+
+	.edgt-meta-box-holder {
+		width: 100%;
+	}
+
+	.edgt-meta-box-holder .edgt-page-form-section th {
+		width: 250px;
+	}
+
+	.edgt-meta-box-holder .edgt-page-form-section th p {
+		font-weight: 400;
+		color: #9e9e9e;
+	}
+
+	.edgt-portfolio-media, .edgt-portfolio-additional-item {
+		background:#fff;
+		margin-bottom: 5px;
+	}
+
+	.edgt-portfolio-media  .edgt-page-form-section {
+		border-top:none
+	}
+
+	.edgt-meta-box-holder .edgt-portfolio-media .edgt-page-form-section,
+	.edgt-meta-box-holder .edgt-portfolio-additional-item .edgt-page-form-section {
+		border-bottom: none;
+		display: table;
+		width: 100%;
+	}
+
+	.edgt-portfolio-toggle-holder {
+		display: table;
+		width: 100%;
+		border:1px solid #dae0e8;
+		position: relative;
+		cursor:pointer;
+	}
+
+	.edgt-portfolio-toggle {
+		display: table-cell;
+		vertical-align: middle;
+		background: #ebeef2;
+		color: #6F858D;
+		height: 40px;
+		padding: 0 10px;
+	}
+
+	.edgt-portfolio-media .edgt-portfolio-toggle-content,
+	.edgt-portfolio-additional-item .edgt-portfolio-toggle-content {
+		border: 1px solid #dbdee0;
+		border-top: none;
+	}
+
+	.edgt-portfolio-toggle .number {
+		display: inline-block;
+		background-color:#ABB7C7;
+		color:#fff;
+		width: 35px;
+		text-align: center;
+		border-radius: 5px;
+		margin-right: 20px;
+		padding:1px 5px
+	}
+
+	.edgt-portfolio-toggle.edgt-portfolio-control {
+		text-align: right;
+		padding-right: 40px;
+		color:#ABB7C7;
+		font-size:14px
+	}
+
+	.edgt-portfolio-toggle.edgt-portfolio-control a {
+		color:#ABB7C7;
+	}
+
+	.edgt-portfolio-toggle.edgt-portfolio-control a.remove-portfolio-media,
+	.edgt-portfolio-toggle.edgt-portfolio-control a.remove-portfolio-item {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 13px 11px 14px 5px;
+		line-height:0;
+	}
+
+	.edgt-portfolio-add {
+		padding: 20px;
+	}
+
+	.edgt-portfolio-add a:first-child {
+		margin-right: 3px;
+	}
+
+	.edgt-portfolio-add a:last-child {
+		margin-right: 10px;
+	}
+
+	.edgt-portfolio-add i {
+		margin-right:5px;
+	}
+
+	.edgt-meta-box-hidden {
+		display: none;
+	}
+
+	.edgt-meta-box-holder .edgt-page-form-container-holder .edgt-page-form-container-holder {
+		border-left: none;
+		margin-left: 0;
+	}
+
+	.edgt-page.btn-default {
+		margin-right:0
+	}
+}
+
+div.inside > div > div > div.edgt-page-form-section:first-child {
+	border-top: none;
+}

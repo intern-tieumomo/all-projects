@@ -1,0 +1,118 @@
+$grid-width: 1100px;
+$grid-width-laptop-wide-landscape: 1100px;
+$grid-width-laptop-landscape: 950px;
+$grid-width-vertical-menu-laptop-landscape: 850px;
+$grid-width-ipad-landscape: 768px;
+$grid-width-ipad-portrait: 600px;
+$grid-width-phone-landscape: 420px;
+$grid-width-phone-portrait: 300px;
+$grid-width-smaller-phone-portrait: 95%;
+
+$grid-width-boxed: 1150px;
+$grid-width-laptop-landscape-boxed: 1000px;
+$grid-width-ipad-landscape-boxed: 818px;
+$grid-width-ipad-portrait-boxed: 650px;
+$grid-width-phone-landscape-boxed: 470px;
+$grid-width-phone-portrait-boxed: 350px;
+$grid-width-smaller-phone-portrait-boxed: 96%;
+
+$grid-width-1300: 1300px;
+$grid-width-1200: 1200px;
+$grid-width-1000: 1000px;
+$grid-width-800: 800px;
+
+$first-main-color: #928e75;
+//
+$default-background-color: #fff;
+$default-background-color-dark: $default-background-color;
+$default-background-color-light: #121212;
+//
+$default-border-color: #bbbec1;
+$default-border-color-dark: #3f3e3f;
+$default-border-color-light: #e7e7e8;
+//
+$default-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.06);
+$default-input-color-dark: #595757;
+
+$default-transition-speed: 0.2s;
+$default-transition-property: ease-out;
+
+$header-light-color: #f6f6f6;
+$header-dark-color: #252525;
+
+$type1-gradient-first-color: #0090f0;
+$type1-gradient-second-color: #00edfd;
+$type2-gradient-first-color: #ad6ef0;
+$type2-gradient-second-color: #03a9f5;
+$type3-gradient-first-color: #3b3860;
+$type3-gradient-second-color: #5d569f;
+$type4-gradient-first-color: #32343a;
+$type4-gradient-second-color: #bfa155;
+
+//typography variables
+$default-font-family: 'Open Sans', sans-serif;
+//
+$default-text-color: #959595;
+$default-text-color-dark: #cfcfcf;
+$default-text-color-light: #ffffff;
+$glowing-text-shadow: 0 0 2px #fff, 0 0 14px #fff, 0 0 33px #fff, 0 0 55px #fff, 0 0 87px #fff;
+//
+$default-post-info-color: #a9a9a9;
+$default-text-size: 15px;
+$default-text-line-height: 26px;
+$headings-font-family: 'Marcellus', sans-serif;
+//
+$headings-text-color: #151515;
+$headings-text-color-light: $headings-text-color;
+$headings-text-color-dark: #ffffff;
+//
+$menu-item-color: #252525;
+$headings-text-line-height: 1.3em;
+$elements-box-shadow-color: rgba(0, 0, 0, 0.08);
+$shop-price-color: #b5b5b5;
+$default-dark-color: #151515;
+
+$button-border-color: #585858;
+
+//responsive breakpoints
+//$large-laptop: 1400px;
+//$mac: 1280px;
+//$laptop-landscape: 1200px;
+//$ipad-landscape: 1024px;
+//$ipad-portrait: 768px;
+//$phone-landscape: 600px;
+//$phone-portrait: 480px;
+//$smaller-phone-portrait: 320px;
+
+$breakpoints: (
+        vertical-menu-laptop-wide-landscape: 1650px,
+        vertical-menu-laptop-landscape: 1490px,
+        laptop-landscape-large-plus-pixel: 1441px,
+        laptop-landscape-large: 1440px,
+        large-laptop-plus-pixel: 1401px,
+        large-laptop: 1400px,
+        vertical-menu-ipad-landscape: 1314px,
+        mac: 1280px,
+        laptop-landscape-plus-pixel: 1201px,
+        laptop-landscape: 1200px,
+        ipad-landscape-plus-pixel: 1025px,
+        ipad-landscape: 1024px,
+        ipad-portrait-plus-pixel: 769px,
+        ipad-portrait: 768px,
+        phone-landscape-plus-pixel: 601px,
+        phone-landscape: 600px,
+        phone-portrait: 480px,
+        smaller-phone-portrait: 320px
+);
+
+$vertical-menu-width: 290px;
+
+// social share colors
+$linkedin-color: #007bb5;
+$googleplus-color: #dd4b39;
+$tumblr-color: #32506d;
+$pinterest-color: #cb2027;
+$facebook-color: #3b5998;
+$instagram-color: #125688;
+$twitter-color: #00aced;
+$vimeo-color: #aad450;
